@@ -1,0 +1,22 @@
+{
+  "dashboard_renders_results": true,
+  "dark_theme_applies": true,
+  "prediction_labels_shown": true,
+  "all_three_families_answer": true,
+  "only_untrainable_models_show_not_trained": true,
+  "overlay_drawn": true,
+  "classical_page_tables": true,
+  "quantum_page_tables": true,
+  "hybrid_page_tables": true,
+  "segmentation_overlay_and_metrics": true,
+  "volume_analysis_summary": true,
+  "viewer3d_canvas_drawn": true,
+  "gradcam_heatmap_shown": true,
+  "comparison_table_rows": true,
+  "roc_and_confusion_render": true,
+  "quantum_config_shows_simulator": true,
+  "models_lists_not_trained_with_reason": true,
+  "history_lists_the_prediction": true,
+  "mobile_no_horizontal_scroll": true,
+  "no_console_errors": true
+}

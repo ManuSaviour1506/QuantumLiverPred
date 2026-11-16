@@ -1,0 +1,4 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": { "strict": false, "noImplicitAny": false, "types": ["node"], "noUnusedLocals": true }
+}

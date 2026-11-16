@@ -1,0 +1,199 @@
+{
+  "name": "MLP (capacity-matched) \u2014 V10, radiomics",
+  "family": "classical",
+  "kind": "v10_patch_sklearn",
+  "architecture": "MLP",
+  "architecture_detail": null,
+  "task": "tumour vs tumour-free liver tissue (96x96 patches) aggregated to a slice-level call",
+  "role": "comparison",
+  "version": "v10.0",
+  "feature_set": "radiomics",
+  "feature_dim": 40,
+  "feature_names": [
+    "mean",
+    "std",
+    "skewness",
+    "kurtosis",
+    "p10",
+    "p25",
+    "p50",
+    "p75",
+    "p90",
+    "entropy",
+    "band_0",
+    "band_1",
+    "band_2",
+    "band_3",
+    "band_4",
+    "glcm_d1_contrast",
+    "glcm_d1_dissimilarity",
+    "glcm_d1_homogeneity",
+    "glcm_d1_energy",
+    "glcm_d1_correlation",
+    "glcm_d1_ASM",
+    "glcm_d3_contrast",
+    "glcm_d3_dissimilarity",
+    "glcm_d3_homogeneity",
+    "glcm_d3_energy",
+    "glcm_d3_correlation",
+    "glcm_d3_ASM",
+    "lbp_0",
+    "lbp_1",
+    "lbp_2",
+    "lbp_3",
+    "lbp_4",
+    "lbp_5",
+    "lbp_6",
+    "lbp_7",
+    "lbp_8",
+    "lbp_9",
+    "grad_mean",
+    "grad_std",
+    "grad_p90"
+  ],
+  "preprocessing": {
+    "scaler": "standard"
+  },
+  "preprocessing_signature": "20c5adf1dc31c622e9e0",
+  "selected_config": {
+    "alpha": 0.1,
+    "hidden": 8
+  },
+  "config_selection": "most frequent inner-loop selection (3 of 8 outer folds)",
+  "seeds": [
+    0
+  ],
+  "training_data": "real",
+  "dataset_version": "lits_verified_v8@2a9a4887bb322cfc",
+  "dataset_license": "CC BY-NC-SA 4.0 (derived from seongun/liver-tumor-classification, itself derived from LiTS)",
+  "data_split": {
+    "final_fit": "all units",
+    "calibration_and_threshold": "leave-one-unit-out out-of-fold scores",
+    "units": [
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06+G07",
+      "G08+G09",
+      "G10"
+    ],
+    "n_patches": 2449,
+    "positives": 1381,
+    "negatives": 1068
+  },
+  "threshold": 0.5067128692495685,
+  "threshold_rule": "Youden J on calibrated leave-one-unit-out predictions",
+  "platt": [
+    0.3287327416487178,
+    -0.024862874481345356
+  ],
+  "n_parameters": 337,
+  "execution_mode": "classical_cpu_numpy",
+  "circuit": null,
+  "feature_importance": [],
+  "evaluations": [
+    {
+      "name": "Nested leave-one-unit-out evaluation (radiomics)",
+      "status": "completed (real data)",
+      "evaluation_unit": "reconstructed scan-group unit (8 units; G06+G07 and G08+G09 merged)",
+      "units": [
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05",
+        "G06+G07",
+        "G08+G09",
+        "G10"
+      ],
+      "qualifying_units": [
+        "G01",
+        "G02",
+        "G04",
+        "G05",
+        "G06+G07",
+        "G08+G09",
+        "G10"
+      ],
+      "split": "outer: leave one unit out; inner: grouped 3-fold",
+      "metrics": {
+        "primary_mean_within_unit_auc": 0.9378793926522301,
+        "within_unit_auc_min": 0.8034210526315789,
+        "within_unit_auc_max": 1.0,
+        "pair_weighted_within_unit_auc": 0.9377514248356484,
+        "roc_auc": 0.7264995511584451,
+        "pr_auc": 0.8036993925533756,
+        "accuracy": 0.7337688852592895,
+        "balanced_accuracy": 0.728923431156384,
+        "sensitivity": 0.7668356263577119,
+        "specificity": 0.6910112359550562,
+        "precision": 0.7624190064794817,
+        "f1": 0.7646209386281588,
+        "mcc": 0.45824596799283546,
+        "log_loss": 0.762540432630288,
+        "brier": 0.2553043847175701,
+        "ece": 0.22840999486973543,
+        "mean_seed_sd_within_unit": 0.02621361498631792,
+        "fit_seconds_mean": 0.17295600467498387,
+        "predict_ms_per_patch": 0.0043207638332667135
+      },
+      "per_unit_auc": {
+        "G01": 0.9677720334057328,
+        "G02": 0.8759820426487093,
+        "G03": 1.0,
+        "G04": 1.0,
+        "G05": 0.8034210526315789,
+        "G06+G07": 0.9369928796158304,
+        "G08+G09": 0.9908496732026144,
+        "G10": 0.9901380670611439
+      },
+      "caveats": [
+        "patch-level estimate on reconstructed scan-group units, not patients",
+        "pooled metrics use per-fold thresholds; the primary metric is the mean within-unit AUC"
+      ]
+    },
+    {
+      "name": "Leave-one-unit-out calibration predictions (final configuration)",
+      "status": "completed",
+      "evaluation_unit": "reconstructed scan-group units",
+      "metrics": {
+        "roc_auc": 0.7489287467421697,
+        "pr_auc": 0.8275048750873484,
+        "log_loss": 0.5893549231752886,
+        "brier": 0.20436064436404416,
+        "ece": 0.11414975549639743,
+        "threshold": 0.5067128692495685,
+        "tp": 991,
+        "fp": 311,
+        "tn": 757,
+        "fn": 390,
+        "accuracy": 0.7137607186606778,
+        "balanced_accuracy": 0.7131987215473778,
+        "sensitivity": 0.717595944967415,
+        "recall": 0.717595944967415,
+        "specificity": 0.7088014981273408,
+        "precision": 0.761136712749616,
+        "f1": 0.7387253074916139,
+        "mcc": 0.4237501416004482
+      },
+      "caveats": [
+        "same predictions were used to fit calibration and the threshold: optimistic"
+      ]
+    }
+  ],
+  "training_history": null,
+  "limitations": [
+    "research use only; not clinically validated",
+    "liver gate inherited from V9 (known edge-patch label defect)",
+    "slice-level 'No tumour detected' is not validated: the dataset has no tumour-free liver slices"
+  ],
+  "model_id": "v10_mlp_small_radiomics",
+  "format_version": 1,
+  "files": {
+    "model.npz": "2c5fbbce2627e599187dea29178c39ece0cae3e5b880608365eb8b716261b9e7",
+    "model.joblib": "d1a32c69aaa13c1068eb68ce3c1e5f622c863d4926391a34e9c83f75810e4aa5"
+  },
+  "saved_utc": "2026-11-12T15:56:26+00:00"
+}

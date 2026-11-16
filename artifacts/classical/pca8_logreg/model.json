@@ -1,0 +1,60 @@
+{
+  "name": "PCA-8 Logistic Regression (control, ImageNet features)",
+  "kind": "pca8_control",
+  "task": "Task A: tumour vs tumour-free liver tissue (96x96 px CT patch)",
+  "architecture": "Logistic Regression on 8 PCA features (control); C=10 (validation)",
+  "input": "frozen ImageNet EfficientNet-B0 GAP features (1280-d) of the 96x96 patch (feature extractor never trained on CT labels)",
+  "feature_source": "imagenet",
+  "labels": "LiTS expert masks via seongun/liver-tumor-classification (verified pixel-exact)",
+  "split_file": "data/manifests/split_v8.csv",
+  "validation_status": "held-out test split, research only",
+  "clinical_use": "NOT validated for clinical use",
+  "validation_auc_selection": 0.7660919540229885,
+  "calibration": {
+    "mu": 1.4315820451591372,
+    "sd": 3.854155303303889,
+    "a": 1.223659713412442,
+    "b": 0.596100868396831,
+    "min_slope": 0.001
+  },
+  "calibration_status": "platt_on_validation",
+  "threshold": 0.5252844490314728,
+  "threshold_rule": "Youden J on validation (calibrated probability)",
+  "validation_score_check": {
+    "constant_scores": false,
+    "ok": true
+  },
+  "inference_seconds_per_patch": 0.020010395067524084,
+  "family": "classical",
+  "model_id": "pca8_logreg",
+  "npz_sha256": "c31bc924795e06c6c69b79c83cc03acc62ff8e9a6ab40c8d80ebf958463b5548",
+  "status": "trained",
+  "saved_utc": "2026-11-06T05:16:11+00:00",
+  "test_summary": {
+    "auc": 0.6341463414634146,
+    "auc_ci95": [
+      0.583118626350348,
+      0.8977806069958848
+    ],
+    "sensitivity": 0.5664893617021277,
+    "specificity": 0.6463414634146342,
+    "f1": 0.6301775147928995,
+    "accuracy": 0.5980707395498392,
+    "pr_auc": 0.7620297463309038,
+    "ece": 0.11067395469791856,
+    "brier": 0.2449445358271812,
+    "sensitivity_ci95": [
+      0.5119361417700693,
+      0.9111111111111111
+    ],
+    "specificity_ci95": [
+      0.5924454310025897,
+      0.7779166666666659
+    ]
+  },
+  "validation_summary": {
+    "auc": 0.7660919540229885,
+    "sensitivity": 0.7988505747126436,
+    "specificity": 0.5727272727272728
+  }
+}

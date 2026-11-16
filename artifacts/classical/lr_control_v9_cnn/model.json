@@ -1,0 +1,60 @@
+{
+  "name": "Logistic regression (control for the VQC) (8 qubits, CNN features)",
+  "kind": "v9_lr_control",
+  "version": "v9",
+  "features": "cnn25d_v9",
+  "feature_description": "64-d embedding (penultimate layer) of the selected V9 2.5-D CNN (cnn25d_v9_a4_res_se_focal, trained on the training split only)",
+  "configuration": {
+    "qubits": 8,
+    "C": 0.01
+  },
+  "selection": "highest validation ROC-AUC in the sweep",
+  "validation_auc": 0.9989550679205851,
+  "training_status": "TRAINED",
+  "labels": "LiTS expert masks (verified)",
+  "clinical_use": "NOT validated for clinical use",
+  "calibration": {
+    "mu": 0.8122295081971661,
+    "sd": 1.0594904586502036,
+    "a": 11.972101909546817,
+    "b": 2.896144061317832,
+    "min_slope": 0.001
+  },
+  "calibration_status": "platt_on_validation",
+  "threshold": 0.5758597827247234,
+  "threshold_rule": "Youden J on validation (calibrated probability)",
+  "validation_score_check": {
+    "constant_scores": false,
+    "ok": true
+  },
+  "inference_seconds_per_patch": 0.0101142,
+  "family": "classical",
+  "model_id": "lr_control_v9_cnn",
+  "npz_sha256": "524b458aea0d8d7cd3830aa3c3238a16b53268c237a153e978b420c177f3a3b3",
+  "status": "trained",
+  "saved_utc": "2026-11-06T11:05:07+00:00",
+  "role": "control",
+  "role_order": 4,
+  "test_summary": {
+    "auc": 0.9983350631378654,
+    "auc_ci95": [
+      0.9968016710420972,
+      1.0
+    ],
+    "sensitivity": 0.9946808510638298,
+    "specificity": 0.9186991869918699,
+    "f1": 0.9714285714285714,
+    "accuracy": 0.9646302250803859,
+    "pr_auc": 0.9989450650790035,
+    "ece": 0.044831529748286365
+  },
+  "validation_summary": {
+    "auc": 0.9989550679205851
+  },
+  "train_seconds": 0.0,
+  "parameters": 9,
+  "head_inference_ms_per_patch": 0.0002,
+  "feature_ms_per_patch": 10.114,
+  "inference_timing_note": "head + feature extraction on 2 CPU cores; circuits simulated exactly",
+  "support_vectors": null
+}

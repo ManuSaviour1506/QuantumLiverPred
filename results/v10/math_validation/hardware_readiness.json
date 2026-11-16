@@ -1,0 +1,69 @@
+{
+  "rows": [
+    {
+      "circuit": "V9 VQC 8q 2L (ring)",
+      "qubits": 8,
+      "one_qubit_gates": 48,
+      "two_qubit_gates": 16,
+      "depth": 22,
+      "two_qubit_depth": 16,
+      "needs_non_nearest_neighbour_coupling_on_a_line": true
+    },
+    {
+      "circuit": "V10 VQC 8q 2L ring",
+      "qubits": 8,
+      "one_qubit_gates": 56,
+      "two_qubit_gates": 16,
+      "depth": 23,
+      "two_qubit_depth": 16,
+      "needs_non_nearest_neighbour_coupling_on_a_line": true
+    },
+    {
+      "circuit": "V10 VQC 8q 2L linear",
+      "qubits": 8,
+      "one_qubit_gates": 56,
+      "two_qubit_gates": 14,
+      "depth": 16,
+      "two_qubit_depth": 9,
+      "needs_non_nearest_neighbour_coupling_on_a_line": false
+    },
+    {
+      "circuit": "V10 VQC 8q 2L brick",
+      "qubits": 8,
+      "one_qubit_gates": 56,
+      "two_qubit_gates": 14,
+      "depth": 11,
+      "two_qubit_depth": 4,
+      "needs_non_nearest_neighbour_coupling_on_a_line": false
+    },
+    {
+      "circuit": "V9 ZZ map 4q reps 2 (linear)",
+      "qubits": 4,
+      "one_qubit_gates": 22,
+      "two_qubit_gates": 12,
+      "depth": 19,
+      "two_qubit_depth": 10,
+      "needs_non_nearest_neighbour_coupling_on_a_line": false
+    },
+    {
+      "circuit": "compute-uncompute kernel circuit 4q",
+      "qubits": 4,
+      "one_qubit_gates": 44,
+      "two_qubit_gates": 24,
+      "depth": 38,
+      "two_qubit_depth": 20,
+      "needs_non_nearest_neighbour_coupling_on_a_line": false
+    },
+    {
+      "circuit": "compute-uncompute kernel circuit 8q",
+      "qubits": 8,
+      "one_qubit_gates": 92,
+      "two_qubit_gates": 56,
+      "depth": 62,
+      "two_qubit_depth": 36,
+      "needs_non_nearest_neighbour_coupling_on_a_line": false
+    }
+  ],
+  "transpiled": false,
+  "note": "logical counts before compilation; no transpilation was done (Qiskit not installed). A ring entangler needs a ring of couplers or SWAP insertion on line or heavy-hex layouts; no hardware was used"
+}

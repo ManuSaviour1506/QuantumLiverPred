@@ -1,0 +1,9 @@
+15:52:46 v10_hist_gb_radiomics: config {'learning_rate': 0.05, 'max_depth': 3} (most frequent inner-loop selection (6 of 8 outer folds)); 2449 patches, 8 units, seed 0
+15:53:21   calibration fold G01: within-unit AUC 0.99617608369788
+15:53:43   calibration fold G02: within-unit AUC 0.8295454545454546
+15:54:19   calibration fold G03: within-unit AUC 1.0
+15:54:23   calibration fold G04: within-unit AUC 0.9990138067061144
+15:54:28   calibration fold G05: within-unit AUC 0.8135964912280702
+15:55:02   calibration fold G06+G07: within-unit AUC 0.8665998595337204
+15:55:22   calibration fold G08+G09: within-unit AUC 0.9812636165577342
+15:55:44   calibration fold G10: within-unit AUC 1.0

@@ -1,0 +1,9 @@
+15:52:39 v10_extra_trees_radiomics: config {'max_depth': 8, 'min_samples_leaf': 5} (most frequent inner-loop selection (3 of 8 outer folds)); 2449 patches, 8 units, seed 0
+15:52:40   calibration fold G01: within-unit AUC 0.9816910887454495
+15:52:41   calibration fold G02: within-unit AUC 0.7790404040404041
+15:52:41   calibration fold G03: within-unit AUC 1.0
+15:52:42   calibration fold G04: within-unit AUC 1.0
+15:52:42   calibration fold G05: within-unit AUC 0.7676315789473684
+15:52:43   calibration fold G06+G07: within-unit AUC 0.8810147832194186
+15:52:43   calibration fold G08+G09: within-unit AUC 0.9825708061002179
+15:52:44   calibration fold G10: within-unit AUC 0.9921104536489151

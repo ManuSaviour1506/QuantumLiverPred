@@ -1,0 +1,43 @@
+{
+ "family": "secondary",
+ "comparisons": {
+  "vqc vs logreg_pca4": {
+   "mean_difference": -0.012508017181827242,
+   "p_two_sided": 0.671875,
+   "units": 7,
+   "smallest_attainable_p": 0.015625,
+   "units_favouring_first": 4,
+   "units_favouring_second": 3,
+   "per_unit": {
+    "G01": 0.06675028296980645,
+    "G02": -0.014730639730639816,
+    "G04": 0.018244575936883667,
+    "G05": 0.03824561403508764,
+    "G06+G07": 0.01513153011174495,
+    "G08+G09": -0.12244008714596943,
+    "G10": -0.08875739644970415
+   },
+   "p_holm": 0.671875,
+   "interpretation": "not significant: this is NOT evidence of equivalence"
+  },
+  "qksvm vs svm_rbf_pca4": {
+   "mean_difference": -0.006327823613637183,
+   "p_two_sided": 0.3125,
+   "units": 7,
+   "smallest_attainable_p": 0.015625,
+   "units_favouring_first": 3,
+   "units_favouring_second": 4,
+   "per_unit": {
+    "G01": -0.013980238000550704,
+    "G02": 0.0028058361391695152,
+    "G04": -0.022189349112425982,
+    "G05": 0.008596491228070269,
+    "G06+G07": -0.01789803061708095,
+    "G08+G09": 0.01612200435729849,
+    "G10": -0.01775147928994092
+   },
+   "p_holm": 0.625,
+   "interpretation": "not significant: this is NOT evidence of equivalence"
+  }
+ }
+}

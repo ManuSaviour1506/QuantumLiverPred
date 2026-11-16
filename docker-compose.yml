@@ -1,0 +1,65 @@
+# Local / single-server deployment: PostgreSQL, API, background worker and nginx-served frontend.
+#   cp .env.example .env   (set JWT_SECRET and POSTGRES_PASSWORD)
+#   docker compose up --build            -> http://localhost:8080 (API also on http://localhost:8000)
+#   docker compose exec backend python -m app.db.migrate upgrade        (also run automatically at start)
+#   docker compose exec backend python -m app.manage create-admin --email you@example.org
+#   docker compose exec backend python -m pytest                         (backend test suite, temporary SQLite DB)
+#   curl http://localhost:8000/health
+name: liver-tumour-intelligence
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-lti}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: ${POSTGRES_DB:-lti}
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-lti} -d ${POSTGRES_DB:-lti}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+
+  backend:
+    build: { context: ., dockerfile: docker/backend.Dockerfile, args: { INSTALL_TEST_DEPS: "true" } }
+    env_file: [.env]
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-lti}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-lti}
+      WORKER_MODE: external
+      DATASET_ROOTS: /data
+      LTI_DATASET_DIR: /data/liver_ct_lits_verified_v8
+      FORWARDED_ALLOW_IPS: 172.16.0.0/12,10.0.0.0/8,192.168.0.0/16   # the nginx container on the compose network
+    command: ["sh", "-c", "python -m app.db.migrate upgrade && exec uvicorn app.main:app --host 0.0.0.0 --port 8000 --proxy-headers --forwarded-allow-ips=\"$$FORWARDED_ALLOW_IPS\""]
+    volumes:
+      - storage:/srv/data
+      - ${LTI_DATASET_HOST_DIR:-./dataset}:/data:ro   # the project's dataset/ folder (incl. liver_ct_lits_verified_v8 if present)
+    ports: ["127.0.0.1:8000:8000"]   # direct API access from this machine only; public traffic goes through nginx
+    depends_on: { db: { condition: service_healthy } }
+    restart: unless-stopped
+
+  worker:
+    build: { context: ., dockerfile: docker/backend.Dockerfile }
+    env_file: [.env]
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-lti}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-lti}
+      WORKER_MODE: external
+      DATASET_ROOTS: /data
+      LTI_DATASET_DIR: /data/liver_ct_lits_verified_v8
+    command: ["python", "-m", "app.worker"]
+    volumes:
+      - storage:/srv/data
+      - ${LTI_DATASET_HOST_DIR:-./dataset}:/data:ro   # the project's dataset/ folder (incl. liver_ct_lits_verified_v8 if present)
+    depends_on: { backend: { condition: service_healthy } }
+    healthcheck: { disable: true }
+    restart: unless-stopped
+
+  frontend:
+    build: { context: ., dockerfile: docker/frontend.Dockerfile }
+    ports: ["8080:80"]
+    depends_on: [backend]
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+  storage:

@@ -1,0 +1,79 @@
+{
+  "name": "Quantum Kernel SVM (8 qubits, fine-tuned features)",
+  "kind": "quantum_kernel",
+  "task": "Task A: tumour vs tumour-free liver tissue (96x96 px CT patch)",
+  "architecture": "standardise -> PCA(8) -> [0, pi] -> x bandwidth; ZZ feature map (2 reps, linear entanglement); fidelity kernel |<psi(x)|psi(x')>|^2; SVC (precomputed kernel, class-balanced)",
+  "input": "GAP features (1280-d) of the fine-tuned EfficientNet-B0 (efficientnet_b0_ft, trained on the training split only)",
+  "feature_source": "finetuned",
+  "labels": "LiTS expert masks via seongun/liver-tumor-classification (verified pixel-exact)",
+  "split_file": "data/manifests/split_v8.csv",
+  "validation_status": "held-out test split, research only",
+  "clinical_use": "NOT validated for clinical use",
+  "quantum_backend": {
+    "execution": "simulator",
+    "simulator": "NumPy exact state-vector (src/quantum/simulator.py)",
+    "hardware": "none - no quantum hardware was used",
+    "shots": "exact expectation values (no shot noise)"
+  },
+  "qubits": 8,
+  "feature_map_reps": 2,
+  "bandwidth": 0.05,
+  "C": 10.0,
+  "support_vectors": 120,
+  "kernel_stats": {
+    "mean_offdiag": 0.8092461335446737,
+    "min_eig": 1.6115061952308682e-08
+  },
+  "validation_auc_selection": 0.9359456635318705,
+  "training": {
+    "train_seconds": 13.1,
+    "grid": "bandwidth {0.05,0.1,0.25,0.5,1} x C {0.1,1,10}"
+  },
+  "calibration": {
+    "mu": 0.5116589606367273,
+    "sd": 1.4321578518275577,
+    "a": 2.9026168528396976,
+    "b": 0.7240977060715327,
+    "min_slope": 0.001
+  },
+  "calibration_status": "platt_on_validation",
+  "threshold": 0.7303334391491972,
+  "threshold_rule": "Youden J on validation (calibrated probability)",
+  "validation_score_check": {
+    "constant_scores": false,
+    "ok": true
+  },
+  "inference_seconds_per_patch": 0.035148800368166894,
+  "family": "quantum",
+  "model_id": "qkernel_svm_8q_ft",
+  "npz_sha256": "f7d82113cac0f8986c7bbcca322d2079cd8ef8d8b667b571ae1d48035d5182fc",
+  "status": "trained",
+  "saved_utc": "2026-11-06T05:39:50+00:00",
+  "test_summary": {
+    "auc": 0.8707619788963847,
+    "auc_ci95": [
+      0.8428650312639476,
+      0.9677795781893005
+    ],
+    "sensitivity": 0.5345744680851063,
+    "specificity": 0.9308943089430894,
+    "f1": 0.6767676767676767,
+    "accuracy": 0.6913183279742765,
+    "pr_auc": 0.9126686700357834,
+    "ece": 0.1304779954612707,
+    "brier": 0.1696538794243228,
+    "sensitivity_ci95": [
+      0.4777756812989556,
+      0.6888888888888889
+    ],
+    "specificity_ci95": [
+      0.8888888888888888,
+      1.0
+    ]
+  },
+  "validation_summary": {
+    "auc": 0.9359456635318705,
+    "sensitivity": 0.8103448275862069,
+    "specificity": 0.9181818181818182
+  }
+}

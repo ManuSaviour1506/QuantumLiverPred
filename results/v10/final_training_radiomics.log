@@ -1,0 +1,215 @@
+== start 2026-11-12T15:52:21Z
+15:52:23 v10_logreg_radiomics: config {'C': 10.0} (most frequent inner-loop selection (6 of 8 outer folds)); 2449 patches, 8 units, seed 0
+15:52:23   calibration fold G01: within-unit AUC 0.9970785279451804
+15:52:23   calibration fold G02: within-unit AUC 0.9638047138047138
+15:52:23   calibration fold G03: within-unit AUC 1.0
+15:52:23   calibration fold G04: within-unit AUC 1.0
+15:52:23   calibration fold G05: within-unit AUC 0.848421052631579
+15:52:23   calibration fold G06+G07: within-unit AUC 0.9758523619462003
+15:52:23   calibration fold G08+G09: within-unit AUC 0.9973856209150327
+15:52:23   calibration fold G10: within-unit AUC 0.9822485207100592
+saved artifacts/v10/v10_logreg_radiomics
+15:52:23 v10_decision_tree_radiomics: config {'max_depth': 6, 'min_samples_leaf': 20} (most frequent inner-loop selection (7 of 8 outer folds)); 2449 patches, 8 units, seed 0
+15:52:23   calibration fold G01: within-unit AUC 0.9044556272752302
+15:52:23   calibration fold G02: within-unit AUC 0.5316358024691358
+15:52:23   calibration fold G03: within-unit AUC 0.7051282051282052
+15:52:23   calibration fold G04: within-unit AUC 0.8651380670611439
+15:52:24   calibration fold G05: within-unit AUC 0.6252631578947369
+15:52:24   calibration fold G06+G07: within-unit AUC 0.8295618708281229
+15:52:24   calibration fold G08+G09: within-unit AUC 0.8461873638344226
+15:52:24   calibration fold G10: within-unit AUC 0.9615384615384616
+saved artifacts/v10/v10_decision_tree_radiomics
+15:52:24 v10_random_forest_radiomics: config {'max_depth': 8, 'min_samples_leaf': 1} (most frequent inner-loop selection (5 of 8 outer folds)); 2449 patches, 8 units, seed 0
+15:52:25   calibration fold G01: within-unit AUC 0.9712441494080578
+15:52:27   calibration fold G02: within-unit AUC 0.8352974186307519
+15:52:29   calibration fold G03: within-unit AUC 1.0
+15:52:31   calibration fold G04: within-unit AUC 1.0
+15:52:33   calibration fold G05: within-unit AUC 0.7591228070175439
+15:52:34   calibration fold G06+G07: within-unit AUC 0.8573924662110077
+15:52:36   calibration fold G08+G09: within-unit AUC 0.9882352941176471
+15:52:37   calibration fold G10: within-unit AUC 1.0
+saved artifacts/v10/v10_random_forest_radiomics
+15:52:39 v10_extra_trees_radiomics: config {'max_depth': 8, 'min_samples_leaf': 5} (most frequent inner-loop selection (3 of 8 outer folds)); 2449 patches, 8 units, seed 0
+15:52:40   calibration fold G01: within-unit AUC 0.9816910887454495
+15:52:41   calibration fold G02: within-unit AUC 0.7790404040404041
+15:52:41   calibration fold G03: within-unit AUC 1.0
+15:52:42   calibration fold G04: within-unit AUC 1.0
+15:52:42   calibration fold G05: within-unit AUC 0.7676315789473684
+15:52:43   calibration fold G06+G07: within-unit AUC 0.8810147832194186
+15:52:43   calibration fold G08+G09: within-unit AUC 0.9825708061002179
+15:52:44   calibration fold G10: within-unit AUC 0.9921104536489151
+saved artifacts/v10/v10_extra_trees_radiomics
+15:52:45 v10_svm_rbf_radiomics: config {'C': 3.0, 'gamma': 0.01} (most frequent inner-loop selection (8 of 8 outer folds)); 2449 patches, 8 units, seed 0
+15:52:45   calibration fold G01: within-unit AUC 0.9008687937838417
+15:52:45   calibration fold G02: within-unit AUC 0.9308361391694725
+15:52:45   calibration fold G03: within-unit AUC 0.9935897435897436
+15:52:45   calibration fold G04: within-unit AUC 1.0
+15:52:45   calibration fold G05: within-unit AUC 0.9142105263157895
+15:52:45   calibration fold G06+G07: within-unit AUC 0.9591134636357926
+15:52:45   calibration fold G08+G09: within-unit AUC 0.9899782135076253
+15:52:45   calibration fold G10: within-unit AUC 0.9881656804733728
+saved artifacts/v10/v10_svm_rbf_radiomics
+15:52:45 v10_knn_radiomics: config {'n_neighbors': 21, 'weights': 'uniform'} (most frequent inner-loop selection (7 of 8 outer folds)); 2449 patches, 8 units, seed 0
+15:52:45   calibration fold G01: within-unit AUC 0.8134311236195663
+15:52:46   calibration fold G02: within-unit AUC 0.7187850729517397
+15:52:46   calibration fold G03: within-unit AUC 0.9871794871794872
+15:52:46   calibration fold G04: within-unit AUC 1.0
+15:52:46   calibration fold G05: within-unit AUC 0.7531578947368421
+15:52:46   calibration fold G06+G07: within-unit AUC 0.6869571920448122
+15:52:46   calibration fold G08+G09: within-unit AUC 0.9854030501089325
+15:52:46   calibration fold G10: within-unit AUC 0.7307692307692307
+saved artifacts/v10/v10_knn_radiomics
+15:52:46 v10_hist_gb_radiomics: config {'learning_rate': 0.05, 'max_depth': 3} (most frequent inner-loop selection (6 of 8 outer folds)); 2449 patches, 8 units, seed 0
+15:53:21   calibration fold G01: within-unit AUC 0.99617608369788
+15:53:43   calibration fold G02: within-unit AUC 0.8295454545454546
+15:54:19   calibration fold G03: within-unit AUC 1.0
+15:54:23   calibration fold G04: within-unit AUC 0.9990138067061144
+15:54:28   calibration fold G05: within-unit AUC 0.8135964912280702
+15:55:02   calibration fold G06+G07: within-unit AUC 0.8665998595337204
+15:55:22   calibration fold G08+G09: within-unit AUC 0.9812636165577342
+15:55:44   calibration fold G10: within-unit AUC 1.0
+saved artifacts/v10/v10_hist_gb_radiomics
+15:56:25 v10_mlp_small_radiomics: config {'alpha': 0.1, 'hidden': 8} (most frequent inner-loop selection (3 of 8 outer folds)); 2449 patches, 8 units, seed 0
+15:56:25   calibration fold G01: within-unit AUC 0.98591269234299
+15:56:25   calibration fold G02: within-unit AUC 0.8444163860830527
+15:56:25   calibration fold G03: within-unit AUC 1.0
+15:56:25   calibration fold G04: within-unit AUC 1.0
+15:56:25   calibration fold G05: within-unit AUC 0.7523684210526316
+15:56:25   calibration fold G06+G07: within-unit AUC 0.895523922092605
+15:56:26   calibration fold G08+G09: within-unit AUC 0.9908496732026144
+15:56:26   calibration fold G10: within-unit AUC 0.9644970414201184
+saved artifacts/v10/v10_mlp_small_radiomics
+15:56:26 v10_logreg_pca4_radiomics: config {'C': 10.0} (most frequent inner-loop selection (7 of 8 outer folds)); 2449 patches, 8 units, seed 0
+15:56:26   calibration fold G01: within-unit AUC 0.995793692067668
+15:56:26   calibration fold G02: within-unit AUC 0.638327721661055
+15:56:26   calibration fold G03: within-unit AUC 1.0
+15:56:26   calibration fold G04: within-unit AUC 0.997534516765286
+15:56:26   calibration fold G05: within-unit AUC 0.6978947368421052
+15:56:26   calibration fold G06+G07: within-unit AUC 0.9579286362779862
+15:56:26   calibration fold G08+G09: within-unit AUC 0.9729847494553376
+15:56:26   calibration fold G10: within-unit AUC 0.9940828402366864
+saved artifacts/v10/v10_logreg_pca4_radiomics
+15:56:26 v10_svm_rbf_pca4_radiomics: config {'C': 0.3, 'gamma': 0.1} (most frequent inner-loop selection (5 of 8 outer folds)); 2449 patches, 8 units, seed 0
+15:56:26   calibration fold G01: within-unit AUC 0.8019976138762275
+15:56:26   calibration fold G02: within-unit AUC 0.6453423120089786
+15:56:26   calibration fold G03: within-unit AUC 0.9807692307692307
+15:56:26   calibration fold G04: within-unit AUC 0.9990138067061144
+15:56:26   calibration fold G05: within-unit AUC 0.7499122807017544
+15:56:26   calibration fold G06+G07: within-unit AUC 0.8848661858837099
+15:56:27   calibration fold G08+G09: within-unit AUC 0.9185185185185185
+15:56:27   calibration fold G10: within-unit AUC 1.0
+saved artifacts/v10/v10_svm_rbf_pca4_radiomics
+15:56:29 v10_vqc_radiomics: config {'layers': 1, 'readout': 'linear_z'} (most frequent inner-loop selection (8 of 8 outer folds)); 2449 patches, 8 units, seed 0
+15:56:34   calibration fold G01: within-unit AUC 0.98400073419193
+15:56:39   calibration fold G02: within-unit AUC 0.6603535353535354
+15:56:45   calibration fold G03: within-unit AUC 0.9935897435897436
+15:56:50   calibration fold G04: within-unit AUC 0.9945759368836292
+15:56:55   calibration fold G05: within-unit AUC 0.7414035087719298
+15:56:57   calibration fold G06+G07: within-unit AUC 0.8951756113994667
+15:57:03   calibration fold G08+G09: within-unit AUC 0.9642701525054467
+15:57:09   calibration fold G10: within-unit AUC 0.8560157790927022
+saved artifacts/v10/v10_vqc_radiomics
+15:57:17 v10_qksvm_radiomics: config {'C': 0.3, 'bandwidth': 0.25, 'pair': 'product'} (most frequent inner-loop selection (5 of 8 outer folds)); 2449 patches, 8 units, seed 0
+15:57:20   calibration fold G01: within-unit AUC 0.9850102480956897
+15:57:25   calibration fold G02: within-unit AUC 0.6412738496071829
+15:57:30   calibration fold G03: within-unit AUC 1.0
+15:57:36   calibration fold G04: within-unit AUC 1.0
+15:57:40   calibration fold G05: within-unit AUC 0.727719298245614
+15:57:41   calibration fold G06+G07: within-unit AUC 0.9449412154330187
+15:57:47   calibration fold G08+G09: within-unit AUC 0.9607843137254902
+15:57:52   calibration fold G10: within-unit AUC 1.0
+saved artifacts/v10/v10_qksvm_radiomics
+15:58:00 v10_hybrid_no_fusion_radiomics: config {'layers': 1, 'lr': 0.03} (most frequent inner-loop selection (5 of 8 outer folds)); 2449 patches, 8 units, seed 0
+15:58:05   calibration fold G01: within-unit AUC 0.8886628529474747
+15:58:11   calibration fold G02: within-unit AUC 0.9243827160493827
+15:58:17   calibration fold G03: within-unit AUC 0.967948717948718
+15:58:23   calibration fold G04: within-unit AUC 0.9965483234714004
+15:58:28   calibration fold G05: within-unit AUC 0.8858771929824562
+15:58:32   calibration fold G06+G07: within-unit AUC 0.9126225511188767
+15:58:37   calibration fold G08+G09: within-unit AUC 0.9830065359477124
+15:58:43   calibration fold G10: within-unit AUC 0.6390532544378699
+saved artifacts/v10/v10_hybrid_no_fusion_radiomics
+15:58:49 v10_hybrid_twin_radiomics: config {'layers': 2, 'lr': 0.03} (most frequent inner-loop selection (4 of 8 outer folds)); 2449 patches, 8 units, seed 0
+15:58:49   calibration fold G01: within-unit AUC 0.9861880143167426
+15:58:49   calibration fold G02: within-unit AUC 0.9754489337822672
+15:58:49   calibration fold G03: within-unit AUC 0.9935897435897436
+15:58:50   calibration fold G04: within-unit AUC 0.9812623274161736
+15:58:50   calibration fold G05: within-unit AUC 0.8097368421052632
+15:58:50   calibration fold G06+G07: within-unit AUC 0.8520336205469049
+15:58:50   calibration fold G08+G09: within-unit AUC 0.9921568627450981
+15:58:50   calibration fold G10: within-unit AUC 0.9526627218934911
+saved artifacts/v10/v10_hybrid_twin_radiomics
+15:58:50 v10_hybrid_feature_fusion_radiomics: config {'layers': 1, 'lr': 0.03} (most frequent inner-loop selection (5 of 8 outer folds)); 2449 patches, 8 units, seed 0
+15:58:55   calibration fold G01: within-unit AUC 0.9712594450732662
+15:59:01   calibration fold G02: within-unit AUC 0.9789562289562289
+15:59:06   calibration fold G03: within-unit AUC 0.9871794871794872
+15:59:12   calibration fold G04: within-unit AUC 0.9960552268244576
+15:59:17   calibration fold G05: within-unit AUC 0.8557894736842105
+15:59:20   calibration fold G06+G07: within-unit AUC 0.9474307803872529
+15:59:25   calibration fold G08+G09: within-unit AUC 0.987363834422658
+15:59:31   calibration fold G10: within-unit AUC 0.8619329388560157
+saved artifacts/v10/v10_hybrid_feature_fusion_radiomics
+15:59:37 v10_late_fusion_radiomics: config {'C': 1.0} (most frequent inner-loop selection (8 of 8 outer folds)); 2449 patches, 8 units, seed 0
+15:59:45   calibration fold G01: within-unit AUC 0.9972773715928905
+15:59:53   calibration fold G02: within-unit AUC 0.8569023569023569
+16:00:03   calibration fold G03: within-unit AUC 0.9935897435897436
+16:00:13   calibration fold G04: within-unit AUC 1.0
+16:00:22   calibration fold G05: within-unit AUC 0.8435964912280701
+16:00:27   calibration fold G06+G07: within-unit AUC 0.9104470367896033
+16:00:37   calibration fold G08+G09: within-unit AUC 0.9908496732026144
+16:00:47   calibration fold G10: within-unit AUC 0.8402366863905325
+saved artifacts/v10/v10_late_fusion_radiomics
+{'p2': 0.0, 'p1': 0.0, 'readout_error': 0.0, 'shots': 'exact', 'mean_abs_logit_change': 1.0870471189861064e-15, 'logit_correlation_with_ideal': 1.0, 'mean_abs_expectation': 0.4307077693724635, 'auc': 0.9218310767246938, 'auc_noiseless': 0.9218310767246938}
+{'p2': 0.001, 'p1': 0.0001, 'readout_error': 0.0, 'shots': 'exact', 'mean_abs_logit_change': 0.0045083371572128715, 'logit_correlation_with_ideal': 0.9999996065729209, 'mean_abs_expectation': 0.4296442098235513, 'auc': 0.9218310767246938, 'auc_noiseless': 0.9218310767246938}
+{'p2': 0.005, 'p1': 0.0005, 'readout_error': 0.0, 'shots': 'exact', 'mean_abs_logit_change': 0.022428412558330838, 'logit_correlation_with_ideal': 0.9999902015970782, 'mean_abs_expectation': 0.4254145440513147, 'auc': 0.9220116054158607, 'auc_noiseless': 0.9218310767246938}
+{'p2': 0.01, 'p1': 0.001, 'readout_error': 0.0, 'shots': 'exact', 'mean_abs_logit_change': 0.04457653075127133, 'logit_correlation_with_ideal': 0.9999609945990166, 'mean_abs_expectation': 0.42018280053326085, 'auc': 0.9218568665377176, 'auc_noiseless': 0.9218310767246938}
+{'p2': 0.03, 'p1': 0.003, 'readout_error': 0.0, 'shots': 'exact', 'mean_abs_logit_change': 0.13045079772910836, 'logit_correlation_with_ideal': 0.9996559010203977, 'mean_abs_expectation': 0.39984251781012403, 'auc': 0.9213410702772404, 'auc_noiseless': 0.9218310767246938}
+-> /home/claude/work/lti/liver_tumour_intelligence_v10/results/v10/noise/noise_study.json
+# Model registry
+
+41 servable of 63 registered.
+
+| id | family | architecture | version | status | training | execution | primary metric |
+|---|---|---|---|---|---|---|---|
+v10_decision_tree_radiomics {'G01': 1.0, 'G02': 0.949, 'G03': 1.0, 'G04': 0.988, 'G05': 0.884, 'G06': 0.999, 'G07': 1.0, 'G08': 1.0, 'G09': 1.0, 'G10': 0.989}
+v10_extra_trees_radiomics {'G01': 1.0, 'G02': 0.874, 'G03': 1.0, 'G04': 1.0, 'G05': 0.855, 'G06': 1.0, 'G07': 1.0, 'G08': 1.0, 'G09': 1.0, 'G10': 1.0}
+v10_hist_gb_radiomics {'G01': 1.0, 'G02': 1.0, 'G03': 1.0, 'G04': 1.0, 'G05': 1.0, 'G06': 1.0, 'G07': 1.0, 'G08': 1.0, 'G09': 1.0, 'G10': 1.0}
+v10_hybrid_twin_radiomics {'G01': 1.0, 'G02': 0.988, 'G03': 1.0, 'G04': 1.0, 'G05': 0.956, 'G06': 0.999, 'G07': 1.0, 'G08': 0.933, 'G09': 1.0, 'G10': 1.0}
+v10_knn_radiomics {'G01': 1.0, 'G02': 0.882, 'G03': 1.0, 'G04': 1.0, 'G05': 0.843, 'G06': 0.999, 'G07': 1.0, 'G08': 1.0, 'G09': 1.0, 'G10': 1.0}
+v10_logreg_pca4_radiomics {'G01': 1.0, 'G02': 0.615, 'G03': 1.0, 'G04': 1.0, 'G05': 0.62, 'G06': 1.0, 'G07': 1.0, 'G08': 0.933, 'G09': 1.0, 'G10': 1.0}
+v10_logreg_radiomics {'G01': 1.0, 'G02': 0.959, 'G03': 1.0, 'G04': 1.0, 'G05': 0.925, 'G06': 0.999, 'G07': 1.0, 'G08': 1.0, 'G09': 1.0, 'G10': 1.0}
+v10_mlp_small_radiomics {'G01': 0.999, 'G02': 0.829, 'G03': 1.0, 'G04': 1.0, 'G05': 0.818, 'G06': 0.999, 'G07': 1.0, 'G08': 0.933, 'G09': 1.0, 'G10': 0.956}
+v10_random_forest_radiomics {'G01': 1.0, 'G02': 1.0, 'G03': 1.0, 'G04': 1.0, 'G05': 1.0, 'G06': 1.0, 'G07': 1.0, 'G08': 1.0, 'G09': 1.0, 'G10': 1.0}
+v10_svm_rbf_pca4_radiomics {'G01': 0.955, 'G02': 0.612, 'G03': 1.0, 'G04': 1.0, 'G05': 0.608, 'G06': 0.999, 'G07': 1.0, 'G08': 0.8, 'G09': 1.0, 'G10': 1.0}
+v10_svm_rbf_radiomics {'G01': 1.0, 'G02': 0.971, 'G03': 1.0, 'G04': 1.0, 'G05': 0.929, 'G06': 1.0, 'G07': 1.0, 'G08': 1.0, 'G09': 1.0, 'G10': 1.0}
+v10_hybrid_feature_fusion_radiomics {'G01': 1.0, 'G02': 1.0, 'G03': 1.0, 'G04': 1.0, 'G05': 1.0, 'G06': 1.0, 'G07': 1.0, 'G08': 1.0, 'G09': 1.0, 'G10': 0.978}
+v10_hybrid_no_fusion_radiomics {'G01': 1.0, 'G02': 0.991, 'G03': 1.0, 'G04': 1.0, 'G05': 1.0, 'G06': 1.0, 'G07': 1.0, 'G08': 1.0, 'G09': 1.0, 'G10': 0.978}
+v10_late_fusion_radiomics {'G01': 1.0, 'G02': 0.821, 'G03': 1.0, 'G04': 1.0, 'G05': 0.792, 'G06': 0.999, 'G07': 1.0, 'G08': 0.933, 'G09': 1.0, 'G10': 0.978}
+v10_qksvm_radiomics {'G01': 0.996, 'G02': 0.597, 'G03': 1.0, 'G04': 1.0, 'G05': 0.545, 'G06': 0.998, 'G07': 1.0, 'G08': 0.8, 'G09': 1.0, 'G10': 1.0}
+v10_vqc_radiomics {'G01': 0.999, 'G02': 0.635, 'G03': 1.0, 'G04': 1.0, 'G05': 0.614, 'G06': 0.997, 'G07': 1.0, 'G08': 0.8, 'G09': 1.0, 'G10': 0.956}
+logreg_radiomics_v9 {'G01': 0.955, 'G02': 0.888, 'G03': 1.0, 'G04': 1.0, 'G05': 0.956, 'G06': 1.0, 'G07': 1.0, 'G08': 1.0, 'G09': 1.0, 'G10': 0.733}
+lr_control_v9_cnn {'G01': 0.997, 'G02': 1.0, 'G03': 1.0, 'G04': 1.0, 'G05': 1.0, 'G06': 1.0, 'G07': 1.0, 'G08': 1.0, 'G09': 1.0, 'G10': 0.978}
+lr_control_v9_eff {'G01': 0.941, 'G02': 0.885, 'G03': 1.0, 'G04': 1.0, 'G05': 1.0, 'G06': 1.0, 'G07': 0.894, 'G08': 1.0, 'G09': 1.0, 'G10': 1.0}
+random_forest_radiomics_v9 {'G01': 0.961, 'G02': 0.888, 'G03': 1.0, 'G04': 1.0, 'G05': 1.0, 'G06': 1.0, 'G07': 0.923, 'G08': 1.0, 'G09': 1.0, 'G10': 0.978}
+rbf_control_v9_cnn {'G01': 0.974, 'G02': 1.0, 'G03': 1.0, 'G04': 1.0, 'G05': 1.0, 'G06': 1.0, 'G07': 1.0, 'G08': 1.0, 'G09': 1.0, 'G10': 0.978}
+rbf_control_v9_eff {'G01': 0.945, 'G02': 0.897, 'G03': 1.0, 'G04': 1.0, 'G05': 1.0, 'G06': 1.0, 'G07': 0.904, 'G08': 1.0, 'G09': 1.0, 'G10': 1.0}
+svm_rbf_radiomics_v9 {'G01': 0.882, 'G02': 0.894, 'G03': 1.0, 'G04': 1.0, 'G05': 0.956, 'G06': 1.0, 'G07': 1.0, 'G08': 1.0, 'G09': 0.974, 'G10': 1.0}
+twin_v9_cnn {'G01': 0.998, 'G02': 1.0, 'G03': 1.0, 'G04': 1.0, 'G05': 1.0, 'G06': 1.0, 'G07': 1.0, 'G08': 1.0, 'G09': 1.0, 'G10': 0.978}
+twin_v9_eff {'G01': 0.934, 'G02': 0.906, 'G03': 1.0, 'G04': 1.0, 'G05': 1.0, 'G06': 1.0, 'G07': 0.904, 'G08': 1.0, 'G09': 1.0, 'G10': 1.0}
+cnn25d_v9_a1_aug {'G01': 0.997, 'G02': 0.997, 'G03': 1.0, 'G04': 1.0, 'G05': 1.0, 'G06': 1.0, 'G07': 1.0, 'G08': 0.867, 'G09': 1.0, 'G10': 0.956}
+cnn25d_v9_a2_aug_focal {'G01': 0.999, 'G02': 0.988, 'G03': 1.0, 'G04': 1.0, 'G05': 1.0, 'G06': 1.0, 'G07': 1.0, 'G08': 0.867, 'G09': 1.0, 'G10': 1.0}
+cnn25d_v9_a3_res_se {'G01': 0.999, 'G02': 1.0, 'G03': 1.0, 'G04': 1.0, 'G05': 1.0, 'G06': 1.0, 'G07': 1.0, 'G08': 0.933, 'G09': 1.0, 'G10': 1.0}
+cnn25d_v9_a4_res_se_focal {'G01': 0.998, 'G02': 1.0, 'G03': 1.0, 'G04': 1.0, 'G05': 1.0, 'G06': 1.0, 'G07': 1.0, 'G08': 1.0, 'G09': 1.0, 'G10': 0.978}
+cnn2d_v9 {'G01': 0.999, 'G02': 0.985, 'G03': 1.0, 'G04': 1.0, 'G05': 0.994, 'G06': 1.0, 'G07': 1.0, 'G08': 1.0, 'G09': 1.0, 'G10': 1.0}
+Traceback (most recent call last):
+  File "/home/claude/work/lti/liver_tumour_intelligence_v10/scripts/evaluate_models.py", line 42, in <module>
+    p = m.predict_proba(ds["stacks25d"][idx])
+  File "/home/claude/work/lti/liver_tumour_intelligence_v10/src/v10/engine/v9_adapter.py", line 142, in predict_proba
+    _, prob = self.lm.probabilities(ctx)
+              ~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/claude/work/lti/liver_tumour_intelligence_v10/src/inference/registry.py", line 219, in probabilities
+    s = self.scores(ctx)
+  File "/home/claude/work/lti/liver_tumour_intelligence_v10/src/inference/registry.py", line 179, in scores
+    raise ModelIntegrityError("needs two slices above and two below")
+src.inference.artifacts.ModelIntegrityError: needs two slices above and two below
+== exit 1 2026-11-12T16:03:03Z

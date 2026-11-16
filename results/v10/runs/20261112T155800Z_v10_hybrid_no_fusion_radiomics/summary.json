@@ -1,0 +1,8 @@
+{
+ "status": "succeeded",
+ "started_utc": "2026-11-12T15:58:00+00:00",
+ "finished_utc": "2026-11-12T15:58:49+00:00",
+ "seconds": 48.7,
+ "artifact": "artifacts/v10/v10_hybrid_no_fusion_radiomics",
+ "dataset_version": "lits_verified_v8@2a9a4887bb322cfc"
+}

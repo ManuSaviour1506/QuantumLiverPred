@@ -1,0 +1,4 @@
+# Everything needed to run the backend, train / evaluate models and run the Python test suites.
+-r backend/requirements.txt
+pytest>=7.4            # tested 9.1.1
+requests>=2.31         # tested 2.34.2 (integration tests over real HTTP)

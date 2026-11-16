@@ -1,0 +1,55 @@
+{
+  "environment": {
+    "python": "3.13.18",
+    "platform": "Linux-6.18.44-fc-v378-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "cpu_count": 2,
+    "packages": {
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "sklearn": "1.9.1",
+      "pandas": "3.0.5",
+      "pennylane": null,
+      "qiskit": null,
+      "torch": null
+    },
+    "utc": "2026-11-11T19:01:16+00:00",
+    "execution": "classical simulation only; no quantum hardware"
+  },
+  "inputs_sha256": {},
+  "seeds": {
+    "all": "fixed seeds in code"
+  },
+  "steps": {
+    "simulator_checks": {
+      "status": "ok",
+      "seconds": 0.2
+    },
+    "readout_and_trainability": {
+      "status": "ok",
+      "seconds": 111.0
+    },
+    "parameter_accounting": {
+      "status": "ok",
+      "seconds": 36.2
+    },
+    "expressibility": {
+      "status": "ok",
+      "seconds": 18.8
+    },
+    "feature_maps_synthetic": {
+      "status": "ok",
+      "seconds": 0.2
+    },
+    "noise_validation": {
+      "status": "ok",
+      "seconds": 19.5
+    },
+    "hardware_readiness": {
+      "status": "ok",
+      "seconds": 0.0
+    }
+  },
+  "data": "synthetic only",
+  "command": "python scripts/v10_math_validation.py"
+}

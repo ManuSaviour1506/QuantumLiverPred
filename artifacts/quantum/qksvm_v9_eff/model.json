@@ -1,0 +1,73 @@
+{
+  "name": "Quantum Kernel SVM (4 qubits, V9, EFF features)",
+  "kind": "v9_qksvm",
+  "version": "v9",
+  "features": "effnet_ft_v8",
+  "feature_description": "GAP features (1280-d) of V8's fine-tuned EfficientNet-B0 (trained on the training split only)",
+  "configuration": {
+    "qubits": 4,
+    "bandwidth": 0.05,
+    "C": 10.0
+  },
+  "selection": "highest validation ROC-AUC in the sweep",
+  "validation_auc": 0.9485370950888191,
+  "training_status": "PARTIALLY TRAINED",
+  "labels": "LiTS expert masks (verified)",
+  "clinical_use": "NOT validated for clinical use",
+  "calibration": {
+    "mu": 0.5342023516617862,
+    "sd": 1.4337401578500537,
+    "a": 3.1609810473827964,
+    "b": 0.7475600376504333,
+    "min_slope": 0.001
+  },
+  "calibration_status": "platt_on_validation",
+  "threshold": 0.8470249620913364,
+  "threshold_rule": "Youden J on validation (calibrated probability)",
+  "validation_score_check": {
+    "constant_scores": false,
+    "ok": true
+  },
+  "inference_seconds_per_patch": 0.0174432,
+  "family": "quantum",
+  "quantum_backend": {
+    "execution": "simulator",
+    "simulator": "NumPy exact state-vector (src/quantum/simulator.py)",
+    "hardware": "none",
+    "noise": "noise-free unless stated (noise study in quantum_experiments.json)"
+  },
+  "circuit": {
+    "depth": 22,
+    "one_qubit_gates": 22,
+    "two_qubit_gates": 12,
+    "state_vector_bytes": 256
+  },
+  "model_id": "qksvm_v9_eff",
+  "npz_sha256": "0f2d854fe5152e0f6c7a5ecbbb8fb1dd1820a3742c4b6327f426886691a761c7",
+  "status": "trained",
+  "saved_utc": "2026-11-06T11:27:08+00:00",
+  "role": "experiment",
+  "role_order": 5,
+  "test_summary": {
+    "auc": 0.900060543158623,
+    "auc_ci95": [
+      0.8767536149427335,
+      0.9851944444444445
+    ],
+    "sensitivity": 0.43882978723404253,
+    "specificity": 0.991869918699187,
+    "f1": 0.6077348066298343,
+    "accuracy": 0.657556270096463,
+    "pr_auc": 0.9341925136652545,
+    "ece": 0.14030350546664905
+  },
+  "validation_summary": {
+    "auc": 0.9485370950888191
+  },
+  "train_seconds": 0.6,
+  "parameters": null,
+  "head_inference_ms_per_patch": 0.0172,
+  "feature_ms_per_patch": 17.426,
+  "inference_timing_note": "head + feature extraction on 2 CPU cores; circuits simulated exactly",
+  "support_vectors": 131
+}

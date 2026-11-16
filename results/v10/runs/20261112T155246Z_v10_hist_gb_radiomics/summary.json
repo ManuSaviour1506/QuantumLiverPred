@@ -1,0 +1,8 @@
+{
+ "status": "succeeded",
+ "started_utc": "2026-11-12T15:52:46+00:00",
+ "finished_utc": "2026-11-12T15:56:25+00:00",
+ "seconds": 218.4,
+ "artifact": "artifacts/v10/v10_hist_gb_radiomics",
+ "dataset_version": "lits_verified_v8@2a9a4887bb322cfc"
+}

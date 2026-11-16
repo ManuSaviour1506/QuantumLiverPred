@@ -1,0 +1,9 @@
+15:56:29 v10_vqc_radiomics: config {'layers': 1, 'readout': 'linear_z'} (most frequent inner-loop selection (8 of 8 outer folds)); 2449 patches, 8 units, seed 0
+15:56:34   calibration fold G01: within-unit AUC 0.98400073419193
+15:56:39   calibration fold G02: within-unit AUC 0.6603535353535354
+15:56:45   calibration fold G03: within-unit AUC 0.9935897435897436
+15:56:50   calibration fold G04: within-unit AUC 0.9945759368836292
+15:56:55   calibration fold G05: within-unit AUC 0.7414035087719298
+15:56:57   calibration fold G06+G07: within-unit AUC 0.8951756113994667
+15:57:03   calibration fold G08+G09: within-unit AUC 0.9642701525054467
+15:57:09   calibration fold G10: within-unit AUC 0.8560157790927022

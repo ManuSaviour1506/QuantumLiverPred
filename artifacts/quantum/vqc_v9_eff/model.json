@@ -1,0 +1,74 @@
+{
+  "name": "Variational Quantum Classifier (4 qubits, V9, EFF features)",
+  "kind": "v9_vqc",
+  "version": "v9",
+  "features": "effnet_ft_v8",
+  "feature_description": "GAP features (1280-d) of V8's fine-tuned EfficientNet-B0 (trained on the training split only)",
+  "configuration": {
+    "qubits": 4,
+    "layers": 3,
+    "trainable_map": true,
+    "readout": "z0"
+  },
+  "selection": "highest validation ROC-AUC in the sweep",
+  "validation_auc": 0.9565308254963427,
+  "training_status": "PARTIALLY TRAINED",
+  "labels": "LiTS expert masks (verified)",
+  "clinical_use": "NOT validated for clinical use",
+  "calibration": {
+    "mu": 0.9846639624487769,
+    "sd": 5.218737674752377,
+    "a": 2.7842178632304657,
+    "b": 0.974541483964634,
+    "min_slope": 0.001
+  },
+  "calibration_status": "platt_on_validation",
+  "threshold": 0.7811364666420034,
+  "threshold_rule": "Youden J on validation (calibrated probability)",
+  "validation_score_check": {
+    "constant_scores": false,
+    "ok": true
+  },
+  "inference_seconds_per_patch": 0.0174531,
+  "family": "quantum",
+  "quantum_backend": {
+    "execution": "simulator",
+    "simulator": "NumPy exact state-vector (src/quantum/simulator.py)",
+    "hardware": "none",
+    "noise": "noise-free unless stated (noise study in quantum_experiments.json)"
+  },
+  "circuit": {
+    "depth": 21,
+    "one_qubit_gates": 36,
+    "two_qubit_gates": 12,
+    "state_vector_bytes": 256
+  },
+  "model_id": "vqc_v9_eff",
+  "npz_sha256": "a9a881a38c96f4e35c58158153f34e40863d7d344173e8c49b172db6f8624d79",
+  "status": "trained",
+  "saved_utc": "2026-11-06T11:27:08+00:00",
+  "role": "experiment",
+  "role_order": 5,
+  "test_summary": {
+    "auc": 0.9073905898633456,
+    "auc_ci95": [
+      0.8806775577760041,
+      0.9955555555555556
+    ],
+    "sensitivity": 0.5345744680851063,
+    "specificity": 0.967479674796748,
+    "f1": 0.6871794871794871,
+    "accuracy": 0.7057877813504824,
+    "pr_auc": 0.9387284647135716,
+    "ece": 0.13819719157205895
+  },
+  "validation_summary": {
+    "auc": 0.9565308254963427
+  },
+  "train_seconds": 4.7,
+  "parameters": 34,
+  "head_inference_ms_per_patch": 0.0271,
+  "feature_ms_per_patch": 17.426,
+  "inference_timing_note": "head + feature extraction on 2 CPU cores; circuits simulated exactly",
+  "support_vectors": null
+}

@@ -1,0 +1,15 @@
+{
+ "model_id": "v10_logreg_pca4_radiomics",
+ "spec": "logreg_pca4",
+ "config": {
+  "C": 10.0
+ },
+ "selection": "most frequent inner-loop selection (7 of 8 outer folds)",
+ "preprocessing": {
+  "scaler": "standard",
+  "pca": 4
+ },
+ "seed": 0,
+ "features": "radiomics",
+ "architecture": null
+}

@@ -1,0 +1,39 @@
+{
+  "performed_utc": "2026-11-06",
+  "source_dataset": "seongun/liver-tumor-classification (Hugging Face), derived from the LiTS benchmark (doi:10.1016/j.media.2022.102680), CC BY-NC-SA 4.0",
+  "dataset_card_statements": [
+    "label: binary (Normal / Tumor present) assigned based on the segmentation mask",
+    "mask values: 0 = background, 127 = liver, 255 = tumour",
+    "w_sample: windowed CT slice used as network input"
+  ],
+  "why_this_source": "liver_final/backend/scripts/build_real_liver_dataset.py downloaded images/w_sample/{i}.png for i = 100..1899 from this dataset and saved them as ct_lits_####.png (numbering continued after the ct_slice files), choosing the folder by brightness rules.",
+  "method": {
+    "environment": "The build container could not reach huggingface.co; the verification ran in the user's desktop browser session (same logic as scripts/verify_labels.py --online). Results were transferred to the container as text and checked by SHA-256 on both sides.",
+    "pixel_matching": "For every upstream index 100..1899 the w_sample PNG was decoded (no colour management) and SHA-256 of the 512x512 grey values computed; the 1,745 local ct_lits files (decoded red channel; RGB channels identical) were hashed the same way and aligned in order.",
+    "label_derivation": "Each upstream mask was decoded; label = 1 if any pixel has value 255 (tumour). Compared with metadata.jsonl label.",
+    "mask_transfer": "The 476 tumour-slice masks were reduced to 64x64 three-class maps (argmax of background / liver / tumour pixel counts per 8x8 cell), packed 2 bits per cell, delta-coded between consecutive slices, raw-deflated and base64 encoded (mask_chunk0.txt, mask_chunk1.txt)."
+  },
+  "results": {
+    "upstream_metadata_rows": 3986,
+    "upstream_positive_rows": 1196,
+    "upstream_label_string_sha256": "a7df4ea68cb36e6fdfa1ec618c9958956c06da10b8207cbf8a2774943c1624b0",
+    "local_ct_lits_files": 1745,
+    "matched_pixel_exact": 1745,
+    "match_order": "monotonic: ct_lits_4237 = upstream 100 ... ct_lits_5981 = upstream 1899",
+    "upstream_indices_without_local_file": "322, 324-326, 328-330, 333-350, 668-697 (55; downloads that failed in the original script)",
+    "duplicate_upstream_hashes": 0,
+    "label_vs_mask_agreement": "1745 / 1745",
+    "tumour_slices": 476,
+    "no_tumour_slices": 1269,
+    "no_tumour_slices_with_any_liver_annotation": 0,
+    "per_slice_payload_sha256": "b948eb9ce538cf4a98ca312d51d0e39e0156b125feacd57fdc69f70355c56855",
+    "positive_counts_sha256": "0a9b2ba0b1c8ec090ea62a1559f52f67f2c0d14042e2c537bc359731c1c49317",
+    "masks_c3_raw_sha256": "3e0294e3a412761ce75d329f39e67aa4344617b684e13982005226a356341403",
+    "mask_chunk_sha256_prefixes": {"mask_chunk0.txt": "f24920b1ae21bf0c", "mask_chunk1.txt": "441eaa6cd056b8da"}
+  },
+  "consequence_for_v8": "No-tumour slices contain no liver at all, so slice-level tumour vs no-tumour labels are confounded with liver presence. V8 trains and compares all models on tumour vs tumour-free liver tissue patches defined by the expert masks.",
+  "not_used": {
+    "ct_slice_####.png (4,236)": "SofiaVouzika/Liver_Tumor: no dataset card, no documented label source, no patient ids; folder subtype assigned by row number - excluded",
+    "synthetic drawings (5)": "not CT acquisitions - excluded"
+  }
+}

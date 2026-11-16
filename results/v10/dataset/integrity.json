@@ -1,0 +1,1705 @@
+{
+  "checks": {
+    "files_present": {
+      "scans_folder": false,
+      "processed_patches_v8": false,
+      "processed_v9_5slice": false,
+      "processed_v9_seg": false,
+      "feature_cache": false,
+      "images_referenced_by_manifest": 5986,
+      "images_present": 0,
+      "pass": null,
+      "note": "image files are not part of the repository; image-level checks cannot run"
+    },
+    "labels": {
+      "rows": 1745,
+      "tumour": 476,
+      "no_tumour": 1269,
+      "label_values": [
+        0,
+        1
+      ],
+      "missing_values": 0,
+      "upstream_string_sha256": "a7df4ea68cb36e6fdfa1ec618c9958956c06da10b8207cbf8a2774943c1624b0",
+      "upstream_string_sha256_matches_record": true,
+      "labels_equal_upstream_string": true,
+      "file_number_to_index_mapping_monotonic": true,
+      "mask_index_equals_tumour_slices": true,
+      "split_file_identical_to_label_file": true,
+      "folder_not_used_as_label": true,
+      "mask_chunks_decode_to_stored_masks": true,
+      "label_vs_index_modulo_chi2": {
+        "upstream_index": {
+          "2": 0.022946387658052358,
+          "3": 0.003057302911227658,
+          "4": 0.05741260315948769,
+          "5": 0.2542502504112974,
+          "6": 0.0772180279098713,
+          "7": 0.21322412572070076,
+          "8": 0.20288449144878296,
+          "9": 0.3376757730761421,
+          "10": 0.4130978199033106
+        },
+        "file_number": {
+          "2": 0.0149224989241354,
+          "3": 0.03300773605064568,
+          "4": 0.07628709119683907,
+          "5": 0.24266444166319007,
+          "6": 0.09031520460026898,
+          "7": 0.21520679070188747,
+          "8": 0.30615230902956125,
+          "9": 0.9338592210474936,
+          "10": 0.6736751220691527
+        },
+        "row_position": {
+          "2": 0.014922498924135401,
+          "3": 0.03300773605064568,
+          "4": 0.07628709119683907,
+          "5": 0.24266444166319007,
+          "6": 0.09031520460026897,
+          "7": 0.2152067907018875,
+          "8": 0.30615230902956125,
+          "9": 0.9338592210474936,
+          "10": 0.6736751220691527
+        }
+      },
+      "max_residue_rate_deviation": 0.017097551445688974,
+      "label_changes_along_index": 27,
+      "pass": true
+    },
+    "masks": {
+      "masks": 476,
+      "shape": [
+        64,
+        64
+      ],
+      "values": [
+        0,
+        1,
+        2
+      ],
+      "tumour_cells_min_median_max": [
+        29,
+        128,
+        242
+      ],
+      "liver_cells_min_median_max": [
+        124,
+        443,
+        940
+      ],
+      "slices_without_tumour_cells": 0,
+      "corr_tumour_pixels_vs_cells": 0.9988894270036575,
+      "corr_liver_pixels_vs_cells": 0.9998452986115738,
+      "isolated_tumour_cells": 0,
+      "no_tumour_slices_with_liver_annotation": 0,
+      "pass": true
+    },
+    "task_a_patches": {
+      "patches": 2449,
+      "tumour": 1381,
+      "tumour_free_liver": 1068,
+      "fractions_not_reproduced": 0,
+      "label_rule_violations": 0,
+      "centre_cell_mismatches": 0,
+      "duplicate_coordinates": 0,
+      "patches_only_from_tumour_slices": true,
+      "group_split_scan_consistent_with_slice_table": true,
+      "missing_values": 0,
+      "patches_per_slice_mean": 5.144957983193278,
+      "pass": true
+    },
+    "gate_patches": {
+      "patches": 4661,
+      "liver": 2449,
+      "other": 2212,
+      "liver_patches_are_task_a_patches": true,
+      "other_patches_touching_liver": 43,
+      "of_which_at_image_edge_x0_or_y0": 43,
+      "other_patches_by_split": {
+        "train": 42,
+        "val": 1
+      },
+      "liver_fraction_range": [
+        0.3472222222222222,
+        0.5347222222222222
+      ],
+      "defect_cause": "V9 src/data/patches.py::sample_gate_negatives tests m[cy-half-1:cy+half+1, cx-half-1:cx+half+1] for liver; for cx = half (x = 0) or cy = half (y = 0) the start index is -1, the slice is empty and the liver test passes vacuously",
+      "affected_patches": [
+        {
+          "upstream_index": 1111,
+          "y": 240,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.3472222222222222
+        },
+        {
+          "upstream_index": 1141,
+          "y": 224,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.4166666666666667
+        },
+        {
+          "upstream_index": 1156,
+          "y": 256,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.3611111111111111
+        },
+        {
+          "upstream_index": 1158,
+          "y": 160,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.4027777777777778
+        },
+        {
+          "upstream_index": 1166,
+          "y": 224,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.4513888888888889
+        },
+        {
+          "upstream_index": 1167,
+          "y": 208,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.4722222222222222
+        },
+        {
+          "upstream_index": 1174,
+          "y": 176,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.4722222222222222
+        },
+        {
+          "upstream_index": 1175,
+          "y": 224,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.4513888888888889
+        },
+        {
+          "upstream_index": 1182,
+          "y": 160,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.4375
+        },
+        {
+          "upstream_index": 1182,
+          "y": 256,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.4027777777777778
+        },
+        {
+          "upstream_index": 1186,
+          "y": 256,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.4583333333333333
+        },
+        {
+          "upstream_index": 1192,
+          "y": 192,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.5347222222222222
+        },
+        {
+          "upstream_index": 1195,
+          "y": 160,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.4583333333333333
+        },
+        {
+          "upstream_index": 1196,
+          "y": 192,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.5277777777777778
+        },
+        {
+          "upstream_index": 1198,
+          "y": 224,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.5277777777777778
+        },
+        {
+          "upstream_index": 1198,
+          "y": 144,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.3611111111111111
+        },
+        {
+          "upstream_index": 1199,
+          "y": 192,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.5277777777777778
+        },
+        {
+          "upstream_index": 1201,
+          "y": 144,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.3541666666666667
+        },
+        {
+          "upstream_index": 1208,
+          "y": 176,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.4930555555555556
+        },
+        {
+          "upstream_index": 1210,
+          "y": 240,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.4930555555555556
+        },
+        {
+          "upstream_index": 1211,
+          "y": 208,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.5208333333333334
+        },
+        {
+          "upstream_index": 1212,
+          "y": 224,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.5138888888888888
+        },
+        {
+          "upstream_index": 1213,
+          "y": 240,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.4930555555555556
+        },
+        {
+          "upstream_index": 1214,
+          "y": 160,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.4166666666666667
+        },
+        {
+          "upstream_index": 1214,
+          "y": 224,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.5138888888888888
+        },
+        {
+          "upstream_index": 1215,
+          "y": 224,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.5138888888888888
+        },
+        {
+          "upstream_index": 1215,
+          "y": 176,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.4791666666666667
+        },
+        {
+          "upstream_index": 1216,
+          "y": 176,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.4791666666666667
+        },
+        {
+          "upstream_index": 1219,
+          "y": 160,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.3958333333333333
+        },
+        {
+          "upstream_index": 1220,
+          "y": 160,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.3958333333333333
+        },
+        {
+          "upstream_index": 1221,
+          "y": 192,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.5277777777777778
+        },
+        {
+          "upstream_index": 1222,
+          "y": 224,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.5347222222222222
+        },
+        {
+          "upstream_index": 1227,
+          "y": 240,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.5069444444444444
+        },
+        {
+          "upstream_index": 1233,
+          "y": 176,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.4027777777777778
+        },
+        {
+          "upstream_index": 1234,
+          "y": 208,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.4861111111111111
+        },
+        {
+          "upstream_index": 1236,
+          "y": 224,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.4861111111111111
+        },
+        {
+          "upstream_index": 1241,
+          "y": 224,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.4722222222222222
+        },
+        {
+          "upstream_index": 1245,
+          "y": 224,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.4652777777777778
+        },
+        {
+          "upstream_index": 1246,
+          "y": 240,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.4444444444444444
+        },
+        {
+          "upstream_index": 1249,
+          "y": 192,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.3819444444444444
+        },
+        {
+          "upstream_index": 1251,
+          "y": 240,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.4236111111111111
+        },
+        {
+          "upstream_index": 1253,
+          "y": 208,
+          "x": 0,
+          "group": "G06",
+          "split": "train",
+          "liver_fraction_in_patch": 0.3888888888888889
+        },
+        {
+          "upstream_index": 1687,
+          "y": 176,
+          "x": 0,
+          "group": "G10",
+          "split": "val",
+          "liver_fraction_in_patch": 0.3958333333333333
+        }
+      ],
+      "split_consistent": true,
+      "task_a_affected": false,
+      "pass": false
+    },
+    "split": {
+      "groups": 10,
+      "groups_in_more_than_one_split": 0,
+      "patch_groups_in_more_than_one_split": 0,
+      "scan_groups_csv_reproduced": true,
+      "v9_slice_table_consistent": true,
+      "v9_neighbours_crossing_groups": 0,
+      "pass": true
+    },
+    "manifest": {
+      "rows": 5986,
+      "categories": {
+        "ct_slice": 4236,
+        "ct_lits": 1745,
+        "synthetic_drawing": 5
+      },
+      "sizes": {
+        "256x256": 4236,
+        "320x320": 5,
+        "512x512": 1745
+      },
+      "ct_lits_all_512": true,
+      "ct_lits_channels_identical": true,
+      "qc_status": {
+        "ok": 5986
+      },
+      "exact_duplicates": 0,
+      "ct_lits_unique_pixel_hashes": 1745,
+      "missing_values_in_key_columns": 0,
+      "verified_files_in_manifest": 1745,
+      "excluded_rows": 4241,
+      "excluded_categories": {
+        "ct_slice": 4236,
+        "synthetic_drawing": 5
+      },
+      "pass": true
+    },
+    "near_duplicates": {
+      "pairs_total": 14723,
+      "pairs_between_verified_slices": 226,
+      "verified_with_unverified": 0,
+      "index_distance_max": 1,
+      "pairs_crossing_groups": 0,
+      "pairs_crossing_splits": 0,
+      "pairs_with_different_labels": 0,
+      "threshold": "32x32 thumbnail correlation >= 0.999 (computed by V9 prepare_data.py; not recomputable without images)",
+      "pass": true
+    }
+  },
+  "group_structure": {
+    "groups": [
+      {
+        "group": "G01",
+        "split": "test",
+        "slices": 249,
+        "tumour_slices": 116,
+        "first_index": 100,
+        "last_index": 373,
+        "tumour_runs": 1,
+        "patches": 531,
+        "tumour_patches": 337,
+        "tumour_free_patches": 194
+      },
+      {
+        "group": "G02",
+        "split": "val",
+        "slices": 305,
+        "tumour_slices": 33,
+        "first_index": 374,
+        "last_index": 708,
+        "tumour_runs": 1,
+        "patches": 171,
+        "tumour_patches": 99,
+        "tumour_free_patches": 72
+      },
+      {
+        "group": "G03",
+        "split": "train",
+        "slices": 173,
+        "tumour_slices": 14,
+        "first_index": 709,
+        "last_index": 881,
+        "tumour_runs": 1,
+        "patches": 43,
+        "tumour_patches": 39,
+        "tumour_free_patches": 4
+      },
+      {
+        "group": "G04",
+        "split": "train",
+        "slices": 37,
+        "tumour_slices": 13,
+        "first_index": 882,
+        "last_index": 918,
+        "tumour_runs": 1,
+        "patches": 91,
+        "tumour_patches": 39,
+        "tumour_free_patches": 52
+      },
+      {
+        "group": "G05",
+        "split": "train",
+        "slices": 140,
+        "tumour_slices": 79,
+        "first_index": 919,
+        "last_index": 1058,
+        "tumour_runs": 4,
+        "patches": 278,
+        "tumour_patches": 228,
+        "tumour_free_patches": 50
+      },
+      {
+        "group": "G06",
+        "split": "train",
+        "slices": 246,
+        "tumour_slices": 178,
+        "first_index": 1059,
+        "last_index": 1304,
+        "tumour_runs": 2,
+        "patches": 1131,
+        "tumour_patches": 525,
+        "tumour_free_patches": 606
+      },
+      {
+        "group": "G07",
+        "split": "test",
+        "slices": 101,
+        "tumour_slices": 8,
+        "first_index": 1305,
+        "last_index": 1405,
+        "tumour_runs": 1,
+        "patches": 56,
+        "tumour_patches": 24,
+        "tumour_free_patches": 32
+      },
+      {
+        "group": "G08",
+        "split": "test",
+        "slices": 86,
+        "tumour_slices": 5,
+        "first_index": 1406,
+        "last_index": 1491,
+        "tumour_runs": 1,
+        "patches": 35,
+        "tumour_patches": 15,
+        "tumour_free_patches": 20
+      },
+      {
+        "group": "G09",
+        "split": "val",
+        "slices": 104,
+        "tumour_slices": 12,
+        "first_index": 1492,
+        "last_index": 1595,
+        "tumour_runs": 1,
+        "patches": 61,
+        "tumour_patches": 36,
+        "tumour_free_patches": 25
+      },
+      {
+        "group": "G10",
+        "split": "val",
+        "slices": 304,
+        "tumour_slices": 18,
+        "first_index": 1596,
+        "last_index": 1899,
+        "tumour_runs": 1,
+        "patches": 52,
+        "tumour_patches": 39,
+        "tumour_free_patches": 13
+      }
+    ],
+    "runs": [
+      {
+        "start": 100,
+        "end": 215,
+        "length": 116,
+        "group": "G01",
+        "split": "test",
+        "liver_cells_start": 186,
+        "liver_cells_end": 130
+      },
+      {
+        "start": 532,
+        "end": 564,
+        "length": 33,
+        "group": "G02",
+        "split": "val",
+        "liver_cells_start": 553,
+        "liver_cells_end": 305
+      },
+      {
+        "start": 852,
+        "end": 865,
+        "length": 14,
+        "group": "G03",
+        "split": "train",
+        "liver_cells_start": 186,
+        "liver_cells_end": 284
+      },
+      {
+        "start": 898,
+        "end": 910,
+        "length": 13,
+        "group": "G04",
+        "split": "train",
+        "liver_cells_start": 353,
+        "liver_cells_end": 550
+      },
+      {
+        "start": 926,
+        "end": 979,
+        "length": 54,
+        "group": "G05",
+        "split": "train",
+        "liver_cells_start": 135,
+        "liver_cells_end": 444
+      },
+      {
+        "start": 985,
+        "end": 987,
+        "length": 3,
+        "group": "G05",
+        "split": "train",
+        "liver_cells_start": 139,
+        "liver_cells_end": 167
+      },
+      {
+        "start": 997,
+        "end": 1002,
+        "length": 6,
+        "group": "G05",
+        "split": "train",
+        "liver_cells_start": 124,
+        "liver_cells_end": 124
+      },
+      {
+        "start": 1008,
+        "end": 1023,
+        "length": 16,
+        "group": "G05",
+        "split": "train",
+        "liver_cells_start": 576,
+        "liver_cells_end": 126
+      },
+      {
+        "start": 1094,
+        "end": 1260,
+        "length": 167,
+        "group": "G06",
+        "split": "train",
+        "liver_cells_start": 167,
+        "liver_cells_end": 305
+      },
+      {
+        "start": 1267,
+        "end": 1277,
+        "length": 11,
+        "group": "G06",
+        "split": "train",
+        "liver_cells_start": 479,
+        "liver_cells_end": 259
+      },
+      {
+        "start": 1331,
+        "end": 1338,
+        "length": 8,
+        "group": "G07",
+        "split": "test",
+        "liver_cells_start": 635,
+        "liver_cells_end": 655
+      },
+      {
+        "start": 1472,
+        "end": 1476,
+        "length": 5,
+        "group": "G08",
+        "split": "test",
+        "liver_cells_start": 860,
+        "liver_cells_end": 923
+      },
+      {
+        "start": 1507,
+        "end": 1518,
+        "length": 12,
+        "group": "G09",
+        "split": "val",
+        "liver_cells_start": 554,
+        "liver_cells_end": 247
+      },
+      {
+        "start": 1673,
+        "end": 1690,
+        "length": 18,
+        "group": "G10",
+        "split": "val",
+        "liver_cells_start": 130,
+        "liver_cells_end": 173
+      }
+    ],
+    "boundaries": [
+      {
+        "prev_run_end": 215,
+        "next_run_start": 532,
+        "gap_slices": 316,
+        "gap_missing_indices": 25,
+        "group_prev": "G01",
+        "group_next": "G02",
+        "split_prev": "test",
+        "split_next": "val",
+        "same_group": false,
+        "liver_iou_across": 0.2328519855595668
+      },
+      {
+        "prev_run_end": 564,
+        "next_run_start": 852,
+        "gap_slices": 287,
+        "gap_missing_indices": 30,
+        "group_prev": "G02",
+        "group_next": "G03",
+        "split_prev": "val",
+        "split_next": "train",
+        "same_group": false,
+        "liver_iou_across": 0.356353591160221
+      },
+      {
+        "prev_run_end": 865,
+        "next_run_start": 898,
+        "gap_slices": 32,
+        "gap_missing_indices": 0,
+        "group_prev": "G03",
+        "group_next": "G04",
+        "split_prev": "train",
+        "split_next": "train",
+        "same_group": false,
+        "liver_iou_across": 0.5202863961813843
+      },
+      {
+        "prev_run_end": 910,
+        "next_run_start": 926,
+        "gap_slices": 15,
+        "gap_missing_indices": 0,
+        "group_prev": "G04",
+        "group_next": "G05",
+        "split_prev": "train",
+        "split_next": "train",
+        "same_group": false,
+        "liver_iou_across": 0.2038664323374341
+      },
+      {
+        "prev_run_end": 979,
+        "next_run_start": 985,
+        "gap_slices": 5,
+        "gap_missing_indices": 0,
+        "group_prev": "G05",
+        "group_next": "G05",
+        "split_prev": "train",
+        "split_next": "train",
+        "same_group": true,
+        "liver_iou_across": 0.21205821205821207
+      },
+      {
+        "prev_run_end": 987,
+        "next_run_start": 997,
+        "gap_slices": 9,
+        "gap_missing_indices": 0,
+        "group_prev": "G05",
+        "group_next": "G05",
+        "split_prev": "train",
+        "split_next": "train",
+        "same_group": true,
+        "liver_iou_across": 0.07777777777777778
+      },
+      {
+        "prev_run_end": 1002,
+        "next_run_start": 1008,
+        "gap_slices": 5,
+        "gap_missing_indices": 0,
+        "group_prev": "G05",
+        "group_next": "G05",
+        "split_prev": "train",
+        "split_next": "train",
+        "same_group": true,
+        "liver_iou_across": 0.20898100172711573
+      },
+      {
+        "prev_run_end": 1023,
+        "next_run_start": 1094,
+        "gap_slices": 70,
+        "gap_missing_indices": 0,
+        "group_prev": "G05",
+        "group_next": "G06",
+        "split_prev": "train",
+        "split_next": "train",
+        "same_group": false,
+        "liver_iou_across": 0.0
+      },
+      {
+        "prev_run_end": 1260,
+        "next_run_start": 1267,
+        "gap_slices": 6,
+        "gap_missing_indices": 0,
+        "group_prev": "G06",
+        "group_next": "G06",
+        "split_prev": "train",
+        "split_next": "train",
+        "same_group": true,
+        "liver_iou_across": 0.17894736842105263
+      },
+      {
+        "prev_run_end": 1277,
+        "next_run_start": 1331,
+        "gap_slices": 53,
+        "gap_missing_indices": 0,
+        "group_prev": "G06",
+        "group_next": "G07",
+        "split_prev": "train",
+        "split_next": "test",
+        "same_group": false,
+        "liver_iou_across": 0.09157509157509157
+      },
+      {
+        "prev_run_end": 1338,
+        "next_run_start": 1472,
+        "gap_slices": 133,
+        "gap_missing_indices": 0,
+        "group_prev": "G07",
+        "group_next": "G08",
+        "split_prev": "test",
+        "split_next": "test",
+        "same_group": false,
+        "liver_iou_across": 0.02503382949932341
+      },
+      {
+        "prev_run_end": 1476,
+        "next_run_start": 1507,
+        "gap_slices": 30,
+        "gap_missing_indices": 0,
+        "group_prev": "G08",
+        "group_next": "G09",
+        "split_prev": "test",
+        "split_next": "val",
+        "same_group": false,
+        "liver_iou_across": 0.5289855072463768
+      },
+      {
+        "prev_run_end": 1518,
+        "next_run_start": 1673,
+        "gap_slices": 154,
+        "gap_missing_indices": 0,
+        "group_prev": "G09",
+        "group_next": "G10",
+        "split_prev": "val",
+        "split_next": "val",
+        "same_group": false,
+        "liver_iou_across": 0.0
+      }
+    ],
+    "within_run_liver_iou": {
+      "n": 462,
+      "median": 0.9804467748102026,
+      "p5": 0.9170063807160582,
+      "min": 0.33446519524617996,
+      "below_0_8": [
+        {
+          "index": 202,
+          "next": 203,
+          "group": "G01",
+          "liver_iou": 0.33446519524617996
+        },
+        {
+          "index": 959,
+          "next": 960,
+          "group": "G05",
+          "liver_iou": 0.7436399217221135
+        },
+        {
+          "index": 1020,
+          "next": 1021,
+          "group": "G05",
+          "liver_iou": 0.7986798679867987
+        },
+        {
+          "index": 1021,
+          "next": 1022,
+          "group": "G05",
+          "liver_iou": 0.7148760330578512
+        },
+        {
+          "index": 1022,
+          "next": 1023,
+          "group": "G05",
+          "liver_iou": 0.7283236994219653
+        }
+      ]
+    },
+    "label_vs_group_chi2": {
+      "chi2": 172.54689045090402,
+      "dof": 9,
+      "note": "patch counts are not independent; descriptive only"
+    }
+  },
+  "relation_evidence": [
+    {
+      "groups": [
+        "G01",
+        "G02"
+      ],
+      "splits": [
+        "test",
+        "val"
+      ],
+      "adjacent_in_index_order": true,
+      "gap_between_tumour_runs": 316,
+      "liver_iou_across_boundary": 0.2328519855595668,
+      "padding_signature_audited": true,
+      "identical_padding_run_crosses_boundary": false,
+      "padding_run": null
+    },
+    {
+      "groups": [
+        "G02",
+        "G03"
+      ],
+      "splits": [
+        "val",
+        "train"
+      ],
+      "adjacent_in_index_order": true,
+      "gap_between_tumour_runs": 287,
+      "liver_iou_across_boundary": 0.356353591160221,
+      "padding_signature_audited": true,
+      "identical_padding_run_crosses_boundary": false,
+      "padding_run": null
+    },
+    {
+      "groups": [
+        "G03",
+        "G04"
+      ],
+      "splits": [
+        "train",
+        "train"
+      ],
+      "adjacent_in_index_order": true,
+      "gap_between_tumour_runs": 32,
+      "liver_iou_across_boundary": 0.5202863961813843,
+      "padding_signature_audited": false,
+      "identical_padding_run_crosses_boundary": false,
+      "padding_run": null
+    },
+    {
+      "groups": [
+        "G04",
+        "G05"
+      ],
+      "splits": [
+        "train",
+        "train"
+      ],
+      "adjacent_in_index_order": true,
+      "gap_between_tumour_runs": 15,
+      "liver_iou_across_boundary": 0.2038664323374341,
+      "padding_signature_audited": false,
+      "identical_padding_run_crosses_boundary": false,
+      "padding_run": null
+    },
+    {
+      "groups": [
+        "G05",
+        "G06"
+      ],
+      "splits": [
+        "train",
+        "train"
+      ],
+      "adjacent_in_index_order": true,
+      "gap_between_tumour_runs": 70,
+      "liver_iou_across_boundary": 0.0,
+      "padding_signature_audited": false,
+      "identical_padding_run_crosses_boundary": false,
+      "padding_run": null
+    },
+    {
+      "groups": [
+        "G06",
+        "G07"
+      ],
+      "splits": [
+        "train",
+        "test"
+      ],
+      "adjacent_in_index_order": true,
+      "gap_between_tumour_runs": 53,
+      "liver_iou_across_boundary": 0.09157509157509157,
+      "padding_signature_audited": true,
+      "identical_padding_run_crosses_boundary": true,
+      "padding_run": {
+        "upstream_indices": "1302-1305",
+        "zero_count": 56252,
+        "groups": [
+          "G06 (train)",
+          "G07 (test)"
+        ],
+        "tumour_slices": 0
+      }
+    },
+    {
+      "groups": [
+        "G07",
+        "G08"
+      ],
+      "splits": [
+        "test",
+        "test"
+      ],
+      "adjacent_in_index_order": true,
+      "gap_between_tumour_runs": 133,
+      "liver_iou_across_boundary": 0.02503382949932341,
+      "padding_signature_audited": false,
+      "identical_padding_run_crosses_boundary": false,
+      "padding_run": null
+    },
+    {
+      "groups": [
+        "G08",
+        "G09"
+      ],
+      "splits": [
+        "test",
+        "val"
+      ],
+      "adjacent_in_index_order": true,
+      "gap_between_tumour_runs": 30,
+      "liver_iou_across_boundary": 0.5289855072463768,
+      "padding_signature_audited": true,
+      "identical_padding_run_crosses_boundary": true,
+      "padding_run": {
+        "upstream_indices": "1488-1495",
+        "zero_count": 55772,
+        "groups": [
+          "G08 (test)",
+          "G09 (val)"
+        ],
+        "tumour_slices": 0
+      }
+    },
+    {
+      "groups": [
+        "G09",
+        "G10"
+      ],
+      "splits": [
+        "val",
+        "val"
+      ],
+      "adjacent_in_index_order": true,
+      "gap_between_tumour_runs": 154,
+      "liver_iou_across_boundary": 0.0,
+      "padding_signature_audited": false,
+      "identical_padding_run_crosses_boundary": false,
+      "padding_run": null
+    }
+  ],
+  "intensity_by_group": [
+    {
+      "group": "G01",
+      "label_tumour": 0,
+      "slices": 133,
+      "mean_intensity_median": 32.63,
+      "mean_intensity_iqr": [
+        27.39,
+        38.81
+      ],
+      "std_intensity_median": 72.87
+    },
+    {
+      "group": "G01",
+      "label_tumour": 1,
+      "slices": 116,
+      "mean_intensity_median": 43.099999999999994,
+      "mean_intensity_iqr": [
+        39.625,
+        49.7975
+      ],
+      "std_intensity_median": 80.06
+    },
+    {
+      "group": "G02",
+      "label_tumour": 0,
+      "slices": 272,
+      "mean_intensity_median": 36.69,
+      "mean_intensity_iqr": [
+        28.6325,
+        48.902499999999996
+      ],
+      "std_intensity_median": 76.785
+    },
+    {
+      "group": "G02",
+      "label_tumour": 1,
+      "slices": 33,
+      "mean_intensity_median": 54.89,
+      "mean_intensity_iqr": [
+        49.17,
+        58.57
+      ],
+      "std_intensity_median": 95.8
+    },
+    {
+      "group": "G03",
+      "label_tumour": 0,
+      "slices": 159,
+      "mean_intensity_median": 30.74,
+      "mean_intensity_iqr": [
+        26.43,
+        42.32
+      ],
+      "std_intensity_median": 72.07
+    },
+    {
+      "group": "G03",
+      "label_tumour": 1,
+      "slices": 14,
+      "mean_intensity_median": 38.355000000000004,
+      "mean_intensity_iqr": [
+        37.8925,
+        39.38
+      ],
+      "std_intensity_median": 80.80000000000001
+    },
+    {
+      "group": "G04",
+      "label_tumour": 0,
+      "slices": 24,
+      "mean_intensity_median": 28.9,
+      "mean_intensity_iqr": [
+        25.145,
+        31.9925
+      ],
+      "std_intensity_median": 69.33500000000001
+    },
+    {
+      "group": "G04",
+      "label_tumour": 1,
+      "slices": 13,
+      "mean_intensity_median": 75.59,
+      "mean_intensity_iqr": [
+        75.2,
+        78.23
+      ],
+      "std_intensity_median": 102.75
+    },
+    {
+      "group": "G05",
+      "label_tumour": 0,
+      "slices": 61,
+      "mean_intensity_median": 29.43,
+      "mean_intensity_iqr": [
+        25.28,
+        34.35
+      ],
+      "std_intensity_median": 70.82
+    },
+    {
+      "group": "G05",
+      "label_tumour": 1,
+      "slices": 79,
+      "mean_intensity_median": 50.17,
+      "mean_intensity_iqr": [
+        43.39,
+        54.725
+      ],
+      "std_intensity_median": 87.74
+    },
+    {
+      "group": "G06",
+      "label_tumour": 0,
+      "slices": 68,
+      "mean_intensity_median": 29.455,
+      "mean_intensity_iqr": [
+        23.955,
+        39.925
+      ],
+      "std_intensity_median": 71.875
+    },
+    {
+      "group": "G06",
+      "label_tumour": 1,
+      "slices": 178,
+      "mean_intensity_median": 64.175,
+      "mean_intensity_iqr": [
+        59.705,
+        70.8675
+      ],
+      "std_intensity_median": 97.325
+    },
+    {
+      "group": "G07",
+      "label_tumour": 0,
+      "slices": 93,
+      "mean_intensity_median": 45.26,
+      "mean_intensity_iqr": [
+        39.54,
+        55.68
+      ],
+      "std_intensity_median": 80.19
+    },
+    {
+      "group": "G07",
+      "label_tumour": 1,
+      "slices": 8,
+      "mean_intensity_median": 66.965,
+      "mean_intensity_iqr": [
+        66.2225,
+        67.43
+      ],
+      "std_intensity_median": 101.765
+    },
+    {
+      "group": "G08",
+      "label_tumour": 0,
+      "slices": 81,
+      "mean_intensity_median": 39.61,
+      "mean_intensity_iqr": [
+        33.64,
+        48.06
+      ],
+      "std_intensity_median": 76.63
+    },
+    {
+      "group": "G08",
+      "label_tumour": 1,
+      "slices": 5,
+      "mean_intensity_median": 95.48,
+      "mean_intensity_iqr": [
+        94.4,
+        96.59
+      ],
+      "std_intensity_median": 107.19
+    },
+    {
+      "group": "G09",
+      "label_tumour": 0,
+      "slices": 92,
+      "mean_intensity_median": 40.11,
+      "mean_intensity_iqr": [
+        32.435,
+        47.5425
+      ],
+      "std_intensity_median": 74.77000000000001
+    },
+    {
+      "group": "G09",
+      "label_tumour": 1,
+      "slices": 12,
+      "mean_intensity_median": 44.84,
+      "mean_intensity_iqr": [
+        36.9625,
+        51.9675
+      ],
+      "std_intensity_median": 82.3
+    },
+    {
+      "group": "G10",
+      "label_tumour": 0,
+      "slices": 286,
+      "mean_intensity_median": 42.115,
+      "mean_intensity_iqr": [
+        35.1125,
+        49.275
+      ],
+      "std_intensity_median": 81.055
+    },
+    {
+      "group": "G10",
+      "label_tumour": 1,
+      "slices": 18,
+      "mean_intensity_median": 50.545,
+      "mean_intensity_iqr": [
+        49.665000000000006,
+        51.400000000000006
+      ],
+      "std_intensity_median": 84.84
+    }
+  ],
+  "series_discontinuities": {
+    "steps": 462,
+    "abs_delta_median": 0.269999999999996,
+    "abs_delta_p99": 3.938199999999995,
+    "liver_iou_median": 0.9804467748102026,
+    "liver_iou_p1": 0.8033513456979501,
+    "largest_intensity_steps": [
+      {
+        "from": 202,
+        "to": 203,
+        "group": "G01",
+        "delta_mean_intensity": -15.020000000000003,
+        "liver_iou": 0.33446519524617996,
+        "liver_area_ratio": 0.33446519524617996
+      },
+      {
+        "from": 1184,
+        "to": 1185,
+        "group": "G06",
+        "delta_mean_intensity": 6.530000000000001,
+        "liver_iou": 0.8175182481751825,
+        "liver_area_ratio": 1.1245733788395904
+      },
+      {
+        "from": 959,
+        "to": 960,
+        "group": "G05",
+        "delta_mean_intensity": 4.75,
+        "liver_iou": 0.7436399217221135,
+        "liver_area_ratio": 1.2846153846153847
+      },
+      {
+        "from": 1516,
+        "to": 1517,
+        "group": "G09",
+        "delta_mean_intensity": -4.469999999999999,
+        "liver_iou": 0.8844884488448845,
+        "liver_area_ratio": 0.8970099667774086
+      },
+      {
+        "from": 864,
+        "to": 865,
+        "group": "G03",
+        "delta_mean_intensity": 4.170000000000002,
+        "liver_iou": 0.8063380281690141,
+        "liver_area_ratio": 1.240174672489083
+      },
+      {
+        "from": 1515,
+        "to": 1516,
+        "group": "G09",
+        "delta_mean_intensity": -3.789999999999999,
+        "liver_iou": 0.8925373134328358,
+        "liver_area_ratio": 0.9039039039039038
+      },
+      {
+        "from": 1514,
+        "to": 1515,
+        "group": "G09",
+        "delta_mean_intensity": -3.190000000000005,
+        "liver_iou": 0.9287749287749287,
+        "liver_area_ratio": 0.9680232558139535
+      },
+      {
+        "from": 1509,
+        "to": 1510,
+        "group": "G09",
+        "delta_mean_intensity": -2.6700000000000017,
+        "liver_iou": 0.9346534653465347,
+        "liver_area_ratio": 0.9423459244532804
+      },
+      {
+        "from": 1510,
+        "to": 1511,
+        "group": "G09",
+        "delta_mean_intensity": -2.6699999999999946,
+        "liver_iou": 0.9119496855345912,
+        "liver_area_ratio": 0.9240506329113924
+      },
+      {
+        "from": 1512,
+        "to": 1513,
+        "group": "G09",
+        "delta_mean_intensity": -2.6199999999999974,
+        "liver_iou": 0.9029126213592233,
+        "liver_area_ratio": 0.9168704156479217
+      }
+    ],
+    "lowest_liver_iou_steps": [
+      {
+        "from": 202,
+        "to": 203,
+        "group": "G01",
+        "delta_mean_intensity": -15.020000000000003,
+        "liver_iou": 0.33446519524617996,
+        "liver_area_ratio": 0.33446519524617996
+      },
+      {
+        "from": 1021,
+        "to": 1022,
+        "group": "G05",
+        "delta_mean_intensity": -0.8599999999999994,
+        "liver_iou": 0.7148760330578512,
+        "liver_area_ratio": 0.7148760330578512
+      },
+      {
+        "from": 1022,
+        "to": 1023,
+        "group": "G05",
+        "delta_mean_intensity": -1.1400000000000006,
+        "liver_iou": 0.7283236994219653,
+        "liver_area_ratio": 0.7283236994219653
+      },
+      {
+        "from": 959,
+        "to": 960,
+        "group": "G05",
+        "delta_mean_intensity": 4.75,
+        "liver_iou": 0.7436399217221135,
+        "liver_area_ratio": 1.2846153846153847
+      },
+      {
+        "from": 1020,
+        "to": 1021,
+        "group": "G05",
+        "delta_mean_intensity": -1.0899999999999963,
+        "liver_iou": 0.7986798679867987,
+        "liver_area_ratio": 0.7986798679867987
+      },
+      {
+        "from": 864,
+        "to": 865,
+        "group": "G03",
+        "delta_mean_intensity": 4.170000000000002,
+        "liver_iou": 0.8063380281690141,
+        "liver_area_ratio": 1.240174672489083
+      },
+      {
+        "from": 1184,
+        "to": 1185,
+        "group": "G06",
+        "delta_mean_intensity": 6.530000000000001,
+        "liver_iou": 0.8175182481751825,
+        "liver_area_ratio": 1.1245733788395904
+      },
+      {
+        "from": 1517,
+        "to": 1518,
+        "group": "G09",
+        "delta_mean_intensity": -2.599999999999998,
+        "liver_iou": 0.8530465949820788,
+        "liver_area_ratio": 0.9148148148148149
+      },
+      {
+        "from": 1276,
+        "to": 1277,
+        "group": "G06",
+        "delta_mean_intensity": -1.4499999999999993,
+        "liver_iou": 0.8633333333333333,
+        "liver_area_ratio": 0.8633333333333333
+      },
+      {
+        "from": 1274,
+        "to": 1275,
+        "group": "G06",
+        "delta_mean_intensity": -1.6099999999999994,
+        "liver_iou": 0.8668341708542714,
+        "liver_area_ratio": 0.8668341708542714
+      }
+    ],
+    "extreme_on_both": [
+      {
+        "from": 202,
+        "to": 203,
+        "group": "G01",
+        "delta_mean_intensity": -15.020000000000003,
+        "liver_iou": 0.33446519524617996,
+        "liver_area_ratio": 0.33446519524617996
+      },
+      {
+        "from": 959,
+        "to": 960,
+        "group": "G05",
+        "delta_mean_intensity": 4.75,
+        "liver_iou": 0.7436399217221135,
+        "liver_area_ratio": 1.2846153846153847
+      }
+    ]
+  },
+  "volume_id_search": {
+    "pattern": "vol[_-]?0*\\d{1,4}",
+    "text_files_scanned": 180,
+    "files_with_matches": {},
+    "vol_008_found": false
+  },
+  "proposed_units": {
+    "rule": "merge two groups when a run of identical upstream padding signatures crosses their boundary (data/labels/verification/scan_signature_audit.json); merging is the leakage-safe direction",
+    "merges": [
+      [
+        "G06",
+        "G07"
+      ],
+      [
+        "G08",
+        "G09"
+      ]
+    ],
+    "units": [
+      {
+        "unit": "G01",
+        "groups": [
+          "G01"
+        ],
+        "patches": 531,
+        "tumour_patches": 337,
+        "tumour_free_patches": 194,
+        "share_of_all_patches": 0.2168,
+        "v9_splits": [
+          "test"
+        ]
+      },
+      {
+        "unit": "G02",
+        "groups": [
+          "G02"
+        ],
+        "patches": 171,
+        "tumour_patches": 99,
+        "tumour_free_patches": 72,
+        "share_of_all_patches": 0.0698,
+        "v9_splits": [
+          "val"
+        ]
+      },
+      {
+        "unit": "G03",
+        "groups": [
+          "G03"
+        ],
+        "patches": 43,
+        "tumour_patches": 39,
+        "tumour_free_patches": 4,
+        "share_of_all_patches": 0.0176,
+        "v9_splits": [
+          "train"
+        ]
+      },
+      {
+        "unit": "G04",
+        "groups": [
+          "G04"
+        ],
+        "patches": 91,
+        "tumour_patches": 39,
+        "tumour_free_patches": 52,
+        "share_of_all_patches": 0.0372,
+        "v9_splits": [
+          "train"
+        ]
+      },
+      {
+        "unit": "G05",
+        "groups": [
+          "G05"
+        ],
+        "patches": 278,
+        "tumour_patches": 228,
+        "tumour_free_patches": 50,
+        "share_of_all_patches": 0.1135,
+        "v9_splits": [
+          "train"
+        ]
+      },
+      {
+        "unit": "G06+G07",
+        "groups": [
+          "G06",
+          "G07"
+        ],
+        "patches": 1187,
+        "tumour_patches": 549,
+        "tumour_free_patches": 638,
+        "share_of_all_patches": 0.4847,
+        "v9_splits": [
+          "test",
+          "train"
+        ]
+      },
+      {
+        "unit": "G08+G09",
+        "groups": [
+          "G08",
+          "G09"
+        ],
+        "patches": 96,
+        "tumour_patches": 51,
+        "tumour_free_patches": 45,
+        "share_of_all_patches": 0.0392,
+        "v9_splits": [
+          "test",
+          "val"
+        ]
+      },
+      {
+        "unit": "G10",
+        "groups": [
+          "G10"
+        ],
+        "patches": 52,
+        "tumour_patches": 39,
+        "tumour_free_patches": 13,
+        "share_of_all_patches": 0.0212,
+        "v9_splits": [
+          "val"
+        ]
+      }
+    ],
+    "not_assessable": [
+      [
+        "G03",
+        "G04"
+      ],
+      [
+        "G04",
+        "G05"
+      ],
+      [
+        "G05",
+        "G06"
+      ],
+      [
+        "G07",
+        "G08"
+      ],
+      [
+        "G09",
+        "G10"
+      ]
+    ],
+    "note": "padding signatures were audited only at boundaries between different V9 splits; for the other boundaries no evidence exists either way, and the per-slice padding counts are not in the repository"
+  }
+}

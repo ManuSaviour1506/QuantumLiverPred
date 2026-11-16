@@ -1,0 +1,103 @@
+{
+  "name": "Logistic Regression (radiomics, V9)",
+  "kind": "radiomics_v9",
+  "version": "v9",
+  "task": "Task A: tumour vs tumour-free liver tissue (96x96 px CT patch)",
+  "architecture": "Logistic Regression (radiomics, V9); 40 handcrafted features on normalised patches; input normalisation 'none', smoothing sigma 1.0; hyper-parameters {'C': 1} (validation)",
+  "input": "96x96 grey patch -> normalisation -> handcrafted features",
+  "normalization": "none",
+  "smooth": 1.0,
+  "feature_names": [
+    "mean",
+    "sd",
+    "skew",
+    "kurtosis",
+    "p10",
+    "p25",
+    "p50",
+    "p75",
+    "p90",
+    "entropy",
+    "band_0",
+    "band_1",
+    "band_2",
+    "band_3",
+    "band_4",
+    "glcm_contrast_d1",
+    "glcm_dissimilarity_d1",
+    "glcm_homogeneity_d1",
+    "glcm_energy_d1",
+    "glcm_correlation_d1",
+    "glcm_ASM_d1",
+    "glcm_contrast_d3",
+    "glcm_dissimilarity_d3",
+    "glcm_homogeneity_d3",
+    "glcm_energy_d3",
+    "glcm_correlation_d3",
+    "glcm_ASM_d3",
+    "lbp_0",
+    "lbp_1",
+    "lbp_2",
+    "lbp_3",
+    "lbp_4",
+    "lbp_5",
+    "lbp_6",
+    "lbp_7",
+    "lbp_8",
+    "lbp_9",
+    "grad_mean",
+    "grad_sd",
+    "grad_p90"
+  ],
+  "selected_hyperparameters": {
+    "C": 1
+  },
+  "validation_auc": 0.9499477533960293,
+  "validation_ece": 0.06573362592278564,
+  "threshold_high_sensitivity": 0.09520986474787974,
+  "training": {
+    "train_seconds": 5.7,
+    "grid_size": 16
+  },
+  "labels": "LiTS expert masks (verified)",
+  "clinical_use": "NOT validated for clinical use",
+  "training_status": "TRAINED",
+  "calibration": {
+    "mu": 3.964217098560555,
+    "sd": 7.433950366844436,
+    "a": 4.548858802354439,
+    "b": 1.878764579443347,
+    "min_slope": 0.001
+  },
+  "calibration_status": "platt_on_validation",
+  "threshold": 0.633996789656117,
+  "threshold_rule": "Youden J on validation (calibrated probability)",
+  "validation_score_check": {
+    "constant_scores": false,
+    "ok": true
+  },
+  "inference_seconds_per_patch": 0.008824294133440562,
+  "family": "classical",
+  "model_id": "logreg_radiomics_v9",
+  "npz_sha256": "df12665e391a1b37dc8406dd76c4c7cb081ae97fbab7e283c576a422efa61280",
+  "status": "trained",
+  "saved_utc": "2026-11-06T10:03:11+00:00",
+  "role": "baseline",
+  "role_order": 3,
+  "test_summary": {
+    "auc": 0.9431218647292856,
+    "auc_ci95": [
+      0.9231101288120607,
+      1.0
+    ],
+    "sensitivity": 0.9202127659574468,
+    "specificity": 0.6869918699186992,
+    "f1": 0.8660826032540677,
+    "accuracy": 0.8279742765273312,
+    "pr_auc": 0.9696279311618909,
+    "ece": 0.12714594433473428
+  },
+  "validation_summary": {
+    "auc": 0.9499477533960293
+  }
+}

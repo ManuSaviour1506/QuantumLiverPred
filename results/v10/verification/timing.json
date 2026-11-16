@@ -1,0 +1,106 @@
+{
+  "recorded": {
+    "vqc_v9_cnn": {
+      "head_inference_ms_per_patch": 0.4567,
+      "feature_ms_per_patch": 10.114,
+      "train_seconds": 53.4,
+      "parameters": 57,
+      "support_vectors": null
+    },
+    "lr_control_v9_cnn": {
+      "head_inference_ms_per_patch": 0.0002,
+      "feature_ms_per_patch": 10.114,
+      "train_seconds": 0.0,
+      "parameters": 9,
+      "support_vectors": null
+    },
+    "qksvm_v9_cnn": {
+      "head_inference_ms_per_patch": 0.0119,
+      "feature_ms_per_patch": 10.114,
+      "train_seconds": 0.5,
+      "parameters": null,
+      "support_vectors": 38
+    },
+    "rbf_control_v9_cnn": {
+      "head_inference_ms_per_patch": 0.0003,
+      "feature_ms_per_patch": 10.114,
+      "train_seconds": 0.1,
+      "parameters": null,
+      "support_vectors": null
+    },
+    "hybrid_v9_cnn": {
+      "head_inference_ms_per_patch": 0.6849,
+      "feature_ms_per_patch": 10.114,
+      "train_seconds": 51.3,
+      "parameters": 585,
+      "support_vectors": null
+    },
+    "twin_v9_cnn": {
+      "head_inference_ms_per_patch": 0.0002,
+      "feature_ms_per_patch": 10.114,
+      "train_seconds": 0.1,
+      "parameters": 609,
+      "support_vectors": null
+    },
+    "vqc_v9_eff": {
+      "head_inference_ms_per_patch": 0.0271,
+      "feature_ms_per_patch": 17.426,
+      "train_seconds": 4.7,
+      "parameters": 34,
+      "support_vectors": null
+    },
+    "lr_control_v9_eff": {
+      "head_inference_ms_per_patch": 0.0052,
+      "feature_ms_per_patch": 17.426,
+      "train_seconds": 0.0,
+      "parameters": 5,
+      "support_vectors": null
+    },
+    "qksvm_v9_eff": {
+      "head_inference_ms_per_patch": 0.0172,
+      "feature_ms_per_patch": 17.426,
+      "train_seconds": 0.6,
+      "parameters": null,
+      "support_vectors": 131
+    },
+    "rbf_control_v9_eff": {
+      "head_inference_ms_per_patch": 0.0072,
+      "feature_ms_per_patch": 17.426,
+      "train_seconds": 0.1,
+      "parameters": null,
+      "support_vectors": null
+    },
+    "hybrid_v9_eff": {
+      "head_inference_ms_per_patch": 0.5757,
+      "feature_ms_per_patch": 17.426,
+      "train_seconds": 114.6,
+      "parameters": 10313,
+      "support_vectors": null
+    },
+    "twin_v9_eff": {
+      "head_inference_ms_per_patch": 0.004,
+      "feature_ms_per_patch": 17.426,
+      "train_seconds": 0.7,
+      "parameters": 10337,
+      "support_vectors": null
+    }
+  },
+  "remeasured_this_environment": {
+    "patches": 622,
+    "encoding_ms_per_patch": 0.0001501688101542556,
+    "state_evolution_ms_per_patch": 0.4063735916398397,
+    "readout_ms_per_patch": 0.0008151157555455827,
+    "vqc_head_total_ms_per_patch": 0.4126416864953648,
+    "lr_head_total_ms_per_patch": 0.00015622990364060022,
+    "lr_dot_product_only_ms_per_patch": 2.702572279579045e-06,
+    "ratio_vqc_to_lr_including_encoding": 2641.2465019797246,
+    "v10_simulator_forward_ms_per_patch": 0.37104662540183797,
+    "peak_memory_bytes_vqc_head": 10312240,
+    "peak_memory_bytes_lr_head": 703760,
+    "vqc_one_training_epoch_seconds_synthetic_1543": 2.6183597780000127,
+    "method": "best of 7 after one warm-up call; synthetic inputs of the V9 shapes; trained V9 weights",
+    "recorded_vqc_train_seconds": 53.4,
+    "implied_epochs_if_recorded_time_is_training": 20.394447107184266
+  },
+  "interpretation": "the ratio compares two NumPy implementations on one CPU; it is not a quantum-versus-classical speed comparison and says nothing about hardware execution time"
+}

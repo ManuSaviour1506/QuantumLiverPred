@@ -1,0 +1,34 @@
+{
+  "runs": [
+    {
+      "variant": "cnn2d_v9",
+      "model_id": "cnn2d_v9",
+      "recipe": "a4_res_se_focal",
+      "val_auc": 0.9983281086729362,
+      "val_ece": 0.022108388661147164,
+      "best_epoch": 5,
+      "train_seconds": 614.4019842950001,
+      "parameters": 325181
+    },
+    {
+      "variant": "cnn5s_v9",
+      "model_id": "cnn5s_v9",
+      "recipe": "a4_res_se_focal",
+      "val_auc": 0.9998432601880878,
+      "val_ece": 0.00721909704811451,
+      "best_epoch": 12,
+      "train_seconds": 1126.0660749340004,
+      "parameters": 325821
+    },
+    {
+      "variant": "cnn3d_v9",
+      "model_id": "cnn3d_v9",
+      "recipe": "a4_res_se_focal",
+      "val_auc": 0.9979623824451411,
+      "val_ece": 0.006710451094696246,
+      "best_epoch": 12,
+      "train_seconds": 1543.7274497730004,
+      "parameters": 327757
+    }
+  ]
+}

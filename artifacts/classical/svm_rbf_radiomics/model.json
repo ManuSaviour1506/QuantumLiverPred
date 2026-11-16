@@ -1,0 +1,109 @@
+{
+  "name": "RBF-SVM (radiomics)",
+  "kind": "radiomics_baseline",
+  "task": "Task A: tumour vs tumour-free liver tissue (96x96 px CT patch)",
+  "architecture": "RBF-SVM (radiomics); 40 handcrafted features; hyper-parameters chosen on validation: {'C': 10, 'gamma': 0.01}",
+  "input": "96x96 grey patch -> handcrafted features",
+  "labels": "LiTS expert masks via seongun/liver-tumor-classification (verified pixel-exact)",
+  "split_file": "data/manifests/split_v8.csv",
+  "validation_status": "held-out test split, research only",
+  "clinical_use": "NOT validated for clinical use",
+  "feature_names": [
+    "mean",
+    "sd",
+    "skew",
+    "kurtosis",
+    "p10",
+    "p25",
+    "p50",
+    "p75",
+    "p90",
+    "entropy",
+    "band_0",
+    "band_1",
+    "band_2",
+    "band_3",
+    "band_4",
+    "glcm_contrast_d1",
+    "glcm_dissimilarity_d1",
+    "glcm_homogeneity_d1",
+    "glcm_energy_d1",
+    "glcm_correlation_d1",
+    "glcm_ASM_d1",
+    "glcm_contrast_d3",
+    "glcm_dissimilarity_d3",
+    "glcm_homogeneity_d3",
+    "glcm_energy_d3",
+    "glcm_correlation_d3",
+    "glcm_ASM_d3",
+    "lbp_0",
+    "lbp_1",
+    "lbp_2",
+    "lbp_3",
+    "lbp_4",
+    "lbp_5",
+    "lbp_6",
+    "lbp_7",
+    "lbp_8",
+    "lbp_9",
+    "grad_mean",
+    "grad_sd",
+    "grad_p90"
+  ],
+  "selected_hyperparameters": {
+    "C": 10,
+    "gamma": 0.01
+  },
+  "validation_auc_selection": 0.9039184952978057,
+  "training": {
+    "train_seconds": 0.35289686599980996,
+    "grid_size": 12
+  },
+  "calibration": {
+    "mu": 1.4869397643178677,
+    "sd": 1.6773594812015256,
+    "a": 2.1141303704982968,
+    "b": 0.6733750052410546,
+    "min_slope": 0.001
+  },
+  "calibration_status": "platt_on_validation",
+  "threshold": 0.7736622370437045,
+  "threshold_rule": "Youden J on validation (calibrated probability)",
+  "validation_score_check": {
+    "constant_scores": false,
+    "ok": true
+  },
+  "inference_seconds_per_patch": 0.006208958175625107,
+  "family": "classical",
+  "model_id": "svm_rbf_radiomics",
+  "npz_sha256": "754e9cc3550b61d600a0a0bafb79dc2a8e852f4dbbe92d6dffeeb3262e255cfa",
+  "status": "trained",
+  "saved_utc": "2026-11-06T05:04:09+00:00",
+  "test_summary": {
+    "auc": 0.46740399584846914,
+    "auc_ci95": [
+      0.2912866215597145,
+      0.9911147119341565
+    ],
+    "sensitivity": 0.48936170212765956,
+    "specificity": 0.4186991869918699,
+    "f1": 0.5234708392603129,
+    "accuracy": 0.46141479099678456,
+    "pr_auc": 0.5892911021474161,
+    "ece": 0.22328648075879365,
+    "brier": 0.27885915265745803,
+    "sensitivity_ci95": [
+      0.42942877375191785,
+      0.9206349206349206
+    ],
+    "specificity_ci95": [
+      0.2695163963921448,
+      1.0
+    ]
+  },
+  "validation_summary": {
+    "auc": 0.9039184952978057,
+    "sensitivity": 0.7413793103448276,
+    "specificity": 0.9363636363636364
+  }
+}

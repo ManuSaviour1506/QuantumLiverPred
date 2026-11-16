@@ -1,0 +1,15 @@
+{
+  "about": "ImageNet backbone weights (timm releases, Apache-2.0) required at inference. The OOD detector and the liver gate use EfficientNet-B0, so every patch model depends on it; DenseNet-121 / ResNet-50 are needed only by their fine-tuned models. Download and verify with: python scripts/fetch_weights.py",
+  "directory": "artifacts/weights",
+  "files": [
+    {"arch": "efficientnet_b0", "file": "efficientnet_b0_ra-3dd342df.pth", "bytes": 21376743,
+     "sha256": "3dd342dfa1fee25ae65e7bbdf8998cad6e45d6e77e69d580f0bd14d3eeb0b3f3", "required_by": "OOD detector, liver gate, ImageNet-feature models, EfficientNet models",
+     "url": "https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-weights/efficientnet_b0_ra-3dd342df.pth"},
+    {"arch": "densenet121", "file": "densenet121_ra-50efcf5c.pth", "bytes": 32376726,
+     "sha256": "50efcf5cb2ca22330d2978d1f4570ac8eeac4aeb30652cc656ff9908bf60dfb2", "required_by": "densenet121_ft, densenet121_ft_v9",
+     "url": "https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-weights/densenet121_ra-50efcf5c.pth"},
+    {"arch": "resnet50", "file": "resnet50_a1_0-14fe96d1.pth", "bytes": 102483913,
+     "sha256": "14fe96d1f9fb311a60490082d2077e6e60427dcfe21839ddf934cce948f72b0f", "required_by": "resnet50_ft, resnet50_ft_v9",
+     "url": "https://github.com/huggingface/pytorch-image-models/releases/download/v0.1-rsb-weights/resnet50_a1_0-14fe96d1.pth"}
+  ]
+}

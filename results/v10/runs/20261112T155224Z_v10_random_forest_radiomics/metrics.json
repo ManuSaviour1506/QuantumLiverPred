@@ -1,0 +1,90 @@
+[
+ {
+  "name": "Nested leave-one-unit-out evaluation (radiomics)",
+  "status": "completed (real data)",
+  "evaluation_unit": "reconstructed scan-group unit (8 units; G06+G07 and G08+G09 merged)",
+  "units": [
+   "G01",
+   "G02",
+   "G03",
+   "G04",
+   "G05",
+   "G06+G07",
+   "G08+G09",
+   "G10"
+  ],
+  "qualifying_units": [
+   "G01",
+   "G02",
+   "G04",
+   "G05",
+   "G06+G07",
+   "G08+G09",
+   "G10"
+  ],
+  "split": "outer: leave one unit out; inner: grouped 3-fold",
+  "metrics": {
+   "primary_mean_within_unit_auc": 0.9158611352549701,
+   "within_unit_auc_min": 0.774298245614035,
+   "within_unit_auc_max": 1.0,
+   "pair_weighted_within_unit_auc": 0.8371723789174438,
+   "roc_auc": 0.7946699048347422,
+   "pr_auc": 0.8666804512096591,
+   "accuracy": 0.7370355247039608,
+   "balanced_accuracy": 0.7476300216691482,
+   "sensitivity": 0.664735698769008,
+   "specificity": 0.8305243445692884,
+   "precision": 0.835304822565969,
+   "f1": 0.7403225806451613,
+   "mcc": 0.4937987957905955,
+   "log_loss": 0.5618319593606463,
+   "brier": 0.19070705004306776,
+   "ece": 0.11926535901903365,
+   "mean_seed_sd_within_unit": 0.005079139676618179,
+   "fit_seconds_mean": 1.021189839375006,
+   "predict_ms_per_patch": 0.5487047814384691
+  },
+  "per_unit_auc": {
+   "G01": 0.9917709321178378,
+   "G02": 0.8487654320987654,
+   "G03": 1.0,
+   "G04": 1.0,
+   "G05": 0.774298245614035,
+   "G06+G07": 0.8079580428365053,
+   "G08+G09": 0.9882352941176471,
+   "G10": 1.0
+  },
+  "caveats": [
+   "patch-level estimate on reconstructed scan-group units, not patients",
+   "pooled metrics use per-fold thresholds; the primary metric is the mean within-unit AUC"
+  ]
+ },
+ {
+  "name": "Leave-one-unit-out calibration predictions (final configuration)",
+  "status": "completed",
+  "evaluation_unit": "reconstructed scan-group units",
+  "metrics": {
+   "roc_auc": 0.8326058303297562,
+   "pr_auc": 0.8906011692374052,
+   "log_loss": 0.5084252935029024,
+   "brier": 0.16593804639074494,
+   "ece": 0.08761557612572557,
+   "threshold": 0.47411473657500913,
+   "tp": 1083,
+   "fp": 243,
+   "tn": 825,
+   "fn": 298,
+   "accuracy": 0.7790935075541037,
+   "balanced_accuracy": 0.7783431237744999,
+   "sensitivity": 0.7842143374366402,
+   "recall": 0.7842143374366402,
+   "specificity": 0.7724719101123596,
+   "precision": 0.8167420814479638,
+   "f1": 0.8001477650535649,
+   "mcc": 0.554027494781001
+  },
+  "caveats": [
+   "same predictions were used to fit calibration and the threshold: optimistic"
+  ]
+ }
+]

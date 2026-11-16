@@ -1,0 +1,47 @@
+{
+  "name": "Liver-tissue gate",
+  "kind": "gate",
+  "role": "supporting",
+  "task": "liver tissue (tumour or tumour-free) vs body tissue without liver, 96x96 patch",
+  "architecture": "frozen ImageNet EfficientNet-B0 GAP -> standardise -> logistic regression (C=0.001)",
+  "threshold": 0.40914539086372326,
+  "threshold_rule": "Youden J on validation",
+  "validation": {
+    "accuracy": 0.9017941454202077,
+    "precision": 0.7406417112299465,
+    "recall": 0.9753521126760564,
+    "sensitivity": 0.9753521126760564,
+    "specificity": 0.8748387096774194,
+    "f1": 0.8419452887537995,
+    "balanced_accuracy": 0.9250954111767379,
+    "confusion_matrix": {
+      "tp": 277,
+      "fp": 97,
+      "tn": 678,
+      "fn": 7
+    },
+    "auc": 0.9752612448886869
+  },
+  "test": {
+    "accuracy": 0.8576242628475147,
+    "precision": 0.8249641319942611,
+    "recall": 0.9244372990353698,
+    "sensitivity": 0.9244372990353698,
+    "specificity": 0.784070796460177,
+    "f1": 0.8718726307808946,
+    "balanced_accuracy": 0.8542540477477734,
+    "confusion_matrix": {
+      "tp": 575,
+      "fp": 122,
+      "tn": 443,
+      "fn": 47
+    },
+    "auc": 0.944199413823521
+  },
+  "labels": "LiTS expert masks (liver annotation); no-liver slices contribute body patches",
+  "model_id": "liver_gate",
+  "family": "classical",
+  "npz_sha256": "dd069a63f893d3d1d863b5e2c1c790aa2d47f4502ac9aaadb68618d1a948ed01",
+  "status": "trained",
+  "saved_utc": "2026-11-06T05:34:07+00:00"
+}

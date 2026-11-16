@@ -1,0 +1,95 @@
+{
+  "environment": {
+    "python": "3.13.18",
+    "platform": "Linux-6.18.44-fc-v378-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "cpu_count": 2,
+    "packages": {
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "sklearn": "1.9.1",
+      "pandas": "3.0.5",
+      "pennylane": null,
+      "qiskit": null,
+      "torch": null
+    },
+    "utc": "2026-11-11T18:45:24+00:00",
+    "execution": "classical simulation only; no quantum hardware"
+  },
+  "inputs_sha256": {
+    "results/v9/quantum/quantum_experiments_cnn.json": "e6891db5f320c59f560297f96bf33795d2a2189162fc585295acd007d4d9d024",
+    "results/v9/quantum/quantum_experiments_eff.json": "d9afbde9f09d3669447b6db9bc75de2921592c62bc35b1fc543702566e3ab14b",
+    "results/v9/quantum/inference_timing.json": "366dad3b600be6926e4ab5240e6410ae797e2dd9ba214a843332e8b2a0b2d7d3",
+    "results/v9/comparison_v9.json": "00e4932be193389ac809202104f9c75be82530aaf2ff2e561ca011c0bc836771",
+    "results/predictions/cnn25d_v9_a4_res_se_focal.csv": "f567800e8051cc662f15cb87ba22f70b1348a85b67b28ca11cb6001884ebb7f2",
+    "results/predictions/lr_control_v9_cnn.csv": "3555161f3c2e13fd73b8f3a9f850587e9e82e603cd74ae5a4f65de568c7b2275",
+    "results/predictions/vqc_v9_cnn.csv": "a7a81655518642d1663a6db4edb9913181f70f2f9c94a3602f12de67196344c8",
+    "results/predictions/qksvm_v9_cnn.csv": "7ae0f8d4ba989e11ad85710a93805b577eeb5e1828e766500d5b14eca21234e6",
+    "results/predictions/rbf_control_v9_cnn.csv": "f3b5942c129140ae86e143a38ee8b5f392088ddb4f3a0e1d8125b262dd02c5a9",
+    "results/predictions/hybrid_v9_cnn.csv": "157908ee9a531be529fd43899fe490552215fe8657af59450e1003e20a1ffa79",
+    "results/predictions/twin_v9_cnn.csv": "b71092f9c096dedc676f476bf4b61628f2bf881df5ea8c3acc221c26d28fa2c1",
+    "results/predictions/vqc_v9_eff.csv": "c84377331c2323bd81c3a737dc15b4bf642adf66a1ac8aa0765d5f5af58c02fc",
+    "results/predictions/lr_control_v9_eff.csv": "92422ffd3ca73aa856a97cf5cdde007e149539f86b8f70015e9d771b29276d88",
+    "results/predictions/qksvm_v9_eff.csv": "eeeb3254a1cf7a5d4a61ee9136b5a4a5a51a0bcc3983eb4606e5310ebd7e4edc",
+    "results/predictions/rbf_control_v9_eff.csv": "a474270f48d2cdae0d4941c2aad2ec4eee143177d10a7863b2bec15e9438c408",
+    "results/predictions/hybrid_v9_eff.csv": "61373544df24745e68d2927483c205ff2f2e35e6d48fd49e3b2675b6bae23c68",
+    "results/predictions/twin_v9_eff.csv": "28ade202e7d0737e2df3a31b2e5aeb25cc4875ea7a2a9398137900c74db99a16",
+    "artifacts/quantum/vqc_v9_cnn/model.npz": "1fb4f7739f49aa28236a198c9f551c5a87f6b24842ff9e99cfff0f23b8ab561e",
+    "artifacts/quantum/vqc_v9_eff/model.npz": "a9a881a38c96f4e35c58158153f34e40863d7d344173e8c49b172db6f8624d79",
+    "artifacts/quantum/vqc_8q/model.npz": "8fd5e1cb43695ebe97f7bc3ddf125f377d09da78a30215c89edbd19426a2e634",
+    "artifacts/quantum/vqc_8q_ft/model.npz": "1de43a0aad5759f7dcef3cc58e47b0d764e326244541eab6d4c37a148529aafc",
+    "artifacts/quantum/qksvm_v9_cnn/model.npz": "304525b99dc281d05f57b42bdfa52417bd8c4643e205e5fa41a5519fb2a672e7",
+    "artifacts/quantum/qksvm_v9_eff/model.npz": "0f2d854fe5152e0f6c7a5ecbbb8fb1dd1820a3742c4b6327f426886691a761c7",
+    "artifacts/quantum/qkernel_svm_8q/model.npz": "2df84489f37aa279444b4c8cd8bfb844a4e84ce93014b7a9a0d56468ef82e9c2",
+    "artifacts/quantum/qkernel_svm_8q_ft/model.npz": "f7d82113cac0f8986c7bbcca322d2079cd8ef8d8b667b571ae1d48035d5182fc",
+    "artifacts/classical/rbf_control_v9_cnn/model.npz": "533e3625cb6140e08e49ed6c0e00aaeab5a27032a55545fdc74b70624df691da",
+    "artifacts/classical/rbf_control_v9_eff/model.npz": "bd4149fcbdbdcc6e944ce031b9efac284cf1e93bede6e1299e8f7458c9ee9361",
+    "artifacts/classical/pca8_svm_rbf/model.npz": "06c4efbfbb4a0b4ca0d3ba26c9f7638a64f2f0b59917335d962be4b82b0c53d7",
+    "artifacts/classical/pca8_svm_rbf_ft/model.npz": "8c8fcd711222c32c6e63e0bc1ee3b894b2f12d38a49e0ad886a345b127cfc8a3",
+    "artifacts/hybrid/hybrid_v9_cnn/model.npz": "1a089aa8c53024cda896ec5db6259392936b81ab75f0543e87aa84b1cd543e26",
+    "artifacts/hybrid/hybrid_v9_eff/model.npz": "d131ad90474abb2db3daded71a4c1bba2e6d28d6ccb066a40401e2c223f70b70"
+  },
+  "seeds": {
+    "global": "fixed per analysis (see code); no training on real data"
+  },
+  "steps": {
+    "A_feature_saturation": {
+      "status": "ok",
+      "seconds": 0.1
+    },
+    "B_kernel_geometry": {
+      "status": "ok",
+      "seconds": 28.8
+    },
+    "C_zz_phase": {
+      "status": "ok",
+      "seconds": 3.1
+    },
+    "D_parameters_and_readout": {
+      "status": "ok",
+      "seconds": 9.2
+    },
+    "E_hybrid_vs_twin": {
+      "status": "ok",
+      "seconds": 0.1
+    },
+    "F_vqc_selection": {
+      "status": "ok",
+      "seconds": 0.0
+    },
+    "G_noise": {
+      "status": "ok",
+      "seconds": 91.1
+    },
+    "timing": {
+      "status": "ok",
+      "seconds": 10.1
+    },
+    "statistics": {
+      "status": "ok",
+      "seconds": 4.7
+    }
+  },
+  "total_seconds": 147.2,
+  "command": "python scripts/v10_verify_v9_findings.py"
+}

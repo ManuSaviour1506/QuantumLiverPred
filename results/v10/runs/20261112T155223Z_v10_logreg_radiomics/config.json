@@ -1,0 +1,14 @@
+{
+ "model_id": "v10_logreg_radiomics",
+ "spec": "logreg",
+ "config": {
+  "C": 10.0
+ },
+ "selection": "most frequent inner-loop selection (6 of 8 outer folds)",
+ "preprocessing": {
+  "scaler": "standard"
+ },
+ "seed": 0,
+ "features": "radiomics",
+ "architecture": null
+}

@@ -1,0 +1,119 @@
+{
+  "model_hypothetical": {
+    "p1": 0.001,
+    "p2": 0.01,
+    "readout_e0": 0.02,
+    "readout_e1": 0.03,
+    "amp_damp": 0.0,
+    "phase_damp": 0.0,
+    "t1": 100.0,
+    "t2": 80.0,
+    "dur_1q": 0.05,
+    "dur_2q": 0.3,
+    "idle": true,
+    "calibration": "hypothetical: values of a plausible order of magnitude, not from any device (times in microseconds)"
+  },
+  "closed_forms_max_error": {
+    "depolarizing_1q_<Z>=1-4p/3": 1.1102230246251565e-16,
+    "depolarizing_2q_<Z0>=1-16p/15": 0.0,
+    "amplitude_damping_P1=1-g": 0.0,
+    "phase_damping_coherence=sqrt(1-l)": 2.220446049250313e-16,
+    "T1_P1=exp(-t/T1)": 0.0,
+    "T2_coherence=exp(-t/T2)": 2.220446049250313e-16
+  },
+  "separate_mechanisms_v10_4q_2L": {
+    "one_qubit_depolarizing": {
+      "mean_abs_change_<Z>": 0.0034728624131414756,
+      "max_abs_change_<Z>": 0.012372699914372398,
+      "mean_shrinkage_|<Z>|": 0.02238182367877073
+    },
+    "two_qubit_depolarizing": {
+      "mean_abs_change_<Z>": 0.01056009559487218,
+      "max_abs_change_<Z>": 0.042548254381991946,
+      "mean_shrinkage_|<Z>|": 0.0682079202597844
+    },
+    "readout_error": {
+      "mean_abs_change_<Z>": 0.01299372634488262,
+      "max_abs_change_<Z>": 0.039073214840530945,
+      "mean_shrinkage_|<Z>|": 0.05508985871102101
+    },
+    "relaxation_T1_T2_gates_only": {
+      "mean_abs_change_<Z>": 0.007398599029052081,
+      "max_abs_change_<Z>": 0.03014497283482731,
+      "mean_shrinkage_|<Z>|": 0.04138912407719775
+    },
+    "relaxation_T1_T2_with_idle": {
+      "mean_abs_change_<Z>": 0.011984831087688743,
+      "max_abs_change_<Z>": 0.047674276801887405,
+      "mean_shrinkage_|<Z>|": 0.06728637977093566
+    },
+    "combined": {
+      "mean_abs_change_<Z>": 0.033941625955392386,
+      "max_abs_change_<Z>": 0.13223701766622487,
+      "mean_shrinkage_|<Z>|": 0.19748917887133433
+    }
+  },
+  "trajectory_convergence": {
+    "rows": [
+      {
+        "trajectories": 16,
+        "mean_abs_error_vs_exact": 0.019877784890158883,
+        "sd_over_5_seeds": 0.0032253646592908646
+      },
+      {
+        "trajectories": 50,
+        "mean_abs_error_vs_exact": 0.011151720135305649,
+        "sd_over_5_seeds": 0.00081102684106498
+      },
+      {
+        "trajectories": 100,
+        "mean_abs_error_vs_exact": 0.007208239962613855,
+        "sd_over_5_seeds": 0.0010904250122251236
+      },
+      {
+        "trajectories": 200,
+        "mean_abs_error_vs_exact": 0.006023073941980111,
+        "sd_over_5_seeds": 0.0009891952475846047
+      },
+      {
+        "trajectories": 400,
+        "mean_abs_error_vs_exact": 0.0044023758655823446,
+        "sd_over_5_seeds": 0.0004623221766822683
+      },
+      {
+        "trajectories": 800,
+        "mean_abs_error_vs_exact": 0.0027057629191789647,
+        "sd_over_5_seeds": 0.0003682980338357216
+      },
+      {
+        "trajectories": 1600,
+        "mean_abs_error_vs_exact": 0.0019957378755771213,
+        "sd_over_5_seeds": 0.00025588536388420545
+      }
+    ],
+    "log_log_slope": -0.4930590389708282,
+    "expected_slope": -0.5
+  },
+  "noisy_kernel_3q": {
+    "asymmetry_max_|K-K^T|": 0.013760853638575446,
+    "diagonal_min_max": [
+      0.7321847014438759,
+      0.7563433268121145
+    ],
+    "min_eigenvalue_exact_noisy": 0.00828653254013487,
+    "mean_abs_change_vs_clean": 0.06785619182540228,
+    "corr_offdiag_clean_vs_noisy": 0.9989767387141104,
+    "finite_shots": {
+      "shots_1024": {
+        "min_eigenvalue_mean": 0.007175314682556428,
+        "negative_eigenvalues_mean": 0.6,
+        "mean_abs_error_vs_exact_noisy": 0.01002392875050743
+      },
+      "shots_8192": {
+        "min_eigenvalue_mean": 0.001471605631684783,
+        "negative_eigenvalues_mean": 0.6,
+        "mean_abs_error_vs_exact_noisy": 0.004088415511511853
+      }
+    }
+  }
+}

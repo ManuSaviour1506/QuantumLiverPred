@@ -1,0 +1,446 @@
+{
+  "claim": "CNN embeddings are already almost linearly separable; logistic regression reaches test AUC ~0.998 with 5-9 parameters",
+  "lr_control_sweep_recorded": [
+    {
+      "features": "cnn",
+      "pca_components": 4,
+      "parameters": 5,
+      "C": 10,
+      "val_auc": 0.9994252873563219,
+      "test_auc": 0.9983242518595399
+    },
+    {
+      "features": "cnn",
+      "pca_components": 6,
+      "parameters": 7,
+      "C": 0.01,
+      "val_auc": 0.9989550679205851,
+      "test_auc": 0.9983350631378654
+    },
+    {
+      "features": "cnn",
+      "pca_components": 8,
+      "parameters": 9,
+      "C": 0.01,
+      "val_auc": 0.9989550679205851,
+      "test_auc": 0.9983350631378654
+    },
+    {
+      "features": "cnn",
+      "pca_components": 10,
+      "parameters": 11,
+      "C": 0.01,
+      "val_auc": 0.9989550679205851,
+      "test_auc": 0.9983350631378655
+    },
+    {
+      "features": "eff",
+      "pca_components": 4,
+      "parameters": 5,
+      "C": 10,
+      "val_auc": 0.961337513061651,
+      "test_auc": 0.9108177650925445
+    },
+    {
+      "features": "eff",
+      "pca_components": 6,
+      "parameters": 7,
+      "C": 10,
+      "val_auc": 0.9634273772204807,
+      "test_auc": 0.9173261546445252
+    },
+    {
+      "features": "eff",
+      "pca_components": 8,
+      "parameters": 9,
+      "C": 10,
+      "val_auc": 0.9669801462904912,
+      "test_auc": 0.9107637087009169
+    },
+    {
+      "features": "eff",
+      "pca_components": 10,
+      "parameters": 11,
+      "C": 10,
+      "val_auc": 0.9677638453500523,
+      "test_auc": 0.9158017644006227
+    }
+  ],
+  "embedding_provenance": {
+    "cnn": "cnn25d_v9_a4_res_se_focal",
+    "split_file": "data/manifests/split_v8.csv",
+    "training_status": "TRAINED",
+    "validation_used_for": "early stopping (val ROC-AUC) and recipe selection among a1-a4",
+    "best_epoch": 22,
+    "epochs_run": 28,
+    "classification_for_v10": "exploratory: CNN fitted on training groups only, but validation groups reused for CNN and quantum selection, and the test groups were examined in V9's G01 analysis"
+  },
+  "score_rank_agreement": {
+    "test": {
+      "spearman": {
+        "cnn25d_v9_a4_res_se_focal": {
+          "cnn25d_v9_a4_res_se_focal": 0.9999999999999999,
+          "lr_control_v9_cnn": 0.9975339886275345,
+          "vqc_v9_cnn": 0.5622850259248595,
+          "qksvm_v9_cnn": 0.9985850803469558,
+          "rbf_control_v9_cnn": 0.5911575350767203,
+          "hybrid_v9_cnn": 0.9668347600589434,
+          "twin_v9_cnn": 0.9689615776807916
+        },
+        "lr_control_v9_cnn": {
+          "cnn25d_v9_a4_res_se_focal": 0.9975339886275345,
+          "lr_control_v9_cnn": 0.9999999999999999,
+          "vqc_v9_cnn": 0.5582817717193643,
+          "qksvm_v9_cnn": 0.9983763879261485,
+          "rbf_control_v9_cnn": 0.5940635209363502,
+          "hybrid_v9_cnn": 0.96117109210539,
+          "twin_v9_cnn": 0.9706173538194988
+        },
+        "vqc_v9_cnn": {
+          "cnn25d_v9_a4_res_se_focal": 0.5622850259248595,
+          "lr_control_v9_cnn": 0.5582817717193643,
+          "vqc_v9_cnn": 0.9999999999999999,
+          "qksvm_v9_cnn": 0.5595086936599964,
+          "rbf_control_v9_cnn": 0.9796557552445313,
+          "hybrid_v9_cnn": 0.6180522783739473,
+          "twin_v9_cnn": 0.6049066505337701
+        },
+        "qksvm_v9_cnn": {
+          "cnn25d_v9_a4_res_se_focal": 0.9985850803469558,
+          "lr_control_v9_cnn": 0.9983763879261485,
+          "vqc_v9_cnn": 0.5595086936599964,
+          "qksvm_v9_cnn": 0.9999999999999999,
+          "rbf_control_v9_cnn": 0.5893368495388233,
+          "hybrid_v9_cnn": 0.9599366402829079,
+          "twin_v9_cnn": 0.965510797389305
+        },
+        "rbf_control_v9_cnn": {
+          "cnn25d_v9_a4_res_se_focal": 0.5911575350767203,
+          "lr_control_v9_cnn": 0.5940635209363502,
+          "vqc_v9_cnn": 0.9796557552445313,
+          "qksvm_v9_cnn": 0.5893368495388233,
+          "rbf_control_v9_cnn": 0.9999999999999999,
+          "hybrid_v9_cnn": 0.6570925714947943,
+          "twin_v9_cnn": 0.653003496582917
+        },
+        "hybrid_v9_cnn": {
+          "cnn25d_v9_a4_res_se_focal": 0.9668347600589434,
+          "lr_control_v9_cnn": 0.96117109210539,
+          "vqc_v9_cnn": 0.6180522783739473,
+          "qksvm_v9_cnn": 0.9599366402829079,
+          "rbf_control_v9_cnn": 0.6570925714947943,
+          "hybrid_v9_cnn": 0.9999999999999999,
+          "twin_v9_cnn": 0.9814046326376344
+        },
+        "twin_v9_cnn": {
+          "cnn25d_v9_a4_res_se_focal": 0.9689615776807916,
+          "lr_control_v9_cnn": 0.9706173538194988,
+          "vqc_v9_cnn": 0.6049066505337701,
+          "qksvm_v9_cnn": 0.965510797389305,
+          "rbf_control_v9_cnn": 0.653003496582917,
+          "hybrid_v9_cnn": 0.9814046326376344,
+          "twin_v9_cnn": 0.9999999999999999
+        }
+      },
+      "auc": {
+        "cnn25d_v9_a4_res_se_focal": 0.9986918353226085,
+        "lr_control_v9_cnn": 0.9983350631378655,
+        "vqc_v9_cnn": 0.9731447846393357,
+        "qksvm_v9_cnn": 0.9977404428299602,
+        "rbf_control_v9_cnn": 0.9819775990313094,
+        "hybrid_v9_cnn": 0.9985729112610275,
+        "twin_v9_cnn": 0.9985729112610275
+      }
+    },
+    "val": {
+      "spearman": {
+        "cnn25d_v9_a4_res_se_focal": {
+          "cnn25d_v9_a4_res_se_focal": 1.0,
+          "lr_control_v9_cnn": 0.9893673366215519,
+          "vqc_v9_cnn": 0.8923421877742183,
+          "qksvm_v9_cnn": 0.9871644222785102,
+          "rbf_control_v9_cnn": 0.8891590944214663,
+          "hybrid_v9_cnn": 0.9747353752419669,
+          "twin_v9_cnn": 0.9921648544793028
+        },
+        "lr_control_v9_cnn": {
+          "cnn25d_v9_a4_res_se_focal": 0.9893673366215519,
+          "lr_control_v9_cnn": 1.0,
+          "vqc_v9_cnn": 0.8813056131095668,
+          "qksvm_v9_cnn": 0.9935557552119486,
+          "rbf_control_v9_cnn": 0.9131082571306582,
+          "hybrid_v9_cnn": 0.9685143032268372,
+          "twin_v9_cnn": 0.9889943342405184
+        },
+        "vqc_v9_cnn": {
+          "cnn25d_v9_a4_res_se_focal": 0.8923421877742183,
+          "lr_control_v9_cnn": 0.8813056131095668,
+          "vqc_v9_cnn": 1.0,
+          "qksvm_v9_cnn": 0.8862594200127302,
+          "rbf_control_v9_cnn": 0.9032776536473817,
+          "hybrid_v9_cnn": 0.8791744702920891,
+          "twin_v9_cnn": 0.8862924244368948
+        },
+        "qksvm_v9_cnn": {
+          "cnn25d_v9_a4_res_se_focal": 0.9871644222785102,
+          "lr_control_v9_cnn": 0.9935557552119486,
+          "vqc_v9_cnn": 0.8862594200127302,
+          "qksvm_v9_cnn": 1.0,
+          "rbf_control_v9_cnn": 0.9026563322654917,
+          "hybrid_v9_cnn": 0.9596078236201662,
+          "twin_v9_cnn": 0.9772997666115718
+        },
+        "rbf_control_v9_cnn": {
+          "cnn25d_v9_a4_res_se_focal": 0.8891590944214663,
+          "lr_control_v9_cnn": 0.9131082571306582,
+          "vqc_v9_cnn": 0.9032776536473817,
+          "qksvm_v9_cnn": 0.9026563322654917,
+          "rbf_control_v9_cnn": 1.0,
+          "hybrid_v9_cnn": 0.9233537733748596,
+          "twin_v9_cnn": 0.9133068075553938
+        },
+        "hybrid_v9_cnn": {
+          "cnn25d_v9_a4_res_se_focal": 0.9747353752419669,
+          "lr_control_v9_cnn": 0.9685143032268372,
+          "vqc_v9_cnn": 0.8791744702920891,
+          "qksvm_v9_cnn": 0.9596078236201662,
+          "rbf_control_v9_cnn": 0.9233537733748596,
+          "hybrid_v9_cnn": 1.0,
+          "twin_v9_cnn": 0.9829707648906271
+        },
+        "twin_v9_cnn": {
+          "cnn25d_v9_a4_res_se_focal": 0.9921648544793028,
+          "lr_control_v9_cnn": 0.9889943342405184,
+          "vqc_v9_cnn": 0.8862924244368948,
+          "qksvm_v9_cnn": 0.9772997666115718,
+          "rbf_control_v9_cnn": 0.9133068075553938,
+          "hybrid_v9_cnn": 0.9829707648906271,
+          "twin_v9_cnn": 1.0
+        }
+      },
+      "auc": {
+        "cnn25d_v9_a4_res_se_focal": 0.9995820271682341,
+        "lr_control_v9_cnn": 0.9989550679205852,
+        "vqc_v9_cnn": 0.9993730407523511,
+        "qksvm_v9_cnn": 0.9995297805642633,
+        "rbf_control_v9_cnn": 0.9994252873563219,
+        "hybrid_v9_cnn": 0.9991118077324974,
+        "twin_v9_cnn": 0.9991640543364682
+      }
+    }
+  },
+  "test_pair_discordance_vs_cnn": {
+    "lr_control_v9_cnn": {
+      "pairs": 92496,
+      "cnn_wrong_model_right": 26,
+      "cnn_right_model_wrong": 59,
+      "both_wrong": 95
+    },
+    "vqc_v9_cnn": {
+      "pairs": 92496,
+      "cnn_wrong_model_right": 14,
+      "cnn_right_model_wrong": 2377,
+      "both_wrong": 107
+    },
+    "qksvm_v9_cnn": {
+      "pairs": 92496,
+      "cnn_wrong_model_right": 18,
+      "cnn_right_model_wrong": 106,
+      "both_wrong": 103
+    },
+    "rbf_control_v9_cnn": {
+      "pairs": 92496,
+      "cnn_wrong_model_right": 18,
+      "cnn_right_model_wrong": 1564,
+      "both_wrong": 103
+    },
+    "hybrid_v9_cnn": {
+      "pairs": 92496,
+      "cnn_wrong_model_right": 23,
+      "cnn_right_model_wrong": 34,
+      "both_wrong": 98
+    },
+    "twin_v9_cnn": {
+      "pairs": 92496,
+      "cnn_wrong_model_right": 21,
+      "cnn_right_model_wrong": 32,
+      "both_wrong": 100
+    }
+  },
+  "lr_control_coefficients": {
+    "lr_control_v9_cnn": {
+      "abs_coef": [
+        1.937684399925821,
+        0.24684384300244686,
+        0.007797806227606831,
+        0.040007932596666386,
+        0.1531137128189814,
+        0.03661504183076719,
+        0.00030626737276424714,
+        0.0011843732991476384
+      ],
+      "logit_range_per_component": [
+        6.0874150757825065,
+        0.7754828037603593,
+        0.02449753075876636,
+        0.12568862713100273,
+        0.4810209153559693,
+        0.11502954642642119,
+        0.0009621673283104055,
+        0.003720818455710127
+      ],
+      "share_of_first_component": 0.7995220646904263,
+      "pca_component_range_training": [
+        21.355794981908684,
+        12.305357522252066,
+        49.114507794887395,
+        23.271837364145302,
+        12.584215021431106,
+        20.23376648244765,
+        51.03771087628991,
+        36.55479886495269
+      ]
+    },
+    "lr_control_v9_eff": {
+      "abs_coef": [
+        14.170182641707772,
+        3.3437885804146106,
+        0.32122794342183975,
+        0.5418981657031655
+      ],
+      "logit_range_per_component": [
+        44.51694168721475,
+        10.504821639387984,
+        1.0091673471818094,
+        1.702423296366849
+      ],
+      "share_of_first_component": 0.7710783910151896,
+      "pca_component_range_training": [
+        67.13848367863427,
+        44.12546177809232,
+        46.91248670067032,
+        41.32569834730813
+      ]
+    },
+    "pca8_logreg": {
+      "abs_coef": [
+        2.2174926785190467,
+        1.6271731328651344,
+        4.3798814675293505,
+        7.0210733653763,
+        4.5350539089623645,
+        0.5017013871624219,
+        1.6752257093961558,
+        0.8760971650502163
+      ],
+      "logit_range_per_component": [
+        6.96645870822459,
+        5.111915160327794,
+        13.759803441984289,
+        22.05735250498115,
+        14.24729204402984,
+        1.576141392205273,
+        5.262876781743713,
+        2.752340417552604
+      ],
+      "share_of_first_component": 0.09711491320345449,
+      "pca_component_range_training": [
+        36.444129838856604,
+        43.689500565333915,
+        44.94678350858983,
+        34.65076124313735,
+        37.76309696415261,
+        36.877784413613696,
+        29.5227674629273,
+        29.62151785793408
+      ]
+    },
+    "pca8_logreg_ft": {
+      "abs_coef": [
+        14.541319404508988,
+        3.3361515309045724,
+        0.1998126635750957,
+        0.10055894067503304,
+        0.9808015876319346,
+        0.9763831288701021,
+        1.0801247450851972,
+        1.34135442276364
+      ],
+      "logit_range_per_component": [
+        45.68290221470814,
+        10.480829140752146,
+        0.6277299959817295,
+        0.31591522927745563,
+        3.0812790623336914,
+        3.067398064747329,
+        3.3933119641202034,
+        4.213989200414429
+      ],
+      "share_of_first_component": 0.6446618608025095,
+      "pca_component_range_training": [
+        67.13848367863427,
+        44.12546177809232,
+        46.91248670067032,
+        41.32569834730813,
+        37.82209275032404,
+        35.78579599617497,
+        34.27643182590336,
+        37.79115862042082
+      ]
+    }
+  },
+  "support_vector_class_separation": {
+    "v9_cnn_4q": {
+      "n": 40,
+      "cohens_d_per_component": [
+        -2.2431605409142064,
+        0.22873614573961887,
+        0.3217059912057487,
+        -0.2508577071147253
+      ],
+      "note": "support vectors lie near the decision boundary, so these effect sizes understate separability"
+    },
+    "v9_eff_4q": {
+      "n": 389,
+      "cohens_d_per_component": [
+        -3.3243407724605967,
+        0.2480267991314443,
+        0.032286061663169295,
+        -0.04971329511207445
+      ],
+      "note": "support vectors lie near the decision boundary, so these effect sizes understate separability"
+    },
+    "v8_imagenet_8q": {
+      "n": 437,
+      "cohens_d_per_component": [
+        0.13088639549612494,
+        0.031828018904542274,
+        0.1079304093019676,
+        -0.41602611889597224,
+        0.15201948576864566,
+        -0.015980025288311304,
+        0.026431739754790014,
+        -0.08807479995678481
+      ],
+      "note": "support vectors lie near the decision boundary, so these effect sizes understate separability"
+    },
+    "v8_finetuned_8q": {
+      "n": 136,
+      "cohens_d_per_component": [
+        -2.4288345959595787,
+        0.2664927227299725,
+        -0.27188514936584307,
+        0.2250050875922351,
+        0.011174982743461273,
+        0.08428143914513625,
+        -0.05022825187431772,
+        0.2309579855647375
+      ],
+      "note": "support vectors lie near the decision boundary, so these effect sizes understate separability"
+    }
+  },
+  "not_executable": {
+    "feature_distributions_correlations_redundancy": "not executable: the repository holds no feature vectors (CT images, data/processed and artifacts/cache are absent)",
+    "separability_diagnostics_on_full_embeddings": "not executable: the repository holds no feature vectors (CT images, data/processed and artifacts/cache are absent)"
+  }
+}

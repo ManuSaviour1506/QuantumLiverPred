@@ -1,0 +1,60 @@
+{
+  "name": "Classical twin (control for the hybrid) (8 qubits, EFF features)",
+  "kind": "v9_twin",
+  "version": "v9",
+  "features": "effnet_ft_v8",
+  "feature_description": "GAP features (1280-d) of V8's fine-tuned EfficientNet-B0 (trained on the training split only)",
+  "configuration": {
+    "qubits": 8,
+    "fusion": true
+  },
+  "selection": "highest validation ROC-AUC in the sweep",
+  "validation_auc": 0.9652560083594567,
+  "training_status": "PARTIALLY TRAINED",
+  "labels": "LiTS expert masks (verified)",
+  "clinical_use": "NOT validated for clinical use",
+  "calibration": {
+    "mu": 2.529774829451191,
+    "sd": 7.6275784281948855,
+    "a": 2.205886645639301,
+    "b": 0.5989730669066968,
+    "min_slope": 0.001
+  },
+  "calibration_status": "platt_on_validation",
+  "threshold": 0.8766410451360728,
+  "threshold_rule": "Youden J on validation (calibrated probability)",
+  "validation_score_check": {
+    "constant_scores": false,
+    "ok": true
+  },
+  "inference_seconds_per_patch": 0.01743,
+  "family": "classical",
+  "model_id": "twin_v9_eff",
+  "npz_sha256": "9b9e852697aa8869c09820393df941f3c65bab8cf8f0c5eb5b870253dac0ca33",
+  "status": "trained",
+  "saved_utc": "2026-11-06T11:27:08+00:00",
+  "role": "control",
+  "role_order": 4,
+  "test_summary": {
+    "auc": 0.9097474485383152,
+    "auc_ci95": [
+      0.8839699074074074,
+      0.9955555555555555
+    ],
+    "sensitivity": 0.625,
+    "specificity": 0.9471544715447154,
+    "f1": 0.7532051282051282,
+    "accuracy": 0.752411575562701,
+    "pr_auc": 0.939778643603201,
+    "ece": 0.13345137177967045
+  },
+  "validation_summary": {
+    "auc": 0.9652560083594567
+  },
+  "train_seconds": 0.7,
+  "parameters": 10337,
+  "head_inference_ms_per_patch": 0.004,
+  "feature_ms_per_patch": 17.426,
+  "inference_timing_note": "head + feature extraction on 2 CPU cores; circuits simulated exactly",
+  "support_vectors": null
+}

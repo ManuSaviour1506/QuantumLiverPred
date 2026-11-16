@@ -1,0 +1,28 @@
+  0/1745
+  200/1745
+  400/1745
+  600/1745
+  800/1745
+  1000/1745
+  1200/1745
+  1400/1745
+  1600/1745
+{
+ "passed": true,
+ "rows": 1745,
+ "file_status": {
+  "ok": 1745
+ },
+ "label_distribution": {
+  "tumour": 476,
+  "no_tumour": 1269
+ },
+ "warnings": [
+  "No patient identifiers: patient-level evaluation and leakage control are not possible; evaluate by scan / group only and do not describe results as patient-level."
+ ]
+}
+report: /sessions/rcw-01ugnsatahizjsuisnop5cus/lti_validator/lits_verified_v8_full.json
+
+real	0m15.111s
+user	0m12.425s
+sys	0m0.503s

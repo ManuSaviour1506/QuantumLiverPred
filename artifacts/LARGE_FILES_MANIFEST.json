@@ -1,0 +1,65 @@
+{
+ "about": "V11: large files and where they are. The three ImageNet weights (artifacts/weights, timm releases, Apache-2.0) ARE included in the V11 package. The seven V9 files (four model.npz, three training checkpoints that serving never reads) are NOT included: they were not in the V10 lean folder this package was built from. They are byte-identical copies of files in the V9 project; restore and verify them with: python install.py --v9 /path/to/liver_tumour_project_v9 (or scripts/v10_import_v9_artifacts.py). Models whose files are missing are reported as unavailable (never replaced by placeholders). See MISSING_ARTIFACTS.md.",
+ "files": [
+  {
+   "path": "artifacts/classical/densenet121_ft/checkpoint_best.npz",
+   "bytes": 2627488,
+   "sha256": "edeab770c75ff55602e674659d85d81bbb881e03cb0b97dfd04f525e3d07d741",
+   "included_in_v11_package": false
+  },
+  {
+   "path": "artifacts/classical/efficientnet_b0_ft/checkpoint_best.npz",
+   "bytes": 4561382,
+   "sha256": "7accb9dc20f346828275d71f6daec5e39b5bfdb42f43194af4f7b89a3e75c5dd",
+   "included_in_v11_package": false
+  },
+  {
+   "path": "artifacts/classical/efficientnet_b0_ft/model.npz",
+   "bytes": 4561382,
+   "sha256": "7accb9dc20f346828275d71f6daec5e39b5bfdb42f43194af4f7b89a3e75c5dd",
+   "included_in_v11_package": false
+  },
+  {
+   "path": "artifacts/classical/efficientnet_b0_ft_v9/model.npz",
+   "bytes": 4561382,
+   "sha256": "da3a25dc2fe0e25caeb374897b2cae3e428dba16b8199ae3f1e2b666acebd95a",
+   "included_in_v11_package": false
+  },
+  {
+   "path": "artifacts/classical/resnet50_ft/checkpoint_best.npz",
+   "bytes": 17887950,
+   "sha256": "1e08ef03e0a5f967ade1b305025864f585408f1abb6e8cc6d56a646f4bbf32c1",
+   "included_in_v11_package": false
+  },
+  {
+   "path": "artifacts/classical/resnet50_ft/model.npz",
+   "bytes": 17887950,
+   "sha256": "1e08ef03e0a5f967ade1b305025864f585408f1abb6e8cc6d56a646f4bbf32c1",
+   "included_in_v11_package": false
+  },
+  {
+   "path": "artifacts/classical/resnet50_ft_v9/model.npz",
+   "bytes": 17887950,
+   "sha256": "295a03c00083ea02b8999b49ecef1793d169c981765f74db1d729c156851b694",
+   "included_in_v11_package": false
+  },
+  {
+   "path": "artifacts/weights/densenet121_ra-50efcf5c.pth",
+   "bytes": 32376726,
+   "sha256": "50efcf5cb2ca22330d2978d1f4570ac8eeac4aeb30652cc656ff9908bf60dfb2",
+   "included_in_v11_package": true
+  },
+  {
+   "path": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth",
+   "bytes": 21376743,
+   "sha256": "3dd342dfa1fee25ae65e7bbdf8998cad6e45d6e77e69d580f0bd14d3eeb0b3f3",
+   "included_in_v11_package": true
+  },
+  {
+   "path": "artifacts/weights/resnet50_a1_0-14fe96d1.pth",
+   "bytes": 102483913,
+   "sha256": "14fe96d1f9fb311a60490082d2077e6e60427dcfe21839ddf934cce948f72b0f",
+   "included_in_v11_package": true
+  }
+ ]
+}

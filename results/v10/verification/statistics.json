@@ -1,0 +1,258 @@
+{
+  "paired_tests_reported": 30,
+  "involving_quantum_or_hybrid": 15,
+  "recorded_planned_comparisons_per_feature_set": [
+    3,
+    3
+  ],
+  "multiplicity_correction_applied_in_v9": false,
+  "reanalysis_quantum_vs_control_test_set": [
+    {
+      "a": "vqc_v9_cnn",
+      "b": "lr_control_v9_cnn",
+      "delta_auc": -0.025190278498529728,
+      "group_sign_flip": {
+        "p_two_sided": 1.0,
+        "groups_used": 3,
+        "groups_with_nonzero_difference": 1,
+        "smallest_attainable_p": 1.0
+      },
+      "group_bootstrap_ci95": [
+        -0.03276331487656392,
+        0.0
+      ],
+      "group_bootstrap_distinct_resamples_max": 27,
+      "delong_patch_level_reference": {
+        "p": 4.3442409625171763e-07,
+        "assumption": "independent samples (violated for patches from the same scan group)"
+      },
+      "v9_reported": {
+        "ci95": [
+          -0.03837908659734168,
+          2.7755575615477452e-18
+        ],
+        "p": 0.529
+      },
+      "per_group_delta": [
+        {
+          "group": "G01-R1",
+          "delta": -0.03276331487656392
+        },
+        {
+          "group": "G07-R1",
+          "delta": 0.0
+        },
+        {
+          "group": "G08-R1",
+          "delta": 0.0
+        }
+      ]
+    },
+    {
+      "a": "qksvm_v9_cnn",
+      "b": "rbf_control_v9_cnn",
+      "delta_auc": 0.015762843798650783,
+      "group_sign_flip": {
+        "p_two_sided": 1.0,
+        "groups_used": 3,
+        "groups_with_nonzero_difference": 1,
+        "smallest_attainable_p": 1.0
+      },
+      "group_bootstrap_ci95": [
+        0.0,
+        0.021000948331242886
+      ],
+      "group_bootstrap_distinct_resamples_max": 27,
+      "delong_patch_level_reference": {
+        "p": 0.0002724086088510269,
+        "assumption": "independent samples (violated for patches from the same scan group)"
+      },
+      "v9_reported": {
+        "ci95": [
+          -1.1102230246251565e-16,
+          0.026362183085964885
+        ],
+        "p": 0.511
+      },
+      "per_group_delta": [
+        {
+          "group": "G01-R1",
+          "delta": 0.021000948331242886
+        },
+        {
+          "group": "G07-R1",
+          "delta": 0.0
+        },
+        {
+          "group": "G08-R1",
+          "delta": 0.0
+        }
+      ]
+    },
+    {
+      "a": "hybrid_v9_cnn",
+      "b": "twin_v9_cnn",
+      "delta_auc": 0.0,
+      "group_sign_flip": {
+        "p_two_sided": 1.0,
+        "groups_used": 3,
+        "groups_with_nonzero_difference": 1,
+        "smallest_attainable_p": 1.0
+      },
+      "group_bootstrap_ci95": [
+        -1.5295665208525655e-05,
+        1.1644425813361892e-05
+      ],
+      "group_bootstrap_distinct_resamples_max": 27,
+      "delong_patch_level_reference": {
+        "p": 1.0,
+        "assumption": "independent samples (violated for patches from the same scan group)"
+      },
+      "v9_reported": {
+        "ci95": [
+          -0.00016407819613530327,
+          0.00015334060737461617
+        ],
+        "p": 1.0
+      },
+      "per_group_delta": [
+        {
+          "group": "G01-R1",
+          "delta": -1.5295665208525655e-05
+        },
+        {
+          "group": "G07-R1",
+          "delta": 0.0
+        },
+        {
+          "group": "G08-R1",
+          "delta": 0.0
+        }
+      ]
+    },
+    {
+      "a": "vqc_v9_eff",
+      "b": "lr_control_v9_eff",
+      "delta_auc": -0.0034271752291991087,
+      "group_sign_flip": {
+        "p_two_sided": 1.0,
+        "groups_used": 3,
+        "groups_with_nonzero_difference": 1,
+        "smallest_attainable_p": 1.0
+      },
+      "group_bootstrap_ci95": [
+        -0.004542812566918575,
+        0.0015432098765432167
+      ],
+      "group_bootstrap_distinct_resamples_max": 27,
+      "delong_patch_level_reference": {
+        "p": 0.05240904882332931,
+        "assumption": "independent samples (violated for patches from the same scan group)"
+      },
+      "v9_reported": {
+        "ci95": [
+          -0.006425798398912547,
+          0.005102040816326483
+        ],
+        "p": 0.419
+      },
+      "per_group_delta": [
+        {
+          "group": "G01-R1",
+          "delta": -0.004542812566918575
+        },
+        {
+          "group": "G07-R1",
+          "delta": 0.0
+        },
+        {
+          "group": "G08-R1",
+          "delta": 0.0
+        }
+      ]
+    },
+    {
+      "a": "qksvm_v9_eff",
+      "b": "rbf_control_v9_eff",
+      "delta_auc": -0.015081733264141195,
+      "group_sign_flip": {
+        "p_two_sided": 0.75,
+        "groups_used": 3,
+        "groups_with_nonzero_difference": 3,
+        "smallest_attainable_p": 0.25
+      },
+      "group_bootstrap_ci95": [
+        -0.019425494814769406,
+        0.01822916666666663
+      ],
+      "group_bootstrap_distinct_resamples_max": 27,
+      "delong_patch_level_reference": {
+        "p": 1.6832268201483203e-07,
+        "assumption": "independent samples (violated for patches from the same scan group)"
+      },
+      "v9_reported": {
+        "ci95": [
+          -0.022250066856255784,
+          0.01678240740740733
+        ],
+        "p": 0.407
+      },
+      "per_group_delta": [
+        {
+          "group": "G01-R1",
+          "delta": -0.019425494814769406
+        },
+        {
+          "group": "G07-R1",
+          "delta": 0.01822916666666663
+        },
+        {
+          "group": "G08-R1",
+          "delta": -0.006666666666666599
+        }
+      ]
+    },
+    {
+      "a": "hybrid_v9_eff",
+      "b": "twin_v9_eff",
+      "delta_auc": 0.0037947586922678633,
+      "group_sign_flip": {
+        "p_two_sided": 0.25,
+        "groups_used": 3,
+        "groups_with_nonzero_difference": 3,
+        "smallest_attainable_p": 0.25
+      },
+      "group_bootstrap_ci95": [
+        0.0015370642073638807,
+        0.02734375
+      ],
+      "group_bootstrap_distinct_resamples_max": 27,
+      "delong_patch_level_reference": {
+        "p": 0.2243847565359398,
+        "assumption": "independent samples (violated for patches from the same scan group)"
+      },
+      "v9_reported": {
+        "ci95": [
+          -0.002502371140764159,
+          0.027063034415155004
+        ],
+        "p": 0.238
+      },
+      "per_group_delta": [
+        {
+          "group": "G01-R1",
+          "delta": 0.001682523172932826
+        },
+        {
+          "group": "G07-R1",
+          "delta": 0.02734375
+        },
+        {
+          "group": "G08-R1",
+          "delta": 0.0033333333333332993
+        }
+      ]
+    }
+  ],
+  "conclusion": "with three test groups an exact group-level test cannot reach p < 0.25, and when only G01 differs (G07 and G08 at AUC 1.000 for both models) it cannot reach p < 1; patch-level tests treat 622 dependent patches as independent"
+}

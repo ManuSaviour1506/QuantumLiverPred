@@ -1,0 +1,964 @@
+{
+  "claim": "phi = 2(pi - x_a)(pi - x_b) = 2 pi^2 - 2 pi (x_a + x_b) + 2 x_a x_b; the 'nearly constant' explanation was wrong",
+  "implemented_unitary": "U(x) = [ D(x) H^{(x)n} ]^reps,  D(x) = exp(-i [ sum_q u_q Z_q + sum_(a,b) (pi - u_a)(pi - u_b) Z_a Z_b ]),  u = bandwidth * x, linear chain pairs (q, q+1), reps = 2 (src/quantum/simulator.py ZZFeatureMap.states)",
+  "gate_identity_CNOT_RZ2phi_CNOT_equals_exp_minus_i_phi_ZZ": true,
+  "matches_qiskit_ZZFeatureMap_gate_sequence": "yes, apart from entanglement: Qiskit's default is 'full', V9 uses 'linear'",
+  "periodicity": "exp(-i phi Z_a Z_b) changes only by a global phase when phi -> phi + pi, and exp(-i u Z) when u -> u + pi; so the constant pi^2 acts as a fixed ZZ rotation with phi = pi^2 mod pi = 0.4448 rad",
+  "note_on_linear_terms": "all three parts (constant, linear, bilinear) multiply Z_a Z_b, so all three are two-qubit interactions; the linear part is an entangling ZZ rotation whose angle depends additively on the data, only the bilinear part couples the two features multiplicatively",
+  "v10_reproduces_v9_states_n4_bw0.05": true,
+  "v10_reproduces_v9_states_n8_bw1.0": true,
+  "on_real_points": {
+    "v9_cnn_4q": {
+      "n_points": 40,
+      "qubits": 4,
+      "per_bandwidth": {
+        "bw_0.01": {
+          "pair_phase_span_rad (phi, i.e. exp(-i phi ZZ))": {
+            "constant": 0.0,
+            "linear": 0.19739208802177716,
+            "bilinear": 0.0009869604401088355,
+            "total": 0.19640512758166828
+          },
+          "pair_phase_sd_rad": {
+            "constant": 1.7763568394002505e-15,
+            "linear": 0.048057544565277034,
+            "bilinear": 0.00022898425142816778,
+            "total": 0.04785933910953641
+          },
+          "single_qubit_phase_span_rad": 0.03141592653589729,
+          "kernel_change_when_removing_part": {
+            "v9_without_bilinear": {
+              "max_abs_diff": 0.0006666814854741077,
+              "mean_abs_diff": 2.8310044190203683e-05,
+              "relative_frobenius_centred": 0.007959073348333854,
+              "centred_alignment_between_kernels": 0.9999938678252644
+            },
+            "v9_without_constant": {
+              "max_abs_diff": 0.029124577678258046,
+              "mean_abs_diff": 0.0010035403813521194,
+              "relative_frobenius_centred": 0.30830315694537486,
+              "centred_alignment_between_kernels": 0.9950243487341335
+            },
+            "v9_bilinear": {
+              "max_abs_diff": 0.08978735727048803,
+              "mean_abs_diff": 0.0035225806507458574,
+              "relative_frobenius_centred": 0.974470053701663,
+              "centred_alignment_between_kernels": 0.8798412222219294
+            },
+            "none": {
+              "max_abs_diff": 0.08978846788063666,
+              "mean_abs_diff": 0.0035226476007832004,
+              "relative_frobenius_centred": 0.9744828703109776,
+              "centred_alignment_between_kernels": 0.8798898690387735
+            }
+          },
+          "fubini_study_mean_per_feature_v9": [
+            0.0015330975378091694,
+            0.0029198010675912656,
+            0.0028530144913219146,
+            0.0015766660199645344
+          ],
+          "fubini_study_mean_per_feature_no_pair_terms": [
+            0.00010042577880398085,
+            0.00010054124199854186,
+            0.00010028089469926726,
+            0.0001003136462784937
+          ],
+          "meyer_wallach_mean": 0.5660768206961079
+        },
+        "bw_0.05": {
+          "pair_phase_span_rad (phi, i.e. exp(-i phi ZZ))": {
+            "constant": 0.0,
+            "linear": 0.9869604401088855,
+            "bilinear": 0.02467401100272088,
+            "total": 0.9622864291061646
+          },
+          "pair_phase_sd_rad": {
+            "constant": 1.7763568394002505e-15,
+            "linear": 0.24028772282638514,
+            "bilinear": 0.005724606285704195,
+            "total": 0.23534655389349105
+          },
+          "single_qubit_phase_span_rad": 0.15707963267948644,
+          "kernel_change_when_removing_part": {
+            "v9_without_bilinear": {
+              "max_abs_diff": 0.024965964415700537,
+              "mean_abs_diff": 0.0017285685081749607,
+              "relative_frobenius_centred": 0.04600649126834081,
+              "centred_alignment_between_kernels": 0.9996322825841873
+            },
+            "v9_without_constant": {
+              "max_abs_diff": 0.2707635066136702,
+              "mean_abs_diff": 0.013906154081119873,
+              "relative_frobenius_centred": 0.29174479734891073,
+              "centred_alignment_between_kernels": 0.9689983286305697
+            },
+            "v9_bilinear": {
+              "max_abs_diff": 0.5427603060624264,
+              "mean_abs_diff": 0.05035562191148353,
+              "relative_frobenius_centred": 0.9515866207660292,
+              "centred_alignment_between_kernels": 0.8964989471937149
+            },
+            "none": {
+              "max_abs_diff": 0.5429457334189757,
+              "mean_abs_diff": 0.05040266891891248,
+              "relative_frobenius_centred": 0.952303730371851,
+              "centred_alignment_between_kernels": 0.8966249437532201
+            }
+          },
+          "fubini_study_mean_per_feature_v9": [
+            0.026471913550096815,
+            0.062436264491871896,
+            0.058239333911025426,
+            0.02902114271119416
+          ],
+          "fubini_study_mean_per_feature_no_pair_terms": [
+            0.0025819463234100226,
+            0.0026578061973481226,
+            0.0025062873998393798,
+            0.0025163582328957546
+          ],
+          "meyer_wallach_mean": 0.2833428063302528
+        },
+        "bw_0.25": {
+          "pair_phase_span_rad (phi, i.e. exp(-i phi ZZ))": {
+            "constant": 0.0,
+            "linear": 4.934802200544428,
+            "bilinear": 0.616850275068022,
+            "total": 4.317951925476406
+          },
+          "pair_phase_sd_rad": {
+            "constant": 1.7763568394002505e-15,
+            "linear": 1.2014386141319255,
+            "bilinear": 0.14311515714260487,
+            "total": 1.0798456547798547
+          },
+          "single_qubit_phase_span_rad": 0.7853981633974322,
+          "kernel_change_when_removing_part": {
+            "v9_without_bilinear": {
+              "max_abs_diff": 0.2949777355659808,
+              "mean_abs_diff": 0.0482517208030131,
+              "relative_frobenius_centred": 0.3291692100519174,
+              "centred_alignment_between_kernels": 0.9737854940828671
+            },
+            "v9_without_constant": {
+              "max_abs_diff": 0.17547422931207707,
+              "mean_abs_diff": 0.023254096605241442,
+              "relative_frobenius_centred": 0.17749554553862754,
+              "centred_alignment_between_kernels": 0.9842090140232442
+            },
+            "v9_bilinear": {
+              "max_abs_diff": 0.7044726354095884,
+              "mean_abs_diff": 0.2192445423640159,
+              "relative_frobenius_centred": 0.7827940736990808,
+              "centred_alignment_between_kernels": 0.7320368850704136
+            },
+            "none": {
+              "max_abs_diff": 0.7253994915449312,
+              "mean_abs_diff": 0.23279026870633238,
+              "relative_frobenius_centred": 0.8204823276190268,
+              "centred_alignment_between_kernels": 0.7062631746621049
+            }
+          },
+          "fubini_study_mean_per_feature_v9": [
+            1.464892819824648,
+            2.732317855858035,
+            1.5146090454054573,
+            0.8774079435225346
+          ],
+          "fubini_study_mean_per_feature_no_pair_terms": [
+            0.10019955698492566,
+            0.11806558397609024,
+            0.06408303554472639,
+            0.07185784189900346
+          ],
+          "meyer_wallach_mean": 0.4278468793726688
+        },
+        "bw_1": {
+          "pair_phase_span_rad (phi, i.e. exp(-i phi ZZ))": {
+            "constant": 0.0,
+            "linear": 19.73920880217771,
+            "bilinear": 9.869604401088353,
+            "total": 9.869604401089358
+          },
+          "pair_phase_sd_rad": {
+            "constant": 1.7763568394002505e-15,
+            "linear": 4.805754456527702,
+            "bilinear": 2.289842514281678,
+            "total": 3.0454837394501015
+          },
+          "single_qubit_phase_span_rad": 3.1415926535897287,
+          "kernel_change_when_removing_part": {
+            "v9_without_bilinear": {
+              "max_abs_diff": 0.6465947745769942,
+              "mean_abs_diff": 0.1493130688855369,
+              "relative_frobenius_centred": 0.49014088497163516,
+              "centred_alignment_between_kernels": 0.8984545888703326
+            },
+            "v9_without_constant": {
+              "max_abs_diff": 0.21667461223235696,
+              "mean_abs_diff": 0.0585653954206805,
+              "relative_frobenius_centred": 0.21519225550546117,
+              "centred_alignment_between_kernels": 0.9819208873955129
+            },
+            "v9_bilinear": {
+              "max_abs_diff": 0.6991896973680403,
+              "mean_abs_diff": 0.21515498270253303,
+              "relative_frobenius_centred": 0.6243526617811721,
+              "centred_alignment_between_kernels": 0.7851590579854666
+            },
+            "none": {
+              "max_abs_diff": 0.8099426240801555,
+              "mean_abs_diff": 0.3260252638062294,
+              "relative_frobenius_centred": 0.5875434915356852,
+              "centred_alignment_between_kernels": 0.823244250281269
+            }
+          },
+          "fubini_study_mean_per_feature_v9": [
+            2.8614883046396145,
+            23.15769339733543,
+            13.875424128007023,
+            18.77788812137959
+          ],
+          "fubini_study_mean_per_feature_no_pair_terms": [
+            1.3599742476610999,
+            1.746293757654005,
+            1.0051494031548813,
+            1.8564579790103508
+          ],
+          "meyer_wallach_mean": 0.5007603429711872
+        }
+      }
+    },
+    "v9_eff_4q": {
+      "n_points": 389,
+      "qubits": 4,
+      "per_bandwidth": {
+        "bw_0.01": {
+          "pair_phase_span_rad (phi, i.e. exp(-i phi ZZ))": {
+            "constant": 0.0,
+            "linear": 0.1254498879606373,
+            "bilinear": 0.0004526983838156918,
+            "total": 0.1250079868304983
+          },
+          "pair_phase_sd_rad": {
+            "constant": 0.0,
+            "linear": 0.02594420506044483,
+            "bilinear": 9.83363393126668e-05,
+            "total": 0.02584905188583291
+          },
+          "single_qubit_phase_span_rad": 0.030365570002594086,
+          "kernel_change_when_removing_part": {
+            "v9_without_bilinear": {
+              "max_abs_diff": 0.00027807253956246836,
+              "mean_abs_diff": 4.027131103873683e-05,
+              "relative_frobenius_centred": 0.007267265061737577,
+              "centred_alignment_between_kernels": 0.9999992476105918
+            },
+            "v9_without_constant": {
+              "max_abs_diff": 0.011865224337305302,
+              "mean_abs_diff": 0.0015485229425943846,
+              "relative_frobenius_centred": 0.2987672345553547,
+              "centred_alignment_between_kernels": 0.990232026403974
+            },
+            "v9_bilinear": {
+              "max_abs_diff": 0.036708370504041854,
+              "mean_abs_diff": 0.005575454392697696,
+              "relative_frobenius_centred": 0.9723271594294771,
+              "centred_alignment_between_kernels": 0.8371744715486145
+            },
+            "none": {
+              "max_abs_diff": 0.036708753391027416,
+              "mean_abs_diff": 0.005575517379737449,
+              "relative_frobenius_centred": 0.9723368658947945,
+              "centred_alignment_between_kernels": 0.8370892274276567
+            }
+          },
+          "fubini_study_mean_per_feature_v9": [
+            0.0015597575453440982,
+            0.0028886908420844293,
+            0.0028786951711268216,
+            0.0015648869977624713
+          ],
+          "fubini_study_mean_per_feature_no_pair_terms": [
+            0.00010035172692823835,
+            0.00010039080677870516,
+            0.00010034029163108471,
+            0.0001003699345858422
+          ],
+          "meyer_wallach_mean": 0.5744236511217709
+        },
+        "bw_0.05": {
+          "pair_phase_span_rad (phi, i.e. exp(-i phi ZZ))": {
+            "constant": 0.0,
+            "linear": 0.6272494398031867,
+            "bilinear": 0.011317459595392295,
+            "total": 0.6162019115496875
+          },
+          "pair_phase_sd_rad": {
+            "constant": 0.0,
+            "linear": 0.12972102530222415,
+            "bilinear": 0.0024584084828166704,
+            "total": 0.12734340509242636
+          },
+          "single_qubit_phase_span_rad": 0.15182785001297044,
+          "kernel_change_when_removing_part": {
+            "v9_without_bilinear": {
+              "max_abs_diff": 0.012289366155607162,
+              "mean_abs_diff": 0.0029349022937797237,
+              "relative_frobenius_centred": 0.028892319253615642,
+              "centred_alignment_between_kernels": 0.9999760067254615
+            },
+            "v9_without_constant": {
+              "max_abs_diff": 0.19907897335064084,
+              "mean_abs_diff": 0.032742645401562825,
+              "relative_frobenius_centred": 0.3844875609463637,
+              "centred_alignment_between_kernels": 0.9881933367617997
+            },
+            "v9_bilinear": {
+              "max_abs_diff": 0.3920808077992949,
+              "mean_abs_diff": 0.08932449388951705,
+              "relative_frobenius_centred": 0.9520062017303652,
+              "centred_alignment_between_kernels": 0.8654253077205347
+            },
+            "none": {
+              "max_abs_diff": 0.39237225555129585,
+              "mean_abs_diff": 0.08937919475936493,
+              "relative_frobenius_centred": 0.9525019944798037,
+              "centred_alignment_between_kernels": 0.8634171048051614
+            }
+          },
+          "fubini_study_mean_per_feature_v9": [
+            0.02802057830209037,
+            0.0539282591915935,
+            0.05346913389825403,
+            0.028263954621188248
+          ],
+          "fubini_study_mean_per_feature_no_pair_terms": [
+            0.002542012378370373,
+            0.002563766532404088,
+            0.002533509402269374,
+            0.002551221789381941
+          ],
+          "meyer_wallach_mean": 0.10991498252011593
+        },
+        "bw_0.25": {
+          "pair_phase_span_rad (phi, i.e. exp(-i phi ZZ))": {
+            "constant": 0.0,
+            "linear": 3.136247199015932,
+            "bilinear": 0.28293648988480735,
+            "total": 2.8600589926784625
+          },
+          "pair_phase_sd_rad": {
+            "constant": 0.0,
+            "linear": 0.6486051265111208,
+            "bilinear": 0.061460212070416756,
+            "total": 0.5893303811571988
+          },
+          "single_qubit_phase_span_rad": 0.7591392500648521,
+          "kernel_change_when_removing_part": {
+            "v9_without_bilinear": {
+              "max_abs_diff": 0.20050644330841683,
+              "mean_abs_diff": 0.02979505670894743,
+              "relative_frobenius_centred": 0.15949428108390445,
+              "centred_alignment_between_kernels": 0.9888273027816307
+            },
+            "v9_without_constant": {
+              "max_abs_diff": 0.6499442389160185,
+              "mean_abs_diff": 0.06910104294046208,
+              "relative_frobenius_centred": 0.350059408375144,
+              "centred_alignment_between_kernels": 0.9382174165383445
+            },
+            "v9_bilinear": {
+              "max_abs_diff": 0.8953873639766171,
+              "mean_abs_diff": 0.5743730326632902,
+              "relative_frobenius_centred": 0.7618893901040552,
+              "centred_alignment_between_kernels": 0.6684756984011401
+            },
+            "none": {
+              "max_abs_diff": 0.9141330452021154,
+              "mean_abs_diff": 0.621002984887803,
+              "relative_frobenius_centred": 0.7969385156285773,
+              "centred_alignment_between_kernels": 0.6489129669085241
+            }
+          },
+          "fubini_study_mean_per_feature_v9": [
+            1.1707958085804826,
+            2.094437459132516,
+            1.9847789589078093,
+            1.1284402564593066
+          ],
+          "fubini_study_mean_per_feature_no_pair_terms": [
+            0.08460637657137227,
+            0.09039539605737446,
+            0.07958996317558586,
+            0.08659056283111255
+          ],
+          "meyer_wallach_mean": 0.6463498332570491
+        },
+        "bw_1": {
+          "pair_phase_span_rad (phi, i.e. exp(-i phi ZZ))": {
+            "constant": 0.0,
+            "linear": 12.544988796063729,
+            "bilinear": 4.526983838156918,
+            "total": 8.125977494664214
+          },
+          "pair_phase_sd_rad": {
+            "constant": 0.0,
+            "linear": 2.594420506044483,
+            "bilinear": 0.9833633931266681,
+            "total": 1.661342369160185
+          },
+          "single_qubit_phase_span_rad": 3.0365570002594082,
+          "kernel_change_when_removing_part": {
+            "v9_without_bilinear": {
+              "max_abs_diff": 0.88770105561572,
+              "mean_abs_diff": 0.08992935821040514,
+              "relative_frobenius_centred": 1.0790343623936727,
+              "centred_alignment_between_kernels": 0.35353120509767016
+            },
+            "v9_without_constant": {
+              "max_abs_diff": 0.7391125277054706,
+              "mean_abs_diff": 0.07136954805330513,
+              "relative_frobenius_centred": 0.851680163437232,
+              "centred_alignment_between_kernels": 0.6290749206093306
+            },
+            "v9_bilinear": {
+              "max_abs_diff": 0.8299494832802818,
+              "mean_abs_diff": 0.09312545686389036,
+              "relative_frobenius_centred": 1.160436224866686,
+              "centred_alignment_between_kernels": 0.4236772400749322
+            },
+            "none": {
+              "max_abs_diff": 0.9394158535894069,
+              "mean_abs_diff": 0.22786937584881384,
+              "relative_frobenius_centred": 1.6697143540194896,
+              "centred_alignment_between_kernels": 0.31070107745272085
+            }
+          },
+          "fubini_study_mean_per_feature_v9": [
+            8.381374302424138,
+            17.321112080026513,
+            16.405230606530985,
+            10.64316571036672
+          ],
+          "fubini_study_mean_per_feature_no_pair_terms": [
+            1.4351869150330818,
+            1.6120037006350791,
+            1.6846019014193934,
+            1.5296197068415125
+          ],
+          "meyer_wallach_mean": 0.485431798132765
+        }
+      }
+    },
+    "v8_imagenet_8q": {
+      "n_points": 437,
+      "qubits": 8,
+      "per_bandwidth": {
+        "bw_0.01": {
+          "pair_phase_span_rad (phi, i.e. exp(-i phi ZZ))": {
+            "constant": 0.0,
+            "linear": 0.1617649078880486,
+            "bilinear": 0.0008477497365071921,
+            "total": 0.16092565588682461
+          },
+          "pair_phase_sd_rad": {
+            "constant": 3.552713678800501e-15,
+            "linear": 0.022571580620117482,
+            "bilinear": 0.0001075414704263643,
+            "total": 0.022469965449103037
+          },
+          "single_qubit_phase_span_rad": 0.031415926535897094,
+          "kernel_change_when_removing_part": {
+            "v9_without_bilinear": {
+              "max_abs_diff": 0.0006677795623070137,
+              "mean_abs_diff": 8.22016157261497e-05,
+              "relative_frobenius_centred": 0.008784096540608488,
+              "centred_alignment_between_kernels": 0.9999969233487277
+            },
+            "v9_without_constant": {
+              "max_abs_diff": 0.022135445735650405,
+              "mean_abs_diff": 0.002894618323331607,
+              "relative_frobenius_centred": 0.32061257997468123,
+              "centred_alignment_between_kernels": 0.9922798504971369
+            },
+            "v9_bilinear": {
+              "max_abs_diff": 0.0659594039192456,
+              "mean_abs_diff": 0.009461400411425675,
+              "relative_frobenius_centred": 0.9716516630609031,
+              "centred_alignment_between_kernels": 0.7755351309631384
+            },
+            "none": {
+              "max_abs_diff": 0.06596068668244925,
+              "mean_abs_diff": 0.009461553827856396,
+              "relative_frobenius_centred": 0.9716652364011565,
+              "centred_alignment_between_kernels": 0.7753669063776316
+            }
+          },
+          "fubini_study_mean_per_feature_v9": [
+            0.0015700584166111753,
+            0.0028506490501456483,
+            0.0031429108204861222,
+            0.003131919057430821,
+            0.0030966779140939593,
+            0.0031158821078847154,
+            0.0028185639378008887,
+            0.001518409398215681
+          ],
+          "fubini_study_mean_per_feature_no_pair_terms": [
+            0.000100722985507673,
+            0.00010059930666272976,
+            0.0001006613681298063,
+            0.00010066114608520138,
+            0.0001006436045614123,
+            0.00010068001987662001,
+            0.00010065714928231273,
+            0.00010064304944989999
+          ],
+          "meyer_wallach_mean": 0.6043468396491452
+        },
+        "bw_0.05": {
+          "pair_phase_span_rad (phi, i.e. exp(-i phi ZZ))": {
+            "constant": 0.0,
+            "linear": 0.8088245394402429,
+            "bilinear": 0.021193743412679805,
+            "total": 0.7878432394096908
+          },
+          "pair_phase_sd_rad": {
+            "constant": 3.552713678800501e-15,
+            "linear": 0.11285790310058742,
+            "bilinear": 0.002688536760659108,
+            "total": 0.11032033278308252
+          },
+          "single_qubit_phase_span_rad": 0.1570796326794855,
+          "kernel_change_when_removing_part": {
+            "v9_without_bilinear": {
+              "max_abs_diff": 0.025253502848547438,
+              "mean_abs_diff": 0.005638251864434166,
+              "relative_frobenius_centred": 0.03413853318360188,
+              "centred_alignment_between_kernels": 0.9998915822694776
+            },
+            "v9_without_constant": {
+              "max_abs_diff": 0.31850048156790844,
+              "mean_abs_diff": 0.07474750423546606,
+              "relative_frobenius_centred": 0.5151823789422154,
+              "centred_alignment_between_kernels": 0.9873802856730672
+            },
+            "v9_bilinear": {
+              "max_abs_diff": 0.5854378100242991,
+              "mean_abs_diff": 0.1372176112683112,
+              "relative_frobenius_centred": 0.9418179874432112,
+              "centred_alignment_between_kernels": 0.822011878870364
+            },
+            "none": {
+              "max_abs_diff": 0.5863919752954765,
+              "mean_abs_diff": 0.13734999337378112,
+              "relative_frobenius_centred": 0.9426036396653509,
+              "centred_alignment_between_kernels": 0.8180934641203086
+            }
+          },
+          "fubini_study_mean_per_feature_v9": [
+            0.027715119199633875,
+            0.05177795459054835,
+            0.05428932214890381,
+            0.052718568621656914,
+            0.05232114164144264,
+            0.053315474812798413,
+            0.051935868938812746,
+            0.02711163449298226
+          ],
+          "fubini_study_mean_per_feature_no_pair_terms": [
+            0.0026004989273076262,
+            0.0025237956169377185,
+            0.002565421541866897,
+            0.002562296264052577,
+            0.002552376865416761,
+            0.002575391677694938,
+            0.002561964307368214,
+            0.0025512167933783303
+          ],
+          "meyer_wallach_mean": 0.07565601627880301
+        },
+        "bw_0.25": {
+          "pair_phase_span_rad (phi, i.e. exp(-i phi ZZ))": {
+            "constant": 0.0,
+            "linear": 4.044122697201216,
+            "bilinear": 0.5298435853169952,
+            "total": 3.5195901964373713
+          },
+          "pair_phase_sd_rad": {
+            "constant": 3.552713678800501e-15,
+            "linear": 0.564289515502937,
+            "bilinear": 0.06721341901647769,
+            "total": 0.5012439165733669
+          },
+          "single_qubit_phase_span_rad": 0.7853981633974274,
+          "kernel_change_when_removing_part": {
+            "v9_without_bilinear": {
+              "max_abs_diff": 0.22149984997759314,
+              "mean_abs_diff": 0.02868021073204401,
+              "relative_frobenius_centred": 0.23784647658252075,
+              "centred_alignment_between_kernels": 0.9776896020774725
+            },
+            "v9_without_constant": {
+              "max_abs_diff": 0.3478382882162735,
+              "mean_abs_diff": 0.03168758096838787,
+              "relative_frobenius_centred": 0.29602859442127105,
+              "centred_alignment_between_kernels": 0.9554675852404536
+            },
+            "v9_bilinear": {
+              "max_abs_diff": 0.8412395262931363,
+              "mean_abs_diff": 0.5321607628007055,
+              "relative_frobenius_centred": 0.7655557007820113,
+              "centred_alignment_between_kernels": 0.6898034997108566
+            },
+            "none": {
+              "max_abs_diff": 0.8964675176506895,
+              "mean_abs_diff": 0.6163508810073606,
+              "relative_frobenius_centred": 0.7591135352605262,
+              "centred_alignment_between_kernels": 0.667713389947874
+            }
+          },
+          "fubini_study_mean_per_feature_v9": [
+            1.2442418590441484,
+            1.8532735874265984,
+            1.6670485778469413,
+            1.4613378683803202,
+            1.5570788085006455,
+            1.6416263919349934,
+            1.808684751081205,
+            1.1146828802210962
+          ],
+          "fubini_study_mean_per_feature_no_pair_terms": [
+            0.10101354275260377,
+            0.07491836317985445,
+            0.09346805107668388,
+            0.09241990284181156,
+            0.08818445385028184,
+            0.09686993218682716,
+            0.091319742656637,
+            0.08764568526498095
+          ],
+          "meyer_wallach_mean": 0.5143388777364709
+        },
+        "bw_1": {
+          "pair_phase_span_rad (phi, i.e. exp(-i phi ZZ))": {
+            "constant": 0.0,
+            "linear": 16.176490788804863,
+            "bilinear": 8.477497365071923,
+            "total": 7.783970776583349
+          },
+          "pair_phase_sd_rad": {
+            "constant": 3.552713678800501e-15,
+            "linear": 2.257158062011748,
+            "bilinear": 1.075414704263643,
+            "total": 1.2894997978331293
+          },
+          "single_qubit_phase_span_rad": 3.1415926535897096,
+          "kernel_change_when_removing_part": {
+            "v9_without_bilinear": {
+              "max_abs_diff": 0.592272769092945,
+              "mean_abs_diff": 0.008869579497647632,
+              "relative_frobenius_centred": 0.4333270972646048,
+              "centred_alignment_between_kernels": 0.9013546698348167
+            },
+            "v9_without_constant": {
+              "max_abs_diff": 0.2832070985890911,
+              "mean_abs_diff": 0.0077770032249526826,
+              "relative_frobenius_centred": 0.29375354048130625,
+              "centred_alignment_between_kernels": 0.9579725121143601
+            },
+            "v9_bilinear": {
+              "max_abs_diff": 0.5419587310654657,
+              "mean_abs_diff": 0.009463651831849674,
+              "relative_frobenius_centred": 0.46100129796490275,
+              "centred_alignment_between_kernels": 0.8981010531042101
+            },
+            "none": {
+              "max_abs_diff": 0.8265211385135224,
+              "mean_abs_diff": 0.12909672923553348,
+              "relative_frobenius_centred": 2.2007873551759856,
+              "centred_alignment_between_kernels": 0.44353635159248356
+            }
+          },
+          "fubini_study_mean_per_feature_v9": [
+            12.608159028093537,
+            10.992467500192674,
+            18.369851986332883,
+            13.467917481857496,
+            11.428273792080114,
+            14.106017619752729,
+            12.25121832565401,
+            7.247551366995614
+          ],
+          "fubini_study_mean_per_feature_no_pair_terms": [
+            1.5473149929667858,
+            1.6361686784316396,
+            1.3299023249313535,
+            1.3356909867034974,
+            1.4769775573131312,
+            1.341332572624143,
+            1.4117327021279105,
+            1.4283398065972899
+          ],
+          "meyer_wallach_mean": 0.5775690124968959
+        }
+      }
+    },
+    "v8_finetuned_8q": {
+      "n_points": 136,
+      "qubits": 8,
+      "per_bandwidth": {
+        "bw_0.01": {
+          "pair_phase_span_rad (phi, i.e. exp(-i phi ZZ))": {
+            "constant": 0.0,
+            "linear": 0.14438494695881107,
+            "bilinear": 0.0006708768004343888,
+            "total": 0.14371430600222546
+          },
+          "pair_phase_sd_rad": {
+            "constant": 3.552713678800501e-15,
+            "linear": 0.02419348163804163,
+            "bilinear": 0.00010530079634402429,
+            "total": 0.02409185683236425
+          },
+          "single_qubit_phase_span_rad": 0.03141592653589726,
+          "kernel_change_when_removing_part": {
+            "v9_without_bilinear": {
+              "max_abs_diff": 0.0004339586667445605,
+              "mean_abs_diff": 9.667690706533804e-05,
+              "relative_frobenius_centred": 0.008294808620321168,
+              "centred_alignment_between_kernels": 0.9999991085691043
+            },
+            "v9_without_constant": {
+              "max_abs_diff": 0.01581184224931409,
+              "mean_abs_diff": 0.0034094422796605525,
+              "relative_frobenius_centred": 0.31555107903355223,
+              "centred_alignment_between_kernels": 0.9907879777025617
+            },
+            "v9_bilinear": {
+              "max_abs_diff": 0.047643140509365134,
+              "mean_abs_diff": 0.011535661528582179,
+              "relative_frobenius_centred": 0.9764973570890383,
+              "centred_alignment_between_kernels": 0.8308218052781297
+            },
+            "none": {
+              "max_abs_diff": 0.04764378427457239,
+              "mean_abs_diff": 0.011535827504336557,
+              "relative_frobenius_centred": 0.9765096522310671,
+              "centred_alignment_between_kernels": 0.8307037502595845
+            }
+          },
+          "fubini_study_mean_per_feature_v9": [
+            0.0015480636380636819,
+            0.0028773589720016194,
+            0.0031575934677410007,
+            0.0031516877343223623,
+            0.0031578703704247895,
+            0.0031327295333002446,
+            0.0028476435262113436,
+            0.0015447842351706492
+          ],
+          "fubini_study_mean_per_feature_no_pair_terms": [
+            0.00010061151258527696,
+            0.00010066620739604893,
+            0.00010063028841584048,
+            0.00010063828855234145,
+            0.00010066490125131408,
+            0.00010063616606714731,
+            0.00010064906424640399,
+            0.0001006588603319154
+          ],
+          "meyer_wallach_mean": 0.6164044518544419
+        },
+        "bw_0.05": {
+          "pair_phase_span_rad (phi, i.e. exp(-i phi ZZ))": {
+            "constant": 0.0,
+            "linear": 0.7219247347940553,
+            "bilinear": 0.016771920010859722,
+            "total": 0.7051587108793846
+          },
+          "pair_phase_sd_rad": {
+            "constant": 3.552713678800501e-15,
+            "linear": 0.12096740819020815,
+            "bilinear": 0.0026325199086006073,
+            "total": 0.11842839379017764
+          },
+          "single_qubit_phase_span_rad": 0.15707963267948633,
+          "kernel_change_when_removing_part": {
+            "v9_without_bilinear": {
+              "max_abs_diff": 0.016109825757756102,
+              "mean_abs_diff": 0.006085942512356858,
+              "relative_frobenius_centred": 0.029369717683144846,
+              "centred_alignment_between_kernels": 0.9999535994782726
+            },
+            "v9_without_constant": {
+              "max_abs_diff": 0.2566341509696522,
+              "mean_abs_diff": 0.07591329137728091,
+              "relative_frobenius_centred": 0.44725494488696843,
+              "centred_alignment_between_kernels": 0.987557710923173
+            },
+            "v9_bilinear": {
+              "max_abs_diff": 0.5022435069688989,
+              "mean_abs_diff": 0.16690972006736754,
+              "relative_frobenius_centred": 0.9514286692210755,
+              "centred_alignment_between_kernels": 0.8681510597764825
+            },
+            "none": {
+              "max_abs_diff": 0.502671412932446,
+              "mean_abs_diff": 0.16705055405209676,
+              "relative_frobenius_centred": 0.9521427465564459,
+              "centred_alignment_between_kernels": 0.865756209431347
+            }
+          },
+          "fubini_study_mean_per_feature_v9": [
+            0.027755113403660867,
+            0.053730987633027846,
+            0.054597805361734184,
+            0.05426668705902295,
+            0.054030358781813746,
+            0.053206007247067415,
+            0.05218964753825491,
+            0.026942607132246825
+          ],
+          "fubini_study_mean_per_feature_no_pair_terms": [
+            0.00253545942411272,
+            0.002566298807447337,
+            0.0025437410348040563,
+            0.0025484834830682163,
+            0.0025632327959503615,
+            0.002547617019304733,
+            0.002557242816196325,
+            0.002562019224223591
+          ],
+          "meyer_wallach_mean": 0.09020838806079635
+        },
+        "bw_0.25": {
+          "pair_phase_span_rad (phi, i.e. exp(-i phi ZZ))": {
+            "constant": 0.0,
+            "linear": 3.6096236739702765,
+            "bilinear": 0.41929800027149305,
+            "total": 3.194227264765626
+          },
+          "pair_phase_sd_rad": {
+            "constant": 3.552713678800501e-15,
+            "linear": 0.6048370409510407,
+            "bilinear": 0.06581299771501518,
+            "total": 0.5415849453909503
+          },
+          "single_qubit_phase_span_rad": 0.7853981633974315,
+          "kernel_change_when_removing_part": {
+            "v9_without_bilinear": {
+              "max_abs_diff": 0.20225858196648303,
+              "mean_abs_diff": 0.018443974279321422,
+              "relative_frobenius_centred": 0.20958346762470195,
+              "centred_alignment_between_kernels": 0.9806428971657429
+            },
+            "v9_without_constant": {
+              "max_abs_diff": 0.2892109624986969,
+              "mean_abs_diff": 0.023632312084688713,
+              "relative_frobenius_centred": 0.29040508384709524,
+              "centred_alignment_between_kernels": 0.9569443316588186
+            },
+            "v9_bilinear": {
+              "max_abs_diff": 0.8587815105143407,
+              "mean_abs_diff": 0.5634331547618723,
+              "relative_frobenius_centred": 0.9038591588198516,
+              "centred_alignment_between_kernels": 0.5788156167200714
+            },
+            "none": {
+              "max_abs_diff": 0.8976093610414317,
+              "mean_abs_diff": 0.6544261504700393,
+              "relative_frobenius_centred": 0.8747261354895608,
+              "centred_alignment_between_kernels": 0.5436021106537248
+            }
+          },
+          "fubini_study_mean_per_feature_v9": [
+            1.1307957426640853,
+            2.0604828523134957,
+            1.8326662009855312,
+            1.762567449917044,
+            1.6476696392068757,
+            1.6034786871654174,
+            1.943126926029493,
+            1.2013668454654634
+          ],
+          "fubini_study_mean_per_feature_no_pair_terms": [
+            0.08140291022950454,
+            0.09145072036244235,
+            0.08329308892933837,
+            0.08516491792832843,
+            0.09238400567422017,
+            0.08624253255984371,
+            0.08968188871266387,
+            0.0924622133759728
+          ],
+          "meyer_wallach_mean": 0.5708872039633096
+        },
+        "bw_1": {
+          "pair_phase_span_rad (phi, i.e. exp(-i phi ZZ))": {
+            "constant": 0.0,
+            "linear": 14.438494695881106,
+            "bilinear": 6.708768004343889,
+            "total": 8.031140727128408
+          },
+          "pair_phase_sd_rad": {
+            "constant": 3.552713678800501e-15,
+            "linear": 2.419348163804163,
+            "bilinear": 1.053007963440243,
+            "total": 1.4296835006172837
+          },
+          "single_qubit_phase_span_rad": 3.141592653589726,
+          "kernel_change_when_removing_part": {
+            "v9_without_bilinear": {
+              "max_abs_diff": 0.3670418052886,
+              "mean_abs_diff": 0.0079682456007166,
+              "relative_frobenius_centred": 0.18579124678676412,
+              "centred_alignment_between_kernels": 0.9826587608972093
+            },
+            "v9_without_constant": {
+              "max_abs_diff": 0.1625996209538389,
+              "mean_abs_diff": 0.006796378687869172,
+              "relative_frobenius_centred": 0.14527291495760952,
+              "centred_alignment_between_kernels": 0.9894347503697376
+            },
+            "v9_bilinear": {
+              "max_abs_diff": 0.5478059966582897,
+              "mean_abs_diff": 0.008338243289621133,
+              "relative_frobenius_centred": 0.21247851182597832,
+              "centred_alignment_between_kernels": 0.9777680993377668
+            },
+            "none": {
+              "max_abs_diff": 0.7779152073080173,
+              "mean_abs_diff": 0.12240057682501647,
+              "relative_frobenius_centred": 1.166813987602561,
+              "centred_alignment_between_kernels": 0.6139822161825234
+            }
+          },
+          "fubini_study_mean_per_feature_v9": [
+            8.230645140765565,
+            17.7238472711247,
+            15.076873963998697,
+            15.004852237017715,
+            16.6906502900495,
+            13.268950288443632,
+            13.459500715433151,
+            7.269671054430268
+          ],
+          "fubini_study_mean_per_feature_no_pair_terms": [
+            1.5620734331850732,
+            1.5765149782853705,
+            1.6537333068304438,
+            1.5291674462628515,
+            1.4052978576569142,
+            1.4355626201667526,
+            1.431797227267312,
+            1.369675875168988
+          ],
+          "meyer_wallach_mean": 0.5756249618972431
+        }
+      }
+    }
+  }
+}

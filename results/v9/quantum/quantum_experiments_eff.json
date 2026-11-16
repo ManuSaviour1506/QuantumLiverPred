@@ -1,0 +1,739 @@
+{
+  "features": "effnet_ft_v8",
+  "feature_description": "GAP features (1280-d) of V8's fine-tuned EfficientNet-B0 (trained on the training split only)",
+  "backend": {
+    "execution": "simulator",
+    "simulator": "NumPy exact state-vector (src/quantum/simulator.py)",
+    "hardware": "none",
+    "noise": "noise-free unless stated (noise study in quantum_experiments.json)"
+  },
+  "configurations": [
+    {
+      "kind": "vqc",
+      "qubits": 4,
+      "layers": 3,
+      "trainable_map": false,
+      "readout": "z0",
+      "val_auc": 0.9563218390804598,
+      "test_auc": 0.9261481577581734,
+      "train_seconds": 4.7,
+      "depth": 21,
+      "one_qubit_gates": 36,
+      "two_qubit_gates": 12,
+      "state_vector_bytes": 256,
+      "parameters": 26
+    },
+    {
+      "kind": "vqc",
+      "qubits": 6,
+      "layers": 3,
+      "trainable_map": false,
+      "readout": "z0",
+      "val_auc": 0.9250261233019853,
+      "test_auc": 0.8853355820792252,
+      "train_seconds": 33.2,
+      "depth": 27,
+      "one_qubit_gates": 54,
+      "two_qubit_gates": 18,
+      "state_vector_bytes": 1024,
+      "parameters": 38
+    },
+    {
+      "kind": "vqc",
+      "qubits": 8,
+      "layers": 3,
+      "trainable_map": false,
+      "readout": "z0",
+      "val_auc": 0.8679205851619645,
+      "test_auc": 0.836652395779277,
+      "train_seconds": 180.4,
+      "depth": 33,
+      "one_qubit_gates": 72,
+      "two_qubit_gates": 24,
+      "state_vector_bytes": 4096,
+      "parameters": 50
+    },
+    {
+      "kind": "vqc",
+      "qubits": 10,
+      "layers": 3,
+      "trainable_map": false,
+      "readout": "z0",
+      "val_auc": 0.9475966562173458,
+      "test_auc": 0.9534898806434874,
+      "train_seconds": 395.7,
+      "depth": 39,
+      "one_qubit_gates": 90,
+      "two_qubit_gates": 30,
+      "state_vector_bytes": 16384,
+      "parameters": 62
+    },
+    {
+      "kind": "vqc",
+      "qubits": 8,
+      "layers": 1,
+      "trainable_map": false,
+      "readout": "z0",
+      "val_auc": 0.7383490073145245,
+      "test_auc": 0.8570208441446117,
+      "train_seconds": 16.2,
+      "depth": 11,
+      "one_qubit_gates": 24,
+      "two_qubit_gates": 8,
+      "state_vector_bytes": 4096,
+      "parameters": 18
+    },
+    {
+      "kind": "vqc",
+      "qubits": 8,
+      "layers": 2,
+      "trainable_map": false,
+      "readout": "z0",
+      "val_auc": 0.9057471264367817,
+      "test_auc": 0.7399563224355648,
+      "train_seconds": 25.3,
+      "depth": 22,
+      "one_qubit_gates": 48,
+      "two_qubit_gates": 16,
+      "state_vector_bytes": 4096,
+      "parameters": 34
+    },
+    {
+      "kind": "vqc",
+      "qubits": 8,
+      "layers": 4,
+      "trainable_map": false,
+      "readout": "z0",
+      "val_auc": 0.898798328108673,
+      "test_auc": 0.8694862480539699,
+      "train_seconds": 174.3,
+      "depth": 44,
+      "one_qubit_gates": 96,
+      "two_qubit_gates": 32,
+      "state_vector_bytes": 4096,
+      "parameters": 66
+    },
+    {
+      "kind": "lr_control",
+      "qubits": 4,
+      "C": 10,
+      "val_auc": 0.961337513061651,
+      "test_auc": 0.9108177650925445,
+      "train_seconds": 0.0,
+      "parameters": 5
+    },
+    {
+      "kind": "lr_control",
+      "qubits": 6,
+      "C": 10,
+      "val_auc": 0.9634273772204807,
+      "test_auc": 0.9173261546445252,
+      "train_seconds": 0.0,
+      "parameters": 7
+    },
+    {
+      "kind": "lr_control",
+      "qubits": 8,
+      "C": 10,
+      "val_auc": 0.9669801462904912,
+      "test_auc": 0.9107637087009169,
+      "train_seconds": 0.0,
+      "parameters": 9
+    },
+    {
+      "kind": "lr_control",
+      "qubits": 10,
+      "C": 10,
+      "val_auc": 0.9677638453500523,
+      "test_auc": 0.9158017644006227,
+      "train_seconds": 0.0,
+      "parameters": 11
+    },
+    {
+      "kind": "vqc",
+      "qubits": 4,
+      "layers": 3,
+      "trainable_map": true,
+      "readout": "z0",
+      "val_auc": 0.9565308254963427,
+      "test_auc": 0.9073905898633456,
+      "train_seconds": 4.7,
+      "depth": 21,
+      "one_qubit_gates": 36,
+      "two_qubit_gates": 12,
+      "state_vector_bytes": 256,
+      "parameters": 34
+    },
+    {
+      "kind": "vqc",
+      "qubits": 4,
+      "layers": 3,
+      "trainable_map": false,
+      "readout": "allz",
+      "val_auc": 0.9515673981191223,
+      "test_auc": 0.9028066078533126,
+      "train_seconds": 2.3,
+      "depth": 21,
+      "one_qubit_gates": 36,
+      "two_qubit_gates": 12,
+      "state_vector_bytes": 256,
+      "parameters": 29
+    },
+    {
+      "kind": "vqc",
+      "qubits": 4,
+      "layers": 3,
+      "trainable_map": true,
+      "readout": "allz",
+      "val_auc": 0.95282131661442,
+      "test_auc": 0.9154666147725308,
+      "train_seconds": 5.0,
+      "depth": 21,
+      "one_qubit_gates": 36,
+      "two_qubit_gates": 12,
+      "state_vector_bytes": 256,
+      "parameters": 37
+    },
+    {
+      "kind": "qksvm",
+      "qubits": 4,
+      "bandwidth": 0.05,
+      "C": 10.0,
+      "val_auc": 0.9485370950888191,
+      "test_auc": 0.900060543158623,
+      "train_seconds": 0.6,
+      "depth": 22,
+      "one_qubit_gates": 22,
+      "two_qubit_gates": 12,
+      "state_vector_bytes": 256,
+      "kernel_target_alignment_train": {
+        "0.05": 0.023667979875921254,
+        "0.1": 0.09893100891009193,
+        "0.25": 0.17960307730214412,
+        "0.5": 0.12180554223390834,
+        "1.0": 0.07001461023047653
+      },
+      "support_vectors": 131
+    },
+    {
+      "kind": "rbf_control",
+      "qubits": 4,
+      "gamma": 0.1,
+      "C": 0.1,
+      "val_auc": 0.9591954022988506,
+      "test_auc": 0.9151422764227642,
+      "train_seconds": 0.1
+    },
+    {
+      "kind": "qksvm",
+      "qubits": 6,
+      "bandwidth": 0.05,
+      "C": 10.0,
+      "val_auc": 0.9443051201671891,
+      "test_auc": 0.8876059505275903,
+      "train_seconds": 1.3,
+      "depth": 34,
+      "one_qubit_gates": 34,
+      "two_qubit_gates": 20,
+      "state_vector_bytes": 1024,
+      "kernel_target_alignment_train": {
+        "0.05": 0.023629722576760662,
+        "0.1": 0.1027157979328927,
+        "0.25": 0.18098058807755657,
+        "0.5": 0.11619222780232608,
+        "1.0": 0.07011972701576077
+      },
+      "support_vectors": 121
+    },
+    {
+      "kind": "rbf_control",
+      "qubits": 6,
+      "gamma": 0.1,
+      "C": 10.0,
+      "val_auc": 0.9598223615464996,
+      "test_auc": 0.904330998097215,
+      "train_seconds": 0.1
+    },
+    {
+      "kind": "qksvm",
+      "qubits": 8,
+      "bandwidth": 0.05,
+      "C": 10.0,
+      "val_auc": 0.9359456635318705,
+      "test_auc": 0.8707619788963847,
+      "train_seconds": 5.2,
+      "depth": 46,
+      "one_qubit_gates": 46,
+      "two_qubit_gates": 28,
+      "state_vector_bytes": 4096,
+      "kernel_target_alignment_train": {
+        "0.05": 0.02502566333741104,
+        "0.1": 0.11180930558246452,
+        "0.25": 0.1801351232898173,
+        "0.5": 0.09192207441151445,
+        "1.0": 0.053081346446172066
+      },
+      "support_vectors": 120
+    },
+    {
+      "kind": "rbf_control",
+      "qubits": 8,
+      "gamma": 0.1,
+      "C": 10.0,
+      "val_auc": 0.9586729362591432,
+      "test_auc": 0.912104307213285,
+      "train_seconds": 0.1
+    },
+    {
+      "kind": "qksvm",
+      "qubits": 10,
+      "bandwidth": 0.05,
+      "C": 10.0,
+      "val_auc": 0.9451933124346917,
+      "test_auc": 0.8806002421726344,
+      "train_seconds": 24.8,
+      "depth": 58,
+      "one_qubit_gates": 58,
+      "two_qubit_gates": 36,
+      "state_vector_bytes": 16384,
+      "kernel_target_alignment_train": {
+        "0.05": 0.0266123975912322,
+        "0.1": 0.1252453844592183,
+        "0.25": 0.1830425456516089,
+        "0.5": 0.07083656606547258,
+        "1.0": 0.03868793994857572
+      },
+      "support_vectors": 118
+    },
+    {
+      "kind": "rbf_control",
+      "qubits": 10,
+      "gamma": 0.1,
+      "C": 10.0,
+      "val_auc": 0.9661442006269593,
+      "test_auc": 0.9219317592112092,
+      "train_seconds": 0.2
+    },
+    {
+      "kind": "hybrid",
+      "qubits": 4,
+      "fusion": false,
+      "val_auc": 0.9571055381400209,
+      "test_auc": 0.9239750908147379,
+      "train_seconds": 5.1,
+      "parameters": 5153,
+      "depth": 21,
+      "one_qubit_gates": 36,
+      "two_qubit_gates": 12,
+      "state_vector_bytes": 256
+    },
+    {
+      "kind": "twin",
+      "qubits": 4,
+      "fusion": false,
+      "val_auc": 0.9680250783699059,
+      "test_auc": 0.9285050164331431,
+      "train_seconds": 0.2,
+      "parameters": 5149
+    },
+    {
+      "kind": "hybrid",
+      "qubits": 4,
+      "fusion": true,
+      "val_auc": 0.9651515151515152,
+      "test_auc": 0.90802304964539,
+      "train_seconds": 3.0,
+      "parameters": 5157,
+      "depth": 21,
+      "one_qubit_gates": 36,
+      "two_qubit_gates": 12,
+      "state_vector_bytes": 256
+    },
+    {
+      "kind": "twin",
+      "qubits": 4,
+      "fusion": true,
+      "val_auc": 0.9696447230929989,
+      "test_auc": 0.9118502421726344,
+      "train_seconds": 0.3,
+      "parameters": 5153
+    },
+    {
+      "kind": "hybrid",
+      "qubits": 8,
+      "fusion": false,
+      "val_auc": 0.9468652037617554,
+      "test_auc": 0.8970333852274693,
+      "train_seconds": 49.5,
+      "parameters": 10305,
+      "depth": 33,
+      "one_qubit_gates": 72,
+      "two_qubit_gates": 24,
+      "state_vector_bytes": 4096
+    },
+    {
+      "kind": "twin",
+      "qubits": 8,
+      "fusion": false,
+      "val_auc": 0.9653082549634274,
+      "test_auc": 0.9130665109842588,
+      "train_seconds": 0.3,
+      "parameters": 10329
+    },
+    {
+      "kind": "hybrid",
+      "qubits": 8,
+      "fusion": true,
+      "val_auc": 0.965360501567398,
+      "test_auc": 0.9135422072305829,
+      "train_seconds": 114.6,
+      "parameters": 10313,
+      "depth": 33,
+      "one_qubit_gates": 72,
+      "two_qubit_gates": 24,
+      "state_vector_bytes": 4096
+    },
+    {
+      "kind": "twin",
+      "qubits": 8,
+      "fusion": true,
+      "val_auc": 0.9652560083594567,
+      "test_auc": 0.9097474485383152,
+      "train_seconds": 0.7,
+      "parameters": 10337
+    }
+  ],
+  "selected": {
+    "vqc": {
+      "kind": "vqc",
+      "qubits": 4,
+      "layers": 3,
+      "trainable_map": true,
+      "readout": "z0",
+      "val_auc": 0.9565308254963427,
+      "test_auc": 0.9073905898633456,
+      "train_seconds": 4.7,
+      "depth": 21,
+      "one_qubit_gates": 36,
+      "two_qubit_gates": 12,
+      "state_vector_bytes": 256,
+      "parameters": 34
+    },
+    "qksvm": {
+      "kind": "qksvm",
+      "qubits": 4,
+      "bandwidth": 0.05,
+      "C": 10.0,
+      "val_auc": 0.9485370950888191,
+      "test_auc": 0.900060543158623,
+      "train_seconds": 0.6,
+      "depth": 22,
+      "one_qubit_gates": 22,
+      "two_qubit_gates": 12,
+      "state_vector_bytes": 256,
+      "kernel_target_alignment_train": {
+        "0.05": 0.023667979875921254,
+        "0.1": 0.09893100891009193,
+        "0.25": 0.17960307730214412,
+        "0.5": 0.12180554223390834,
+        "1.0": 0.07001461023047653
+      },
+      "support_vectors": 131
+    },
+    "hybrid": {
+      "kind": "hybrid",
+      "qubits": 8,
+      "fusion": true,
+      "val_auc": 0.965360501567398,
+      "test_auc": 0.9135422072305829,
+      "train_seconds": 114.6,
+      "parameters": 10313,
+      "depth": 33,
+      "one_qubit_gates": 72,
+      "two_qubit_gates": 24,
+      "state_vector_bytes": 4096
+    }
+  },
+  "matched_controls": {
+    "vqc": {
+      "kind": "lr_control",
+      "qubits": 4,
+      "C": 10,
+      "val_auc": 0.961337513061651,
+      "test_auc": 0.9108177650925445,
+      "train_seconds": 0.0,
+      "parameters": 5
+    },
+    "qksvm": {
+      "kind": "rbf_control",
+      "qubits": 4,
+      "gamma": 0.1,
+      "C": 0.1,
+      "val_auc": 0.9591954022988506,
+      "test_auc": 0.9151422764227642,
+      "train_seconds": 0.1
+    },
+    "hybrid": {
+      "kind": "twin",
+      "qubits": 8,
+      "fusion": true,
+      "val_auc": 0.9652560083594567,
+      "test_auc": 0.9097474485383152,
+      "train_seconds": 0.7,
+      "parameters": 10337
+    }
+  },
+  "paired_tests_test_set": {
+    "vqc": {
+      "quantum": {
+        "kind": "vqc",
+        "qubits": 4,
+        "layers": 3,
+        "trainable_map": true,
+        "readout": "z0",
+        "val_auc": 0.9565308254963427,
+        "test_auc": 0.9073905898633456,
+        "train_seconds": 4.7,
+        "depth": 21,
+        "one_qubit_gates": 36,
+        "two_qubit_gates": 12,
+        "state_vector_bytes": 256,
+        "parameters": 34
+      },
+      "control": {
+        "kind": "lr_control",
+        "qubits": 4,
+        "C": 10,
+        "val_auc": 0.961337513061651,
+        "test_auc": 0.9108177650925445,
+        "train_seconds": 0.0,
+        "parameters": 5
+      },
+      "delta_auc": -0.0034271752291988866,
+      "ci95": [
+        -0.006425798398912547,
+        0.005102040816326483
+      ],
+      "p_two_sided": 0.419
+    },
+    "qksvm": {
+      "quantum": {
+        "kind": "qksvm",
+        "qubits": 4,
+        "bandwidth": 0.05,
+        "C": 10.0,
+        "val_auc": 0.9485370950888191,
+        "test_auc": 0.900060543158623,
+        "train_seconds": 0.6,
+        "depth": 22,
+        "one_qubit_gates": 22,
+        "two_qubit_gates": 12,
+        "state_vector_bytes": 256,
+        "support_vectors": 131
+      },
+      "control": {
+        "kind": "rbf_control",
+        "qubits": 4,
+        "gamma": 0.1,
+        "C": 0.1,
+        "val_auc": 0.9591954022988506,
+        "test_auc": 0.9151422764227642,
+        "train_seconds": 0.1
+      },
+      "delta_auc": -0.015081733264141195,
+      "ci95": [
+        -0.022250066856255784,
+        0.01678240740740733
+      ],
+      "p_two_sided": 0.407
+    },
+    "hybrid": {
+      "quantum": {
+        "kind": "hybrid",
+        "qubits": 8,
+        "fusion": true,
+        "val_auc": 0.965360501567398,
+        "test_auc": 0.9135422072305829,
+        "train_seconds": 114.6,
+        "parameters": 10313,
+        "depth": 33,
+        "one_qubit_gates": 72,
+        "two_qubit_gates": 24,
+        "state_vector_bytes": 4096
+      },
+      "control": {
+        "kind": "twin",
+        "qubits": 8,
+        "fusion": true,
+        "val_auc": 0.9652560083594567,
+        "test_auc": 0.9097474485383152,
+        "train_seconds": 0.7,
+        "parameters": 10337
+      },
+      "delta_auc": 0.0037947586922676413,
+      "ci95": [
+        -0.002502371140764159,
+        0.027063034415155004
+      ],
+      "p_two_sided": 0.238
+    }
+  },
+  "noise_study_test_auc": {
+    "vqc": [
+      {
+        "p_depolarizing": 0.0,
+        "shots": null,
+        "test_auc": 0.9073905898633456
+      },
+      {
+        "p_depolarizing": 0.0,
+        "shots": 1024,
+        "test_auc": 0.9065094706798132
+      },
+      {
+        "p_depolarizing": 0.001,
+        "shots": null,
+        "test_auc": 0.9040715274174018
+      },
+      {
+        "p_depolarizing": 0.001,
+        "shots": 1024,
+        "test_auc": 0.9056445684137693
+      },
+      {
+        "p_depolarizing": 0.005,
+        "shots": null,
+        "test_auc": 0.8982658709565818
+      },
+      {
+        "p_depolarizing": 0.005,
+        "shots": 1024,
+        "test_auc": 0.8928007697630168
+      },
+      {
+        "p_depolarizing": 0.01,
+        "shots": null,
+        "test_auc": 0.8835084760422073
+      },
+      {
+        "p_depolarizing": 0.01,
+        "shots": 1024,
+        "test_auc": 0.8840274174018335
+      }
+    ],
+    "hybrid": [
+      {
+        "p_depolarizing": 0.0,
+        "shots": null,
+        "test_auc": 0.9135422072305829
+      },
+      {
+        "p_depolarizing": 0.0,
+        "shots": 1024,
+        "test_auc": 0.9128719079743989
+      },
+      {
+        "p_depolarizing": 0.001,
+        "shots": null,
+        "test_auc": 0.9020714409271754
+      },
+      {
+        "p_depolarizing": 0.001,
+        "shots": 1024,
+        "test_auc": 0.9009038228680158
+      },
+      {
+        "p_depolarizing": 0.005,
+        "shots": null,
+        "test_auc": 0.9009686905379692
+      },
+      {
+        "p_depolarizing": 0.005,
+        "shots": 1024,
+        "test_auc": 0.8996821484172288
+      },
+      {
+        "p_depolarizing": 0.01,
+        "shots": null,
+        "test_auc": 0.8985793980280229
+      },
+      {
+        "p_depolarizing": 0.01,
+        "shots": 1024,
+        "test_auc": 0.9010659920428992
+      }
+    ],
+    "qksvm": [
+      {
+        "p_depolarizing": 0.0,
+        "shots": null,
+        "test_auc": 0.900060543158623
+      },
+      {
+        "p_depolarizing": 0.0,
+        "shots": 1024,
+        "test_auc": 0.8152676872513407
+      },
+      {
+        "p_depolarizing": 0.0,
+        "shots": 8192,
+        "test_auc": 0.8857247880989448
+      },
+      {
+        "p_depolarizing": 0.001,
+        "shots": null,
+        "test_auc": 0.900060543158623
+      },
+      {
+        "p_depolarizing": 0.001,
+        "shots": 1024,
+        "test_auc": 0.7898395606296488
+      },
+      {
+        "p_depolarizing": 0.001,
+        "shots": 8192,
+        "test_auc": 0.8793677564435218
+      },
+      {
+        "p_depolarizing": 0.005,
+        "shots": null,
+        "test_auc": 0.900060543158623
+      },
+      {
+        "p_depolarizing": 0.005,
+        "shots": 1024,
+        "test_auc": 0.6986680505102923
+      },
+      {
+        "p_depolarizing": 0.005,
+        "shots": 8192,
+        "test_auc": 0.8551504929942916
+      },
+      {
+        "p_depolarizing": 0.01,
+        "shots": null,
+        "test_auc": 0.900060543158623
+      },
+      {
+        "p_depolarizing": 0.01,
+        "shots": 1024,
+        "test_auc": 0.6466117453727729
+      },
+      {
+        "p_depolarizing": 0.01,
+        "shots": 8192,
+        "test_auc": 0.7622599896211728
+      }
+    ]
+  },
+  "saved_models": {
+    "vqc_v9_eff": "vqc",
+    "lr_control_v9_eff": "lr_control",
+    "qksvm_v9_eff": "qksvm",
+    "rbf_control_v9_eff": "rbf_control",
+    "hybrid_v9_eff": "hybrid",
+    "twin_v9_eff": "twin"
+  },
+  "bonferroni_planned_comparisons": 3,
+  "note": "test AUC of every configuration is listed for transparency; only validation AUC was used to choose"
+}

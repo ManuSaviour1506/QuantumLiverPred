@@ -1,0 +1,9 @@
+image_path,file_name,upstream_index,label_tumour,tumour_px_512,liver_px_512,group_id,scan_id,split,pixel_sha12
+images/test/ct_lits_4277.png,ct_lits_4277.png,140,1,14320,26388,G01,G01-R1,test,ebba759ec249
+images/test/ct_lits_4278.png,ct_lits_4278.png,141,1,13934,26719,G01,G01-R1,test,2d9e62a8a0e7
+images/test/ct_lits_4279.png,ct_lits_4279.png,142,1,14111,27139,G01,G01-R1,test,794d75f8244f
+images/test/ct_lits_4353.png,ct_lits_4353.png,216,0,0,0,G01,G01-neg,test,9e6326cbb4b2
+images/test/ct_lits_4354.png,ct_lits_4354.png,217,0,0,0,G01,G01-neg,test,2ee253548899
+images/val/ct_lits_4649.png,ct_lits_4649.png,537,1,7444,35050,G02,G02-R1,val,4978b078759d
+images/val/ct_lits_4650.png,ct_lits_4650.png,538,1,7485,35057,G02,G02-R1,val,3d40346a45b3
+images/val/ct_lits_4651.png,ct_lits_4651.png,539,1,7553,35020,G02,G02-R1,val,29cbf291db0e

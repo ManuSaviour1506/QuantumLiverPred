@@ -1,0 +1,438 @@
+{
+  "model": "unet25d_v9",
+  "targets": "verified expert maps, 64 x 64 (8 x 8-pixel cells)",
+  "split": "V8 patient-independent split (reconstructed scan groups)",
+  "postprocessing_grid": [
+    {
+      "min_tumour_cells": 0,
+      "tumour_in_liver": false,
+      "val_lesion_f1": 0.25,
+      "val_tumour_dice": 0.7130232558139535,
+      "val_lesion_sensitivity": 0.8333333333333334,
+      "val_fp_lesions_per_scan": 9.666666666666666
+    },
+    {
+      "min_tumour_cells": 0,
+      "tumour_in_liver": true,
+      "val_lesion_f1": 0.8333333333333334,
+      "val_tumour_dice": 0.7413556863061175,
+      "val_lesion_sensitivity": 0.8333333333333334,
+      "val_fp_lesions_per_scan": 0.3333333333333333
+    },
+    {
+      "min_tumour_cells": 1,
+      "tumour_in_liver": false,
+      "val_lesion_f1": 0.25,
+      "val_tumour_dice": 0.7130232558139535,
+      "val_lesion_sensitivity": 0.8333333333333334,
+      "val_fp_lesions_per_scan": 9.666666666666666
+    },
+    {
+      "min_tumour_cells": 1,
+      "tumour_in_liver": true,
+      "val_lesion_f1": 0.8333333333333334,
+      "val_tumour_dice": 0.7413556863061175,
+      "val_lesion_sensitivity": 0.8333333333333334,
+      "val_fp_lesions_per_scan": 0.3333333333333333
+    },
+    {
+      "min_tumour_cells": 2,
+      "tumour_in_liver": false,
+      "val_lesion_f1": 0.2777777777777778,
+      "val_tumour_dice": 0.7132444168734491,
+      "val_lesion_sensitivity": 0.8333333333333334,
+      "val_fp_lesions_per_scan": 8.333333333333334
+    },
+    {
+      "min_tumour_cells": 2,
+      "tumour_in_liver": true,
+      "val_lesion_f1": 0.8333333333333334,
+      "val_tumour_dice": 0.7413556863061175,
+      "val_lesion_sensitivity": 0.8333333333333334,
+      "val_fp_lesions_per_scan": 0.3333333333333333
+    },
+    {
+      "min_tumour_cells": 4,
+      "tumour_in_liver": false,
+      "val_lesion_f1": 0.3125,
+      "val_tumour_dice": 0.7138533178114086,
+      "val_lesion_sensitivity": 0.8333333333333334,
+      "val_fp_lesions_per_scan": 7.0
+    },
+    {
+      "min_tumour_cells": 4,
+      "tumour_in_liver": true,
+      "val_lesion_f1": 0.8333333333333334,
+      "val_tumour_dice": 0.7413556863061175,
+      "val_lesion_sensitivity": 0.8333333333333334,
+      "val_fp_lesions_per_scan": 0.3333333333333333
+    },
+    {
+      "min_tumour_cells": 8,
+      "tumour_in_liver": false,
+      "val_lesion_f1": 0.3846153846153846,
+      "val_tumour_dice": 0.7155749183133655,
+      "val_lesion_sensitivity": 0.8333333333333334,
+      "val_fp_lesions_per_scan": 5.0
+    },
+    {
+      "min_tumour_cells": 8,
+      "tumour_in_liver": true,
+      "val_lesion_f1": 0.8333333333333334,
+      "val_tumour_dice": 0.7413556863061175,
+      "val_lesion_sensitivity": 0.8333333333333334,
+      "val_fp_lesions_per_scan": 0.3333333333333333
+    }
+  ],
+  "postprocessing": {
+    "min_tumour_cells": 0,
+    "tumour_in_liver": true
+  },
+  "raw_validation": {
+    "liver": {
+      "dice": 0.7744982777468391,
+      "iou": 0.6319846505991652,
+      "precision": 0.7498003194888179,
+      "recall": 0.8008787271253679
+    },
+    "tumour": {
+      "dice": 0.7130232558139535,
+      "iou": 0.5540296349837369,
+      "precision": 0.6779186320754716,
+      "recall": 0.7519620667102681
+    },
+    "lesion_sensitivity": 0.8333333333333334,
+    "reference_lesions": 6,
+    "detected_lesions": 5,
+    "false_positive_lesions_total": 29,
+    "false_positive_lesions_per_scan": 9.666666666666666,
+    "mean_dice_per_scan_tumour": 0.6586589583092072,
+    "mean_dice_per_scan_liver": 0.6801071178841785
+  },
+  "val": {
+    "per_scan": {
+      "G02": {
+        "liver": {
+          "dice": 0.8989069271069142,
+          "iou": 0.8163768796992481,
+          "precision": 0.9291349110843695,
+          "recall": 0.8705838135805563,
+          "tp_cells": 13898,
+          "fp_cells": 1060,
+          "fn_cells": 2066
+        },
+        "tumour": {
+          "dice": 0.7794715447154471,
+          "iou": 0.6386344712739384,
+          "precision": 0.7551070637460005,
+          "recall": 0.8054607508532423,
+          "tp_cells": 3068,
+          "fp_cells": 995,
+          "fn_cells": 741
+        },
+        "lesions": {
+          "reference_lesions": 3,
+          "detected_lesions": 3,
+          "predicted_lesions": 4,
+          "false_positive_lesions": 1,
+          "lesion_sensitivity": 1.0,
+          "lesion_sizes_cells": [
+            122,
+            3338,
+            349
+          ],
+          "lesion_detected": [
+            true,
+            true,
+            true
+          ]
+        },
+        "slice_tumour_detection": {
+          "tp": 33,
+          "fn": 0,
+          "fp": 0,
+          "tn": 272
+        },
+        "n_slices": 305,
+        "tumour_cells_reference": 3809,
+        "tumour_cells_predicted": 4063
+      },
+      "G09": {
+        "liver": {
+          "dice": 0.6594103058693855,
+          "iou": 0.4918807810894142,
+          "precision": 0.9645304312777107,
+          "recall": 0.5009420138162026,
+          "tp_cells": 2393,
+          "fp_cells": 88,
+          "fn_cells": 2384
+        },
+        "tumour": {
+          "dice": 0.7658157602663707,
+          "iou": 0.6205035971223022,
+          "precision": 0.915929203539823,
+          "recall": 0.6579783852511125,
+          "tp_cells": 1035,
+          "fp_cells": 95,
+          "fn_cells": 538
+        },
+        "lesions": {
+          "reference_lesions": 2,
+          "detected_lesions": 1,
+          "predicted_lesions": 1,
+          "false_positive_lesions": 0,
+          "lesion_sensitivity": 0.5,
+          "lesion_sizes_cells": [
+            1572,
+            1
+          ],
+          "lesion_detected": [
+            true,
+            false
+          ]
+        },
+        "slice_tumour_detection": {
+          "tp": 11,
+          "fn": 1,
+          "fp": 0,
+          "tn": 92
+        },
+        "n_slices": 104,
+        "tumour_cells_reference": 1573,
+        "tumour_cells_predicted": 1130
+      },
+      "G10": {
+        "liver": {
+          "dice": 0.8328583403185247,
+          "iou": 0.7135880494110888,
+          "precision": 0.7612626417407294,
+          "recall": 0.9193190229459659,
+          "tp_cells": 2484,
+          "fp_cells": 779,
+          "fn_cells": 218
+        },
+        "tumour": {
+          "dice": 0.5414847161572053,
+          "iou": 0.3712574850299401,
+          "precision": 0.4517304189435337,
+          "recall": 0.6757493188010899,
+          "tp_cells": 496,
+          "fp_cells": 602,
+          "fn_cells": 238
+        },
+        "lesions": {
+          "reference_lesions": 1,
+          "detected_lesions": 1,
+          "predicted_lesions": 1,
+          "false_positive_lesions": 0,
+          "lesion_sensitivity": 1.0,
+          "lesion_sizes_cells": [
+            734
+          ],
+          "lesion_detected": [
+            true
+          ]
+        },
+        "slice_tumour_detection": {
+          "tp": 18,
+          "fn": 0,
+          "fp": 0,
+          "tn": 286
+        },
+        "n_slices": 304,
+        "tumour_cells_reference": 734,
+        "tumour_cells_predicted": 1098
+      }
+    },
+    "pooled": {
+      "liver": {
+        "dice": 0.8506059576395968,
+        "iou": 0.7400472999605834,
+        "precision": 0.9069172060670466,
+        "recall": 0.8008787271253679
+      },
+      "tumour": {
+        "dice": 0.7413556863061175,
+        "iou": 0.5890112704918032,
+        "precision": 0.7310443490701002,
+        "recall": 0.7519620667102681
+      },
+      "lesion_sensitivity": 0.8333333333333334,
+      "reference_lesions": 6,
+      "detected_lesions": 5,
+      "false_positive_lesions_total": 1,
+      "false_positive_lesions_per_scan": 0.3333333333333333,
+      "mean_dice_per_scan_tumour": 0.6955906737130076,
+      "mean_dice_per_scan_liver": 0.7970585244316082
+    }
+  },
+  "test": {
+    "per_scan": {
+      "G01": {
+        "liver": {
+          "dice": 0.8070604640921824,
+          "iou": 0.6765309052130758,
+          "precision": 0.98501089845033,
+          "recall": 0.6835681723995027,
+          "tp_cells": 32989,
+          "fp_cells": 502,
+          "fn_cells": 15271
+        },
+        "tumour": {
+          "dice": 0.7599913986422142,
+          "iou": 0.6128920378536392,
+          "precision": 0.8271481109996657,
+          "recall": 0.702920786453006,
+          "tp_cells": 12370,
+          "fp_cells": 2585,
+          "fn_cells": 5228
+        },
+        "lesions": {
+          "reference_lesions": 5,
+          "detected_lesions": 3,
+          "predicted_lesions": 11,
+          "false_positive_lesions": 6,
+          "lesion_sensitivity": 0.6,
+          "lesion_sizes_cells": [
+            17400,
+            1,
+            6,
+            49,
+            142
+          ],
+          "lesion_detected": [
+            true,
+            false,
+            false,
+            true,
+            true
+          ]
+        },
+        "slice_tumour_detection": {
+          "tp": 116,
+          "fn": 0,
+          "fp": 0,
+          "tn": 133
+        },
+        "n_slices": 249,
+        "tumour_cells_reference": 17598,
+        "tumour_cells_predicted": 14955
+      },
+      "G07": {
+        "liver": {
+          "dice": 0.9063500258131131,
+          "iou": 0.8287386706948641,
+          "precision": 0.9838601210490922,
+          "recall": 0.8401607963246555,
+          "tp_cells": 4389,
+          "fp_cells": 72,
+          "fn_cells": 835
+        },
+        "tumour": {
+          "dice": 0.6943982251802552,
+          "iou": 0.5318606627017842,
+          "precision": 0.8816901408450705,
+          "recall": 0.5727355901189387,
+          "tp_cells": 626,
+          "fp_cells": 84,
+          "fn_cells": 467
+        },
+        "lesions": {
+          "reference_lesions": 1,
+          "detected_lesions": 1,
+          "predicted_lesions": 3,
+          "false_positive_lesions": 2,
+          "lesion_sensitivity": 1.0,
+          "lesion_sizes_cells": [
+            1093
+          ],
+          "lesion_detected": [
+            true
+          ]
+        },
+        "slice_tumour_detection": {
+          "tp": 8,
+          "fn": 0,
+          "fp": 0,
+          "tn": 93
+        },
+        "n_slices": 101,
+        "tumour_cells_reference": 1093,
+        "tumour_cells_predicted": 710
+      },
+      "G08": {
+        "liver": {
+          "dice": 0.5404516225512188,
+          "iou": 0.37028688524590164,
+          "precision": 0.8604761904761905,
+          "recall": 0.3939393939393939,
+          "tp_cells": 1807,
+          "fp_cells": 293,
+          "fn_cells": 2780
+        },
+        "tumour": {
+          "dice": 0.06806282722513089,
+          "iou": 0.03523035230352303,
+          "precision": 0.6190476190476191,
+          "recall": 0.036011080332409975,
+          "tp_cells": 39,
+          "fp_cells": 24,
+          "fn_cells": 1044
+        },
+        "lesions": {
+          "reference_lesions": 4,
+          "detected_lesions": 2,
+          "predicted_lesions": 6,
+          "false_positive_lesions": 4,
+          "lesion_sensitivity": 0.5,
+          "lesion_sizes_cells": [
+            1017,
+            4,
+            3,
+            59
+          ],
+          "lesion_detected": [
+            true,
+            false,
+            false,
+            true
+          ]
+        },
+        "slice_tumour_detection": {
+          "tp": 5,
+          "fn": 0,
+          "fp": 0,
+          "tn": 81
+        },
+        "n_slices": 86,
+        "tumour_cells_reference": 1083,
+        "tumour_cells_predicted": 63
+      }
+    },
+    "pooled": {
+      "liver": {
+        "dice": 0.7986914382968315,
+        "iou": 0.6648511995656452,
+        "precision": 0.9783531409168081,
+        "recall": 0.6747774276316922
+      },
+      "tumour": {
+        "dice": 0.7343248267703228,
+        "iou": 0.5801842702630525,
+        "precision": 0.8287767039674466,
+        "recall": 0.6591989481136846
+      },
+      "lesion_sensitivity": 0.6,
+      "reference_lesions": 10,
+      "detected_lesions": 6,
+      "false_positive_lesions_total": 12,
+      "false_positive_lesions_per_scan": 4.0,
+      "mean_dice_per_scan_tumour": 0.5074841503492001,
+      "mean_dice_per_scan_liver": 0.751287370818838
+    }
+  },
+  "inference_ms_per_slice": 65.18396927067023,
+  "train_seconds": 2509.480928902,
+  "parameters": 377907,
+  "best_epoch": 13
+}

@@ -1,0 +1,15 @@
+{
+ "model_id": "v10_mlp_small_radiomics",
+ "spec": "mlp_small",
+ "config": {
+  "alpha": 0.1,
+  "hidden": 8
+ },
+ "selection": "most frequent inner-loop selection (3 of 8 outer folds)",
+ "preprocessing": {
+  "scaler": "standard"
+ },
+ "seed": 0,
+ "features": "radiomics",
+ "architecture": null
+}

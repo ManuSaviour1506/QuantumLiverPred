@@ -1,0 +1,164 @@
+14:51:59 dataset lits_verified_v8@2a9a4887bb322cfc: 2449 patches, 8 units, features radiomics 40-d; 18 model specs; seeds [0, 1, 2, 3, 4]
+14:51:59   logreg                   outer unit G01      AUC 0.9971  config {'C': 10.0}
+14:52:00   logreg                   outer unit G02      AUC 0.9638  config {'C': 10.0}
+14:52:00   logreg                   outer unit G03      AUC 1.0  config {'C': 10.0}
+14:52:00   logreg                   outer unit G04      AUC 1.0  config {'C': 10.0}
+14:52:00   logreg                   outer unit G05      AUC 0.8484  config {'C': 10.0}
+14:52:01   logreg                   outer unit G06+G07  AUC 0.9653  config {'C': 1.0}
+14:52:01   logreg                   outer unit G08+G09  AUC 0.9974  config {'C': 10.0}
+14:52:01   logreg                   outer unit G10      AUC 0.9882  config {'C': 0.1}
+14:52:01 logreg: mean within-unit AUC 0.9657365509596284 (2.0 s)
+14:52:01   decision_tree            outer unit G01      AUC 0.9045  config {'max_depth': 6, 'min_samples_leaf': 20}
+14:52:02   decision_tree            outer unit G02      AUC 0.5316  config {'max_depth': 6, 'min_samples_leaf': 20}
+14:52:02   decision_tree            outer unit G03      AUC 0.7179  config {'max_depth': 6, 'min_samples_leaf': 5}
+14:52:02   decision_tree            outer unit G04      AUC 0.8651  config {'max_depth': 6, 'min_samples_leaf': 20}
+14:52:03   decision_tree            outer unit G05      AUC 0.6253  config {'max_depth': 6, 'min_samples_leaf': 20}
+14:52:03   decision_tree            outer unit G06+G07  AUC 0.8296  config {'max_depth': 6, 'min_samples_leaf': 20}
+14:52:03   decision_tree            outer unit G08+G09  AUC 0.8462  config {'max_depth': 6, 'min_samples_leaf': 20}
+14:52:04   decision_tree            outer unit G10      AUC 0.9615  config {'max_depth': 6, 'min_samples_leaf': 20}
+14:52:04 decision_tree: mean within-unit AUC 0.7948257644144648 (2.4 s)
+14:52:19   random_forest            outer unit G01      AUC 0.9918  config {'max_depth': 8, 'min_samples_leaf': 5}
+14:52:34   random_forest            outer unit G02      AUC 0.8488  config {'max_depth': 8, 'min_samples_leaf': 5}
+14:52:52   random_forest            outer unit G03      AUC 1.0  config {'max_depth': 8, 'min_samples_leaf': 1}
+14:53:08   random_forest            outer unit G04      AUC 1.0  config {'max_depth': 8, 'min_samples_leaf': 1}
+14:53:23   random_forest            outer unit G05      AUC 0.7743  config {'max_depth': 8, 'min_samples_leaf': 1}
+14:53:34   random_forest            outer unit G06+G07  AUC 0.808  config {'max_depth': None, 'min_samples_leaf': 1}
+14:53:51   random_forest            outer unit G08+G09  AUC 0.9882  config {'max_depth': 8, 'min_samples_leaf': 1}
+14:54:07   random_forest            outer unit G10      AUC 1.0  config {'max_depth': 8, 'min_samples_leaf': 1}
+14:54:07 random_forest: mean within-unit AUC 0.9158611352549701 (123.5 s)
+14:54:15   extra_trees              outer unit G01      AUC 0.9794  config {'max_depth': 8, 'min_samples_leaf': 5}
+14:54:24   extra_trees              outer unit G02      AUC 0.8022  config {'max_depth': None, 'min_samples_leaf': 5}
+14:54:33   extra_trees              outer unit G03      AUC 1.0  config {'max_depth': 8, 'min_samples_leaf': 1}
+14:54:42   extra_trees              outer unit G04      AUC 1.0  config {'max_depth': 8, 'min_samples_leaf': 1}
+14:54:51   extra_trees              outer unit G05      AUC 0.7649  config {'max_depth': 8, 'min_samples_leaf': 5}
+14:54:59   extra_trees              outer unit G06+G07  AUC 0.7156  config {'max_depth': None, 'min_samples_leaf': 1}
+14:55:08   extra_trees              outer unit G08+G09  AUC 0.9865  config {'max_depth': 8, 'min_samples_leaf': 1}
+14:55:16   extra_trees              outer unit G10      AUC 0.9941  config {'max_depth': 8, 'min_samples_leaf': 5}
+14:55:16 extra_trees: mean within-unit AUC 0.8918204254152614 (69.4 s)
+14:55:17   svm_rbf                  outer unit G01      AUC 0.9009  config {'C': 3.0, 'gamma': 0.01}
+14:55:18   svm_rbf                  outer unit G02      AUC 0.9308  config {'C': 3.0, 'gamma': 0.01}
+14:55:18   svm_rbf                  outer unit G03      AUC 0.9936  config {'C': 3.0, 'gamma': 0.01}
+14:55:19   svm_rbf                  outer unit G04      AUC 1.0  config {'C': 3.0, 'gamma': 0.01}
+14:55:20   svm_rbf                  outer unit G05      AUC 0.9142  config {'C': 3.0, 'gamma': 0.01}
+14:55:20   svm_rbf                  outer unit G06+G07  AUC 0.9591  config {'C': 3.0, 'gamma': 0.01}
+14:55:21   svm_rbf                  outer unit G08+G09  AUC 0.99  config {'C': 3.0, 'gamma': 0.01}
+14:55:22   svm_rbf                  outer unit G10      AUC 0.9882  config {'C': 3.0, 'gamma': 0.01}
+14:55:22 svm_rbf: mean within-unit AUC 0.9547389738408422 (5.0 s)
+14:55:22   knn                      outer unit G01      AUC 0.8134  config {'n_neighbors': 21, 'weights': 'uniform'}
+14:55:22   knn                      outer unit G02      AUC 0.7188  config {'n_neighbors': 21, 'weights': 'uniform'}
+14:55:22   knn                      outer unit G03      AUC 0.9872  config {'n_neighbors': 21, 'weights': 'uniform'}
+14:55:22   knn                      outer unit G04      AUC 1.0  config {'n_neighbors': 21, 'weights': 'uniform'}
+14:55:22   knn                      outer unit G05      AUC 0.7532  config {'n_neighbors': 21, 'weights': 'uniform'}
+14:55:22   knn                      outer unit G06+G07  AUC 0.673  config {'n_neighbors': 21, 'weights': 'distance'}
+14:55:22   knn                      outer unit G08+G09  AUC 0.9854  config {'n_neighbors': 21, 'weights': 'uniform'}
+14:55:22   knn                      outer unit G10      AUC 0.7308  config {'n_neighbors': 21, 'weights': 'uniform'}
+14:55:22 knn: mean within-unit AUC 0.8106424151939821 (0.9 s)
+14:56:07   hist_gb                  outer unit G01      AUC 0.9962  config {'learning_rate': 0.05, 'max_depth': 3}
+14:56:45   hist_gb                  outer unit G02      AUC 0.8295  config {'learning_rate': 0.05, 'max_depth': 3}
+14:57:23   hist_gb                  outer unit G03      AUC 1.0  config {'learning_rate': 0.05, 'max_depth': 3}
+14:58:00   hist_gb                  outer unit G04      AUC 0.999  config {'learning_rate': 0.05, 'max_depth': 3}
+14:58:36   hist_gb                  outer unit G05      AUC 0.8136  config {'learning_rate': 0.05, 'max_depth': 3}
+14:59:09   hist_gb                  outer unit G06+G07  AUC 0.8554  config {'learning_rate': 0.15, 'max_depth': 3}
+14:59:47   hist_gb                  outer unit G08+G09  AUC 0.9813  config {'learning_rate': 0.05, 'max_depth': 3}
+15:00:25   hist_gb                  outer unit G10      AUC 0.9941  config {'learning_rate': 0.15, 'max_depth': 3}
+15:00:25 hist_gb: mean within-unit AUC 0.924157257894677 (302.1 s)
+15:00:26   mlp_small                outer unit G01      AUC 0.9678  config {'alpha': 0.1, 'hidden': 8}
+15:00:28   mlp_small                outer unit G02      AUC 0.876  config {'alpha': 1.0, 'hidden': 8}
+15:00:30   mlp_small                outer unit G03      AUC 1.0  config {'alpha': 1.0, 'hidden': 8}
+15:00:32   mlp_small                outer unit G04      AUC 1.0  config {'alpha': 0.1, 'hidden': 8}
+15:00:33   mlp_small                outer unit G05      AUC 0.8034  config {'alpha': 0.001, 'hidden': 8}
+15:00:34   mlp_small                outer unit G06+G07  AUC 0.937  config {'alpha': 0.1, 'hidden': 8}
+15:00:36   mlp_small                outer unit G08+G09  AUC 0.9908  config {'alpha': 1.0, 'hidden': 8}
+15:00:38   mlp_small                outer unit G10      AUC 0.9901  config {'alpha': 0.001, 'hidden': 8}
+15:00:38 mlp_small: mean within-unit AUC 0.9378793926522301 (13.0 s)
+15:00:38   logreg_pca4              outer unit G01      AUC 0.9958  config {'C': 10.0}
+15:00:38   logreg_pca4              outer unit G02      AUC 0.6383  config {'C': 10.0}
+15:00:38   logreg_pca4              outer unit G03      AUC 1.0  config {'C': 10.0}
+15:00:38   logreg_pca4              outer unit G04      AUC 0.9975  config {'C': 10.0}
+15:00:38   logreg_pca4              outer unit G05      AUC 0.6979  config {'C': 10.0}
+15:00:39   logreg_pca4              outer unit G06+G07  AUC 0.9579  config {'C': 10.0}
+15:00:39   logreg_pca4              outer unit G08+G09  AUC 0.973  config {'C': 0.1}
+15:00:39   logreg_pca4              outer unit G10      AUC 0.9941  config {'C': 10.0}
+15:00:39 logreg_pca4: mean within-unit AUC 0.8935066990437319 (1.4 s)
+15:00:40   svm_rbf_pca4             outer unit G01      AUC 0.802  config {'C': 0.3, 'gamma': 0.1}
+15:00:40   svm_rbf_pca4             outer unit G02      AUC 0.6453  config {'C': 0.3, 'gamma': 0.1}
+15:00:41   svm_rbf_pca4             outer unit G03      AUC 0.9167  config {'C': 3.0, 'gamma': 0.1}
+15:00:42   svm_rbf_pca4             outer unit G04      AUC 0.9862  config {'C': 3.0, 'gamma': 0.1}
+15:00:43   svm_rbf_pca4             outer unit G05      AUC 0.7499  config {'C': 0.3, 'gamma': 0.1}
+15:00:43   svm_rbf_pca4             outer unit G06+G07  AUC 0.8849  config {'C': 0.3, 'gamma': 0.1}
+15:00:44   svm_rbf_pca4             outer unit G08+G09  AUC 0.8946  config {'C': 3.0, 'gamma': 0.1}
+15:00:45   svm_rbf_pca4             outer unit G10      AUC 1.0  config {'C': 0.3, 'gamma': 0.1}
+15:00:45 svm_rbf_pca4: mean within-unit AUC 0.85183786618037 (5.7 s)
+15:01:44   vqc                      outer unit G01      AUC 0.9839  config {'layers': 1, 'readout': 'linear_z'}
+15:02:55   vqc                      outer unit G02      AUC 0.6723  config {'layers': 1, 'readout': 'linear_z'}
+15:04:10   vqc                      outer unit G03      AUC 0.9936  config {'layers': 1, 'readout': 'linear_z'}
+15:05:24   vqc                      outer unit G04      AUC 0.9961  config {'layers': 1, 'readout': 'linear_z'}
+15:06:34   vqc                      outer unit G05      AUC 0.7393  config {'layers': 1, 'readout': 'linear_z'}
+15:07:16   vqc                      outer unit G06+G07  AUC 0.8822  config {'layers': 1, 'readout': 'linear_z'}
+15:08:33   vqc                      outer unit G08+G09  AUC 0.9647  config {'layers': 1, 'readout': 'linear_z'}
+15:09:53   vqc                      outer unit G10      AUC 0.9073  config {'layers': 1, 'readout': 'linear_z'}
+15:09:53 vqc: mean within-unit AUC 0.8779507689726073 (548.2 s)
+15:10:40   qksvm                    outer unit G01      AUC 0.9836  config {'pair': 'product', 'bandwidth': 0.25, 'C': 3.0}
+15:12:00   qksvm                    outer unit G02      AUC 0.6413  config {'pair': 'product', 'bandwidth': 0.25, 'C': 0.3}
+15:13:14   qksvm                    outer unit G03      AUC 1.0  config {'pair': 'product', 'bandwidth': 0.25, 'C': 3.0}
+15:14:27   qksvm                    outer unit G04      AUC 0.9916  config {'pair': 'product', 'bandwidth': 0.25, 'C': 3.0}
+15:15:27   qksvm                    outer unit G05      AUC 0.7277  config {'pair': 'product', 'bandwidth': 0.25, 'C': 0.3}
+15:15:41   qksvm                    outer unit G06+G07  AUC 0.9449  config {'pair': 'product', 'bandwidth': 0.25, 'C': 0.3}
+15:16:54   qksvm                    outer unit G08+G09  AUC 0.9608  config {'pair': 'product', 'bandwidth': 0.25, 'C': 0.3}
+15:18:19   qksvm                    outer unit G10      AUC 1.0  config {'pair': 'product', 'bandwidth': 0.25, 'C': 0.3}
+15:18:19 qksvm: mean within-unit AUC 0.89284625503494 (506.0 s)
+15:19:25   hybrid_no_fusion         outer unit G01      AUC 0.992  config {'layers': 2, 'lr': 0.03}
+15:20:39   hybrid_no_fusion         outer unit G02      AUC 0.9645  config {'layers': 2, 'lr': 0.03}
+15:21:42   hybrid_no_fusion         outer unit G03      AUC 0.9808  config {'layers': 1, 'lr': 0.03}
+15:22:41   hybrid_no_fusion         outer unit G04      AUC 0.9956  config {'layers': 1, 'lr': 0.03}
+15:23:34   hybrid_no_fusion         outer unit G05      AUC 0.902  config {'layers': 1, 'lr': 0.03}
+15:24:17   hybrid_no_fusion         outer unit G06+G07  AUC 0.921  config {'layers': 2, 'lr': 0.03}
+15:25:17   hybrid_no_fusion         outer unit G08+G09  AUC 0.9926  config {'layers': 1, 'lr': 0.03}
+15:26:20   hybrid_no_fusion         outer unit G10      AUC 0.7732  config {'layers': 1, 'lr': 0.03}
+15:26:20 hybrid_no_fusion: mean within-unit AUC 0.934394559953328 (480.7 s)
+15:26:21   hybrid_twin              outer unit G01      AUC 0.998  config {'layers': 2, 'lr': 0.03}
+15:26:22   hybrid_twin              outer unit G02      AUC 0.9672  config {'layers': 2, 'lr': 0.03}
+15:26:23   hybrid_twin              outer unit G03      AUC 1.0  config {'layers': 1, 'lr': 0.03}
+15:26:24   hybrid_twin              outer unit G04      AUC 0.9862  config {'layers': 1, 'lr': 0.03}
+15:26:25   hybrid_twin              outer unit G05      AUC 0.8272  config {'layers': 2, 'lr': 0.03}
+15:26:26   hybrid_twin              outer unit G06+G07  AUC 0.9317  config {'layers': 1, 'lr': 0.03}
+15:26:27   hybrid_twin              outer unit G08+G09  AUC 0.9952  config {'layers': 1, 'lr': 0.03}
+15:26:29   hybrid_twin              outer unit G10      AUC 0.8442  config {'layers': 2, 'lr': 0.03}
+15:26:29 hybrid_twin: mean within-unit AUC 0.9356653839089132 (9.0 s)
+15:27:24   hybrid_feature_fusion    outer unit G01      AUC 0.983  config {'layers': 2, 'lr': 0.03}
+15:28:31   hybrid_feature_fusion    outer unit G02      AUC 0.9343  config {'layers': 2, 'lr': 0.03}
+15:29:13   hybrid_feature_fusion    outer unit G03      AUC 0.9936  config {'layers': 1, 'lr': 0.03}
+15:29:54   hybrid_feature_fusion    outer unit G04      AUC 0.9975  config {'layers': 1, 'lr': 0.03}
+15:30:31   hybrid_feature_fusion    outer unit G05      AUC 0.8828  config {'layers': 1, 'lr': 0.03}
+15:31:07   hybrid_feature_fusion    outer unit G06+G07  AUC 0.9211  config {'layers': 2, 'lr': 0.03}
+15:31:45   hybrid_feature_fusion    outer unit G08+G09  AUC 0.9991  config {'layers': 1, 'lr': 0.03}
+15:32:25   hybrid_feature_fusion    outer unit G10      AUC 0.6469  config {'layers': 1, 'lr': 0.03}
+15:32:25 hybrid_feature_fusion: mean within-unit AUC 0.9092524952278357 (355.9 s)
+15:33:17   hybrid_random_quantum    outer unit G01      AUC 0.7212  config {'layers': 2, 'lr': 0.03}
+15:34:24   hybrid_random_quantum    outer unit G02      AUC 0.9293  config {'layers': 2, 'lr': 0.03}
+15:35:03   hybrid_random_quantum    outer unit G03      AUC 1.0  config {'layers': 1, 'lr': 0.03}
+15:35:41   hybrid_random_quantum    outer unit G04      AUC 0.9995  config {'layers': 1, 'lr': 0.03}
+15:36:17   hybrid_random_quantum    outer unit G05      AUC 0.8828  config {'layers': 1, 'lr': 0.03}
+15:36:53   hybrid_random_quantum    outer unit G06+G07  AUC 0.9546  config {'layers': 2, 'lr': 0.03}
+15:37:31   hybrid_random_quantum    outer unit G08+G09  AUC 0.9926  config {'layers': 1, 'lr': 0.03}
+15:38:11   hybrid_random_quantum    outer unit G10      AUC 0.7436  config {'layers': 1, 'lr': 0.03}
+15:38:11 hybrid_random_quantum: mean within-unit AUC 0.8890934196654074 (346.5 s)
+15:39:04   hybrid_quantum_only      outer unit G01      AUC 0.9069  config {'layers': 2, 'lr': 0.03}
+15:40:09   hybrid_quantum_only      outer unit G02      AUC 0.6184  config {'layers': 2, 'lr': 0.03}
+15:40:47   hybrid_quantum_only      outer unit G03      AUC 1.0  config {'layers': 1, 'lr': 0.03}
+15:41:25   hybrid_quantum_only      outer unit G04      AUC 1.0  config {'layers': 1, 'lr': 0.03}
+15:42:01   hybrid_quantum_only      outer unit G05      AUC 0.7234  config {'layers': 1, 'lr': 0.03}
+15:42:38   hybrid_quantum_only      outer unit G06+G07  AUC 0.8484  config {'layers': 2, 'lr': 0.03}
+15:43:19   hybrid_quantum_only      outer unit G08+G09  AUC 0.963  config {'layers': 1, 'lr': 0.03}
+15:43:59   hybrid_quantum_only      outer unit G10      AUC 0.9191  config {'layers': 1, 'lr': 0.03}
+15:43:59 hybrid_quantum_only: mean within-unit AUC 0.8541851515980375 (347.8 s)
+15:44:55   late_fusion              outer unit G01      AUC 0.9952  config {'C': 1.0}
+15:46:00   late_fusion              outer unit G02      AUC 0.8583  config {'C': 1.0}
+15:47:07   late_fusion              outer unit G03      AUC 0.9936  config {'C': 1.0}
+15:48:14   late_fusion              outer unit G04      AUC 1.0  config {'C': 1.0}
+15:49:19   late_fusion              outer unit G05      AUC 0.8443  config {'C': 1.0}
+15:49:56   late_fusion              outer unit G06+G07  AUC 0.9219  config {'C': 1.0}
+15:51:05   late_fusion              outer unit G08+G09  AUC 0.9908  config {'C': 1.0}
+15:52:13   late_fusion              outer unit G10      AUC 0.8442  config {'C': 1.0}
+15:52:13 late_fusion: mean within-unit AUC 0.9221157751601358 (494.5 s)
+15:52:14 done in 3614.9 s -> /home/claude/work/lti/liver_tumour_intelligence_v10/results/v10/nested/radiomics

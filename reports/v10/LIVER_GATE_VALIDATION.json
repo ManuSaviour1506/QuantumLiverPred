@@ -1,0 +1,136 @@
+{
+ "n": 8,
+ "source": "dataset/sample_data/lits_sample",
+ "sweep": [
+  {
+   "min_unet_liver_px": 0,
+   "tp": 6,
+   "fp": 1,
+   "fn": 0,
+   "tn": 1,
+   "liver_free_wrongly_analysed": 1,
+   "liver_slices_withheld": 0
+  },
+  {
+   "min_unet_liver_px": 1024,
+   "tp": 6,
+   "fp": 1,
+   "fn": 0,
+   "tn": 1,
+   "liver_free_wrongly_analysed": 1,
+   "liver_slices_withheld": 0
+  },
+  {
+   "min_unet_liver_px": 2048,
+   "tp": 6,
+   "fp": 1,
+   "fn": 0,
+   "tn": 1,
+   "liver_free_wrongly_analysed": 1,
+   "liver_slices_withheld": 0
+  },
+  {
+   "min_unet_liver_px": 3072,
+   "tp": 6,
+   "fp": 1,
+   "fn": 0,
+   "tn": 1,
+   "liver_free_wrongly_analysed": 1,
+   "liver_slices_withheld": 0
+  },
+  {
+   "min_unet_liver_px": 4096,
+   "tp": 6,
+   "fp": 0,
+   "fn": 0,
+   "tn": 2,
+   "liver_free_wrongly_analysed": 0,
+   "liver_slices_withheld": 0
+  },
+  {
+   "min_unet_liver_px": 5120,
+   "tp": 6,
+   "fp": 0,
+   "fn": 0,
+   "tn": 2,
+   "liver_free_wrongly_analysed": 0,
+   "liver_slices_withheld": 0
+  },
+  {
+   "min_unet_liver_px": 6144,
+   "tp": 6,
+   "fp": 0,
+   "fn": 0,
+   "tn": 2,
+   "liver_free_wrongly_analysed": 0,
+   "liver_slices_withheld": 0
+  },
+  {
+   "min_unet_liver_px": 8192,
+   "tp": 3,
+   "fp": 0,
+   "fn": 3,
+   "tn": 2,
+   "liver_free_wrongly_analysed": 0,
+   "liver_slices_withheld": 3
+  }
+ ],
+ "records": [
+  {
+   "file": "ct_lits_4277.png",
+   "split": "test",
+   "liver_present": 1,
+   "gate_pass": true,
+   "unet_liver_px": 7168
+  },
+  {
+   "file": "ct_lits_4278.png",
+   "split": "test",
+   "liver_present": 1,
+   "gate_pass": true,
+   "unet_liver_px": 6976
+  },
+  {
+   "file": "ct_lits_4279.png",
+   "split": "test",
+   "liver_present": 1,
+   "gate_pass": true,
+   "unet_liver_px": 7104
+  },
+  {
+   "file": "ct_lits_4353.png",
+   "split": "test",
+   "liver_present": 0,
+   "gate_pass": true,
+   "unet_liver_px": 3200
+  },
+  {
+   "file": "ct_lits_4354.png",
+   "split": "test",
+   "liver_present": 0,
+   "gate_pass": false,
+   "unet_liver_px": null
+  },
+  {
+   "file": "ct_lits_4649.png",
+   "split": "val",
+   "liver_present": 1,
+   "gate_pass": true,
+   "unet_liver_px": 37248
+  },
+  {
+   "file": "ct_lits_4650.png",
+   "split": "val",
+   "liver_present": 1,
+   "gate_pass": true,
+   "unet_liver_px": 37184
+  },
+  {
+   "file": "ct_lits_4651.png",
+   "split": "val",
+   "liver_present": 1,
+   "gate_pass": true,
+   "unet_liver_px": 36416
+  }
+ ]
+}

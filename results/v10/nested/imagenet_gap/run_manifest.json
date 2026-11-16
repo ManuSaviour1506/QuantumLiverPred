@@ -1,0 +1,44 @@
+{
+ "script": "scripts/run_nested_evaluation.py",
+ "args": {
+  "dataset": "/mnt/user-data/uploads/liver_ct_lits_verified_v8 2",
+  "features": "imagenet_gap",
+  "models": "logreg,svm_rbf,logreg_pca4,svm_rbf_pca4,vqc,qksvm",
+  "seeds": "0,1,2,3,4",
+  "inner_k": 3,
+  "quick": false,
+  "out": null
+ },
+ "seconds": 1909.7,
+ "analysis_plan_sha256": "9d63f113aeb48ca87035f8d52950c81413db0e4511beee46e62af2d92bc1ce4d",
+ "dataset_files_sha256": {
+  "patches_v8.npz": "2a237bf320b5491e73a2c762e6169aef0d13824b9bfed9dac3758560680f30a1",
+  "patches_task_a.csv": "9d4f42ca997f46d7970c90025de8d96dd01bb7ffc4a38ddaebf240445d3715c2"
+ },
+ "dataset_version": "lits_verified_v8@2a9a4887bb322cfc",
+ "license": "CC BY-NC-SA 4.0 (derived from seongun/liver-tumor-classification, itself derived from LiTS)",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v378-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "cpu_count": 2,
+  "packages": {
+   "numpy": "2.5.3",
+   "scipy": "1.18.1",
+   "sklearn": "1.9.1",
+   "pandas": "3.0.5",
+   "pennylane": null,
+   "qiskit": null,
+   "torch": null
+  },
+  "utc": "2026-11-12T20:06:15+00:00",
+  "execution": "classical simulation only; no quantum hardware"
+ },
+ "seeds": [
+  0,
+  1,
+  2,
+  3,
+  4
+ ]
+}

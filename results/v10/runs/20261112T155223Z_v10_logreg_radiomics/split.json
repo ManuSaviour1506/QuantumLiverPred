@@ -1,0 +1,17 @@
+{
+ "final_fit": "all units",
+ "calibration_and_threshold": "leave-one-unit-out out-of-fold scores",
+ "units": [
+  "G01",
+  "G02",
+  "G03",
+  "G04",
+  "G05",
+  "G06+G07",
+  "G08+G09",
+  "G10"
+ ],
+ "n_patches": 2449,
+ "positives": 1381,
+ "negatives": 1068
+}

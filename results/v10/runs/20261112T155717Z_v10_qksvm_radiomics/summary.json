@@ -1,0 +1,8 @@
+{
+ "status": "succeeded",
+ "started_utc": "2026-11-12T15:57:17+00:00",
+ "finished_utc": "2026-11-12T15:57:59+00:00",
+ "seconds": 41.9,
+ "artifact": "artifacts/v10/v10_qksvm_radiomics",
+ "dataset_version": "lits_verified_v8@2a9a4887bb322cfc"
+}

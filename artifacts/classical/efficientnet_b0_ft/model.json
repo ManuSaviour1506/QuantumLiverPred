@@ -1,0 +1,146 @@
+{
+  "name": "EfficientNet-B0 (fine-tuned)",
+  "kind": "cnn_finetune",
+  "task": "Task A: tumour vs tumour-free liver tissue (96x96 px CT patch)",
+  "architecture": "ImageNet-pretrained EfficientNet-B0 (timm weights); fine-tuned: last MBConv block (blocks.6) + conv_head + bn2 + linear head; earlier layers frozen",
+  "input": "96x96 grey patch replicated to 3 channels, ImageNet normalisation",
+  "labels": "LiTS expert masks via seongun/liver-tumor-classification (verified pixel-exact)",
+  "split_file": "data/manifests/split_v8.csv",
+  "validation_status": "held-out test split, research only",
+  "clinical_use": "NOT validated for clinical use",
+  "arch": "efficientnet_b0",
+  "training": {
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 0.49985516476924746,
+        "val_loss": 0.4499939576027905,
+        "val_auc": 0.8622779519331244,
+        "seconds": 3.1
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.10397486581345773,
+        "val_loss": 0.35693931509581656,
+        "val_auc": 0.957680250783699,
+        "seconds": 6.4
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.055567627785967605,
+        "val_loss": 0.2757968578180973,
+        "val_auc": 0.9632183908045977,
+        "seconds": 9.6
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.029989279212088493,
+        "val_loss": 0.29168558430073016,
+        "val_auc": 0.9657262277951932,
+        "seconds": 13.0
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.03355885072649298,
+        "val_loss": 0.307709861493522,
+        "val_auc": 0.9638975966562173,
+        "seconds": 16.1
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.02552832391614617,
+        "val_loss": 0.3543961950893723,
+        "val_auc": 0.9746603970741902,
+        "seconds": 19.4
+      },
+      {
+        "epoch": 7,
+        "train_loss": 0.021187250604478437,
+        "val_loss": 0.291620497285188,
+        "val_auc": 0.9716823406478579,
+        "seconds": 22.6
+      },
+      {
+        "epoch": 8,
+        "train_loss": 0.017118834532880028,
+        "val_loss": 0.31731355367455827,
+        "val_auc": 0.9676071055381401,
+        "seconds": 25.8
+      },
+      {
+        "epoch": 9,
+        "train_loss": 0.009765242652091877,
+        "val_loss": 0.32628982649641125,
+        "val_auc": 0.9673458725182863,
+        "seconds": 28.9
+      },
+      {
+        "epoch": 10,
+        "train_loss": 0.006832023364988754,
+        "val_loss": 0.31182243254102915,
+        "val_auc": 0.9704806687565308,
+        "seconds": 32.3
+      }
+    ],
+    "best_epoch": 6,
+    "train_seconds": 32.3,
+    "pos_weight": 0.8567990373044525,
+    "max_epochs": 20,
+    "batch": 32,
+    "patience": 4,
+    "tail_lr": 0.0001,
+    "head_lr": 0.001,
+    "weight_decay": 0.0001,
+    "n_train_views": 3,
+    "early_stopping": "validation ROC-AUC, patience 4"
+  },
+  "calibration": {
+    "mu": 4.975123047146579,
+    "sd": 8.11839648467086,
+    "a": 4.52436618602001,
+    "b": 1.2588684645213233,
+    "min_slope": 0.001
+  },
+  "calibration_status": "platt_on_validation",
+  "threshold": 0.6565358777400924,
+  "threshold_rule": "Youden J on validation (calibrated probability)",
+  "validation_score_check": {
+    "constant_scores": false,
+    "ok": true
+  },
+  "inference_seconds_per_patch": 0.019368118790997754,
+  "family": "classical",
+  "imagenet_weights": "artifacts/weights (efficientnet_b0)",
+  "trainable_parameters": 1138481,
+  "model_id": "efficientnet_b0_ft",
+  "npz_sha256": "7accb9dc20f346828275d71f6daec5e39b5bfdb42f43194af4f7b89a3e75c5dd",
+  "status": "trained",
+  "saved_utc": "2026-11-06T05:29:57+00:00",
+  "test_summary": {
+    "auc": 0.9359107420861443,
+    "auc_ci95": [
+      0.9185961088084704,
+      0.9886882716049382
+    ],
+    "sensitivity": 0.6542553191489362,
+    "specificity": 0.9634146341463414,
+    "f1": 0.779714738510301,
+    "accuracy": 0.7765273311897106,
+    "pr_auc": 0.9580222355509438,
+    "ece": 0.12761349390915058,
+    "brier": 0.13036685572460774,
+    "sensitivity_ci95": [
+      0.605976257430936,
+      0.8148148148148148
+    ],
+    "specificity_ci95": [
+      0.9285714285714286,
+      1.0
+    ]
+  },
+  "validation_summary": {
+    "auc": 0.9746603970741902,
+    "sensitivity": 0.9195402298850575,
+    "specificity": 0.9454545454545454
+  }
+}

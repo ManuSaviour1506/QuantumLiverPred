@@ -1,0 +1,9 @@
+15:57:17 v10_qksvm_radiomics: config {'C': 0.3, 'bandwidth': 0.25, 'pair': 'product'} (most frequent inner-loop selection (5 of 8 outer folds)); 2449 patches, 8 units, seed 0
+15:57:20   calibration fold G01: within-unit AUC 0.9850102480956897
+15:57:25   calibration fold G02: within-unit AUC 0.6412738496071829
+15:57:30   calibration fold G03: within-unit AUC 1.0
+15:57:36   calibration fold G04: within-unit AUC 1.0
+15:57:40   calibration fold G05: within-unit AUC 0.727719298245614
+15:57:41   calibration fold G06+G07: within-unit AUC 0.9449412154330187
+15:57:47   calibration fold G08+G09: within-unit AUC 0.9607843137254902
+15:57:52   calibration fold G10: within-unit AUC 1.0

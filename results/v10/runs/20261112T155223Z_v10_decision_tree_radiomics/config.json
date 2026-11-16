@@ -1,0 +1,15 @@
+{
+ "model_id": "v10_decision_tree_radiomics",
+ "spec": "decision_tree",
+ "config": {
+  "max_depth": 6,
+  "min_samples_leaf": 20
+ },
+ "selection": "most frequent inner-loop selection (7 of 8 outer folds)",
+ "preprocessing": {
+  "scaler": "standard"
+ },
+ "seed": 0,
+ "features": "radiomics",
+ "architecture": null
+}

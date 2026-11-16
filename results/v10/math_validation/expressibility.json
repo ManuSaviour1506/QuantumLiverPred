@@ -1,0 +1,181 @@
+{
+  "rows": [
+    {
+      "design": "v9",
+      "qubits": 2,
+      "layers": 1,
+      "kl_to_haar": 0.0962475349708127,
+      "mean_fidelity": 0.2500640012542651,
+      "haar_mean_fidelity": 0.25,
+      "n_pairs": 1500,
+      "bins": 75,
+      "meyer_wallach_mean": 0.40180448245269884
+    },
+    {
+      "design": "v10",
+      "qubits": 2,
+      "layers": 1,
+      "kl_to_haar": 0.030762589870522307,
+      "mean_fidelity": 0.2505528185189058,
+      "haar_mean_fidelity": 0.25,
+      "n_pairs": 1500,
+      "bins": 75,
+      "meyer_wallach_mean": 0.3956682502362075
+    },
+    {
+      "design": "v9",
+      "qubits": 2,
+      "layers": 2,
+      "kl_to_haar": 0.02649974832367738,
+      "mean_fidelity": 0.2518767832576145,
+      "haar_mean_fidelity": 0.25,
+      "n_pairs": 1500,
+      "bins": 75,
+      "meyer_wallach_mean": 0.4027154155302251
+    },
+    {
+      "design": "v10",
+      "qubits": 2,
+      "layers": 2,
+      "kl_to_haar": 0.02579967354175961,
+      "mean_fidelity": 0.24437038154455112,
+      "haar_mean_fidelity": 0.25,
+      "n_pairs": 1500,
+      "bins": 75,
+      "meyer_wallach_mean": 0.337638874013045
+    },
+    {
+      "design": "v9",
+      "qubits": 2,
+      "layers": 3,
+      "kl_to_haar": 0.019561645535958117,
+      "mean_fidelity": 0.2532114081333657,
+      "haar_mean_fidelity": 0.25,
+      "n_pairs": 1500,
+      "bins": 75,
+      "meyer_wallach_mean": 0.38882578912560645
+    },
+    {
+      "design": "v10",
+      "qubits": 2,
+      "layers": 3,
+      "kl_to_haar": 0.02240795806798437,
+      "mean_fidelity": 0.25425188895660855,
+      "haar_mean_fidelity": 0.25,
+      "n_pairs": 1500,
+      "bins": 75,
+      "meyer_wallach_mean": 0.3857541148538664
+    },
+    {
+      "design": "v9",
+      "qubits": 2,
+      "layers": 4,
+      "kl_to_haar": 0.022638907236717937,
+      "mean_fidelity": 0.24925757056406886,
+      "haar_mean_fidelity": 0.25,
+      "n_pairs": 1500,
+      "bins": 75,
+      "meyer_wallach_mean": 0.38692726618125034
+    },
+    {
+      "design": "v10",
+      "qubits": 2,
+      "layers": 4,
+      "kl_to_haar": 0.029818381011231226,
+      "mean_fidelity": 0.25206355442655376,
+      "haar_mean_fidelity": 0.25,
+      "n_pairs": 1500,
+      "bins": 75,
+      "meyer_wallach_mean": 0.4091370171904449
+    },
+    {
+      "design": "v9",
+      "qubits": 4,
+      "layers": 1,
+      "kl_to_haar": 0.3542218602502553,
+      "mean_fidelity": 0.062263783442173176,
+      "haar_mean_fidelity": 0.0625,
+      "n_pairs": 1500,
+      "bins": 75,
+      "meyer_wallach_mean": 0.7863357281662963
+    },
+    {
+      "design": "v10",
+      "qubits": 4,
+      "layers": 1,
+      "kl_to_haar": 0.03085882341440594,
+      "mean_fidelity": 0.06034476054206156,
+      "haar_mean_fidelity": 0.0625,
+      "n_pairs": 1500,
+      "bins": 75,
+      "meyer_wallach_mean": 0.7918938863352725
+    },
+    {
+      "design": "v9",
+      "qubits": 4,
+      "layers": 2,
+      "kl_to_haar": 0.01140099335882053,
+      "mean_fidelity": 0.06199875307346623,
+      "haar_mean_fidelity": 0.0625,
+      "n_pairs": 1500,
+      "bins": 75,
+      "meyer_wallach_mean": 0.8301119610840739
+    },
+    {
+      "design": "v10",
+      "qubits": 4,
+      "layers": 2,
+      "kl_to_haar": 0.0123114211390428,
+      "mean_fidelity": 0.06427570591072854,
+      "haar_mean_fidelity": 0.0625,
+      "n_pairs": 1500,
+      "bins": 75,
+      "meyer_wallach_mean": 0.8412819938994
+    },
+    {
+      "design": "v9",
+      "qubits": 4,
+      "layers": 3,
+      "kl_to_haar": 0.011122265743010746,
+      "mean_fidelity": 0.06413347327431525,
+      "haar_mean_fidelity": 0.0625,
+      "n_pairs": 1500,
+      "bins": 75,
+      "meyer_wallach_mean": 0.8312148619906705
+    },
+    {
+      "design": "v10",
+      "qubits": 4,
+      "layers": 3,
+      "kl_to_haar": 0.01643442957915956,
+      "mean_fidelity": 0.06467145135227825,
+      "haar_mean_fidelity": 0.0625,
+      "n_pairs": 1500,
+      "bins": 75,
+      "meyer_wallach_mean": 0.8381494183271541
+    },
+    {
+      "design": "v9",
+      "qubits": 4,
+      "layers": 4,
+      "kl_to_haar": 0.012976093683406454,
+      "mean_fidelity": 0.058730350491450575,
+      "haar_mean_fidelity": 0.0625,
+      "n_pairs": 1500,
+      "bins": 75,
+      "meyer_wallach_mean": 0.8304140662333117
+    },
+    {
+      "design": "v10",
+      "qubits": 4,
+      "layers": 4,
+      "kl_to_haar": 0.013870649586932697,
+      "mean_fidelity": 0.06367249981210986,
+      "haar_mean_fidelity": 0.0625,
+      "n_pairs": 1500,
+      "bins": 75,
+      "meyer_wallach_mean": 0.8219590359349869
+    }
+  ],
+  "definition": "KL divergence of the fidelity histogram of random parameter pairs from the Haar distribution (75 bins); data inputs fixed to 0; lower is closer to Haar. Not a measure of classification quality."
+}

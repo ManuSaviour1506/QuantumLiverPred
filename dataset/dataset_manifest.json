@@ -1,0 +1,395 @@
+{
+ "generated_at": "2026-11-13T17:13:19+00:00",
+ "about": "Datasets and annotations of the Liver Tumour Intelligence Platform V11. 'files' lists every bundled file with its SHA-256 (install.py verifies them). Research use only; not for clinical use.",
+ "structure_mapping": {
+  "datasets/CT": [
+   "dataset/sample_data/lits_sample (bundled, 8 real CT slices)",
+   "dataset/liver_ct_lits_verified_v8 (full CT dataset, NOT INCLUDED in this package \u2014 see full_dataset)"
+  ],
+  "datasets/MRI": [],
+  "datasets/annotations": [
+   "dataset/sample_data/lits_sample/labels/slices.csv",
+   "data/labels/verified_slice_labels.csv (all 1,745 slices of the full dataset)",
+   "data/labels/excluded_unverified.csv",
+   "data/manifests/*.csv",
+   "masks/ inside the full dataset (expert segmentation masks; not included)"
+  ],
+  "datasets/sample_data": [
+   "dataset/sample_data"
+  ],
+  "datasets/dataset_manifest.json": "dataset/dataset_manifest.json (this file)"
+ },
+ "bundled": {
+  "lits_sample": {
+   "path": "dataset/sample_data/lits_sample",
+   "modality": "CT",
+   "n_slices": 8,
+   "n_tumour": 6,
+   "n_liver_free": 2,
+   "groups": [
+    "G01",
+    "G02"
+   ],
+   "licence": "CC BY-NC-SA 4.0 (inherited from LiTS via the Hugging Face source)",
+   "ground_truth": "label_tumour = any tumour pixel in the expert mask; liver_px_512 / tumour_px_512 = mask pixel counts at 512x512"
+  },
+  "synthetic": {
+   "path": "dataset/sample_data/synthetic",
+   "modality": "none (generated phantoms)",
+   "n_images": 24,
+   "use": "software tests and OOD-rejection checks only; never used to train or evaluate a reported model"
+  }
+ },
+ "full_dataset": {
+  "id": "liver_ct_lits_verified_v8",
+  "modality": "CT",
+  "present": false,
+  "expected_path": "dataset/liver_ct_lits_verified_v8 (or set LTI_DATASET_DIR)",
+  "contents": "1,745 axial CT slices (512x512 PNG, 476 with tumour) in 10 reconstructed scan groups, 2,449 96x96 training patches, expert masks, labels, verification records",
+  "n_files": 1757,
+  "verification": "dataset/manifests/lits_verified_v8_SHA256SUMS.txt (SHA-256 of every file); cd dataset/liver_ct_lits_verified_v8 && sha256sum -c ../manifests/lits_verified_v8_SHA256SUMS.txt   (macOS: shasum -a 256 -c ...)",
+  "slice_manifest": "dataset/manifests/lits_verified_v8_manifest.csv",
+  "source": "pixel-matched to the Hugging Face dataset seongun/liver-tumor-classification, derived from the LiTS benchmark; labels re-derived from the expert masks",
+  "citation": "P. Bilic et al., The Liver Tumor Segmentation Benchmark (LiTS), Medical Image Analysis 84, 102680 (2023), doi:10.1016/j.media.2022.102680",
+  "licence": "CC BY-NC-SA 4.0",
+  "how_to_restore": "copy the folder from the V9/V10 project (dataset/liver_ct_lits_verified_v8) into dataset/, verify it with the SHA-256 list, then: python install.py --check (see DATASET_GUIDE.md and MISSING_ARTIFACTS.md)",
+  "why_not_included": "the full dataset folder was not present in the source workspace this package was built from (the V10 folder held the lean release); it was not fabricated or replaced"
+ },
+ "mri": {
+  "present": false,
+  "note": "No MRI data and no MRI-trained model exist in any version of this project. An upload marked MRI is flagged as out of scope (every model is CT-trained) and is expected to be withheld by the out-of-distribution check; nothing was fabricated."
+ },
+ "patient_level": "The source has no patient or volume identifiers; units are reconstructed scan groups (never reported as patients).",
+ "files": [
+  {
+   "path": "dataset/sample_data/lits_sample/README.md",
+   "bytes": 1000,
+   "sha256": "a4c45d278056fc2d73d2a722e0ca903a9943ba6064e91aa7dbbc4ed3999e0f9a",
+   "role": "documentation"
+  },
+  {
+   "path": "dataset/sample_data/lits_sample/images/test/ct_lits_4277.png",
+   "bytes": 178816,
+   "sha256": "deab5974ec6be7e2999da90d9b08f793b4269bc2a02965fd476d267be85512b6",
+   "role": "ct_slice (real, LiTS-derived, CC BY-NC-SA 4.0)"
+  },
+  {
+   "path": "dataset/sample_data/lits_sample/images/test/ct_lits_4278.png",
+   "bytes": 179595,
+   "sha256": "88e04402b8e5b61f52c9836524300d7b77349f2c97417905cc3984c1994252ff",
+   "role": "ct_slice (real, LiTS-derived, CC BY-NC-SA 4.0)"
+  },
+  {
+   "path": "dataset/sample_data/lits_sample/images/test/ct_lits_4279.png",
+   "bytes": 178798,
+   "sha256": "5b83654e6216bc0f83c943292ef73d13dc1cc2edf0e2ae2f8baa37bac4bcdd40",
+   "role": "ct_slice (real, LiTS-derived, CC BY-NC-SA 4.0)"
+  },
+  {
+   "path": "dataset/sample_data/lits_sample/images/test/ct_lits_4353.png",
+   "bytes": 89353,
+   "sha256": "80b27c2f8e3b94b3d6f589c18dc38389c6738bb085de16f35fcacd9bcd8f5340",
+   "role": "ct_slice (real, LiTS-derived, CC BY-NC-SA 4.0)"
+  },
+  {
+   "path": "dataset/sample_data/lits_sample/images/test/ct_lits_4354.png",
+   "bytes": 91817,
+   "sha256": "f4ee489d590fa821c83e51315aa9857f4bf62faa5388cf58bf6ecaac10836dab",
+   "role": "ct_slice (real, LiTS-derived, CC BY-NC-SA 4.0)"
+  },
+  {
+   "path": "dataset/sample_data/lits_sample/images/val/ct_lits_4649.png",
+   "bytes": 154881,
+   "sha256": "b58fbecef271db14244bda482c96adc0909709746f63763ad4c02204542157b9",
+   "role": "ct_slice (real, LiTS-derived, CC BY-NC-SA 4.0)"
+  },
+  {
+   "path": "dataset/sample_data/lits_sample/images/val/ct_lits_4650.png",
+   "bytes": 153487,
+   "sha256": "462ec14e3b2ad314d2f12f84fa8f68bc7ae926727402599d099eea62e5a2342e",
+   "role": "ct_slice (real, LiTS-derived, CC BY-NC-SA 4.0)"
+  },
+  {
+   "path": "dataset/sample_data/lits_sample/images/val/ct_lits_4651.png",
+   "bytes": 152166,
+   "sha256": "3449f32277209939f6b6fc05b5ef97731e7e924165da5d8f09df13728b0d90d6",
+   "role": "ct_slice (real, LiTS-derived, CC BY-NC-SA 4.0)"
+  },
+  {
+   "path": "dataset/sample_data/lits_sample/labels/slices.csv",
+   "bytes": 832,
+   "sha256": "4034b0f647a4591bef0d8c772fab8867c19919b39dfebf651bf6bb80dfa8e9f2",
+   "role": "annotation (slice labels derived from the expert segmentation masks)"
+  },
+  {
+   "path": "dataset/sample_data/synthetic/README.md",
+   "bytes": 136,
+   "sha256": "d4dab87f0908ba131ef68f09cfaf03cc36ccd88cb6738a1affb61f82a8974093",
+   "role": "documentation"
+  },
+  {
+   "path": "dataset/sample_data/synthetic/images/synthetic_phantom_phantom_A_000.png",
+   "bytes": 44593,
+   "sha256": "bf52d35e0685ac4dc9c7f86a201d6b919190a57b61f013bf9e40032c50a0039f",
+   "role": "synthetic_phantom (generated, not a medical image; software tests / OOD checks only)"
+  },
+  {
+   "path": "dataset/sample_data/synthetic/images/synthetic_phantom_phantom_A_001.png",
+   "bytes": 44574,
+   "sha256": "e1c9916a8f7430e2eb3f29e48e11a6fcb5ef45c98783200229b4d25f773fa358",
+   "role": "synthetic_phantom (generated, not a medical image; software tests / OOD checks only)"
+  },
+  {
+   "path": "dataset/sample_data/synthetic/images/synthetic_phantom_phantom_A_002.png",
+   "bytes": 44513,
+   "sha256": "00df58577bf141ebbfef20d46e18f5d03d7d3eeae5c06f4fa97aa99f7d577233",
+   "role": "synthetic_phantom (generated, not a medical image; software tests / OOD checks only)"
+  },
+  {
+   "path": "dataset/sample_data/synthetic/images/synthetic_phantom_phantom_A_003.png",
+   "bytes": 44580,
+   "sha256": "b16cec78c67aaeec68d795ce96417a46da57120922da00f67ae49f21f78a55d7",
+   "role": "synthetic_phantom (generated, not a medical image; software tests / OOD checks only)"
+  },
+  {
+   "path": "dataset/sample_data/synthetic/images/synthetic_phantom_phantom_A_004.png",
+   "bytes": 44637,
+   "sha256": "596194b01a81b4bdebdc58592051d75d786b8a453301d95342ec415350f8a365",
+   "role": "synthetic_phantom (generated, not a medical image; software tests / OOD checks only)"
+  },
+  {
+   "path": "dataset/sample_data/synthetic/images/synthetic_phantom_phantom_A_005.png",
+   "bytes": 44563,
+   "sha256": "bd9bc881e3cec3aefafb0036abb2ae96c1167e28a4262b88612551e8d5b26cec",
+   "role": "synthetic_phantom (generated, not a medical image; software tests / OOD checks only)"
+  },
+  {
+   "path": "dataset/sample_data/synthetic/images/synthetic_phantom_phantom_A_006.png",
+   "bytes": 44472,
+   "sha256": "3c143ad1679ee1f39e3e06e9dd09ee34bdf43ebc01f1d4f93416236e9dc235af",
+   "role": "synthetic_phantom (generated, not a medical image; software tests / OOD checks only)"
+  },
+  {
+   "path": "dataset/sample_data/synthetic/images/synthetic_phantom_phantom_A_007.png",
+   "bytes": 44520,
+   "sha256": "4cf7d59ed080bc2b7c72af3060121c3e7ab7b1bb0828912bbe875984bfb98163",
+   "role": "synthetic_phantom (generated, not a medical image; software tests / OOD checks only)"
+  },
+  {
+   "path": "dataset/sample_data/synthetic/images/synthetic_phantom_phantom_A_008.png",
+   "bytes": 44475,
+   "sha256": "4c6773f6ade9e791da559201ddc076197aa427c2d538b89e6f7a4b781930e2a9",
+   "role": "synthetic_phantom (generated, not a medical image; software tests / OOD checks only)"
+  },
+  {
+   "path": "dataset/sample_data/synthetic/images/synthetic_phantom_phantom_A_009.png",
+   "bytes": 44561,
+   "sha256": "9ec7bdf5ab1713a81ed42707c281c2aec82fcfd17027b065bbb7f1a1b9910445",
+   "role": "synthetic_phantom (generated, not a medical image; software tests / OOD checks only)"
+  },
+  {
+   "path": "dataset/sample_data/synthetic/images/synthetic_phantom_phantom_A_010.png",
+   "bytes": 44651,
+   "sha256": "0e49b83d9f939b8eea57e42ad853118fd9ae0b8fb0b091a1cd398ed12d6755b6",
+   "role": "synthetic_phantom (generated, not a medical image; software tests / OOD checks only)"
+  },
+  {
+   "path": "dataset/sample_data/synthetic/images/synthetic_phantom_phantom_A_011.png",
+   "bytes": 44509,
+   "sha256": "c6d1540fd5799ada354ec552389c6d5d7ed6ed9db8d33b7aa928888081a0ef08",
+   "role": "synthetic_phantom (generated, not a medical image; software tests / OOD checks only)"
+  },
+  {
+   "path": "dataset/sample_data/synthetic/images/synthetic_phantom_phantom_B_000.png",
+   "bytes": 44639,
+   "sha256": "77bcd6832bc1478985fcb745ff97f75bfcf73d431b864f60217427b849760466",
+   "role": "synthetic_phantom (generated, not a medical image; software tests / OOD checks only)"
+  },
+  {
+   "path": "dataset/sample_data/synthetic/images/synthetic_phantom_phantom_B_001.png",
+   "bytes": 44684,
+   "sha256": "bdc07eba43eeef134df3d19c639121a882a252cc82e30924acaeae01c2b40be5",
+   "role": "synthetic_phantom (generated, not a medical image; software tests / OOD checks only)"
+  },
+  {
+   "path": "dataset/sample_data/synthetic/images/synthetic_phantom_phantom_B_002.png",
+   "bytes": 44502,
+   "sha256": "08b69a0916b943064463e68df560eaf95be2934f2faeb786d8eb8cb8847fb73a",
+   "role": "synthetic_phantom (generated, not a medical image; software tests / OOD checks only)"
+  },
+  {
+   "path": "dataset/sample_data/synthetic/images/synthetic_phantom_phantom_B_003.png",
+   "bytes": 44613,
+   "sha256": "229d7ba553782160fe6dd1b9e93df84a29869db16c7867c06d23182c5a3157c4",
+   "role": "synthetic_phantom (generated, not a medical image; software tests / OOD checks only)"
+  },
+  {
+   "path": "dataset/sample_data/synthetic/images/synthetic_phantom_phantom_B_004.png",
+   "bytes": 44492,
+   "sha256": "b38cb89e9d1955fc853a66a20093c4d896d34bfcf425a91be5c779753fb59306",
+   "role": "synthetic_phantom (generated, not a medical image; software tests / OOD checks only)"
+  },
+  {
+   "path": "dataset/sample_data/synthetic/images/synthetic_phantom_phantom_B_005.png",
+   "bytes": 44486,
+   "sha256": "eb683a2846c2abed464fcd8a1388bae206336d9886c39f75cc5716e3d014e099",
+   "role": "synthetic_phantom (generated, not a medical image; software tests / OOD checks only)"
+  },
+  {
+   "path": "dataset/sample_data/synthetic/images/synthetic_phantom_phantom_B_006.png",
+   "bytes": 44555,
+   "sha256": "5dfbffcec4ed6f97708c305eb86f2daf7480a220a990cc89923ae2d96f4266a8",
+   "role": "synthetic_phantom (generated, not a medical image; software tests / OOD checks only)"
+  },
+  {
+   "path": "dataset/sample_data/synthetic/images/synthetic_phantom_phantom_B_007.png",
+   "bytes": 44603,
+   "sha256": "681cf4abea994a92565aed1512c6234e2099005b79c2fa144b00a4f684cbf2ee",
+   "role": "synthetic_phantom (generated, not a medical image; software tests / OOD checks only)"
+  },
+  {
+   "path": "dataset/sample_data/synthetic/images/synthetic_phantom_phantom_B_008.png",
+   "bytes": 44556,
+   "sha256": "54f9a11070db6e553e4ec0d262f910d62d45c164bf8388467f050fc2917e98d5",
+   "role": "synthetic_phantom (generated, not a medical image; software tests / OOD checks only)"
+  },
+  {
+   "path": "dataset/sample_data/synthetic/images/synthetic_phantom_phantom_B_009.png",
+   "bytes": 44580,
+   "sha256": "0043b87e3571b44f3b88e827fa7f9080684d411d84b1d0defcf642e4dd8e526a",
+   "role": "synthetic_phantom (generated, not a medical image; software tests / OOD checks only)"
+  },
+  {
+   "path": "dataset/sample_data/synthetic/images/synthetic_phantom_phantom_B_010.png",
+   "bytes": 44585,
+   "sha256": "7b75bda027384a31e325b0aeae54f30d9c76ca0d91a8d9b6e3001535330920d8",
+   "role": "synthetic_phantom (generated, not a medical image; software tests / OOD checks only)"
+  },
+  {
+   "path": "dataset/sample_data/synthetic/images/synthetic_phantom_phantom_B_011.png",
+   "bytes": 44591,
+   "sha256": "9c85ac106b8f14568db8fb6700373f59c2d9674f9082534ca0cff4df0f7e95d2",
+   "role": "synthetic_phantom (generated, not a medical image; software tests / OOD checks only)"
+  },
+  {
+   "path": "dataset/sample_data/synthetic/manifest.csv",
+   "bytes": 3523,
+   "sha256": "74799ad458b90702a91f9f2ad9ce5c10b470815c4fc25a787dead2dff8956230",
+   "role": "manifest"
+  },
+  {
+   "path": "dataset/manifests/lits_verified_v8_SHA256SUMS.txt",
+   "bytes": 166778,
+   "sha256": "148437978745ae3b396adb9a761501f0e0e15465cf301563ce2fb184d48cb700",
+   "role": "manifest"
+  },
+  {
+   "path": "dataset/manifests/lits_verified_v8_manifest.csv",
+   "bytes": 210476,
+   "sha256": "97ca42d7c41470675f799b2376d1a2766dddef9df480109e67e5870a63564494",
+   "role": "manifest"
+  },
+  {
+   "path": "data/labels/excluded_unverified.csv",
+   "bytes": 937817,
+   "sha256": "223257f61d0588b46d38269f74c9f7e217ed73ab4260963ab4184231e6aa9e84",
+   "role": "annotation (slice labels derived from the expert segmentation masks)"
+  },
+  {
+   "path": "data/labels/verification/local_ct_lits_pixel_sha8_sequence.txt",
+   "bytes": 13960,
+   "sha256": "168dff6fe7df6a2f144d36a94f10d8de5d92698ae168136ff16bb98ce8f1c551",
+   "role": "annotation (slice labels derived from the expert segmentation masks)"
+  },
+  {
+   "path": "data/labels/verification/mask_chunk0.txt",
+   "bytes": 12500,
+   "sha256": "f24920b1ae21bf0c63bc3067a40aec464333129f147ad513ae3fbb09eb7a81f2",
+   "role": "annotation (slice labels derived from the expert segmentation masks)"
+  },
+  {
+   "path": "data/labels/verification/mask_chunk1.txt",
+   "bytes": 8696,
+   "sha256": "441eaa6cd056b8da61ab92d87676fdbca8b52d2249b417e925f0b3aafb629fe7",
+   "role": "annotation (slice labels derived from the expert segmentation masks)"
+  },
+  {
+   "path": "data/labels/verification/positive_slice_pixel_counts_base36.txt",
+   "bytes": 3812,
+   "sha256": "0a9b2ba0b1c8ec090ea62a1559f52f67f2c0d14042e2c537bc359731c1c49317",
+   "role": "annotation (slice labels derived from the expert segmentation masks)"
+  },
+  {
+   "path": "data/labels/verification/scan_signature_audit.json",
+   "bytes": 1504,
+   "sha256": "2957b070c72b5a2f42b524092d69ee06c4bf2c7cfa398a5fcf0a71605c5bd788",
+   "role": "annotation (slice labels derived from the expert segmentation masks)"
+  },
+  {
+   "path": "data/labels/verification/upstream_metadata_labels_3986.txt",
+   "bytes": 3986,
+   "sha256": "a7df4ea68cb36e6fdfa1ec618c9958956c06da10b8207cbf8a2774943c1624b0",
+   "role": "annotation (slice labels derived from the expert segmentation masks)"
+  },
+  {
+   "path": "data/labels/verification/verification_log.json",
+   "bytes": 3315,
+   "sha256": "f3a3f47fd45146d7526c9f344b072a49c4fda68acb73b9cb3973ef6284d18663",
+   "role": "annotation (slice labels derived from the expert segmentation masks)"
+  },
+  {
+   "path": "data/labels/verified_slice_labels.csv",
+   "bytes": 473567,
+   "sha256": "ca3dab974f79b0d7b9122f973d6f3ea071076b075ce27833a93b2031e5b63aed",
+   "role": "annotation (slice labels derived from the expert segmentation masks)"
+  },
+  {
+   "path": "data/manifests/dataset_report.json",
+   "bytes": 1424,
+   "sha256": "2c0c2133e8125d024f5ab35d678bae9be68b41a6aecbec012a2fedbbc124cd83",
+   "role": "manifest"
+  },
+  {
+   "path": "data/manifests/duplicates.csv",
+   "bytes": 1041087,
+   "sha256": "ab7aa423ba23ae45caa478259a5ea4f022cd8cf0b4fd996f154fa8ea28fbcfb8",
+   "role": "manifest"
+  },
+  {
+   "path": "data/manifests/manifest_v8.csv",
+   "bytes": 1447940,
+   "sha256": "d2249a1ea8683fceb4e9dd8311f3d3ad5d2c87b45a78425030035868004e7aea",
+   "role": "manifest"
+  },
+  {
+   "path": "data/manifests/patches_gate.csv",
+   "bytes": 157289,
+   "sha256": "ed1d3e0e70d7ec41f53c44822a8bff8840c7fdfaad5ceb62264361434556ccc9",
+   "role": "manifest"
+  },
+  {
+   "path": "data/manifests/patches_task_a.csv",
+   "bytes": 117546,
+   "sha256": "9d4f42ca997f46d7970c90025de8d96dd01bb7ffc4a38ddaebf240445d3715c2",
+   "role": "manifest"
+  },
+  {
+   "path": "data/manifests/scan_groups.csv",
+   "bytes": 313,
+   "sha256": "2ceb5579fb5ef303c2d1c18f306cad380b90f00f748fb277d6052e1f0144ee25",
+   "role": "manifest"
+  },
+  {
+   "path": "data/manifests/split_v8.csv",
+   "bytes": 473567,
+   "sha256": "ca3dab974f79b0d7b9122f973d6f3ea071076b075ce27833a93b2031e5b63aed",
+   "role": "manifest"
+  },
+  {
+   "path": "data/manifests/v9_slices.csv",
+   "bytes": 137610,
+   "sha256": "8161829c6c8f94d2ceee5db67d527c429730aa5ec239b882ecb0f564b453c477",
+   "role": "annotation (slice labels derived from the expert segmentation masks)"
+  }
+ ]
+}

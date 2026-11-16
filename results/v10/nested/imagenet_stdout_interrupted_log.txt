@@ -1,0 +1,50 @@
+15:52:21 extracting imagenet_gap for 2449 patches
+15:53:08 dataset lits_verified_v8@2a9a4887bb322cfc: 2449 patches, 8 units, features imagenet_gap 1280-d; 8 model specs; seeds [0, 1, 2, 3, 4]
+15:53:09   logreg                   outer unit G01      AUC 0.8497  config {'C': 0.1}
+15:53:11   logreg                   outer unit G02      AUC 0.975  config {'C': 1.0}
+15:53:12   logreg                   outer unit G03      AUC 1.0  config {'C': 0.1}
+15:53:14   logreg                   outer unit G04      AUC 0.9822  config {'C': 0.01}
+15:53:15   logreg                   outer unit G05      AUC 0.8558  config {'C': 10.0}
+15:53:16   logreg                   outer unit G06+G07  AUC 0.942  config {'C': 0.1}
+15:53:17   logreg                   outer unit G08+G09  AUC 0.9264  config {'C': 0.1}
+15:53:19   logreg                   outer unit G10      AUC 0.9586  config {'C': 0.1}
+15:53:19 logreg: mean within-unit AUC 0.9271027810245599 (10.9 s)
+15:53:31   svm_rbf                  outer unit G01      AUC 0.8197  config {'C': 3.0, 'gamma': 'scale'}
+15:53:47   svm_rbf                  outer unit G02      AUC 0.9638  config {'C': 3.0, 'gamma': 'scale'}
+15:54:05   svm_rbf                  outer unit G03      AUC 1.0  config {'C': 3.0, 'gamma': 'scale'}
+15:54:24   svm_rbf                  outer unit G04      AUC 0.9773  config {'C': 3.0, 'gamma': 'scale'}
+15:54:42   svm_rbf                  outer unit G05      AUC 0.9082  config {'C': 3.0, 'gamma': 'scale'}
+15:54:48   svm_rbf                  outer unit G06+G07  AUC 0.9341  config {'C': 3.0, 'gamma': 'scale'}
+15:55:05   svm_rbf                  outer unit G08+G09  AUC 0.8889  config {'C': 3.0, 'gamma': 'scale'}
+15:55:23   svm_rbf                  outer unit G10      AUC 0.9744  config {'C': 3.0, 'gamma': 'scale'}
+15:55:23 svm_rbf: mean within-unit AUC 0.9237713975269314 (123.9 s)
+15:55:35   logreg_pca4              outer unit G01      AUC 0.5214  config {'C': 10.0}
+15:55:50   logreg_pca4              outer unit G02      AUC 0.6958  config {'C': 10.0}
+15:56:06   logreg_pca4              outer unit G03      AUC 1.0  config {'C': 10.0}
+15:56:21   logreg_pca4              outer unit G04      AUC 0.9177  config {'C': 10.0}
+15:56:35   logreg_pca4              outer unit G05      AUC 0.6845  config {'C': 10.0}
+15:56:42   logreg_pca4              outer unit G06+G07  AUC 0.5082  config {'C': 10.0}
+15:56:57   logreg_pca4              outer unit G08+G09  AUC 0.9216  config {'C': 10.0}
+15:57:13   logreg_pca4              outer unit G10      AUC 0.9527  config {'C': 10.0}
+15:57:13 logreg_pca4: mean within-unit AUC 0.7431112266649064 (109.9 s)
+15:57:31   svm_rbf_pca4             outer unit G01      AUC 0.5742  config {'C': 3.0, 'gamma': 0.1}
+15:57:54   svm_rbf_pca4             outer unit G02      AUC 0.6964  config {'C': 3.0, 'gamma': 'scale'}
+15:58:18   svm_rbf_pca4             outer unit G03      AUC 1.0  config {'C': 3.0, 'gamma': 'scale'}
+15:58:41   svm_rbf_pca4             outer unit G04      AUC 0.8979  config {'C': 3.0, 'gamma': 'scale'}
+15:59:03   svm_rbf_pca4             outer unit G05      AUC 0.7522  config {'C': 3.0, 'gamma': 0.1}
+15:59:12   svm_rbf_pca4             outer unit G06+G07  AUC 0.5794  config {'C': 3.0, 'gamma': 'scale'}
+15:59:36   svm_rbf_pca4             outer unit G08+G09  AUC 0.8309  config {'C': 3.0, 'gamma': 'scale'}
+15:59:59   svm_rbf_pca4             outer unit G10      AUC 0.8994  config {'C': 3.0, 'gamma': 0.1}
+15:59:59 svm_rbf_pca4: mean within-unit AUC 0.7472079227671875 (165.8 s)
+16:01:33   vqc                      outer unit G01      AUC 0.5881  config {'layers': 2, 'readout': 'z0'}
+16:03:22   vqc                      outer unit G02      AUC 0.6811  config {'layers': 2, 'readout': 'z0'}
+16:06:06   vqc                      outer unit G03      AUC 1.0  config {'layers': 2, 'readout': 'linear_z'}
+16:08:23   vqc                      outer unit G04      AUC 0.9359  config {'layers': 2, 'readout': 'linear_z'}
+16:10:17   vqc                      outer unit G05      AUC 0.7227  config {'layers': 2, 'readout': 'linear_z'}
+16:11:22   vqc                      outer unit G06+G07  AUC 0.5233  config {'layers': 2, 'readout': 'linear_z'}
+16:13:19   vqc                      outer unit G08+G09  AUC 0.7991  config {'layers': 2, 'readout': 'linear_z'}
+16:15:47   vqc                      outer unit G10      AUC 0.8639  config {'layers': 2, 'readout': 'linear_z'}
+16:15:47 vqc: mean within-unit AUC 0.7306032094830793 (948.7 s)
+16:17:14   qksvm                    outer unit G01      AUC 0.5602  config {'pair': 'product', 'bandwidth': 0.25, 'C': 3.0}
+16:19:18   qksvm                    outer unit G02      AUC 0.6992  config {'pair': 'product', 'bandwidth': 0.5, 'C': 3.0}
+16:21:22   qksvm                    outer unit G03      AUC 1.0  config {'pair': 'v9', 'bandwidth': 0.25, 'C': 3.0}

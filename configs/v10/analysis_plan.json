@@ -1,0 +1,217 @@
+{
+  "title": "V10 nested evaluation \u2014 analysis plan (frozen before any outer-fold prediction exists)",
+  "frozen_utc": "2026-11-12T15:30:00Z",
+  "data": {
+    "dataset": "liver_ct_lits_verified_v8 (1,745 slices; 2,449 liver patches from patches_v8.npz)",
+    "task": "patch-level tumour vs tumour-free liver tissue (96 x 96)",
+    "units": {
+      "G01": "G01",
+      "G02": "G02",
+      "G03": "G03",
+      "G04": "G04",
+      "G05": "G05",
+      "G06": "G06+G07",
+      "G07": "G06+G07",
+      "G08": "G08+G09",
+      "G09": "G08+G09",
+      "G10": "G10"
+    },
+    "unit_note": "reconstructed scan-group units, not patients; patient-level generalisation cannot be established"
+  },
+  "design": {
+    "outer": "leave one unit out (8 folds)",
+    "inner": "grouped 3-fold over the training units (seeded by fold)",
+    "selection_metric": "mean inner-fold AUC",
+    "calibration": "Platt scaling on pooled inner out-of-fold scores",
+    "threshold": "Youden J on calibrated inner out-of-fold probabilities",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "seed_policy": "stochastic models: 5 outer seeds averaged within unit; inner selection with seed 0"
+  },
+  "primary_estimand": "unweighted mean within-unit ROC-AUC over units with >= 10 patches of each class",
+  "secondary": [
+    "pooled out-of-fold AUC of calibrated probabilities",
+    "pair-weighted within-unit AUC",
+    "per-unit results",
+    "accuracy, balanced accuracy, sensitivity, specificity, precision, F1, MCC, log loss, Brier, ECE at the inner-chosen threshold"
+  ],
+  "feature_sets": {
+    "radiomics": "confirmatory family",
+    "imagenet_gap": "secondary family (same comparisons, own Holm correction)",
+    "cnn_embedding": "not used (V9 CNN trained on V9 training groups: leaks across units)"
+  },
+  "confirmatory_comparisons": [
+    "vqc vs logreg_pca4",
+    "qksvm vs svm_rbf_pca4",
+    "hybrid_no_fusion vs hybrid_twin"
+  ],
+  "test": "exact two-sided sign-flip test of the mean per-unit AUC difference; Holm over the 3 comparisons",
+  "attainable_p_note": "with 7 qualifying units the smallest two-sided p is 2/128 = 0.0156; a confirmatory difference needs all 7 units to agree",
+  "equivalence": "not tested: margin rule (max(0.02, 2 x control seed SD)) would need inner-fold pilot estimates; non-significance is never reported as equivalence",
+  "grids": {
+    "classical": {
+      "logreg": [
+        {
+          "C": 0.01
+        },
+        {
+          "C": 0.1
+        },
+        {
+          "C": 1.0
+        },
+        {
+          "C": 10.0
+        }
+      ],
+      "decision_tree": [
+        {
+          "max_depth": 3,
+          "min_samples_leaf": 5
+        },
+        {
+          "max_depth": 3,
+          "min_samples_leaf": 20
+        },
+        {
+          "max_depth": 6,
+          "min_samples_leaf": 5
+        },
+        {
+          "max_depth": 6,
+          "min_samples_leaf": 20
+        }
+      ],
+      "random_forest": [
+        {
+          "max_depth": null,
+          "min_samples_leaf": 1
+        },
+        {
+          "max_depth": null,
+          "min_samples_leaf": 5
+        },
+        {
+          "max_depth": 8,
+          "min_samples_leaf": 1
+        },
+        {
+          "max_depth": 8,
+          "min_samples_leaf": 5
+        }
+      ],
+      "extra_trees": [
+        {
+          "max_depth": null,
+          "min_samples_leaf": 1
+        },
+        {
+          "max_depth": null,
+          "min_samples_leaf": 5
+        },
+        {
+          "max_depth": 8,
+          "min_samples_leaf": 1
+        },
+        {
+          "max_depth": 8,
+          "min_samples_leaf": 5
+        }
+      ],
+      "svm_rbf": [
+        {
+          "C": 0.3,
+          "gamma": "scale"
+        },
+        {
+          "C": 0.3,
+          "gamma": 0.01
+        },
+        {
+          "C": 3.0,
+          "gamma": "scale"
+        },
+        {
+          "C": 3.0,
+          "gamma": 0.01
+        }
+      ],
+      "knn": [
+        {
+          "n_neighbors": 7,
+          "weights": "uniform"
+        },
+        {
+          "n_neighbors": 7,
+          "weights": "distance"
+        },
+        {
+          "n_neighbors": 21,
+          "weights": "uniform"
+        },
+        {
+          "n_neighbors": 21,
+          "weights": "distance"
+        }
+      ],
+      "hist_gb": [
+        {
+          "learning_rate": 0.05,
+          "max_depth": 3
+        },
+        {
+          "learning_rate": 0.05,
+          "max_depth": null
+        },
+        {
+          "learning_rate": 0.15,
+          "max_depth": 3
+        },
+        {
+          "learning_rate": 0.15,
+          "max_depth": null
+        }
+      ],
+      "mlp_small": [
+        {
+          "alpha": 0.001,
+          "hidden": 8
+        },
+        {
+          "alpha": 0.1,
+          "hidden": 8
+        },
+        {
+          "alpha": 1.0,
+          "hidden": 8
+        }
+      ],
+      "xgboost": [
+        {
+          "max_depth": 3,
+          "learning_rate": 0.05
+        },
+        {
+          "max_depth": 3,
+          "learning_rate": 0.15
+        },
+        {
+          "max_depth": 6,
+          "learning_rate": 0.05
+        },
+        {
+          "max_depth": 6,
+          "learning_rate": 0.15
+        }
+      ]
+    },
+    "quantum_qubits": 4,
+    "epochs": 30
+  },
+  "exploratory": "everything else (classical zoo, ablations, late fusion, feature-fusion hybrid)"
+}

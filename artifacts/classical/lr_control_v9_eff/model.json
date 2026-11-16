@@ -1,0 +1,60 @@
+{
+  "name": "Logistic regression (control for the VQC) (4 qubits, EFF features)",
+  "kind": "v9_lr_control",
+  "version": "v9",
+  "features": "effnet_ft_v8",
+  "feature_description": "GAP features (1280-d) of V8's fine-tuned EfficientNet-B0 (trained on the training split only)",
+  "configuration": {
+    "qubits": 4,
+    "C": 10
+  },
+  "selection": "highest validation ROC-AUC in the sweep",
+  "validation_auc": 0.961337513061651,
+  "training_status": "PARTIALLY TRAINED",
+  "labels": "LiTS expert masks (verified)",
+  "clinical_use": "NOT validated for clinical use",
+  "calibration": {
+    "mu": 2.2228913473377663,
+    "sd": 7.130021891601652,
+    "a": 3.8004821861814597,
+    "b": 0.9372361379444065,
+    "min_slope": 0.001
+  },
+  "calibration_status": "platt_on_validation",
+  "threshold": 0.7217438798685749,
+  "threshold_rule": "Youden J on validation (calibrated probability)",
+  "validation_score_check": {
+    "constant_scores": false,
+    "ok": true
+  },
+  "inference_seconds_per_patch": 0.017431199999999997,
+  "family": "classical",
+  "model_id": "lr_control_v9_eff",
+  "npz_sha256": "6988eaaf6ee529de5e4b39b2b5ab5e098e287705a5f9b715158014ed34629a9a",
+  "status": "trained",
+  "saved_utc": "2026-11-06T11:27:08+00:00",
+  "role": "control",
+  "role_order": 4,
+  "test_summary": {
+    "auc": 0.9108177650925445,
+    "auc_ci95": [
+      0.8842122781949696,
+      0.9955573559670783
+    ],
+    "sensitivity": 0.5797872340425532,
+    "specificity": 0.967479674796748,
+    "f1": 0.724252491694352,
+    "accuracy": 0.7331189710610932,
+    "pr_auc": 0.941940389708492,
+    "ece": 0.13808215447098243
+  },
+  "validation_summary": {
+    "auc": 0.961337513061651
+  },
+  "train_seconds": 0.0,
+  "parameters": 5,
+  "head_inference_ms_per_patch": 0.0052,
+  "feature_ms_per_patch": 17.426,
+  "inference_timing_note": "head + feature extraction on 2 CPU cores; circuits simulated exactly",
+  "support_vectors": null
+}

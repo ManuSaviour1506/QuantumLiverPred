@@ -1,0 +1,68 @@
+{
+  "name": "OOD detector (EfficientNet-B0 intermediate features, whole slice)",
+  "fitted_on": "verified training-split slices",
+  "k": 32,
+  "quantile": 99,
+  "thresholds": {
+    "d2": 82.61822931407875,
+    "residual": 0.9626852350892857
+  },
+  "npz_sha256": "42f12830b6843e36c26fdbb48a54a04cdb258a6c3c6bdb46c853dc9690790fa4",
+  "evaluation": {
+    "verified_train_slices": {
+      "n": 596,
+      "flagged": 5,
+      "flagged_rate": 0.0084
+    },
+    "verified_val_slices": {
+      "n": 713,
+      "flagged": 6,
+      "flagged_rate": 0.0084
+    },
+    "verified_test_slices": {
+      "n": 436,
+      "flagged": 7,
+      "flagged_rate": 0.0161
+    },
+    "other_source_ct_slices (ct_slice, excluded)": {
+      "n": 200,
+      "flagged": 200,
+      "qc_rejected": 0,
+      "withheld_qc_or_ood": 200,
+      "flagged_rate": 1.0,
+      "withheld_rate": 1.0
+    },
+    "synthetic_drawings": {
+      "n": 5,
+      "flagged": 5,
+      "qc_rejected": 0,
+      "withheld_qc_or_ood": 5,
+      "flagged_rate": 1.0,
+      "withheld_rate": 1.0
+    },
+    "inverted_test_slices": {
+      "n": 150,
+      "flagged": 13,
+      "qc_rejected": 150,
+      "withheld_qc_or_ood": 150,
+      "flagged_rate": 0.0867,
+      "withheld_rate": 1.0
+    },
+    "heavily_blurred_test_slices": {
+      "n": 150,
+      "flagged": 150,
+      "qc_rejected": 0,
+      "withheld_qc_or_ood": 150,
+      "flagged_rate": 1.0,
+      "withheld_rate": 1.0
+    },
+    "uniform_noise": {
+      "n": 50,
+      "flagged": 50,
+      "qc_rejected": 50,
+      "withheld_qc_or_ood": 50,
+      "flagged_rate": 1.0,
+      "withheld_rate": 1.0
+    }
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "name": "Variational Quantum Classifier (8 qubits, ImageNet features)",
+  "kind": "vqc",
+  "task": "Task A: tumour vs tumour-free liver tissue (96x96 px CT patch)",
+  "architecture": "standardise -> PCA(8) -> [0, pi]; RY angle encoding re-uploaded before each of 3 layers (RY, RZ per qubit + CNOT ring); readout <Z_0> with trainable scale and bias",
+  "input": "frozen ImageNet EfficientNet-B0 GAP features (1280-d) of the 96x96 patch (feature extractor never trained on CT labels)",
+  "feature_source": "imagenet",
+  "labels": "LiTS expert masks via seongun/liver-tumor-classification (verified pixel-exact)",
+  "split_file": "data/manifests/split_v8.csv",
+  "validation_status": "held-out test split, research only",
+  "clinical_use": "NOT validated for clinical use",
+  "quantum_backend": {
+    "execution": "simulator",
+    "simulator": "NumPy exact state-vector (src/quantum/simulator.py)",
+    "hardware": "none - no quantum hardware was used",
+    "shots": "exact expectation values (no shot noise)"
+  },
+  "qubits": 8,
+  "layers": 3,
+  "circuit_parameters": 48,
+  "pca_explained_variance": 0.2533602043510258,
+  "training": {
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 0.5804064760876808,
+        "val_loss": 0.7436540763085062,
+        "seconds": 6.8
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.45395124245346713,
+        "val_loss": 0.6408069830260551,
+        "seconds": 13.3
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.3941671910422237,
+        "val_loss": 0.6500983248181146,
+        "seconds": 19.7
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.36980185468020943,
+        "val_loss": 0.6455196102254883,
+        "seconds": 25.9
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.34177667562777575,
+        "val_loss": 0.6596743596382095,
+        "seconds": 32.4
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.346804199354094,
+        "val_loss": 0.7173690776276515,
+        "seconds": 38.5
+      },
+      {
+        "epoch": 7,
+        "train_loss": 0.3142887731227187,
+        "val_loss": 0.6327465927025485,
+        "seconds": 44.5
+      },
+      {
+        "epoch": 8,
+        "train_loss": 0.3039835813147577,
+        "val_loss": 0.6490019029490233,
+        "seconds": 50.7
+      },
+      {
+        "epoch": 9,
+        "train_loss": 0.2921490460783138,
+        "val_loss": 0.61112475800234,
+        "seconds": 57.4
+      },
+      {
+        "epoch": 10,
+        "train_loss": 0.2801569969253696,
+        "val_loss": 0.6614639475010156,
+        "seconds": 63.4
+      },
+      {
+        "epoch": 11,
+        "train_loss": 0.2864016625924319,
+        "val_loss": 0.7061301392612457,
+        "seconds": 69.3
+      },
+      {
+        "epoch": 12,
+        "train_loss": 0.2784652821517234,
+        "val_loss": 0.652356935529707,
+        "seconds": 75.2
+      },
+      {
+        "epoch": 13,
+        "train_loss": 0.2670075413532581,
+        "val_loss": 0.6703269771962233,
+        "seconds": 81.4
+      },
+      {
+        "epoch": 14,
+        "train_loss": 0.26804642246904975,
+        "val_loss": 0.6937814386129953,
+        "seconds": 87.6
+      },
+      {
+        "epoch": 15,
+        "train_loss": 0.25909542283690734,
+        "val_loss": 0.652627870262979,
+        "seconds": 93.8
+      }
+    ],
+    "best_epoch": 9,
+    "train_seconds": 93.8,
+    "epochs_max": 40,
+    "batch": 64,
+    "lr": 0.05,
+    "patience": 6,
+    "gradient": "adjoint (exact; equals parameter-shift)"
+  },
+  "calibration": {
+    "mu": 0.36839451350582014,
+    "sd": 2.291635132256119,
+    "a": 1.1869273094434967,
+    "b": 0.5252718299634251,
+    "min_slope": 0.001
+  },
+  "calibration_status": "platt_on_validation",
+  "threshold": 0.7462947132477086,
+  "threshold_rule": "Youden J on validation (calibrated probability)",
+  "validation_score_check": {
+    "constant_scores": false,
+    "ok": true
+  },
+  "inference_seconds_per_patch": 0.02082282854340809,
+  "family": "quantum",
+  "model_id": "vqc_8q",
+  "npz_sha256": "8fd5e1cb43695ebe97f7bc3ddf125f377d09da78a30215c89edbd19426a2e634",
+  "status": "trained",
+  "saved_utc": "2026-11-06T05:15:03+00:00",
+  "test_summary": {
+    "auc": 0.6245783601453037,
+    "auc_ci95": [
+      0.5767833800725757,
+      0.8984081790123457
+    ],
+    "sensitivity": 0.2473404255319149,
+    "specificity": 0.9715447154471545,
+    "f1": 0.39075630252100846,
+    "accuracy": 0.5337620578778135,
+    "pr_auc": 0.7601841546914367,
+    "ece": 0.14508083163315139,
+    "brier": 0.25329087830177416,
+    "sensitivity_ci95": [
+      0.2037037037037037,
+      0.4444444444444444
+    ],
+    "specificity_ci95": [
+      0.84375,
+      1.0
+    ]
+  },
+  "validation_summary": {
+    "auc": 0.7727795193312434,
+    "sensitivity": 0.5114942528735632,
+    "specificity": 0.8909090909090909
+  }
+}

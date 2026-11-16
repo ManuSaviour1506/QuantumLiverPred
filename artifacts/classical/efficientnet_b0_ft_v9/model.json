@@ -1,0 +1,223 @@
+{
+  "name": "EfficientNet-B0 (fine-tuned, V9 CT recipe)",
+  "kind": "cnn_finetune",
+  "version": "v9",
+  "arch": "efficientnet_b0",
+  "task": "Task A: tumour vs tumour-free liver tissue (96x96 px CT patch)",
+  "architecture": "ImageNet-pretrained EfficientNet-B0 (timm weights); fine-tuned: last MBConv block (blocks.6) + conv_head + bn2 + linear head; earlier layers frozen",
+  "input": "96x96 grey patch replicated to 3 channels, ImageNet normalisation",
+  "labels": "LiTS expert masks via seongun/liver-tumor-classification (verified pixel-exact)",
+  "split_file": "data/manifests/split_v8.csv",
+  "validation_status": "held-out test split, research only",
+  "clinical_use": "NOT validated for clinical use",
+  "recipe": "V8 views + 3 CT-augmented views (gamma, noise, blur), focal loss gamma 2, 25 epochs, patience 5",
+  "training": {
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 0.11426645358970083,
+        "val_loss": 0.4451607256334257,
+        "val_auc": 0.9132183908045977,
+        "seconds": 2.3
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.027521357989289973,
+        "val_loss": 0.28352579738227784,
+        "val_auc": 0.9642633228840125,
+        "seconds": 5.0
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.014830838275647209,
+        "val_loss": 0.2440727636264205,
+        "val_auc": 0.9702194357366771,
+        "seconds": 7.9
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.01347744343264393,
+        "val_loss": 0.2876679275914129,
+        "val_auc": 0.9712121212121213,
+        "seconds": 11.0
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.009870170456570364,
+        "val_loss": 0.22341850654219456,
+        "val_auc": 0.9750261233019855,
+        "seconds": 14.0
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.00925148169196809,
+        "val_loss": 0.22391812751066084,
+        "val_auc": 0.9771682340647858,
+        "seconds": 17.4
+      },
+      {
+        "epoch": 7,
+        "train_loss": 0.0065162726880907676,
+        "val_loss": 0.19993726412753648,
+        "val_auc": 0.974085684430512,
+        "seconds": 20.1
+      },
+      {
+        "epoch": 8,
+        "train_loss": 0.004029064790482439,
+        "val_loss": 0.2210527512291906,
+        "val_auc": 0.9785266457680251,
+        "seconds": 23.0
+      },
+      {
+        "epoch": 9,
+        "train_loss": 0.003495854274514635,
+        "val_loss": 0.22028375472504774,
+        "val_auc": 0.9797805642633229,
+        "seconds": 26.1
+      },
+      {
+        "epoch": 10,
+        "train_loss": 0.0028919592889494186,
+        "val_loss": 0.21489161402994558,
+        "val_auc": 0.9774817136886104,
+        "seconds": 29.1
+      },
+      {
+        "epoch": 11,
+        "train_loss": 0.002444711027407991,
+        "val_loss": 0.20817668274221318,
+        "val_auc": 0.9756008359456636,
+        "seconds": 32.2
+      },
+      {
+        "epoch": 12,
+        "train_loss": 0.0039913091480012425,
+        "val_loss": 0.21236138274491712,
+        "val_auc": 0.9776384535005225,
+        "seconds": 35.3
+      },
+      {
+        "epoch": 13,
+        "train_loss": 0.0021740240945191387,
+        "val_loss": 0.24047280239498353,
+        "val_auc": 0.9758098223615466,
+        "seconds": 38.5
+      },
+      {
+        "epoch": 14,
+        "train_loss": 0.0011488210061781933,
+        "val_loss": 0.21252549353088795,
+        "val_auc": 0.9800417972831765,
+        "seconds": 41.4
+      },
+      {
+        "epoch": 15,
+        "train_loss": 0.0014914091588725945,
+        "val_loss": 0.23667632820729903,
+        "val_auc": 0.9817136886102404,
+        "seconds": 44.1
+      },
+      {
+        "epoch": 16,
+        "train_loss": 0.0010952507248994663,
+        "val_loss": 0.20441745319732277,
+        "val_auc": 0.9827063740856843,
+        "seconds": 46.9
+      },
+      {
+        "epoch": 17,
+        "train_loss": 0.002300019114588883,
+        "val_loss": 0.21647594281708243,
+        "val_auc": 0.9807210031347962,
+        "seconds": 49.7
+      },
+      {
+        "epoch": 18,
+        "train_loss": 0.0009778184161820325,
+        "val_loss": 0.22183767073237598,
+        "val_auc": 0.9808254963427379,
+        "seconds": 52.5
+      },
+      {
+        "epoch": 19,
+        "train_loss": 0.0009805133866145144,
+        "val_loss": 0.1919934819120249,
+        "val_auc": 0.9794148380355278,
+        "seconds": 55.6
+      },
+      {
+        "epoch": 20,
+        "train_loss": 0.0039956262246813486,
+        "val_loss": 0.19474543799102165,
+        "val_auc": 0.9806687565308254,
+        "seconds": 58.3
+      },
+      {
+        "epoch": 21,
+        "train_loss": 0.000588017069189601,
+        "val_loss": 0.20785953569375165,
+        "val_auc": 0.9808777429467085,
+        "seconds": 61.2
+      }
+    ],
+    "best_epoch": 16,
+    "train_seconds": 61.2,
+    "pos_weight": 0.8567990373044525,
+    "max_epochs": 25,
+    "batch": 32,
+    "patience": 5,
+    "tail_lr": 0.0001,
+    "head_lr": 0.001,
+    "weight_decay": 0.0001,
+    "n_train_views": 6,
+    "early_stopping": "validation ROC-AUC, patience 5",
+    "focal_gamma": 2.0,
+    "view_cache_seconds": 81.3
+  },
+  "calibration": {
+    "mu": 2.2267345414615014,
+    "sd": 4.076559202139281,
+    "a": 5.080019864330437,
+    "b": 1.498413657633919,
+    "min_slope": 0.001
+  },
+  "calibration_status": "platt_on_validation",
+  "threshold": 0.6683360823497756,
+  "threshold_rule": "Youden J on validation (calibrated probability)",
+  "validation_score_check": {
+    "constant_scores": false,
+    "ok": true
+  },
+  "inference_seconds_per_patch": 0.0180148172218645,
+  "family": "classical",
+  "threshold_high_sensitivity": 0.13337691873735522,
+  "threshold_high_sensitivity_rule": "highest validation specificity with validation sensitivity >= 0.98",
+  "validation_auc": 0.9827063740856843,
+  "validation_ece": 0.03635216945971079,
+  "imagenet_weights": "artifacts/weights (efficientnet_b0)",
+  "training_status": "PARTIALLY TRAINED",
+  "trainable_parameters": 1138481,
+  "model_id": "efficientnet_b0_ft_v9",
+  "npz_sha256": "da3a25dc2fe0e25caeb374897b2cae3e428dba16b8199ae3f1e2b666acebd95a",
+  "status": "trained",
+  "saved_utc": "2026-11-06T10:35:02+00:00",
+  "role": "primary",
+  "role_order": 0,
+  "test_summary": {
+    "auc": 0.9326349247535028,
+    "auc_ci95": [
+      0.9145078031887691,
+      0.9881481481481481
+    ],
+    "sensitivity": 0.6569148936170213,
+    "specificity": 0.9512195121951219,
+    "f1": 0.7779527559055117,
+    "accuracy": 0.7733118971061094,
+    "pr_auc": 0.9540551212580249,
+    "ece": 0.12301853718616991
+  },
+  "validation_summary": {
+    "auc": 0.9827063740856843
+  }
+}

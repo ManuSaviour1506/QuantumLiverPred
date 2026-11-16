@@ -1,0 +1,72 @@
+{
+  "model_id": "unet25d_v9",
+  "name": "2.5-D U-Net (liver + tumour segmentation)",
+  "family": "segmentation",
+  "kind": "unet25d",
+  "version": "v9",
+  "status": "trained",
+  "training_status": "TRAINED",
+  "architecture": "U-Net, encoder 3 levels + bottleneck (widths [16, 32, 64, 96]), decoder to 64 x 64, 3 classes",
+  "input": "previous / current / next slice at 128 x 128 (grey 0-1), standardised with training statistics",
+  "output": "64 x 64 map: 0 background, 1 liver, 2 tumour (8 x 8-pixel cells of the 512 x 512 slice)",
+  "labels": "verified LiTS expert masks (seongun/liver-tumor-classification), reduced to 8 x 8-pixel cells",
+  "config": {
+    "in_channels": 3,
+    "widths": [
+      16,
+      32,
+      64,
+      96
+    ],
+    "class_weights": [
+      1.0,
+      2.0,
+      4.0
+    ],
+    "dice_weight": 1.0,
+    "learning_rate": 0.002,
+    "weight_decay": 0.0001,
+    "batch_size": 8,
+    "max_epochs": 30,
+    "warmup_epochs": 1,
+    "patience": 6,
+    "neg_per_pos": 0.5,
+    "augment_shift": 6,
+    "augment_rotate": 10.0,
+    "augment_gamma": 0.3,
+    "augment_noise": 0.03,
+    "augment_blur": 0.3,
+    "augment_intensity": 0.15,
+    "seed": 42
+  },
+  "postprocessing": {
+    "min_tumour_cells": 0,
+    "tumour_in_liver": true
+  },
+  "parameters": 377907,
+  "train_seconds": 2509.480928902,
+  "best_epoch": 13,
+  "inference_ms_per_slice": 65.18396927067023,
+  "test_pooled": {
+    "liver": {
+      "dice": 0.7986914382968315,
+      "iou": 0.6648511995656452,
+      "precision": 0.9783531409168081,
+      "recall": 0.6747774276316922
+    },
+    "tumour": {
+      "dice": 0.7343248267703228,
+      "iou": 0.5801842702630525,
+      "precision": 0.8287767039674466,
+      "recall": 0.6591989481136846
+    },
+    "lesion_sensitivity": 0.6,
+    "reference_lesions": 10,
+    "detected_lesions": 6,
+    "false_positive_lesions_total": 12,
+    "false_positive_lesions_per_scan": 4.0,
+    "mean_dice_per_scan_tumour": 0.5074841503492001,
+    "mean_dice_per_scan_liver": 0.751287370818838
+  },
+  "clinical_use": "NOT validated for clinical use"
+}

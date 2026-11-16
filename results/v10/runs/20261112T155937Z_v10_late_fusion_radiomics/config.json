@@ -1,0 +1,54 @@
+{
+ "model_id": "v10_late_fusion_radiomics",
+ "spec": "late_fusion",
+ "config": {
+  "C": 1.0
+ },
+ "selection": "most frequent inner-loop selection (8 of 8 outer folds)",
+ "preprocessing": {
+  "scaler": "standard"
+ },
+ "seed": 0,
+ "features": "radiomics",
+ "architecture": {
+  "model": "Late fusion (LR + VQC, equal-weight standardised logits)",
+  "vqc": {
+   "model": "VQC",
+   "qubits": 4,
+   "layers": 2,
+   "entangler": "brick",
+   "readout": "linear_z",
+   "observables": [
+    [
+     0
+    ],
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ]
+   ],
+   "trainable_circuit_parameters": 20,
+   "readout_parameters": 5,
+   "gate_counts": {
+    "qubits": 4,
+    "declared_weights": 20,
+    "one_qubit_gates": 28,
+    "two_qubit_gates": 6,
+    "depth": 11,
+    "two_qubit_depth": 4,
+    "state_vector_bytes": 256,
+    "density_matrix_bytes": 4096
+   },
+   "execution_mode": "custom_numpy_simulator",
+   "epochs": 30,
+   "lr": 0.05,
+   "batch": 64,
+   "seed": 0
+  }
+ }
+}

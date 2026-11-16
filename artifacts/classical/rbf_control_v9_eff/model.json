@@ -1,0 +1,61 @@
+{
+  "name": "RBF-SVM (control for the quantum kernel) (4 qubits, EFF features)",
+  "kind": "v9_rbf_control",
+  "version": "v9",
+  "features": "effnet_ft_v8",
+  "feature_description": "GAP features (1280-d) of V8's fine-tuned EfficientNet-B0 (trained on the training split only)",
+  "configuration": {
+    "qubits": 4,
+    "gamma": 0.1,
+    "C": 0.1
+  },
+  "selection": "highest validation ROC-AUC in the sweep",
+  "validation_auc": 0.9591954022988506,
+  "training_status": "PARTIALLY TRAINED",
+  "labels": "LiTS expert masks (verified)",
+  "clinical_use": "NOT validated for clinical use",
+  "calibration": {
+    "mu": 0.3734709050604544,
+    "sd": 0.9920950322148292,
+    "a": 3.569006538941369,
+    "b": 0.8620727822474207,
+    "min_slope": 0.001
+  },
+  "calibration_status": "platt_on_validation",
+  "threshold": 0.748328152017497,
+  "threshold_rule": "Youden J on validation (calibrated probability)",
+  "validation_score_check": {
+    "constant_scores": false,
+    "ok": true
+  },
+  "inference_seconds_per_patch": 0.0174332,
+  "family": "classical",
+  "model_id": "rbf_control_v9_eff",
+  "npz_sha256": "bd4149fcbdbdcc6e944ce031b9efac284cf1e93bede6e1299e8f7458c9ee9361",
+  "status": "trained",
+  "saved_utc": "2026-11-06T11:27:08+00:00",
+  "role": "control",
+  "role_order": 4,
+  "test_summary": {
+    "auc": 0.9151422764227642,
+    "auc_ci95": [
+      0.8909939794870259,
+      0.9925925925925926
+    ],
+    "sensitivity": 0.5611702127659575,
+    "specificity": 0.967479674796748,
+    "f1": 0.7092436974789916,
+    "accuracy": 0.7218649517684887,
+    "pr_auc": 0.9440962846671165,
+    "ece": 0.14091607217349528
+  },
+  "validation_summary": {
+    "auc": 0.9591954022988506
+  },
+  "train_seconds": 0.1,
+  "parameters": null,
+  "head_inference_ms_per_patch": 0.0072,
+  "feature_ms_per_patch": 17.426,
+  "inference_timing_note": "head + feature extraction on 2 CPU cores; circuits simulated exactly",
+  "support_vectors": null
+}

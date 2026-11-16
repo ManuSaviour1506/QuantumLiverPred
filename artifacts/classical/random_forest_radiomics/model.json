@@ -1,0 +1,109 @@
+{
+  "name": "Random Forest (radiomics)",
+  "kind": "radiomics_baseline",
+  "task": "Task A: tumour vs tumour-free liver tissue (96x96 px CT patch)",
+  "architecture": "Random Forest (radiomics); 40 handcrafted features; hyper-parameters chosen on validation: {'max_depth': 8, 'min_samples_leaf': 1}",
+  "input": "96x96 grey patch -> handcrafted features",
+  "labels": "LiTS expert masks via seongun/liver-tumor-classification (verified pixel-exact)",
+  "split_file": "data/manifests/split_v8.csv",
+  "validation_status": "held-out test split, research only",
+  "clinical_use": "NOT validated for clinical use",
+  "feature_names": [
+    "mean",
+    "sd",
+    "skew",
+    "kurtosis",
+    "p10",
+    "p25",
+    "p50",
+    "p75",
+    "p90",
+    "entropy",
+    "band_0",
+    "band_1",
+    "band_2",
+    "band_3",
+    "band_4",
+    "glcm_contrast_d1",
+    "glcm_dissimilarity_d1",
+    "glcm_homogeneity_d1",
+    "glcm_energy_d1",
+    "glcm_correlation_d1",
+    "glcm_ASM_d1",
+    "glcm_contrast_d3",
+    "glcm_dissimilarity_d3",
+    "glcm_homogeneity_d3",
+    "glcm_energy_d3",
+    "glcm_correlation_d3",
+    "glcm_ASM_d3",
+    "lbp_0",
+    "lbp_1",
+    "lbp_2",
+    "lbp_3",
+    "lbp_4",
+    "lbp_5",
+    "lbp_6",
+    "lbp_7",
+    "lbp_8",
+    "lbp_9",
+    "grad_mean",
+    "grad_sd",
+    "grad_p90"
+  ],
+  "selected_hyperparameters": {
+    "max_depth": 8,
+    "min_samples_leaf": 1
+  },
+  "validation_auc_selection": 0.8263061650992685,
+  "training": {
+    "train_seconds": 6.644366757999705,
+    "grid_size": 6
+  },
+  "calibration": {
+    "mu": 0.7650026152556443,
+    "sd": 0.2644330223798288,
+    "a": 1.191307219695167,
+    "b": 0.4907905776592701,
+    "min_slope": 0.001
+  },
+  "calibration_status": "platt_on_validation",
+  "threshold": 0.7441113338402167,
+  "threshold_rule": "Youden J on validation (calibrated probability)",
+  "validation_score_check": {
+    "constant_scores": false,
+    "ok": true
+  },
+  "inference_seconds_per_patch": 0.006253722354081879,
+  "family": "classical",
+  "model_id": "random_forest_radiomics",
+  "npz_sha256": "e2ea0e88ace6114ec9c0ab9fc7d05a2aa098d1db34ebc4a2d4a46ca4559abbfc",
+  "status": "trained",
+  "saved_utc": "2026-11-06T05:04:15+00:00",
+  "test_summary": {
+    "auc": 0.7511676180591593,
+    "auc_ci95": [
+      0.665249844678024,
+      1.0
+    ],
+    "sensitivity": 0.8351063829787234,
+    "specificity": 0.5813008130081301,
+    "f1": 0.7919293820933165,
+    "accuracy": 0.7347266881028939,
+    "pr_auc": 0.7784258741911635,
+    "ece": 0.11424229631471716,
+    "brier": 0.20791042332884824,
+    "sensitivity_ci95": [
+      0.7968337730870713,
+      0.920767195767195
+    ],
+    "specificity_ci95": [
+      0.46935066980059603,
+      1.0
+    ]
+  },
+  "validation_summary": {
+    "auc": 0.8263061650992685,
+    "sensitivity": 0.7126436781609196,
+    "specificity": 0.8909090909090909
+  }
+}

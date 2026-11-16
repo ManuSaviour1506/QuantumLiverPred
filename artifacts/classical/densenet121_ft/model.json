@@ -1,0 +1,216 @@
+{
+  "name": "DenseNet-121 (fine-tuned)",
+  "kind": "cnn_finetune",
+  "task": "Task A: tumour vs tumour-free liver tissue (96x96 px CT patch)",
+  "architecture": "ImageNet-pretrained DenseNet-121 (timm weights); fine-tuned: dense layers 13-16 of block 4 + norm5 + linear head; earlier layers frozen",
+  "input": "96x96 grey patch replicated to 3 channels, ImageNet normalisation",
+  "labels": "LiTS expert masks via seongun/liver-tumor-classification (verified pixel-exact)",
+  "split_file": "data/manifests/split_v8.csv",
+  "validation_status": "held-out test split, research only",
+  "clinical_use": "NOT validated for clinical use",
+  "arch": "densenet121",
+  "training": {
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 0.43547054999692053,
+        "val_loss": 0.5550095072153621,
+        "val_auc": 0.8266457680250784,
+        "seconds": 3.3
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.1263508497073713,
+        "val_loss": 0.9247630790560261,
+        "val_auc": 0.8869905956112853,
+        "seconds": 6.6
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.054248972803863385,
+        "val_loss": 0.688991399953593,
+        "val_auc": 0.8934169278996865,
+        "seconds": 9.8
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.058415783134639764,
+        "val_loss": 0.6115191236160871,
+        "val_auc": 0.9333333333333335,
+        "seconds": 12.8
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.027117722167754415,
+        "val_loss": 1.2555209080329945,
+        "val_auc": 0.922884012539185,
+        "seconds": 16.0
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.020522849820635142,
+        "val_loss": 1.2610342307374622,
+        "val_auc": 0.9374085684430511,
+        "seconds": 19.1
+      },
+      {
+        "epoch": 7,
+        "train_loss": 0.01919687423232695,
+        "val_loss": 1.0341985036560262,
+        "val_auc": 0.919226750261233,
+        "seconds": 22.3
+      },
+      {
+        "epoch": 8,
+        "train_loss": 0.02033194338932576,
+        "val_loss": 1.1304413108184121,
+        "val_auc": 0.9371473354231975,
+        "seconds": 25.5
+      },
+      {
+        "epoch": 9,
+        "train_loss": 0.0077566893813956275,
+        "val_loss": 0.9735121027315704,
+        "val_auc": 0.9320271682340648,
+        "seconds": 28.9
+      },
+      {
+        "epoch": 10,
+        "train_loss": 0.010713608789451642,
+        "val_loss": 1.1148049330541452,
+        "val_auc": 0.9381922675026123,
+        "seconds": 32.1
+      },
+      {
+        "epoch": 11,
+        "train_loss": 0.004318378994310812,
+        "val_loss": 1.2025067984767734,
+        "val_auc": 0.9366248693834901,
+        "seconds": 35.4
+      },
+      {
+        "epoch": 12,
+        "train_loss": 0.003047356181967794,
+        "val_loss": 1.5041453944582401,
+        "val_auc": 0.943939393939394,
+        "seconds": 38.7
+      },
+      {
+        "epoch": 13,
+        "train_loss": 0.003739568665662886,
+        "val_loss": 1.153950913643139,
+        "val_auc": 0.9386102403343783,
+        "seconds": 42.0
+      },
+      {
+        "epoch": 14,
+        "train_loss": 0.0012208470971134097,
+        "val_loss": 1.2636344232069303,
+        "val_auc": 0.9426332288401253,
+        "seconds": 45.2
+      },
+      {
+        "epoch": 15,
+        "train_loss": 0.006133930605170576,
+        "val_loss": 1.3202825604375135,
+        "val_auc": 0.943939393939394,
+        "seconds": 48.5
+      },
+      {
+        "epoch": 16,
+        "train_loss": 0.0017167871711910286,
+        "val_loss": 1.3594354363277532,
+        "val_auc": 0.9446185997910136,
+        "seconds": 52.0
+      },
+      {
+        "epoch": 17,
+        "train_loss": 0.0013388716581148573,
+        "val_loss": 1.3514065777581645,
+        "val_auc": 0.9449320794148379,
+        "seconds": 55.7
+      },
+      {
+        "epoch": 18,
+        "train_loss": 0.0037547665850996355,
+        "val_loss": 1.2555023805388288,
+        "val_auc": 0.9454545454545454,
+        "seconds": 59.3
+      },
+      {
+        "epoch": 19,
+        "train_loss": 0.0021548588324509926,
+        "val_loss": 1.2836147769243162,
+        "val_auc": 0.9458725182863114,
+        "seconds": 62.9
+      },
+      {
+        "epoch": 20,
+        "train_loss": 0.002018050382069901,
+        "val_loss": 1.2937767823586452,
+        "val_auc": 0.9458725182863114,
+        "seconds": 66.2
+      }
+    ],
+    "best_epoch": 19,
+    "train_seconds": 66.2,
+    "pos_weight": 0.8567990373044525,
+    "max_epochs": 20,
+    "batch": 32,
+    "patience": 4,
+    "tail_lr": 0.0001,
+    "head_lr": 0.001,
+    "weight_decay": 0.0001,
+    "n_train_views": 3,
+    "early_stopping": "validation ROC-AUC, patience 4"
+  },
+  "calibration": {
+    "mu": 9.400984196805618,
+    "sd": 18.90242348662126,
+    "a": 2.954987776903528,
+    "b": 0.7322321235813551,
+    "min_slope": 0.001
+  },
+  "calibration_status": "platt_on_validation",
+  "threshold": 0.7333670055359268,
+  "threshold_rule": "Youden J on validation (calibrated probability)",
+  "validation_score_check": {
+    "constant_scores": false,
+    "ok": true
+  },
+  "inference_seconds_per_patch": 0.1544846300064313,
+  "family": "classical",
+  "imagenet_weights": "artifacts/weights (densenet121)",
+  "trainable_parameters": 653057,
+  "model_id": "densenet121_ft",
+  "npz_sha256": "edeab770c75ff55602e674659d85d81bbb881e03cb0b97dfd04f525e3d07d741",
+  "status": "trained",
+  "saved_utc": "2026-11-06T05:36:54+00:00",
+  "test_summary": {
+    "auc": 0.8882113821138211,
+    "auc_ci95": [
+      0.8579860840552886,
+      1.0
+    ],
+    "sensitivity": 0.550531914893617,
+    "specificity": 0.9634146341463414,
+    "f1": 0.6993243243243243,
+    "accuracy": 0.7138263665594855,
+    "pr_auc": 0.9301329474009061,
+    "ece": 0.13482323591212997,
+    "brier": 0.15591459311281253,
+    "sensitivity_ci95": [
+      0.5,
+      0.8222222222222222
+    ],
+    "specificity_ci95": [
+      0.9410375909786287,
+      1.0
+    ]
+  },
+  "validation_summary": {
+    "auc": 0.9458725182863114,
+    "sensitivity": 0.8620689655172413,
+    "specificity": 0.9454545454545454
+  }
+}

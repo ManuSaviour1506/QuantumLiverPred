@@ -1,0 +1,9 @@
+15:52:23 v10_logreg_radiomics: config {'C': 10.0} (most frequent inner-loop selection (6 of 8 outer folds)); 2449 patches, 8 units, seed 0
+15:52:23   calibration fold G01: within-unit AUC 0.9970785279451804
+15:52:23   calibration fold G02: within-unit AUC 0.9638047138047138
+15:52:23   calibration fold G03: within-unit AUC 1.0
+15:52:23   calibration fold G04: within-unit AUC 1.0
+15:52:23   calibration fold G05: within-unit AUC 0.848421052631579
+15:52:23   calibration fold G06+G07: within-unit AUC 0.9758523619462003
+15:52:23   calibration fold G08+G09: within-unit AUC 0.9973856209150327
+15:52:23   calibration fold G10: within-unit AUC 0.9822485207100592

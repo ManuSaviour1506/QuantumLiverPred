@@ -1,0 +1,16 @@
+{
+ "model_id": "v10_svm_rbf_pca4_radiomics",
+ "spec": "svm_rbf_pca4",
+ "config": {
+  "C": 0.3,
+  "gamma": 0.1
+ },
+ "selection": "most frequent inner-loop selection (5 of 8 outer folds)",
+ "preprocessing": {
+  "scaler": "standard",
+  "pca": 4
+ },
+ "seed": 0,
+ "features": "radiomics",
+ "architecture": null
+}

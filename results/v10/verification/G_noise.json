@@ -1,0 +1,502 @@
+{
+  "claim": "one depolarizing rate for all gates; no readout/T1/T2; 16 trajectories; one random stream; non-monotone results; affine kernel noise; noisy test kernel only",
+  "code_evidence": {
+    "single_rate_all_gates": {
+      "file": "src/quantum/v9.py",
+      "lines": [
+        305
+      ],
+      "detail": "the same p after every gate on each touched qubit; a CNOT gets two independent one-qubit errors"
+    },
+    "no_readout_t1_t2": {
+      "file": "src/quantum/v9.py",
+      "lines": [
+        274,
+        319
+      ],
+      "detail": "only Pauli X/Y/Z errors and binomial shots; no assignment error, amplitude or phase damping"
+    },
+    "trajectories_16": {
+      "file": "scripts/v9_quantum.py",
+      "lines": [
+        220,
+        229
+      ]
+    },
+    "single_random_stream": {
+      "file": "scripts/v9_quantum.py",
+      "lines": [
+        214
+      ],
+      "detail": "one generator shared by every noise setting in sequence"
+    },
+    "affine_kernel_model": {
+      "file": "src/quantum/v9.py",
+      "lines": [
+        325
+      ]
+    },
+    "noise_on_test_kernel_only": {
+      "file": "scripts/v9_quantum.py",
+      "lines": [
+        234
+      ]
+    }
+  },
+  "recorded": {
+    "cnn": {
+      "vqc": [
+        {
+          "p_depolarizing": 0.0,
+          "shots": null,
+          "test_auc": 0.9731447846393357
+        },
+        {
+          "p_depolarizing": 0.0,
+          "shots": 1024,
+          "test_auc": 0.9737285936689155
+        },
+        {
+          "p_depolarizing": 0.001,
+          "shots": null,
+          "test_auc": 0.9709717176959004
+        },
+        {
+          "p_depolarizing": 0.001,
+          "shots": 1024,
+          "test_auc": 0.9705068327279017
+        },
+        {
+          "p_depolarizing": 0.005,
+          "shots": null,
+          "test_auc": 0.9558791731534335
+        },
+        {
+          "p_depolarizing": 0.005,
+          "shots": 1024,
+          "test_auc": 0.9646363085971286
+        },
+        {
+          "p_depolarizing": 0.01,
+          "shots": null,
+          "test_auc": 0.9516195294931673
+        },
+        {
+          "p_depolarizing": 0.01,
+          "shots": 1024,
+          "test_auc": 0.9450138384362567
+        }
+      ],
+      "hybrid": [
+        {
+          "p_depolarizing": 0.0,
+          "shots": null,
+          "test_auc": 0.9985729112610274
+        },
+        {
+          "p_depolarizing": 0.0,
+          "shots": 1024,
+          "test_auc": 0.998583722539353
+        },
+        {
+          "p_depolarizing": 0.001,
+          "shots": null,
+          "test_auc": 0.994843020238713
+        },
+        {
+          "p_depolarizing": 0.001,
+          "shots": 1024,
+          "test_auc": 0.9936754021795536
+        },
+        {
+          "p_depolarizing": 0.005,
+          "shots": null,
+          "test_auc": 0.9900860577754713
+        },
+        {
+          "p_depolarizing": 0.005,
+          "shots": 1024,
+          "test_auc": 0.9898914547656115
+        },
+        {
+          "p_depolarizing": 0.01,
+          "shots": null,
+          "test_auc": 0.9831992734820966
+        },
+        {
+          "p_depolarizing": 0.01,
+          "shots": 1024,
+          "test_auc": 0.9857615464452516
+        }
+      ],
+      "qksvm": [
+        {
+          "p_depolarizing": 0.0,
+          "shots": null,
+          "test_auc": 0.9977404428299601
+        },
+        {
+          "p_depolarizing": 0.0,
+          "shots": 1024,
+          "test_auc": 0.9973728593668916
+        },
+        {
+          "p_depolarizing": 0.0,
+          "shots": 8192,
+          "test_auc": 0.9979999135097734
+        },
+        {
+          "p_depolarizing": 0.001,
+          "shots": null,
+          "test_auc": 0.9977404428299601
+        },
+        {
+          "p_depolarizing": 0.001,
+          "shots": 1024,
+          "test_auc": 0.989902266043937
+        },
+        {
+          "p_depolarizing": 0.001,
+          "shots": 8192,
+          "test_auc": 0.9976107074900535
+        },
+        {
+          "p_depolarizing": 0.005,
+          "shots": null,
+          "test_auc": 0.9977404428299601
+        },
+        {
+          "p_depolarizing": 0.005,
+          "shots": 1024,
+          "test_auc": 0.9665282823040997
+        },
+        {
+          "p_depolarizing": 0.005,
+          "shots": 8192,
+          "test_auc": 0.9960971285244767
+        },
+        {
+          "p_depolarizing": 0.01,
+          "shots": null,
+          "test_auc": 0.9977404428299601
+        },
+        {
+          "p_depolarizing": 0.01,
+          "shots": 1024,
+          "test_auc": 0.9229263968171598
+        },
+        {
+          "p_depolarizing": 0.01,
+          "shots": 8192,
+          "test_auc": 0.9915023352361183
+        }
+      ]
+    },
+    "cnn_non_monotone": [
+      {
+        "model": "vqc",
+        "p": 0.0,
+        "shots": 1024,
+        "auc_without_shots": 0.9731447846393357,
+        "auc_with_shots": 0.9737285936689155,
+        "kind": "adding shot noise raised AUC"
+      },
+      {
+        "model": "vqc",
+        "p": 0.005,
+        "shots": 1024,
+        "auc_without_shots": 0.9558791731534335,
+        "auc_with_shots": 0.9646363085971286,
+        "kind": "adding shot noise raised AUC"
+      },
+      {
+        "model": "hybrid",
+        "p": 0.0,
+        "shots": 1024,
+        "auc_without_shots": 0.9985729112610274,
+        "auc_with_shots": 0.998583722539353,
+        "kind": "adding shot noise raised AUC"
+      },
+      {
+        "model": "hybrid",
+        "p": 0.01,
+        "shots": 1024,
+        "auc_without_shots": 0.9831992734820966,
+        "auc_with_shots": 0.9857615464452516,
+        "kind": "adding shot noise raised AUC"
+      },
+      {
+        "model": "qksvm",
+        "p": 0.0,
+        "shots": 8192,
+        "auc_without_shots": 0.9977404428299601,
+        "auc_with_shots": 0.9979999135097734,
+        "kind": "adding shot noise raised AUC"
+      },
+      {
+        "model": "qksvm",
+        "kind": "AUC identical for every p without shots (affine kernel map on the test rows only)"
+      }
+    ],
+    "eff": {
+      "vqc": [
+        {
+          "p_depolarizing": 0.0,
+          "shots": null,
+          "test_auc": 0.9073905898633456
+        },
+        {
+          "p_depolarizing": 0.0,
+          "shots": 1024,
+          "test_auc": 0.9065094706798132
+        },
+        {
+          "p_depolarizing": 0.001,
+          "shots": null,
+          "test_auc": 0.9040715274174018
+        },
+        {
+          "p_depolarizing": 0.001,
+          "shots": 1024,
+          "test_auc": 0.9056445684137693
+        },
+        {
+          "p_depolarizing": 0.005,
+          "shots": null,
+          "test_auc": 0.8982658709565818
+        },
+        {
+          "p_depolarizing": 0.005,
+          "shots": 1024,
+          "test_auc": 0.8928007697630168
+        },
+        {
+          "p_depolarizing": 0.01,
+          "shots": null,
+          "test_auc": 0.8835084760422073
+        },
+        {
+          "p_depolarizing": 0.01,
+          "shots": 1024,
+          "test_auc": 0.8840274174018335
+        }
+      ],
+      "hybrid": [
+        {
+          "p_depolarizing": 0.0,
+          "shots": null,
+          "test_auc": 0.9135422072305829
+        },
+        {
+          "p_depolarizing": 0.0,
+          "shots": 1024,
+          "test_auc": 0.9128719079743989
+        },
+        {
+          "p_depolarizing": 0.001,
+          "shots": null,
+          "test_auc": 0.9020714409271754
+        },
+        {
+          "p_depolarizing": 0.001,
+          "shots": 1024,
+          "test_auc": 0.9009038228680158
+        },
+        {
+          "p_depolarizing": 0.005,
+          "shots": null,
+          "test_auc": 0.9009686905379692
+        },
+        {
+          "p_depolarizing": 0.005,
+          "shots": 1024,
+          "test_auc": 0.8996821484172288
+        },
+        {
+          "p_depolarizing": 0.01,
+          "shots": null,
+          "test_auc": 0.8985793980280229
+        },
+        {
+          "p_depolarizing": 0.01,
+          "shots": 1024,
+          "test_auc": 0.9010659920428992
+        }
+      ],
+      "qksvm": [
+        {
+          "p_depolarizing": 0.0,
+          "shots": null,
+          "test_auc": 0.900060543158623
+        },
+        {
+          "p_depolarizing": 0.0,
+          "shots": 1024,
+          "test_auc": 0.8152676872513407
+        },
+        {
+          "p_depolarizing": 0.0,
+          "shots": 8192,
+          "test_auc": 0.8857247880989448
+        },
+        {
+          "p_depolarizing": 0.001,
+          "shots": null,
+          "test_auc": 0.900060543158623
+        },
+        {
+          "p_depolarizing": 0.001,
+          "shots": 1024,
+          "test_auc": 0.7898395606296488
+        },
+        {
+          "p_depolarizing": 0.001,
+          "shots": 8192,
+          "test_auc": 0.8793677564435218
+        },
+        {
+          "p_depolarizing": 0.005,
+          "shots": null,
+          "test_auc": 0.900060543158623
+        },
+        {
+          "p_depolarizing": 0.005,
+          "shots": 1024,
+          "test_auc": 0.6986680505102923
+        },
+        {
+          "p_depolarizing": 0.005,
+          "shots": 8192,
+          "test_auc": 0.8551504929942916
+        },
+        {
+          "p_depolarizing": 0.01,
+          "shots": null,
+          "test_auc": 0.900060543158623
+        },
+        {
+          "p_depolarizing": 0.01,
+          "shots": 1024,
+          "test_auc": 0.6466117453727729
+        },
+        {
+          "p_depolarizing": 0.01,
+          "shots": 8192,
+          "test_auc": 0.7622599896211728
+        }
+      ]
+    },
+    "eff_non_monotone": [
+      {
+        "model": "vqc",
+        "p": 0.001,
+        "shots": 1024,
+        "auc_without_shots": 0.9040715274174018,
+        "auc_with_shots": 0.9056445684137693,
+        "kind": "adding shot noise raised AUC"
+      },
+      {
+        "model": "vqc",
+        "p": 0.01,
+        "shots": 1024,
+        "auc_without_shots": 0.8835084760422073,
+        "auc_with_shots": 0.8840274174018335,
+        "kind": "adding shot noise raised AUC"
+      },
+      {
+        "model": "hybrid",
+        "shots": 1024,
+        "auc_increases_between_p": [
+          [
+            0.005,
+            0.01
+          ]
+        ]
+      },
+      {
+        "model": "hybrid",
+        "p": 0.01,
+        "shots": 1024,
+        "auc_without_shots": 0.8985793980280229,
+        "auc_with_shots": 0.9010659920428992,
+        "kind": "adding shot noise raised AUC"
+      },
+      {
+        "model": "qksvm",
+        "kind": "AUC identical for every p without shots (affine kernel map on the test rows only)"
+      }
+    ]
+  },
+  "v9_noise_routine_monte_carlo_variability_p0.005": {
+    "trajectories_16": {
+      "seeds": 20,
+      "mean_sd_across_seeds": 0.26796844467277675,
+      "sd_across_inputs_clean": 2.3362760899147874,
+      "spearman_between_seeds_min_median": [
+        0.9677647764776476,
+        0.9790039003900389
+      ],
+      "mean_shift_from_clean": -0.05727158897680987
+    },
+    "trajectories_256": {
+      "seeds": 6,
+      "mean_sd_across_seeds": 0.06027498339363843,
+      "sd_across_inputs_clean": 2.3362760899147874,
+      "spearman_between_seeds_min_median": [
+        0.9975877587758775,
+        0.9982358235823582
+      ],
+      "mean_shift_from_clean": -0.04849182982191321
+    }
+  },
+  "affine_kernel_algebra_on_real_points": {
+    "points": "v9_eff_4q support vectors, random 2/3 train split (illustration only)",
+    "results": [
+      {
+        "p": 0.001,
+        "lambda": 0.9342286880693632,
+        "clean_trained_noisy_test_auc_equals_clean": true,
+        "clean_trained_scores_are_affine_in_clean_scores": true,
+        "noisy_trained_equals_clean_trained_with_C_times_lambda": true,
+        "noisy_trained_auc": 0.9985714285714286,
+        "clean_auc": 0.9985714285714286
+      },
+      {
+        "p": 0.005,
+        "lambda": 0.7111635524897147,
+        "clean_trained_noisy_test_auc_equals_clean": true,
+        "clean_trained_scores_are_affine_in_clean_scores": true,
+        "noisy_trained_equals_clean_trained_with_C_times_lambda": true,
+        "noisy_trained_auc": 0.9980952380952381,
+        "clean_auc": 0.9985714285714286
+      },
+      {
+        "p": 0.01,
+        "lambda": 0.5048858887870696,
+        "clean_trained_noisy_test_auc_equals_clean": true,
+        "clean_trained_scores_are_affine_in_clean_scores": true,
+        "noisy_trained_equals_clean_trained_with_C_times_lambda": true,
+        "noisy_trained_auc": 0.9973809523809524,
+        "clean_auc": 0.9985714285714286
+      }
+    ]
+  },
+  "shot_noise_standard_error": {
+    "p=0.5": {
+      "shots=1024": 0.015625,
+      "shots=8192": 0.005524271728019903
+    },
+    "p=0.9": {
+      "shots=1024": 0.009375,
+      "shots=8192": 0.003314563036811941
+    },
+    "p=0.99": {
+      "shots=1024": 0.003109335740958189,
+      "shots=8192": 0.0010993161937086168
+    },
+    "p=0.993": {
+      "shots=1024": 0.00260539554338684,
+      "shots=8192": 0.000921146428201022
+    }
+  }
+}

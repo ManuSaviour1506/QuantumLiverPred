@@ -1,0 +1,293 @@
+{
+  "rows": [
+    {
+      "qubits": 4,
+      "bandwidth": 0.01,
+      "map": "v9",
+      "offdiag_mean": 0.9880197851400949,
+      "top_share": 0.9881343082972907,
+      "effective_rank": 1.080955572235633,
+      "alignment_centred_toy_label": 0.4009509142046168
+    },
+    {
+      "qubits": 4,
+      "bandwidth": 0.01,
+      "map": "none",
+      "offdiag_mean": 0.9993792856908841,
+      "top_share": 0.9993844773887389,
+      "effective_rank": 1.0060290223000228,
+      "alignment_centred_toy_label": 0.3323225975156285
+    },
+    {
+      "qubits": 4,
+      "bandwidth": 0.01,
+      "map": "product_alpha1",
+      "offdiag_mean": 0.9993790309206234,
+      "top_share": 0.9993842247568074,
+      "effective_rank": 1.0060316213036442,
+      "alignment_centred_toy_label": 0.33240780037901674
+    },
+    {
+      "qubits": 4,
+      "bandwidth": 0.01,
+      "map": "product_alpha16",
+      "offdiag_mean": 0.9993182495662716,
+      "top_share": 0.9993239544368184,
+      "effective_rank": 1.006605256560709,
+      "alignment_centred_toy_label": 0.35136557484298436
+    },
+    {
+      "qubits": 4,
+      "bandwidth": 0.05,
+      "map": "v9",
+      "offdiag_mean": 0.8119340037358582,
+      "top_share": 0.8172127859368561,
+      "effective_rank": 2.1682042551196954,
+      "alignment_centred_toy_label": 0.41679234488314765
+    },
+    {
+      "qubits": 4,
+      "bandwidth": 0.05,
+      "map": "none",
+      "offdiag_mean": 0.9843810835690714,
+      "top_share": 0.9845231329884551,
+      "effective_rank": 1.1076483646822832,
+      "alignment_centred_toy_label": 0.3323738017182886
+    },
+    {
+      "qubits": 4,
+      "bandwidth": 0.05,
+      "map": "product_alpha1",
+      "offdiag_mean": 0.9841806971892275,
+      "top_share": 0.9843246911682104,
+      "effective_rank": 1.1091361915290614,
+      "alignment_centred_toy_label": 0.33442977634124904
+    },
+    {
+      "qubits": 4,
+      "bandwidth": 0.05,
+      "map": "product_alpha16",
+      "offdiag_mean": 0.9448735862284479,
+      "top_share": 0.9457366193839312,
+      "effective_rank": 1.3474549946064114,
+      "alignment_centred_toy_label": 0.40681128071509176
+    },
+    {
+      "qubits": 4,
+      "bandwidth": 0.25,
+      "map": "v9",
+      "offdiag_mean": 0.10248412577770935,
+      "top_share": 0.12828767379847808,
+      "effective_rank": 47.69511456343789,
+      "alignment_centred_toy_label": 0.19084947008953865
+    },
+    {
+      "qubits": 4,
+      "bandwidth": 0.25,
+      "map": "none",
+      "offdiag_mean": 0.6129531529042934,
+      "top_share": 0.6220498838228566,
+      "effective_rank": 4.537080741797476,
+      "alignment_centred_toy_label": 0.3248286130054214
+    },
+    {
+      "qubits": 4,
+      "bandwidth": 0.25,
+      "map": "product_alpha1",
+      "offdiag_mean": 0.5393298405244615,
+      "top_share": 0.550097650099739,
+      "effective_rank": 5.926257238694707,
+      "alignment_centred_toy_label": 0.32106232916141164
+    },
+    {
+      "qubits": 4,
+      "bandwidth": 0.25,
+      "map": "product_alpha16",
+      "offdiag_mean": 0.09784242033705452,
+      "top_share": 0.11805385843058976,
+      "effective_rank": 54.79517688503119,
+      "alignment_centred_toy_label": 0.08281535126096182
+    },
+    {
+      "qubits": 4,
+      "bandwidth": 1.0,
+      "map": "v9",
+      "offdiag_mean": 0.07667954923699513,
+      "top_share": 0.08950207506823163,
+      "effective_rank": 73.57042616988045,
+      "alignment_centred_toy_label": 0.10014371905852455
+    },
+    {
+      "qubits": 4,
+      "bandwidth": 1.0,
+      "map": "none",
+      "offdiag_mean": 0.16307684854055488,
+      "top_share": 0.18878489103931564,
+      "effective_rank": 32.17798817965668,
+      "alignment_centred_toy_label": 0.038550769998909704
+    },
+    {
+      "qubits": 4,
+      "bandwidth": 1.0,
+      "map": "product_alpha1",
+      "offdiag_mean": 0.07643337325986069,
+      "top_share": 0.09192635697370818,
+      "effective_rank": 72.7130451793734,
+      "alignment_centred_toy_label": 0.09046772746496438
+    },
+    {
+      "qubits": 4,
+      "bandwidth": 1.0,
+      "map": "product_alpha16",
+      "offdiag_mean": 0.07689135397158667,
+      "top_share": 0.08987930603932649,
+      "effective_rank": 75.63580249891393,
+      "alignment_centred_toy_label": 0.06469608062433117
+    },
+    {
+      "qubits": 8,
+      "bandwidth": 0.01,
+      "map": "v9",
+      "offdiag_mean": 0.9637696091969274,
+      "top_share": 0.9641421099460696,
+      "effective_rank": 1.2442388545495748,
+      "alignment_centred_toy_label": 0.23483465384742636
+    },
+    {
+      "qubits": 8,
+      "bandwidth": 0.01,
+      "map": "none",
+      "offdiag_mean": 0.9986247462644045,
+      "top_share": 0.9986362458473927,
+      "effective_rank": 1.0132457929488474,
+      "alignment_centred_toy_label": 0.24051769772359932
+    },
+    {
+      "qubits": 8,
+      "bandwidth": 0.01,
+      "map": "product_alpha1",
+      "offdiag_mean": 0.9986239904035641,
+      "top_share": 0.9986354963328348,
+      "effective_rank": 1.0132532992357832,
+      "alignment_centred_toy_label": 0.24055105730945583
+    },
+    {
+      "qubits": 8,
+      "bandwidth": 0.01,
+      "map": "product_alpha16",
+      "offdiag_mean": 0.9984432427943563,
+      "top_share": 0.998456269834614,
+      "effective_rank": 1.0149177302173669,
+      "alignment_centred_toy_label": 0.24736221749419351
+    },
+    {
+      "qubits": 8,
+      "bandwidth": 0.05,
+      "map": "v9",
+      "offdiag_mean": 0.5675875509937389,
+      "top_share": 0.5783767911118711,
+      "effective_rank": 6.732324151347062,
+      "alignment_centred_toy_label": 0.2836661282735802
+    },
+    {
+      "qubits": 8,
+      "bandwidth": 0.05,
+      "map": "none",
+      "offdiag_mean": 0.9656982326067554,
+      "top_share": 0.9660081199271634,
+      "effective_rank": 1.2487943016976675,
+      "alignment_centred_toy_label": 0.2402179443400397
+    },
+    {
+      "qubits": 8,
+      "bandwidth": 0.05,
+      "map": "product_alpha1",
+      "offdiag_mean": 0.9651186322535267,
+      "top_share": 0.9654342077590263,
+      "effective_rank": 1.253525378755021,
+      "alignment_centred_toy_label": 0.24081440653364913
+    },
+    {
+      "qubits": 8,
+      "bandwidth": 0.05,
+      "map": "product_alpha16",
+      "offdiag_mean": 0.8521259829949631,
+      "top_share": 0.8550401771112992,
+      "effective_rank": 2.1689398293869537,
+      "alignment_centred_toy_label": 0.23685031747995952
+    },
+    {
+      "qubits": 8,
+      "bandwidth": 0.25,
+      "map": "v9",
+      "offdiag_mean": 0.008018626331057193,
+      "top_share": 0.01835336264984858,
+      "effective_rank": 117.33653801437232,
+      "alignment_centred_toy_label": 0.10052658975911058
+    },
+    {
+      "qubits": 8,
+      "bandwidth": 0.25,
+      "map": "none",
+      "offdiag_mean": 0.3376933636454971,
+      "top_share": 0.35076653777653677,
+      "effective_rank": 19.625476013179302,
+      "alignment_centred_toy_label": 0.22632340904534423
+    },
+    {
+      "qubits": 8,
+      "bandwidth": 0.25,
+      "map": "product_alpha1",
+      "offdiag_mean": 0.23870159855826914,
+      "top_share": 0.2551718572866749,
+      "effective_rank": 32.16390556194455,
+      "alignment_centred_toy_label": 0.21358848748719703
+    },
+    {
+      "qubits": 8,
+      "bandwidth": 0.25,
+      "map": "product_alpha16",
+      "offdiag_mean": 0.0068821135101929855,
+      "top_share": 0.01686365545901527,
+      "effective_rank": 118.61214919434323,
+      "alignment_centred_toy_label": 0.09432742036865298
+    },
+    {
+      "qubits": 8,
+      "bandwidth": 1.0,
+      "map": "v9",
+      "offdiag_mean": 0.005652026221233931,
+      "top_share": 0.014601015183823096,
+      "effective_rank": 119.04406686812452,
+      "alignment_centred_toy_label": 0.09476584888948518
+    },
+    {
+      "qubits": 8,
+      "bandwidth": 1.0,
+      "map": "none",
+      "offdiag_mean": 0.020229576180196943,
+      "top_share": 0.032426196848226375,
+      "effective_rank": 107.66180523029601,
+      "alignment_centred_toy_label": 0.08761885324806798
+    },
+    {
+      "qubits": 8,
+      "bandwidth": 1.0,
+      "map": "product_alpha1",
+      "offdiag_mean": 0.004855877932261713,
+      "top_share": 0.013529139497350035,
+      "effective_rank": 119.3711513637426,
+      "alignment_centred_toy_label": 0.09243664511882692
+    },
+    {
+      "qubits": 8,
+      "bandwidth": 1.0,
+      "map": "product_alpha16",
+      "offdiag_mean": 0.005370214785422981,
+      "top_share": 0.014580545560601864,
+      "effective_rank": 119.1551520240713,
+      "alignment_centred_toy_label": 0.09128857484334091
+    }
+  ],
+  "inputs": "uniform on [0, pi]^n (synthetic); toy label y = [x0 + x1 > pi] for alignment only"
+}

@@ -1,0 +1,835 @@
+{
+  "claim": "VQC validation AUC does not predict test AUC (examples 0.9967/0.9965, 0.9994/0.9731, 0.9966/0.9168, 0.7164/0.3642)",
+  "cnn": {
+    "vqc": {
+      "configurations": 10,
+      "spearman_val_vs_test": 0.19999999999999998,
+      "selected_test_auc": 0.9731447846393357,
+      "best_test_auc": 0.9971566338003806,
+      "median_test_auc": 0.9741123940494725,
+      "val_minus_test_mean": 0.05890029235865625,
+      "val_minus_test_max": 0.3522491458073388,
+      "rows": [
+        {
+          "qubits": 4,
+          "layers": 3,
+          "trainable_map": false,
+          "readout": "z0",
+          "val_auc": 0.9950365726227794,
+          "test_auc": 0.9866480712679468
+        },
+        {
+          "qubits": 6,
+          "layers": 3,
+          "trainable_map": false,
+          "readout": "z0",
+          "val_auc": 0.9966039707419018,
+          "test_auc": 0.9168396471198754
+        },
+        {
+          "qubits": 8,
+          "layers": 3,
+          "trainable_map": false,
+          "readout": "z0",
+          "val_auc": 0.9936781609195402,
+          "test_auc": 0.9514681715966096
+        },
+        {
+          "qubits": 10,
+          "layers": 3,
+          "trainable_map": false,
+          "readout": "z0",
+          "val_auc": 0.990700104493208,
+          "test_auc": 0.9286347517730497
+        },
+        {
+          "qubits": 8,
+          "layers": 1,
+          "trainable_map": false,
+          "readout": "z0",
+          "val_auc": 0.716405433646813,
+          "test_auc": 0.3641562878394742
+        },
+        {
+          "qubits": 8,
+          "layers": 2,
+          "trainable_map": false,
+          "readout": "z0",
+          "val_auc": 0.9966562173458725,
+          "test_auc": 0.996497145822522
+        },
+        {
+          "qubits": 8,
+          "layers": 4,
+          "trainable_map": false,
+          "readout": "z0",
+          "val_auc": 0.9960292580982237,
+          "test_auc": 0.9941510984258779
+        },
+        {
+          "qubits": 8,
+          "layers": 2,
+          "trainable_map": true,
+          "readout": "z0",
+          "val_auc": 0.999164054336468,
+          "test_auc": 0.9750800034596091
+        },
+        {
+          "qubits": 8,
+          "layers": 2,
+          "trainable_map": false,
+          "readout": "allz",
+          "val_auc": 0.9891327063740858,
+          "test_auc": 0.9971566338003806
+        },
+        {
+          "qubits": 8,
+          "layers": 2,
+          "trainable_map": true,
+          "readout": "allz",
+          "val_auc": 0.999373040752351,
+          "test_auc": 0.9731447846393357
+        }
+      ]
+    },
+    "qksvm": {
+      "configurations": 4,
+      "spearman_val_vs_test": -1.0,
+      "selected_test_auc": 0.9977404428299601,
+      "best_test_auc": 0.9980864037363777,
+      "median_test_auc": 0.9980647811797266,
+      "val_minus_test_mean": 0.0008484108302032056,
+      "val_minus_test_max": 0.0017893377343032313,
+      "rows": [
+        {
+          "qubits": 4,
+          "bandwidth": 0.05,
+          "C": 10.0,
+          "val_auc": 0.9995297805642633,
+          "test_auc": 0.9977404428299601
+        },
+        {
+          "qubits": 6,
+          "bandwidth": 0.05,
+          "C": 0.1,
+          "val_auc": 0.9985893416927899,
+          "test_auc": 0.9980864037363777
+        },
+        {
+          "qubits": 8,
+          "bandwidth": 0.05,
+          "C": 0.1,
+          "val_auc": 0.9985893416927899,
+          "test_auc": 0.9980755924580522
+        },
+        {
+          "qubits": 10,
+          "bandwidth": 0.05,
+          "C": 0.1,
+          "val_auc": 0.9986415882967608,
+          "test_auc": 0.998053969901401
+        }
+      ]
+    },
+    "hybrid": {
+      "configurations": 4,
+      "spearman_val_vs_test": 0.7999999999999999,
+      "selected_test_auc": 0.9985729112610274,
+      "best_test_auc": 0.9985729112610274,
+      "median_test_auc": 0.9899671337138904,
+      "val_minus_test_mean": 0.008339613364285459,
+      "val_minus_test_max": 0.024039090871132873,
+      "rows": [
+        {
+          "qubits": 4,
+          "fusion": false,
+          "val_auc": 0.99858934169279,
+          "test_auc": 0.9745502508216571
+        },
+        {
+          "qubits": 4,
+          "fusion": true,
+          "val_auc": 0.9990073145245559,
+          "test_auc": 0.9978701781698669
+        },
+        {
+          "qubits": 8,
+          "fusion": false,
+          "val_auc": 0.9897074190177639,
+          "test_auc": 0.982064089257914
+        },
+        {
+          "qubits": 8,
+          "fusion": true,
+          "val_auc": 0.9991118077324974,
+          "test_auc": 0.9985729112610274
+        }
+      ]
+    },
+    "lr_control": {
+      "configurations": 4,
+      "spearman_val_vs_test": -0.19999999999999998,
+      "selected_test_auc": 0.9983242518595399,
+      "best_test_auc": 0.9983350631378655,
+      "median_test_auc": 0.9983350631378654,
+      "val_minus_test_mean": 0.0007402624612352637,
+      "val_minus_test_max": 0.0011010354967819769,
+      "rows": [
+        {
+          "qubits": 4,
+          "C": 10,
+          "val_auc": 0.9994252873563219,
+          "test_auc": 0.9983242518595399
+        },
+        {
+          "qubits": 6,
+          "C": 0.01,
+          "val_auc": 0.9989550679205851,
+          "test_auc": 0.9983350631378654
+        },
+        {
+          "qubits": 8,
+          "C": 0.01,
+          "val_auc": 0.9989550679205851,
+          "test_auc": 0.9983350631378654
+        },
+        {
+          "qubits": 10,
+          "C": 0.01,
+          "val_auc": 0.9989550679205851,
+          "test_auc": 0.9983350631378655
+        }
+      ]
+    },
+    "rbf_control": {
+      "configurations": 4,
+      "spearman_val_vs_test": -0.19999999999999998,
+      "selected_test_auc": 0.9819775990313095,
+      "best_test_auc": 0.9887454592631033,
+      "median_test_auc": 0.9852209825289742,
+      "val_minus_test_mean": 0.013572380525546074,
+      "val_minus_test_max": 0.01744768832501231,
+      "rows": [
+        {
+          "qubits": 4,
+          "C": 10.0,
+          "val_auc": 0.9994252873563219,
+          "test_auc": 0.9819775990313095
+        },
+        {
+          "qubits": 6,
+          "C": 1.0,
+          "val_auc": 0.9986938349007315,
+          "test_auc": 0.9855777547137173
+        },
+        {
+          "qubits": 8,
+          "C": 1.0,
+          "val_auc": 0.9986938349007315,
+          "test_auc": 0.9887454592631033
+        },
+        {
+          "qubits": 10,
+          "C": 1.0,
+          "val_auc": 0.9986415882967608,
+          "test_auc": 0.9848642103442311
+        }
+      ]
+    },
+    "twin": {
+      "configurations": 4,
+      "spearman_val_vs_test": 0.7999999999999999,
+      "selected_test_auc": 0.9985729112610274,
+      "best_test_auc": 0.9985729112610274,
+      "median_test_auc": 0.9983188462203771,
+      "val_minus_test_mean": 0.0007443226215594345,
+      "val_minus_test_max": 0.0009569641984686905,
+      "rows": [
+        {
+          "qubits": 4,
+          "fusion": false,
+          "val_auc": 0.9990595611285267,
+          "test_auc": 0.9983026293028888
+        },
+        {
+          "qubits": 4,
+          "fusion": true,
+          "val_auc": 0.9990073145245559,
+          "test_auc": 0.9983350631378654
+        },
+        {
+          "qubits": 8,
+          "fusion": false,
+          "val_auc": 0.9989028213166143,
+          "test_auc": 0.9979458571181457
+        },
+        {
+          "qubits": 8,
+          "fusion": true,
+          "val_auc": 0.999164054336468,
+          "test_auc": 0.9985729112610274
+        }
+      ]
+    }
+  },
+  "eff": {
+    "vqc": {
+      "configurations": 10,
+      "spearman_val_vs_test": 0.7575757575757575,
+      "selected_test_auc": 0.9073905898633456,
+      "best_test_auc": 0.9534898806434874,
+      "median_test_auc": 0.8940710949662689,
+      "val_minus_test_mean": 0.030692596246812122,
+      "val_minus_test_max": 0.16579080400121693,
+      "rows": [
+        {
+          "qubits": 4,
+          "layers": 3,
+          "trainable_map": false,
+          "readout": "z0",
+          "val_auc": 0.9563218390804598,
+          "test_auc": 0.9261481577581734
+        },
+        {
+          "qubits": 6,
+          "layers": 3,
+          "trainable_map": false,
+          "readout": "z0",
+          "val_auc": 0.9250261233019853,
+          "test_auc": 0.8853355820792252
+        },
+        {
+          "qubits": 8,
+          "layers": 3,
+          "trainable_map": false,
+          "readout": "z0",
+          "val_auc": 0.8679205851619645,
+          "test_auc": 0.836652395779277
+        },
+        {
+          "qubits": 10,
+          "layers": 3,
+          "trainable_map": false,
+          "readout": "z0",
+          "val_auc": 0.9475966562173458,
+          "test_auc": 0.9534898806434874
+        },
+        {
+          "qubits": 8,
+          "layers": 1,
+          "trainable_map": false,
+          "readout": "z0",
+          "val_auc": 0.7383490073145245,
+          "test_auc": 0.8570208441446117
+        },
+        {
+          "qubits": 8,
+          "layers": 2,
+          "trainable_map": false,
+          "readout": "z0",
+          "val_auc": 0.9057471264367817,
+          "test_auc": 0.7399563224355648
+        },
+        {
+          "qubits": 8,
+          "layers": 4,
+          "trainable_map": false,
+          "readout": "z0",
+          "val_auc": 0.898798328108673,
+          "test_auc": 0.8694862480539699
+        },
+        {
+          "qubits": 4,
+          "layers": 3,
+          "trainable_map": true,
+          "readout": "z0",
+          "val_auc": 0.9565308254963427,
+          "test_auc": 0.9073905898633456
+        },
+        {
+          "qubits": 4,
+          "layers": 3,
+          "trainable_map": false,
+          "readout": "allz",
+          "val_auc": 0.9515673981191223,
+          "test_auc": 0.9028066078533126
+        },
+        {
+          "qubits": 4,
+          "layers": 3,
+          "trainable_map": true,
+          "readout": "allz",
+          "val_auc": 0.95282131661442,
+          "test_auc": 0.9154666147725308
+        }
+      ]
+    },
+    "qksvm": {
+      "configurations": 4,
+      "spearman_val_vs_test": 0.7999999999999999,
+      "selected_test_auc": 0.900060543158623,
+      "best_test_auc": 0.900060543158623,
+      "median_test_auc": 0.8841030963501124,
+      "val_minus_test_mean": 0.05873811911683449,
+      "val_minus_test_max": 0.06518368463548574,
+      "rows": [
+        {
+          "qubits": 4,
+          "bandwidth": 0.05,
+          "C": 10.0,
+          "val_auc": 0.9485370950888191,
+          "test_auc": 0.900060543158623
+        },
+        {
+          "qubits": 6,
+          "bandwidth": 0.05,
+          "C": 10.0,
+          "val_auc": 0.9443051201671891,
+          "test_auc": 0.8876059505275903
+        },
+        {
+          "qubits": 8,
+          "bandwidth": 0.05,
+          "C": 10.0,
+          "val_auc": 0.9359456635318705,
+          "test_auc": 0.8707619788963847
+        },
+        {
+          "qubits": 10,
+          "bandwidth": 0.05,
+          "C": 10.0,
+          "val_auc": 0.9451933124346917,
+          "test_auc": 0.8806002421726344
+        }
+      ]
+    },
+    "hybrid": {
+      "configurations": 4,
+      "spearman_val_vs_test": 0.39999999999999997,
+      "selected_test_auc": 0.9135422072305829,
+      "best_test_auc": 0.9239750908147379,
+      "median_test_auc": 0.9107826284379865,
+      "val_minus_test_mean": 0.047977256425627335,
+      "val_minus_test_max": 0.05712846550612516,
+      "rows": [
+        {
+          "qubits": 4,
+          "fusion": false,
+          "val_auc": 0.9571055381400209,
+          "test_auc": 0.9239750908147379
+        },
+        {
+          "qubits": 4,
+          "fusion": true,
+          "val_auc": 0.9651515151515152,
+          "test_auc": 0.90802304964539
+        },
+        {
+          "qubits": 8,
+          "fusion": false,
+          "val_auc": 0.9468652037617554,
+          "test_auc": 0.8970333852274693
+        },
+        {
+          "qubits": 8,
+          "fusion": true,
+          "val_auc": 0.965360501567398,
+          "test_auc": 0.9135422072305829
+        }
+      ]
+    },
+    "lr_control": {
+      "configurations": 4,
+      "spearman_val_vs_test": 0.0,
+      "selected_test_auc": 0.9158017644006227,
+      "best_test_auc": 0.9173261546445252,
+      "median_test_auc": 0.9133097647465835,
+      "val_minus_test_mean": 0.051199872271016494,
+      "val_minus_test_max": 0.056216437589574286,
+      "rows": [
+        {
+          "qubits": 4,
+          "C": 10,
+          "val_auc": 0.961337513061651,
+          "test_auc": 0.9108177650925445
+        },
+        {
+          "qubits": 6,
+          "C": 10,
+          "val_auc": 0.9634273772204807,
+          "test_auc": 0.9173261546445252
+        },
+        {
+          "qubits": 8,
+          "C": 10,
+          "val_auc": 0.9669801462904912,
+          "test_auc": 0.9107637087009169
+        },
+        {
+          "qubits": 10,
+          "C": 10,
+          "val_auc": 0.9677638453500523,
+          "test_auc": 0.9158017644006227
+        }
+      ]
+    },
+    "rbf_control": {
+      "configurations": 4,
+      "spearman_val_vs_test": 0.39999999999999997,
+      "selected_test_auc": 0.9219317592112092,
+      "best_test_auc": 0.9219317592112092,
+      "median_test_auc": 0.9136232918180246,
+      "val_minus_test_mean": 0.04758138994674482,
+      "val_minus_test_max": 0.055491363449284625,
+      "rows": [
+        {
+          "qubits": 4,
+          "C": 0.1,
+          "val_auc": 0.9591954022988506,
+          "test_auc": 0.9151422764227642
+        },
+        {
+          "qubits": 6,
+          "C": 10.0,
+          "val_auc": 0.9598223615464996,
+          "test_auc": 0.904330998097215
+        },
+        {
+          "qubits": 8,
+          "C": 10.0,
+          "val_auc": 0.9586729362591432,
+          "test_auc": 0.912104307213285
+        },
+        {
+          "qubits": 10,
+          "C": 10.0,
+          "val_auc": 0.9661442006269593,
+          "test_auc": 0.9219317592112092
+        }
+      ]
+    },
+    "twin": {
+      "configurations": 4,
+      "spearman_val_vs_test": 0.39999999999999997,
+      "selected_test_auc": 0.9118502421726344,
+      "best_test_auc": 0.9285050164331431,
+      "median_test_auc": 0.9124583765784466,
+      "val_minus_test_mean": 0.051266211664359324,
+      "val_minus_test_max": 0.05779448092036443,
+      "rows": [
+        {
+          "qubits": 4,
+          "fusion": false,
+          "val_auc": 0.9680250783699059,
+          "test_auc": 0.9285050164331431
+        },
+        {
+          "qubits": 4,
+          "fusion": true,
+          "val_auc": 0.9696447230929989,
+          "test_auc": 0.9118502421726344
+        },
+        {
+          "qubits": 8,
+          "fusion": false,
+          "val_auc": 0.9653082549634274,
+          "test_auc": 0.9130665109842588
+        },
+        {
+          "qubits": 8,
+          "fusion": true,
+          "val_auc": 0.9652560083594567,
+          "test_auc": 0.9097474485383152
+        }
+      ]
+    }
+  },
+  "quoted_pairs_check": [
+    {
+      "config": [
+        8,
+        2,
+        false,
+        "z0"
+      ],
+      "quoted": [
+        0.9967,
+        0.9965
+      ],
+      "recorded": [
+        0.9966562173458725,
+        0.996497145822522
+      ],
+      "match": true
+    },
+    {
+      "config": [
+        8,
+        2,
+        true,
+        "allz"
+      ],
+      "quoted": [
+        0.9994,
+        0.9731
+      ],
+      "recorded": [
+        0.999373040752351,
+        0.9731447846393357
+      ],
+      "match": true
+    },
+    {
+      "config": [
+        6,
+        3,
+        false,
+        "z0"
+      ],
+      "quoted": [
+        0.9966,
+        0.9168
+      ],
+      "recorded": [
+        0.9966039707419018,
+        0.9168396471198754
+      ],
+      "match": true
+    },
+    {
+      "config": [
+        8,
+        1,
+        false,
+        "z0"
+      ],
+      "quoted": [
+        0.7164,
+        0.3642
+      ],
+      "recorded": [
+        0.716405433646813,
+        0.3641562878394742
+      ],
+      "match": true
+    }
+  ],
+  "per_group_auc_selected_models": {
+    "vqc_v9_cnn": {
+      "val:G02-R1": 1.0,
+      "val:G09-R1": 1.0,
+      "val:G10-R1": 0.9960552268244576,
+      "test:G01-R1": 0.9655541619505033,
+      "test:G07-R1": 1.0,
+      "test:G08-R1": 1.0
+    },
+    "lr_control_v9_cnn": {
+      "val:G02-R1": 1.0,
+      "val:G09-R1": 1.0,
+      "val:G10-R1": 0.9960552268244576,
+      "test:G01-R1": 0.9983174768270672,
+      "test:G07-R1": 1.0,
+      "test:G08-R1": 1.0
+    },
+    "vqc_v9_eff": {
+      "val:G02-R1": 0.9361672278338945,
+      "val:G09-R1": 1.0,
+      "val:G10-R1": 0.9921104536489151,
+      "test:G01-R1": 0.9016794640398911,
+      "test:G07-R1": 0.8984375,
+      "test:G08-R1": 0.9966666666666667
+    },
+    "lr_control_v9_eff": {
+      "val:G02-R1": 0.9429012345679012,
+      "val:G09-R1": 1.0,
+      "val:G10-R1": 0.9960552268244576,
+      "test:G01-R1": 0.9062222766068097,
+      "test:G07-R1": 0.8984375,
+      "test:G08-R1": 0.9966666666666667
+    }
+  },
+  "encoder": {
+    "vqc_v9_cnn": {
+      "encoder": "standardise -> PCA -> min-max to [0, pi] on training rows, clipped",
+      "pca_component_range_training": [
+        21.355794981908684,
+        12.305357522252066,
+        49.114507794887395,
+        23.271837364145302,
+        12.584215021431106,
+        20.23376648244765,
+        51.03771087628991,
+        36.55479886495269
+      ]
+    },
+    "vqc_v9_eff": {
+      "encoder": "standardise -> PCA -> min-max to [0, pi] on training rows, clipped",
+      "pca_component_range_training": [
+        67.13848367863427,
+        44.12546177809232,
+        46.91248670067032,
+        41.32569834730813
+      ]
+    }
+  },
+  "encoded_range_occupancy": {
+    "v9_cnn_4q": {
+      "points": 40,
+      "central_90pct_interval_per_component": [
+        [
+          1.4853277570283345,
+          2.1889538586217685
+        ],
+        [
+          2.272954055743098,
+          2.839170357616377
+        ],
+        [
+          0.015016978211042536,
+          0.09416587053376746
+        ],
+        [
+          0.620054978497337,
+          1.306909679018877
+        ]
+      ],
+      "central_90pct_width_as_share_of_pi": [
+        0.2239711443141503,
+        0.18023224660469034,
+        0.025193874906819676,
+        0.21863264154781303
+      ],
+      "note": "support vectors only (margin-biased); min-max scaling maps the training extremes to 0 and pi"
+    },
+    "v9_eff_4q": {
+      "points": 389,
+      "central_90pct_interval_per_component": [
+        [
+          0.5935729038559537,
+          1.7577958640440288
+        ],
+        [
+          0.42315643645723594,
+          2.5851559189039377
+        ],
+        [
+          0.5086908155359219,
+          1.9555580784661533
+        ],
+        [
+          0.38312991937327034,
+          2.3342425884627866
+        ]
+      ],
+      "central_90pct_width_as_share_of_pi": [
+        0.370583677950022,
+        0.6881858091870241,
+        0.46055215378637476,
+        0.621058451629636
+      ],
+      "note": "support vectors only (margin-biased); min-max scaling maps the training extremes to 0 and pi"
+    },
+    "v8_imagenet_8q": {
+      "points": 437,
+      "central_90pct_interval_per_component": [
+        [
+          0.6136568366916311,
+          2.937206177634535
+        ],
+        [
+          0.28050882448775516,
+          1.7741316755453405
+        ],
+        [
+          0.8308994150974616,
+          2.3101567819228466
+        ],
+        [
+          0.7742608092290597,
+          2.2066512349784055
+        ],
+        [
+          0.8362851031166388,
+          2.1880801670023113
+        ],
+        [
+          0.9986601248156786,
+          2.3028055612979377
+        ],
+        [
+          0.5712953754133163,
+          2.43068832371061
+        ],
+        [
+          0.7021479967838162,
+          2.1803489021425295
+        ]
+      ],
+      "central_90pct_width_as_share_of_pi": [
+        0.7396087262579576,
+        0.4754349197216489,
+        0.4708622440707222,
+        0.45594403339102574,
+        0.43028973292925843,
+        0.41512238545377794,
+        0.5918631577434545,
+        0.47052596194150836
+      ],
+      "note": "support vectors only (margin-biased); min-max scaling maps the training extremes to 0 and pi"
+    },
+    "v8_finetuned_8q": {
+      "points": 136,
+      "central_90pct_interval_per_component": [
+        [
+          0.724342896602602,
+          1.7071145157982943
+        ],
+        [
+          0.4706204773581033,
+          2.5498924122365465
+        ],
+        [
+          0.5590476498141179,
+          2.2610537949440346
+        ],
+        [
+          0.45833617160335394,
+          2.464441325646758
+        ],
+        [
+          0.6712296680990675,
+          2.3171704345788955
+        ],
+        [
+          0.5043523946402684,
+          2.0350066469793093
+        ],
+        [
+          0.609620368768048,
+          2.2433949460160276
+        ],
+        [
+          0.8770928825819152,
+          2.1006240645751495
+        ]
+      ],
+      "central_90pct_width_as_share_of_pi": [
+        0.3128259222508405,
+        0.6618528129363076,
+        0.541765382340416,
+        0.6385631032562719,
+        0.5239192180434552,
+        0.48722238084877534,
+        0.5200465997337751,
+        0.38946207128258525
+      ],
+      "note": "support vectors only (margin-biased); min-max scaling maps the training extremes to 0 and pi"
+    }
+  },
+  "one_layer_explanation": "for one layer with <Z_0> readout the output equals prod_{q>=1} cos(x_q + w_q) exactly and does not depend on x_0 (tests/test_v10_circuits.py::test_v9_one_layer_z0_closed_form); a product of seven cosines is small and sign-unstable, consistent with the collapse (val 0.716, test 0.364)",
+  "not_executable": {
+    "seed_sensitivity": "not executable: the repository holds no feature vectors (CT images, data/processed and artifacts/cache are absent)",
+    "scaling_variants_and_test_clipping_fraction": "not executable: the repository holds no feature vectors (CT images, data/processed and artifacts/cache are absent)",
+    "per_group_behaviour_of_non_selected_configurations": "predictions were saved only for the selected configuration of each model type"
+  }
+}

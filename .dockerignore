@@ -1,0 +1,15 @@
+**/__pycache__
+**/*.pyc
+**/.pytest_cache
+.env
+backend/.env
+backend/data
+frontend/node_modules
+frontend/dist
+frontend/e2e/output
+results/v10/features
+results/v10/nested_quick
+*.zip
+.git
+dataset/liver_ct_lits_verified_v8
+data/masks

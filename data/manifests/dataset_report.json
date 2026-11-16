@@ -1,0 +1,62 @@
+{
+  "scans_folder_images": 5986,
+  "by_category": {
+    "ct_slice": 4236,
+    "ct_lits": 1745,
+    "synthetic_drawing": 5
+  },
+  "qc_rejected": 0,
+  "qc_reject_reasons": {},
+  "exact_duplicate_images": 0,
+  "highly_similar_images": 4100,
+  "highly_similar_cross_category_pairs": 0,
+  "verified_slices": 1745,
+  "verified_tumour_slices": 476,
+  "verified_no_tumour_slices": 1269,
+  "no_tumour_slices_with_liver": 0,
+  "excluded_unverified": 4236,
+  "excluded_synthetic": 5,
+  "scan_groups": 10,
+  "grouping_method": "tumour-run reconstruction (runs <= 10 slices apart merged)",
+  "split_groups": {
+    "train": 4,
+    "val": 3,
+    "test": 3
+  },
+  "split_tumour_slices": {
+    "train": 284,
+    "val": 63,
+    "test": 129
+  },
+  "task_a_patches": {
+    "train": {
+      "tumour": 831,
+      "tumour_free_liver": 712
+    },
+    "val": {
+      "tumour": 174,
+      "tumour_free_liver": 110
+    },
+    "test": {
+      "tumour": 376,
+      "tumour_free_liver": 246
+    }
+  },
+  "gate_patches": {
+    "train": {
+      "liver": 1543,
+      "other": 872
+    },
+    "val": {
+      "liver": 284,
+      "other": 775
+    },
+    "test": {
+      "liver": 622,
+      "other": 565
+    }
+  },
+  "task_a_with_real_neighbours": 2326,
+  "label_source": "seongun/liver-tumor-classification (Hugging Face), derived from LiTS (doi:10.1016/j.media.2022.102680)",
+  "license": "CC BY-NC-SA 4.0 (non-commercial research use, attribution required)"
+}

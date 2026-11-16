@@ -1,0 +1,1772 @@
+{
+  "claim": "final RZ rotations before the CNOT ring and Z measurement have exactly zero gradient",
+  "structural_analysis_random_draws": {
+    "n8_L2_map_allz": {
+      "declared_circuit_and_map_weights": 48,
+      "proved_dead": [
+        17,
+        19,
+        21,
+        23,
+        25,
+        27,
+        29,
+        31
+      ],
+      "zero_in_all_draws": [
+        17,
+        19,
+        21,
+        23,
+        25,
+        27,
+        29,
+        31
+      ],
+      "proved_equals_numerical": true,
+      "jacobian_rank": 32,
+      "redundant_directions": 8,
+      "effective_readouts": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "rows": [
+        {
+          "index": 0,
+          "role": "L1.RY.q0",
+          "max_abs_grad": 2.706644966106508,
+          "mean_abs_grad": 0.2560331616079348,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 1,
+          "role": "L1.RZ.q0",
+          "max_abs_grad": 0.8111781066308413,
+          "mean_abs_grad": 0.11231855029169605,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 2,
+          "role": "L1.RY.q1",
+          "max_abs_grad": 0.7755908580684762,
+          "mean_abs_grad": 0.10580486727713377,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 3,
+          "role": "L1.RZ.q1",
+          "max_abs_grad": 0.46277593516176185,
+          "mean_abs_grad": 0.07121395589373881,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 4,
+          "role": "L1.RY.q2",
+          "max_abs_grad": 1.3687985870102168,
+          "mean_abs_grad": 0.11724283304656634,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 5,
+          "role": "L1.RZ.q2",
+          "max_abs_grad": 0.9608565919538951,
+          "mean_abs_grad": 0.09518894016539195,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 6,
+          "role": "L1.RY.q3",
+          "max_abs_grad": 0.4827549097521685,
+          "mean_abs_grad": 0.07554237504225027,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 7,
+          "role": "L1.RZ.q3",
+          "max_abs_grad": 0.6140373908195348,
+          "mean_abs_grad": 0.06137722356420667,
+          "zero_fraction": 0.125,
+          "status": "active"
+        },
+        {
+          "index": 8,
+          "role": "L1.RY.q4",
+          "max_abs_grad": 0.5955626442790735,
+          "mean_abs_grad": 0.07613372717484419,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 9,
+          "role": "L1.RZ.q4",
+          "max_abs_grad": 0.6422245464438674,
+          "mean_abs_grad": 0.039073154772699105,
+          "zero_fraction": 0.25,
+          "status": "active"
+        },
+        {
+          "index": 10,
+          "role": "L1.RY.q5",
+          "max_abs_grad": 0.35129278173388784,
+          "mean_abs_grad": 0.07413834932828221,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 11,
+          "role": "L1.RZ.q5",
+          "max_abs_grad": 0.4726286286095306,
+          "mean_abs_grad": 0.03217412513822226,
+          "zero_fraction": 0.375,
+          "status": "active"
+        },
+        {
+          "index": 12,
+          "role": "L1.RY.q6",
+          "max_abs_grad": 0.32005327950253043,
+          "mean_abs_grad": 0.059208092105963006,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 13,
+          "role": "L1.RZ.q6",
+          "max_abs_grad": 0.41433555649450493,
+          "mean_abs_grad": 0.03385950235849516,
+          "zero_fraction": 0.5,
+          "status": "active"
+        },
+        {
+          "index": 14,
+          "role": "L1.RY.q7",
+          "max_abs_grad": 0.5464832573989926,
+          "mean_abs_grad": 0.08717315694374089,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 15,
+          "role": "L1.RZ.q7",
+          "max_abs_grad": 0.2905324030065469,
+          "mean_abs_grad": 0.01912259286259555,
+          "zero_fraction": 0.625,
+          "status": "active"
+        },
+        {
+          "index": 16,
+          "role": "L2.RY.q0",
+          "max_abs_grad": 1.4434434916489494,
+          "mean_abs_grad": 0.18077858896725138,
+          "zero_fraction": 0.125,
+          "status": "active"
+        },
+        {
+          "index": 17,
+          "role": "L2.RZ.q0",
+          "max_abs_grad": 1.687018580387445e-16,
+          "mean_abs_grad": 3.32287637076073e-17,
+          "zero_fraction": 1.0,
+          "status": "structurally dead (proved)"
+        },
+        {
+          "index": 18,
+          "role": "L2.RY.q1",
+          "max_abs_grad": 0.8526420308453195,
+          "mean_abs_grad": 0.1584987867314922,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 19,
+          "role": "L2.RZ.q1",
+          "max_abs_grad": 1.1712093968274662e-16,
+          "mean_abs_grad": 3.100781203373214e-17,
+          "zero_fraction": 1.0,
+          "status": "structurally dead (proved)"
+        },
+        {
+          "index": 20,
+          "role": "L2.RY.q2",
+          "max_abs_grad": 1.1783139627682275,
+          "mean_abs_grad": 0.13823910369244205,
+          "zero_fraction": 0.125,
+          "status": "active"
+        },
+        {
+          "index": 21,
+          "role": "L2.RZ.q2",
+          "max_abs_grad": 1.240327285323417e-16,
+          "mean_abs_grad": 2.2731806156945934e-17,
+          "zero_fraction": 1.0,
+          "status": "structurally dead (proved)"
+        },
+        {
+          "index": 22,
+          "role": "L2.RY.q3",
+          "max_abs_grad": 1.1031132379964848,
+          "mean_abs_grad": 0.10512142320410733,
+          "zero_fraction": 0.25,
+          "status": "active"
+        },
+        {
+          "index": 23,
+          "role": "L2.RZ.q3",
+          "max_abs_grad": 1.0744443529331349e-16,
+          "mean_abs_grad": 1.808535602312082e-17,
+          "zero_fraction": 1.0,
+          "status": "structurally dead (proved)"
+        },
+        {
+          "index": 24,
+          "role": "L2.RY.q4",
+          "max_abs_grad": 0.47227330920009725,
+          "mean_abs_grad": 0.0811226526805612,
+          "zero_fraction": 0.375,
+          "status": "active"
+        },
+        {
+          "index": 25,
+          "role": "L2.RZ.q4",
+          "max_abs_grad": 1.3417001884508117e-16,
+          "mean_abs_grad": 1.4394903978530314e-17,
+          "zero_fraction": 1.0,
+          "status": "structurally dead (proved)"
+        },
+        {
+          "index": 26,
+          "role": "L2.RY.q5",
+          "max_abs_grad": 0.3878522285597654,
+          "mean_abs_grad": 0.05812984736341858,
+          "zero_fraction": 0.5,
+          "status": "active"
+        },
+        {
+          "index": 27,
+          "role": "L2.RZ.q5",
+          "max_abs_grad": 5.711034943567395e-17,
+          "mean_abs_grad": 1.0271675088819112e-17,
+          "zero_fraction": 1.0,
+          "status": "structurally dead (proved)"
+        },
+        {
+          "index": 28,
+          "role": "L2.RY.q6",
+          "max_abs_grad": 0.5614675089157206,
+          "mean_abs_grad": 0.042735785087809314,
+          "zero_fraction": 0.625,
+          "status": "active"
+        },
+        {
+          "index": 29,
+          "role": "L2.RZ.q6",
+          "max_abs_grad": 3.9180356008194916e-17,
+          "mean_abs_grad": 6.956813641977283e-18,
+          "zero_fraction": 1.0,
+          "status": "structurally dead (proved)"
+        },
+        {
+          "index": 30,
+          "role": "L2.RY.q7",
+          "max_abs_grad": 0.6524430530615146,
+          "mean_abs_grad": 0.029755536200597277,
+          "zero_fraction": 0.75,
+          "status": "active"
+        },
+        {
+          "index": 31,
+          "role": "L2.RZ.q7",
+          "max_abs_grad": 1.3848075219977302e-17,
+          "mean_abs_grad": 4.320290944999513e-18,
+          "zero_fraction": 1.0,
+          "status": "structurally dead (proved)"
+        },
+        {
+          "index": 32,
+          "role": "map.scale.q0",
+          "max_abs_grad": 2.6935742114738623,
+          "mean_abs_grad": 0.4547561716016795,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 33,
+          "role": "map.scale.q1",
+          "max_abs_grad": 1.7677489765369079,
+          "mean_abs_grad": 0.31968746372212187,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 34,
+          "role": "map.scale.q2",
+          "max_abs_grad": 2.9238910749914835,
+          "mean_abs_grad": 0.40363222479801486,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 35,
+          "role": "map.scale.q3",
+          "max_abs_grad": 1.125974315778953,
+          "mean_abs_grad": 0.2543070627972846,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 36,
+          "role": "map.scale.q4",
+          "max_abs_grad": 1.8094013339634667,
+          "mean_abs_grad": 0.20643111062398542,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 37,
+          "role": "map.scale.q5",
+          "max_abs_grad": 0.7525215239815556,
+          "mean_abs_grad": 0.16378268465966095,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 38,
+          "role": "map.scale.q6",
+          "max_abs_grad": 0.6384468251448919,
+          "mean_abs_grad": 0.14758069378406,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 39,
+          "role": "map.scale.q7",
+          "max_abs_grad": 0.9080564025453173,
+          "mean_abs_grad": 0.1758430554532165,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 40,
+          "role": "map.offset.q0",
+          "max_abs_grad": 2.4443117953622866,
+          "mean_abs_grad": 0.27784288926724254,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 41,
+          "role": "map.offset.q1",
+          "max_abs_grad": 0.9466404523209714,
+          "mean_abs_grad": 0.18697635159374873,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 42,
+          "role": "map.offset.q2",
+          "max_abs_grad": 1.3687985870102175,
+          "mean_abs_grad": 0.19752669011885693,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 43,
+          "role": "map.offset.q3",
+          "max_abs_grad": 0.9404348474311396,
+          "mean_abs_grad": 0.1474533813544782,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 44,
+          "role": "map.offset.q4",
+          "max_abs_grad": 0.5955626442790733,
+          "mean_abs_grad": 0.1209534920085687,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 45,
+          "role": "map.offset.q5",
+          "max_abs_grad": 0.5530117448334624,
+          "mean_abs_grad": 0.10982106486004388,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 46,
+          "role": "map.offset.q6",
+          "max_abs_grad": 0.5562188068379399,
+          "mean_abs_grad": 0.09015507051083228,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 47,
+          "role": "map.offset.q7",
+          "max_abs_grad": 0.6089654431122584,
+          "mean_abs_grad": 0.10405757381647505,
+          "zero_fraction": 0.0,
+          "status": "active"
+        }
+      ],
+      "gate_counts": {
+        "qubits": 8,
+        "declared_weights": 48,
+        "one_qubit_gates": 48,
+        "two_qubit_gates": 16,
+        "depth": 22,
+        "two_qubit_depth": 16,
+        "state_vector_bytes": 4096,
+        "density_matrix_bytes": 1048576
+      }
+    },
+    "n8_L3_fixed_z0": {
+      "declared_circuit_and_map_weights": 48,
+      "proved_dead": [
+        32,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47
+      ],
+      "zero_in_all_draws": [
+        32,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47
+      ],
+      "proved_equals_numerical": true,
+      "jacobian_rank": 39,
+      "redundant_directions": 0,
+      "effective_readouts": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "rows": [
+        {
+          "index": 0,
+          "role": "L1.RY.q0",
+          "max_abs_grad": 0.18714733436900677,
+          "mean_abs_grad": 0.07795085484573051,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 1,
+          "role": "L1.RZ.q0",
+          "max_abs_grad": 0.136912682520994,
+          "mean_abs_grad": 0.054321006608432004,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 2,
+          "role": "L1.RY.q1",
+          "max_abs_grad": 0.29107410213455087,
+          "mean_abs_grad": 0.09993269941124519,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 3,
+          "role": "L1.RZ.q1",
+          "max_abs_grad": 0.16830610978688282,
+          "mean_abs_grad": 0.05607491688636812,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 4,
+          "role": "L1.RY.q2",
+          "max_abs_grad": 0.24743423817800067,
+          "mean_abs_grad": 0.09159888188205248,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 5,
+          "role": "L1.RZ.q2",
+          "max_abs_grad": 0.17997862217790725,
+          "mean_abs_grad": 0.053775297774114925,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 6,
+          "role": "L1.RY.q3",
+          "max_abs_grad": 0.32872056959583373,
+          "mean_abs_grad": 0.08286674508536768,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 7,
+          "role": "L1.RZ.q3",
+          "max_abs_grad": 0.1871768787971059,
+          "mean_abs_grad": 0.059292563492605546,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 8,
+          "role": "L1.RY.q4",
+          "max_abs_grad": 0.15181446343170737,
+          "mean_abs_grad": 0.058136487958174686,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 9,
+          "role": "L1.RZ.q4",
+          "max_abs_grad": 0.09687752790941606,
+          "mean_abs_grad": 0.037096790740366516,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 10,
+          "role": "L1.RY.q5",
+          "max_abs_grad": 0.21338978176793993,
+          "mean_abs_grad": 0.10181016056982704,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 11,
+          "role": "L1.RZ.q5",
+          "max_abs_grad": 0.17380862479046666,
+          "mean_abs_grad": 0.07277806010099003,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 12,
+          "role": "L1.RY.q6",
+          "max_abs_grad": 0.22658242570411863,
+          "mean_abs_grad": 0.09650611804845156,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 13,
+          "role": "L1.RZ.q6",
+          "max_abs_grad": 0.14174740432215416,
+          "mean_abs_grad": 0.05429814788438964,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 14,
+          "role": "L1.RY.q7",
+          "max_abs_grad": 0.1710292002660639,
+          "mean_abs_grad": 0.0863021012894197,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 15,
+          "role": "L1.RZ.q7",
+          "max_abs_grad": 0.12072376433645972,
+          "mean_abs_grad": 0.041687733644518866,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 16,
+          "role": "L2.RY.q0",
+          "max_abs_grad": 0.16070234015301688,
+          "mean_abs_grad": 0.10033877521060794,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 17,
+          "role": "L2.RZ.q0",
+          "max_abs_grad": 0.26356994975834674,
+          "mean_abs_grad": 0.09923012517785819,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 18,
+          "role": "L2.RY.q1",
+          "max_abs_grad": 0.2058948073648248,
+          "mean_abs_grad": 0.09842170286494362,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 19,
+          "role": "L2.RZ.q1",
+          "max_abs_grad": 0.2742354019309978,
+          "mean_abs_grad": 0.08939997799507131,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 20,
+          "role": "L2.RY.q2",
+          "max_abs_grad": 0.14256076874598572,
+          "mean_abs_grad": 0.07441043816545931,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 21,
+          "role": "L2.RZ.q2",
+          "max_abs_grad": 0.17720975603701294,
+          "mean_abs_grad": 0.05926447768167184,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 22,
+          "role": "L2.RY.q3",
+          "max_abs_grad": 0.14785155960526764,
+          "mean_abs_grad": 0.06002522158899326,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 23,
+          "role": "L2.RZ.q3",
+          "max_abs_grad": 0.18290342464458972,
+          "mean_abs_grad": 0.09536034865545238,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 24,
+          "role": "L2.RY.q4",
+          "max_abs_grad": 0.17932363130229143,
+          "mean_abs_grad": 0.06479202367387803,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 25,
+          "role": "L2.RZ.q4",
+          "max_abs_grad": 0.28737941981696985,
+          "mean_abs_grad": 0.05754601076376262,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 26,
+          "role": "L2.RY.q5",
+          "max_abs_grad": 0.21624991757296302,
+          "mean_abs_grad": 0.09922383734253604,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 27,
+          "role": "L2.RZ.q5",
+          "max_abs_grad": 0.2938797544994917,
+          "mean_abs_grad": 0.12672930479516922,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 28,
+          "role": "L2.RY.q6",
+          "max_abs_grad": 0.48442271544776183,
+          "mean_abs_grad": 0.0899465384740069,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 29,
+          "role": "L2.RZ.q6",
+          "max_abs_grad": 0.2903343125453673,
+          "mean_abs_grad": 0.07874496059763768,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 30,
+          "role": "L2.RY.q7",
+          "max_abs_grad": 0.2646702383697839,
+          "mean_abs_grad": 0.0888853202661988,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 31,
+          "role": "L2.RZ.q7",
+          "max_abs_grad": 0.21066616006927036,
+          "mean_abs_grad": 0.0573712174634733,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 32,
+          "role": "L3.RY.q0",
+          "max_abs_grad": 7.45931094670027e-17,
+          "mean_abs_grad": 2.7090598283171138e-17,
+          "zero_fraction": 1.0,
+          "status": "structurally dead (proved)"
+        },
+        {
+          "index": 33,
+          "role": "L3.RZ.q0",
+          "max_abs_grad": 7.28583859910259e-17,
+          "mean_abs_grad": 3.1015410147568663e-17,
+          "zero_fraction": 1.0,
+          "status": "structurally dead (proved)"
+        },
+        {
+          "index": 34,
+          "role": "L3.RY.q1",
+          "max_abs_grad": 0.29167137807488747,
+          "mean_abs_grad": 0.11891748354091043,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 35,
+          "role": "L3.RZ.q1",
+          "max_abs_grad": 8.131516293641283e-17,
+          "mean_abs_grad": 3.596840707220661e-17,
+          "zero_fraction": 1.0,
+          "status": "structurally dead (proved)"
+        },
+        {
+          "index": 36,
+          "role": "L3.RY.q2",
+          "max_abs_grad": 0.3320071541135044,
+          "mean_abs_grad": 0.15048700094263037,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 37,
+          "role": "L3.RZ.q2",
+          "max_abs_grad": 9.451532438642385e-17,
+          "mean_abs_grad": 4.060337135958214e-17,
+          "zero_fraction": 1.0,
+          "status": "structurally dead (proved)"
+        },
+        {
+          "index": 38,
+          "role": "L3.RY.q3",
+          "max_abs_grad": 0.38693959751998697,
+          "mean_abs_grad": 0.12392804806664776,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 39,
+          "role": "L3.RZ.q3",
+          "max_abs_grad": 9.410874857174178e-17,
+          "mean_abs_grad": 3.053113317719181e-17,
+          "zero_fraction": 1.0,
+          "status": "structurally dead (proved)"
+        },
+        {
+          "index": 40,
+          "role": "L3.RY.q4",
+          "max_abs_grad": 0.5051825715596802,
+          "mean_abs_grad": 0.13984871804641477,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 41,
+          "role": "L3.RZ.q4",
+          "max_abs_grad": 7.068998164605489e-17,
+          "mean_abs_grad": 2.338624086051233e-17,
+          "zero_fraction": 1.0,
+          "status": "structurally dead (proved)"
+        },
+        {
+          "index": 42,
+          "role": "L3.RY.q5",
+          "max_abs_grad": 0.6138952718684577,
+          "mean_abs_grad": 0.1836978804876196,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 43,
+          "role": "L3.RZ.q5",
+          "max_abs_grad": 6.23416249179165e-17,
+          "mean_abs_grad": 2.7553191210098285e-17,
+          "zero_fraction": 1.0,
+          "status": "structurally dead (proved)"
+        },
+        {
+          "index": 44,
+          "role": "L3.RY.q6",
+          "max_abs_grad": 0.27270143096276145,
+          "mean_abs_grad": 0.10373688846850161,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 45,
+          "role": "L3.RZ.q6",
+          "max_abs_grad": 2.585822181377928e-17,
+          "mean_abs_grad": 1.1472214237612244e-17,
+          "zero_fraction": 1.0,
+          "status": "structurally dead (proved)"
+        },
+        {
+          "index": 46,
+          "role": "L3.RY.q7",
+          "max_abs_grad": 0.42751258773191236,
+          "mean_abs_grad": 0.1283522366118855,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 47,
+          "role": "L3.RZ.q7",
+          "max_abs_grad": 8.823828335738535e-18,
+          "mean_abs_grad": 3.1187309643060355e-18,
+          "zero_fraction": 1.0,
+          "status": "structurally dead (proved)"
+        }
+      ],
+      "gate_counts": {
+        "qubits": 8,
+        "declared_weights": 48,
+        "one_qubit_gates": 72,
+        "two_qubit_gates": 24,
+        "depth": 33,
+        "two_qubit_depth": 24,
+        "state_vector_bytes": 4096,
+        "density_matrix_bytes": 1048576
+      }
+    },
+    "n4_L3_map_z0": {
+      "declared_circuit_and_map_weights": 32,
+      "proved_dead": [
+        16,
+        17,
+        19,
+        21,
+        23
+      ],
+      "zero_in_all_draws": [
+        16,
+        17,
+        19,
+        21,
+        23
+      ],
+      "proved_equals_numerical": true,
+      "jacobian_rank": 23,
+      "redundant_directions": 4,
+      "effective_readouts": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "rows": [
+        {
+          "index": 0,
+          "role": "L1.RY.q0",
+          "max_abs_grad": 0.5268111378424278,
+          "mean_abs_grad": 0.2559581016409374,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 1,
+          "role": "L1.RZ.q0",
+          "max_abs_grad": 0.7820747444608915,
+          "mean_abs_grad": 0.3186657586159151,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 2,
+          "role": "L1.RY.q1",
+          "max_abs_grad": 1.2883468752641047,
+          "mean_abs_grad": 0.5771072492586203,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 3,
+          "role": "L1.RZ.q1",
+          "max_abs_grad": 0.3642470955508662,
+          "mean_abs_grad": 0.14002140734100663,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 4,
+          "role": "L1.RY.q2",
+          "max_abs_grad": 1.0710366996022014,
+          "mean_abs_grad": 0.394728651310717,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 5,
+          "role": "L1.RZ.q2",
+          "max_abs_grad": 0.45848004850836477,
+          "mean_abs_grad": 0.15947360213432693,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 6,
+          "role": "L1.RY.q3",
+          "max_abs_grad": 1.2320007149164882,
+          "mean_abs_grad": 0.3987576178631663,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 7,
+          "role": "L1.RZ.q3",
+          "max_abs_grad": 0.8298940875925734,
+          "mean_abs_grad": 0.2794893766822331,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 8,
+          "role": "L2.RY.q0",
+          "max_abs_grad": 1.32119559745707,
+          "mean_abs_grad": 0.40934685364748374,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 9,
+          "role": "L2.RZ.q0",
+          "max_abs_grad": 1.0821803937820926,
+          "mean_abs_grad": 0.34365809493869237,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 10,
+          "role": "L2.RY.q1",
+          "max_abs_grad": 1.0554662597617976,
+          "mean_abs_grad": 0.22213264422919077,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 11,
+          "role": "L2.RZ.q1",
+          "max_abs_grad": 0.9767265519422111,
+          "mean_abs_grad": 0.4859672787264818,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 12,
+          "role": "L2.RY.q2",
+          "max_abs_grad": 0.9466326463623576,
+          "mean_abs_grad": 0.36481124890945027,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 13,
+          "role": "L2.RZ.q2",
+          "max_abs_grad": 1.0414467187118885,
+          "mean_abs_grad": 0.5028385089101949,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 14,
+          "role": "L2.RY.q3",
+          "max_abs_grad": 1.5375842987852826,
+          "mean_abs_grad": 0.37241258519468295,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 15,
+          "role": "L2.RZ.q3",
+          "max_abs_grad": 1.184160382605176,
+          "mean_abs_grad": 0.48770229224186284,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 16,
+          "role": "L3.RY.q0",
+          "max_abs_grad": 1.8388068845354155e-16,
+          "mean_abs_grad": 8.193677218197119e-17,
+          "zero_fraction": 1.0,
+          "status": "structurally dead (proved)"
+        },
+        {
+          "index": 17,
+          "role": "L3.RZ.q0",
+          "max_abs_grad": 2.42861286636753e-16,
+          "mean_abs_grad": 9.31474226454713e-17,
+          "zero_fraction": 1.0,
+          "status": "structurally dead (proved)"
+        },
+        {
+          "index": 18,
+          "role": "L3.RY.q1",
+          "max_abs_grad": 0.7808373754885829,
+          "mean_abs_grad": 0.410125610999003,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 19,
+          "role": "L3.RZ.q1",
+          "max_abs_grad": 1.1796119636642288e-16,
+          "mean_abs_grad": 7.346553920761778e-17,
+          "zero_fraction": 1.0,
+          "status": "structurally dead (proved)"
+        },
+        {
+          "index": 20,
+          "role": "L3.RY.q2",
+          "max_abs_grad": 0.991459208030671,
+          "mean_abs_grad": 0.579930822715108,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 21,
+          "role": "L3.RZ.q2",
+          "max_abs_grad": 7.090682208055199e-17,
+          "mean_abs_grad": 3.178157968279175e-17,
+          "zero_fraction": 1.0,
+          "status": "structurally dead (proved)"
+        },
+        {
+          "index": 22,
+          "role": "L3.RY.q3",
+          "max_abs_grad": 1.2988138693679274,
+          "mean_abs_grad": 0.5922360054989172,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 23,
+          "role": "L3.RZ.q3",
+          "max_abs_grad": 2.1361548043349536e-17,
+          "mean_abs_grad": 8.88054428323648e-18,
+          "zero_fraction": 1.0,
+          "status": "structurally dead (proved)"
+        },
+        {
+          "index": 24,
+          "role": "map.scale.q0",
+          "max_abs_grad": 2.7089830312229335,
+          "mean_abs_grad": 0.9007188311958859,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 25,
+          "role": "map.scale.q1",
+          "max_abs_grad": 4.5363679237830095,
+          "mean_abs_grad": 1.132113863682597,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 26,
+          "role": "map.scale.q2",
+          "max_abs_grad": 2.3767897717636193,
+          "mean_abs_grad": 0.8783260794885231,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 27,
+          "role": "map.scale.q3",
+          "max_abs_grad": 3.1992752802979334,
+          "mean_abs_grad": 1.5345408652206227,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 28,
+          "role": "map.offset.q0",
+          "max_abs_grad": 1.2001038448323913,
+          "mean_abs_grad": 0.5048769771171753,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 29,
+          "role": "map.offset.q1",
+          "max_abs_grad": 2.3892191643030967,
+          "mean_abs_grad": 0.9176391270946418,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 30,
+          "role": "map.offset.q2",
+          "max_abs_grad": 1.3659363983368373,
+          "mean_abs_grad": 0.5796213617952445,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 31,
+          "role": "map.offset.q3",
+          "max_abs_grad": 2.079768831646989,
+          "mean_abs_grad": 0.8168120413343112,
+          "zero_fraction": 0.0,
+          "status": "active"
+        }
+      ],
+      "gate_counts": {
+        "qubits": 4,
+        "declared_weights": 32,
+        "one_qubit_gates": 36,
+        "two_qubit_gates": 12,
+        "depth": 21,
+        "two_qubit_depth": 12,
+        "state_vector_bytes": 256,
+        "density_matrix_bytes": 4096
+      }
+    },
+    "n8_L2_fixed_allz": {
+      "declared_circuit_and_map_weights": 32,
+      "proved_dead": [
+        17,
+        19,
+        21,
+        23,
+        25,
+        27,
+        29,
+        31
+      ],
+      "zero_in_all_draws": [
+        17,
+        19,
+        21,
+        23,
+        25,
+        27,
+        29,
+        31
+      ],
+      "proved_equals_numerical": true,
+      "jacobian_rank": 24,
+      "redundant_directions": 0,
+      "effective_readouts": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "rows": [
+        {
+          "index": 0,
+          "role": "L1.RY.q0",
+          "max_abs_grad": 0.727080891514141,
+          "mean_abs_grad": 0.15899455866031856,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 1,
+          "role": "L1.RZ.q0",
+          "max_abs_grad": 1.3972215602988045,
+          "mean_abs_grad": 0.20704771307227063,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 2,
+          "role": "L1.RY.q1",
+          "max_abs_grad": 0.9479678456141031,
+          "mean_abs_grad": 0.14634066895073178,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 3,
+          "role": "L1.RZ.q1",
+          "max_abs_grad": 0.8717179305071688,
+          "mean_abs_grad": 0.11825718889278856,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 4,
+          "role": "L1.RY.q2",
+          "max_abs_grad": 0.8130526654235815,
+          "mean_abs_grad": 0.12883803694371,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 5,
+          "role": "L1.RZ.q2",
+          "max_abs_grad": 0.9458500063875582,
+          "mean_abs_grad": 0.11375246349288368,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 6,
+          "role": "L1.RY.q3",
+          "max_abs_grad": 1.4258872147413881,
+          "mean_abs_grad": 0.13006849801523082,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 7,
+          "role": "L1.RZ.q3",
+          "max_abs_grad": 0.4816318077966477,
+          "mean_abs_grad": 0.06199630301501199,
+          "zero_fraction": 0.125,
+          "status": "active"
+        },
+        {
+          "index": 8,
+          "role": "L1.RY.q4",
+          "max_abs_grad": 0.66009429368965,
+          "mean_abs_grad": 0.08747020099369406,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 9,
+          "role": "L1.RZ.q4",
+          "max_abs_grad": 0.622635204303025,
+          "mean_abs_grad": 0.046855575085697966,
+          "zero_fraction": 0.25,
+          "status": "active"
+        },
+        {
+          "index": 10,
+          "role": "L1.RY.q5",
+          "max_abs_grad": 0.45470970210332545,
+          "mean_abs_grad": 0.07577400834845276,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 11,
+          "role": "L1.RZ.q5",
+          "max_abs_grad": 0.3641297684580801,
+          "mean_abs_grad": 0.04023262523979828,
+          "zero_fraction": 0.375,
+          "status": "active"
+        },
+        {
+          "index": 12,
+          "role": "L1.RY.q6",
+          "max_abs_grad": 0.27997057357942107,
+          "mean_abs_grad": 0.0674592499586028,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 13,
+          "role": "L1.RZ.q6",
+          "max_abs_grad": 0.16701053031002183,
+          "mean_abs_grad": 0.021048891004319805,
+          "zero_fraction": 0.5,
+          "status": "active"
+        },
+        {
+          "index": 14,
+          "role": "L1.RY.q7",
+          "max_abs_grad": 0.44305146590803396,
+          "mean_abs_grad": 0.06502512662545196,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 15,
+          "role": "L1.RZ.q7",
+          "max_abs_grad": 0.3258925960011397,
+          "mean_abs_grad": 0.02329249155583114,
+          "zero_fraction": 0.625,
+          "status": "active"
+        },
+        {
+          "index": 16,
+          "role": "L2.RY.q0",
+          "max_abs_grad": 0.7898029565888641,
+          "mean_abs_grad": 0.14499480918294294,
+          "zero_fraction": 0.125,
+          "status": "active"
+        },
+        {
+          "index": 17,
+          "role": "L2.RZ.q0",
+          "max_abs_grad": 1.4268100589909238e-16,
+          "mean_abs_grad": 3.1132300694289757e-17,
+          "zero_fraction": 1.0,
+          "status": "structurally dead (proved)"
+        },
+        {
+          "index": 18,
+          "role": "L2.RY.q1",
+          "max_abs_grad": 2.3114052301155814,
+          "mean_abs_grad": 0.25103013575358213,
+          "zero_fraction": 0.0,
+          "status": "active"
+        },
+        {
+          "index": 19,
+          "role": "L2.RZ.q1",
+          "max_abs_grad": 7.833043058852549e-17,
+          "mean_abs_grad": 2.426530164107746e-17,
+          "zero_fraction": 1.0,
+          "status": "structurally dead (proved)"
+        },
+        {
+          "index": 20,
+          "role": "L2.RY.q2",
+          "max_abs_grad": 1.1107676694794775,
+          "mean_abs_grad": 0.1480483704952144,
+          "zero_fraction": 0.125,
+          "status": "active"
+        },
+        {
+          "index": 21,
+          "role": "L2.RZ.q2",
+          "max_abs_grad": 1.2044130883598347e-16,
+          "mean_abs_grad": 2.0005693384605566e-17,
+          "zero_fraction": 1.0,
+          "status": "structurally dead (proved)"
+        },
+        {
+          "index": 22,
+          "role": "L2.RY.q3",
+          "max_abs_grad": 0.748266870697263,
+          "mean_abs_grad": 0.1440012762930782,
+          "zero_fraction": 0.25,
+          "status": "active"
+        },
+        {
+          "index": 23,
+          "role": "L2.RZ.q3",
+          "max_abs_grad": 7.22078646875346e-17,
+          "mean_abs_grad": 1.695180796000059e-17,
+          "zero_fraction": 1.0,
+          "status": "structurally dead (proved)"
+        },
+        {
+          "index": 24,
+          "role": "L2.RY.q4",
+          "max_abs_grad": 0.3934320322322368,
+          "mean_abs_grad": 0.06914477120082418,
+          "zero_fraction": 0.375,
+          "status": "active"
+        },
+        {
+          "index": 25,
+          "role": "L2.RZ.q4",
+          "max_abs_grad": 5.854691731421724e-17,
+          "mean_abs_grad": 1.264248237936901e-17,
+          "zero_fraction": 1.0,
+          "status": "structurally dead (proved)"
+        },
+        {
+          "index": 26,
+          "role": "L2.RY.q5",
+          "max_abs_grad": 0.4500955399174905,
+          "mean_abs_grad": 0.05709503890245431,
+          "zero_fraction": 0.5,
+          "status": "active"
+        },
+        {
+          "index": 27,
+          "role": "L2.RZ.q5",
+          "max_abs_grad": 5.312590645178972e-17,
+          "mean_abs_grad": 9.263904301627384e-18,
+          "zero_fraction": 1.0,
+          "status": "structurally dead (proved)"
+        },
+        {
+          "index": 28,
+          "role": "L2.RY.q6",
+          "max_abs_grad": 0.4089449946849141,
+          "mean_abs_grad": 0.04618662038900166,
+          "zero_fraction": 0.625,
+          "status": "active"
+        },
+        {
+          "index": 29,
+          "role": "L2.RZ.q6",
+          "max_abs_grad": 3.447762908503904e-17,
+          "mean_abs_grad": 6.537073952334326e-18,
+          "zero_fraction": 1.0,
+          "status": "structurally dead (proved)"
+        },
+        {
+          "index": 30,
+          "role": "L2.RY.q7",
+          "max_abs_grad": 0.4868193172582207,
+          "mean_abs_grad": 0.031363300039683475,
+          "zero_fraction": 0.75,
+          "status": "active"
+        },
+        {
+          "index": 31,
+          "role": "L2.RZ.q7",
+          "max_abs_grad": 1.590596817507174e-17,
+          "mean_abs_grad": 4.910906784333852e-18,
+          "zero_fraction": 1.0,
+          "status": "structurally dead (proved)"
+        }
+      ],
+      "gate_counts": {
+        "qubits": 8,
+        "declared_weights": 32,
+        "one_qubit_gates": 48,
+        "two_qubit_gates": 16,
+        "depth": 22,
+        "two_qubit_depth": 16,
+        "state_vector_bytes": 4096,
+        "density_matrix_bytes": 1048576
+      }
+    }
+  },
+  "trained_models": {
+    "vqc_v9_cnn": {
+      "qubits": 8,
+      "layers": 2,
+      "trainable_map": true,
+      "readout": "allz",
+      "circuit_weights": 32,
+      "proved_dead": [
+        17,
+        19,
+        21,
+        23,
+        25,
+        27,
+        29,
+        31
+      ],
+      "dead_weights_unchanged_within_1e-8": true,
+      "dead_weights_bitwise_equal_initial_values": false,
+      "why_not_bitwise": "adjoint gradients of dead weights are ~1e-17 rounding noise, and Adam divides the moment by sqrt(v) + 1e-8, so each step moves them by about lr * 1e-9",
+      "max_abs_change_dead": 9.784845156346478e-11,
+      "median_abs_change_live": 0.2632819363499156,
+      "init_rule": "seed 42, uniform(-0.1 pi, 0.1 pi) (V9 code defaults used by the training scripts)",
+      "map_offsets_trained": [
+        0.28823969062857335,
+        0.4590733244381373,
+        -0.9762647304649608,
+        0.5940260151701707,
+        0.7047520861672641,
+        0.4275220571162058,
+        -0.20719299451088294,
+        0.2076484016553339
+      ],
+      "map_scales_trained": [
+        0.9985714513489609,
+        0.1309934720708452,
+        0.02167380377072754,
+        0.3932784144326708,
+        0.6467101123126846,
+        1.0681264410097184,
+        0.8727722899241903,
+        1.3642278636506842
+      ],
+      "readout_weights": [
+        4.414725577493198,
+        -2.2019421171440423,
+        2.4758622328977293,
+        -2.5382250516612377,
+        -0.21721428213050745,
+        2.506096883326585,
+        2.4063781833427624,
+        -1.1912825496277903
+      ]
+    },
+    "vqc_v9_eff": {
+      "qubits": 4,
+      "layers": 3,
+      "trainable_map": true,
+      "readout": "z0",
+      "circuit_weights": 24,
+      "proved_dead": [
+        16,
+        17,
+        19,
+        21,
+        23
+      ],
+      "dead_weights_unchanged_within_1e-8": true,
+      "dead_weights_bitwise_equal_initial_values": false,
+      "why_not_bitwise": "adjoint gradients of dead weights are ~1e-17 rounding noise, and Adam divides the moment by sqrt(v) + 1e-8, so each step moves them by about lr * 1e-9",
+      "max_abs_change_dead": 4.867056341284481e-10,
+      "median_abs_change_live": 0.3460021225853859,
+      "init_rule": "seed 42, uniform(-0.1 pi, 0.1 pi) (V9 code defaults used by the training scripts)",
+      "map_offsets_trained": [
+        -0.7825740025216873,
+        0.7044069255782264,
+        1.1973901618530527,
+        0.15671299321365845
+      ],
+      "map_scales_trained": [
+        1.872549866941845,
+        0.46385965871501145,
+        0.09063857263693292,
+        0.07040856060004982
+      ],
+      "readout_weights": [
+        7.663012933103564,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "vqc_8q": {
+      "qubits": 8,
+      "layers": 3,
+      "trainable_map": false,
+      "readout": "z0",
+      "circuit_weights": 48,
+      "proved_dead": [
+        32,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47
+      ],
+      "dead_weights_unchanged_within_1e-8": true,
+      "dead_weights_bitwise_equal_initial_values": false,
+      "why_not_bitwise": "adjoint gradients of dead weights are ~1e-17 rounding noise, and Adam divides the moment by sqrt(v) + 1e-8, so each step moves them by about lr * 1e-9",
+      "max_abs_change_dead": 5.770825206585783e-10,
+      "median_abs_change_live": 0.48025310158209034,
+      "init_rule": "seed 42, uniform(-0.1 pi, 0.1 pi) (V9 code defaults used by the training scripts)"
+    },
+    "vqc_8q_ft": {
+      "qubits": 8,
+      "layers": 3,
+      "trainable_map": false,
+      "readout": "z0",
+      "circuit_weights": 48,
+      "proved_dead": [
+        32,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47
+      ],
+      "dead_weights_unchanged_within_1e-8": true,
+      "dead_weights_bitwise_equal_initial_values": false,
+      "why_not_bitwise": "adjoint gradients of dead weights are ~1e-17 rounding noise, and Adam divides the moment by sqrt(v) + 1e-8, so each step moves them by about lr * 1e-9",
+      "max_abs_change_dead": 3.530120223915745e-10,
+      "median_abs_change_live": 0.43060369095169393,
+      "init_rule": "seed 42, uniform(-0.1 pi, 0.1 pi) (V9 code defaults used by the training scripts)"
+    }
+  },
+  "trained_v8_on_real_inputs": {
+    "vqc_8q": {
+      "encoder_shared_with_kernel": true,
+      "real_inputs": 437,
+      "zero_in_all_draws": [
+        32,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47
+      ],
+      "max_abs_grad_live_min_median_max": [
+        0.18240055959582757,
+        1.1226231245555836,
+        8.909599250441783
+      ],
+      "z0_on_real_inputs_abs_median": 0.1112504647732116,
+      "z0_range": [
+        -0.43340173835545176,
+        0.3297489151592826
+      ],
+      "readout_scale_bias": [
+        10.220068254914024,
+        0.6001870729120602
+      ]
+    },
+    "vqc_8q_ft": {
+      "encoder_shared_with_kernel": true,
+      "real_inputs": 136,
+      "zero_in_all_draws": [
+        32,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47
+      ],
+      "max_abs_grad_live_min_median_max": [
+        0.058614503764489886,
+        0.7494433982277297,
+        10.918074639923887
+      ],
+      "z0_on_real_inputs_abs_median": 0.13012656506866055,
+      "z0_range": [
+        -0.21875965177506512,
+        0.4781662639101245
+      ],
+      "readout_scale_bias": [
+        8.825522176123096,
+        -1.4145333413106382
+      ]
+    }
+  }
+}

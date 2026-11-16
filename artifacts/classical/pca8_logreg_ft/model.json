@@ -1,0 +1,60 @@
+{
+  "name": "PCA-8 Logistic Regression (control, fine-tuned features)",
+  "kind": "pca8_control",
+  "task": "Task A: tumour vs tumour-free liver tissue (96x96 px CT patch)",
+  "architecture": "Logistic Regression on 8 PCA features (control); C=10 (validation)",
+  "input": "GAP features (1280-d) of the fine-tuned EfficientNet-B0 (efficientnet_b0_ft, trained on the training split only)",
+  "feature_source": "finetuned",
+  "labels": "LiTS expert masks via seongun/liver-tumor-classification (verified pixel-exact)",
+  "split_file": "data/manifests/split_v8.csv",
+  "validation_status": "held-out test split, research only",
+  "clinical_use": "NOT validated for clinical use",
+  "validation_auc_selection": 0.9669801462904912,
+  "calibration": {
+    "mu": 2.2886802099492574,
+    "sd": 7.206734072313267,
+    "a": 4.29238909768041,
+    "b": 1.0961985618866004,
+    "min_slope": 0.001
+  },
+  "calibration_status": "platt_on_validation",
+  "threshold": 0.8232113452947433,
+  "threshold_rule": "Youden J on validation (calibrated probability)",
+  "validation_score_check": {
+    "constant_scores": false,
+    "ok": true
+  },
+  "inference_seconds_per_patch": 0.034784496038584994,
+  "family": "classical",
+  "model_id": "pca8_logreg_ft",
+  "npz_sha256": "81ebb4780724de00be2a789d6b0c556f8501b3a9199db1130bfeaeca83d343db",
+  "status": "trained",
+  "saved_utc": "2026-11-06T05:40:55+00:00",
+  "test_summary": {
+    "auc": 0.9107637087009169,
+    "auc_ci95": [
+      0.8855576584477226,
+      0.9866851851851851
+    ],
+    "sensitivity": 0.5186170212765957,
+    "specificity": 0.9878048780487805,
+    "f1": 0.6794425087108014,
+    "accuracy": 0.7041800643086816,
+    "pr_auc": 0.9412962212420317,
+    "ece": 0.13899004907398285,
+    "brier": 0.15241973939697642,
+    "sensitivity_ci95": [
+      0.4126984126984127,
+      0.6444444444444445
+    ],
+    "specificity_ci95": [
+      0.9583333333333334,
+      1.0
+    ]
+  },
+  "validation_summary": {
+    "auc": 0.9669801462904912,
+    "sensitivity": 0.8275862068965517,
+    "specificity": 0.9818181818181818
+  }
+}

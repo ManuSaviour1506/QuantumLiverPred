@@ -1,0 +1,220 @@
+{
+  "name": "Logistic Regression on PCA(4) [VQC control] \u2014 V10, radiomics",
+  "family": "classical",
+  "kind": "v10_patch_sklearn",
+  "architecture": "Logistic Regression on PCA(4)",
+  "architecture_detail": null,
+  "task": "tumour vs tumour-free liver tissue (96x96 patches) aggregated to a slice-level call",
+  "role": "control",
+  "version": "v10.0",
+  "feature_set": "radiomics",
+  "feature_dim": 40,
+  "feature_names": [
+    "mean",
+    "std",
+    "skewness",
+    "kurtosis",
+    "p10",
+    "p25",
+    "p50",
+    "p75",
+    "p90",
+    "entropy",
+    "band_0",
+    "band_1",
+    "band_2",
+    "band_3",
+    "band_4",
+    "glcm_d1_contrast",
+    "glcm_d1_dissimilarity",
+    "glcm_d1_homogeneity",
+    "glcm_d1_energy",
+    "glcm_d1_correlation",
+    "glcm_d1_ASM",
+    "glcm_d3_contrast",
+    "glcm_d3_dissimilarity",
+    "glcm_d3_homogeneity",
+    "glcm_d3_energy",
+    "glcm_d3_correlation",
+    "glcm_d3_ASM",
+    "lbp_0",
+    "lbp_1",
+    "lbp_2",
+    "lbp_3",
+    "lbp_4",
+    "lbp_5",
+    "lbp_6",
+    "lbp_7",
+    "lbp_8",
+    "lbp_9",
+    "grad_mean",
+    "grad_std",
+    "grad_p90"
+  ],
+  "preprocessing": {
+    "scaler": "standard",
+    "pca": 4
+  },
+  "preprocessing_signature": "9f3ba5a57725cb7bb8fd",
+  "selected_config": {
+    "C": 10.0
+  },
+  "config_selection": "most frequent inner-loop selection (7 of 8 outer folds)",
+  "seeds": [
+    0
+  ],
+  "training_data": "real",
+  "dataset_version": "lits_verified_v8@2a9a4887bb322cfc",
+  "dataset_license": "CC BY-NC-SA 4.0 (derived from seongun/liver-tumor-classification, itself derived from LiTS)",
+  "data_split": {
+    "final_fit": "all units",
+    "calibration_and_threshold": "leave-one-unit-out out-of-fold scores",
+    "units": [
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06+G07",
+      "G08+G09",
+      "G10"
+    ],
+    "n_patches": 2449,
+    "positives": 1381,
+    "negatives": 1068
+  },
+  "threshold": 0.4300706986994666,
+  "threshold_rule": "Youden J on calibrated leave-one-unit-out predictions",
+  "platt": [
+    0.3410094341652446,
+    0.13306499867053517
+  ],
+  "n_parameters": 5,
+  "execution_mode": "classical_cpu_numpy",
+  "circuit": null,
+  "feature_importance": [
+    {
+      "feature": "mean",
+      "importance": 2.011518466432344,
+      "kind": "|standardised coefficient|"
+    },
+    {
+      "feature": "skewness",
+      "importance": 0.9323297157476295,
+      "kind": "|standardised coefficient|"
+    },
+    {
+      "feature": "kurtosis",
+      "importance": 0.47819029132239904,
+      "kind": "|standardised coefficient|"
+    },
+    {
+      "feature": "std",
+      "importance": 0.37920116282595145,
+      "kind": "|standardised coefficient|"
+    }
+  ],
+  "evaluations": [
+    {
+      "name": "Nested leave-one-unit-out evaluation (radiomics)",
+      "status": "completed (real data)",
+      "evaluation_unit": "reconstructed scan-group unit (8 units; G06+G07 and G08+G09 merged)",
+      "units": [
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05",
+        "G06+G07",
+        "G08+G09",
+        "G10"
+      ],
+      "qualifying_units": [
+        "G01",
+        "G02",
+        "G04",
+        "G05",
+        "G06+G07",
+        "G08+G09",
+        "G10"
+      ],
+      "split": "outer: leave one unit out; inner: grouped 3-fold",
+      "metrics": {
+        "primary_mean_within_unit_auc": 0.8935066990437319,
+        "within_unit_auc_min": 0.638327721661055,
+        "within_unit_auc_max": 0.997534516765286,
+        "pair_weighted_within_unit_auc": 0.9519291659643097,
+        "roc_auc": 0.7358492868707743,
+        "pr_auc": 0.7923541439358188,
+        "accuracy": 0.680277664352797,
+        "balanced_accuracy": 0.6550730621842176,
+        "sensitivity": 0.8522809558291093,
+        "specificity": 0.45786516853932585,
+        "precision": 0.6702733485193622,
+        "f1": 0.7503984698756774,
+        "mcc": 0.34144436602427986,
+        "log_loss": 0.6573647782020646,
+        "brier": 0.22762445224284505,
+        "ece": 0.1813397068643628,
+        "mean_seed_sd_within_unit": null,
+        "fit_seconds_mean": 0.0041441042501446645,
+        "predict_ms_per_patch": 0.00395368764210466
+      },
+      "per_unit_auc": {
+        "G01": 0.995793692067668,
+        "G02": 0.638327721661055,
+        "G03": 1.0,
+        "G04": 0.997534516765286,
+        "G05": 0.6978947368421052,
+        "G06+G07": 0.9579286362779862,
+        "G08+G09": 0.9729847494553376,
+        "G10": 0.9940828402366864
+      },
+      "caveats": [
+        "patch-level estimate on reconstructed scan-group units, not patients",
+        "pooled metrics use per-fold thresholds; the primary metric is the mean within-unit AUC"
+      ]
+    },
+    {
+      "name": "Leave-one-unit-out calibration predictions (final configuration)",
+      "status": "completed",
+      "evaluation_unit": "reconstructed scan-group units",
+      "metrics": {
+        "roc_auc": 0.7979426513382529,
+        "pr_auc": 0.822893451305843,
+        "log_loss": 0.5643378197211132,
+        "brier": 0.19445053927634418,
+        "ece": 0.17558373370740718,
+        "threshold": 0.4300706986994666,
+        "tp": 1215,
+        "fp": 382,
+        "tn": 686,
+        "fn": 166,
+        "accuracy": 0.7762351980400163,
+        "balanced_accuracy": 0.7610596728745115,
+        "sensitivity": 0.8797972483707458,
+        "recall": 0.8797972483707458,
+        "specificity": 0.6423220973782772,
+        "precision": 0.7608015028177834,
+        "f1": 0.8159838817998657,
+        "mcc": 0.5436006850011561
+      },
+      "caveats": [
+        "same predictions were used to fit calibration and the threshold: optimistic"
+      ]
+    }
+  ],
+  "training_history": null,
+  "limitations": [
+    "research use only; not clinically validated",
+    "liver gate inherited from V9 (known edge-patch label defect)",
+    "slice-level 'No tumour detected' is not validated: the dataset has no tumour-free liver slices"
+  ],
+  "model_id": "v10_logreg_pca4_radiomics",
+  "format_version": 1,
+  "files": {
+    "model.npz": "df3bd281dfb2cad51c717052541a012a3bcebe0f9e07436e4e1f6d179382942d",
+    "model.joblib": "f2229312ba74e8be000bcdff742e847f08a98f31adbba94ea8f533dc37b24970"
+  },
+  "saved_utc": "2026-11-12T15:56:26+00:00"
+}

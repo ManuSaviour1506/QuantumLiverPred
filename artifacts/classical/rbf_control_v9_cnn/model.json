@@ -1,0 +1,61 @@
+{
+  "name": "RBF-SVM (control for the quantum kernel) (4 qubits, CNN features)",
+  "kind": "v9_rbf_control",
+  "version": "v9",
+  "features": "cnn25d_v9",
+  "feature_description": "64-d embedding (penultimate layer) of the selected V9 2.5-D CNN (cnn25d_v9_a4_res_se_focal, trained on the training split only)",
+  "configuration": {
+    "qubits": 4,
+    "gamma": 0.1,
+    "C": 10.0
+  },
+  "selection": "highest validation ROC-AUC in the sweep",
+  "validation_auc": 0.9994252873563219,
+  "training_status": "TRAINED",
+  "labels": "LiTS expert masks (verified)",
+  "clinical_use": "NOT validated for clinical use",
+  "calibration": {
+    "mu": 0.6388538989212377,
+    "sd": 1.5496055876156847,
+    "a": 12.57025204217038,
+    "b": -2.0931684052874653,
+    "min_slope": 0.001
+  },
+  "calibration_status": "platt_on_validation",
+  "threshold": 0.7374510973295212,
+  "threshold_rule": "Youden J on validation (calibrated probability)",
+  "validation_score_check": {
+    "constant_scores": false,
+    "ok": true
+  },
+  "inference_seconds_per_patch": 0.0101143,
+  "family": "classical",
+  "model_id": "rbf_control_v9_cnn",
+  "npz_sha256": "533e3625cb6140e08e49ed6c0e00aaeab5a27032a55545fdc74b70624df691da",
+  "status": "trained",
+  "saved_utc": "2026-11-06T11:05:07+00:00",
+  "role": "control",
+  "role_order": 4,
+  "test_summary": {
+    "auc": 0.9819775990313095,
+    "auc_ci95": [
+      0.9707057533627949,
+      1.0
+    ],
+    "sensitivity": 0.8776595744680851,
+    "specificity": 0.943089430894309,
+    "f1": 0.9166666666666667,
+    "accuracy": 0.9035369774919614,
+    "pr_auc": 0.9864772135548151,
+    "ece": 0.04742451173362752
+  },
+  "validation_summary": {
+    "auc": 0.9994252873563219
+  },
+  "train_seconds": 0.1,
+  "parameters": null,
+  "head_inference_ms_per_patch": 0.0003,
+  "feature_ms_per_patch": 10.114,
+  "inference_timing_note": "head + feature extraction on 2 CPU cores; circuits simulated exactly",
+  "support_vectors": null
+}

@@ -1,0 +1,9 @@
+15:58:50 v10_hybrid_feature_fusion_radiomics: config {'layers': 1, 'lr': 0.03} (most frequent inner-loop selection (5 of 8 outer folds)); 2449 patches, 8 units, seed 0
+15:58:55   calibration fold G01: within-unit AUC 0.9712594450732662
+15:59:01   calibration fold G02: within-unit AUC 0.9789562289562289
+15:59:06   calibration fold G03: within-unit AUC 0.9871794871794872
+15:59:12   calibration fold G04: within-unit AUC 0.9960552268244576
+15:59:17   calibration fold G05: within-unit AUC 0.8557894736842105
+15:59:20   calibration fold G06+G07: within-unit AUC 0.9474307803872529
+15:59:25   calibration fold G08+G09: within-unit AUC 0.987363834422658
+15:59:31   calibration fold G10: within-unit AUC 0.8619329388560157

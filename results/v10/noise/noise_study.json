@@ -1,0 +1,173 @@
+{
+ "exact": {
+  "model_id": "v10_vqc_radiomics",
+  "inputs": "400 real patches (random sample). The deployed model was fitted on all units: compare noise levels with the noiseless model, not absolute AUCs.",
+  "execution_mode": "custom NumPy density-matrix simulator",
+  "noise_model": "depolarising (p1 = p2/10) + symmetric readout error; hypothetical, not device-calibrated",
+  "circuit": {
+   "model": "VQC",
+   "qubits": 4,
+   "layers": 1,
+   "entangler": "brick",
+   "readout": "linear_z",
+   "observables": [
+    [
+     0
+    ],
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ]
+   ],
+   "trainable_circuit_parameters": 12,
+   "readout_parameters": 5,
+   "gate_counts": {
+    "qubits": 4,
+    "declared_weights": 12,
+    "one_qubit_gates": 16,
+    "two_qubit_gates": 3,
+    "depth": 6,
+    "two_qubit_depth": 2,
+    "state_vector_bytes": 256,
+    "density_matrix_bytes": 4096
+   },
+   "execution_mode": "custom_numpy_simulator",
+   "epochs": null,
+   "lr": null,
+   "batch": null,
+   "seed": null
+  },
+  "summary": [
+   {
+    "p2": 0.0,
+    "p1": 0.0,
+    "readout_error": 0.0,
+    "shots": "exact",
+    "mean_abs_logit_change": 1.0870471189861064e-15,
+    "logit_correlation_with_ideal": 1.0,
+    "mean_abs_expectation": 0.4307077693724635,
+    "auc": 0.9218310767246938,
+    "auc_noiseless": 0.9218310767246938
+   },
+   {
+    "p2": 0.001,
+    "p1": 0.0001,
+    "readout_error": 0.0,
+    "shots": "exact",
+    "mean_abs_logit_change": 0.0045083371572128715,
+    "logit_correlation_with_ideal": 0.9999996065729209,
+    "mean_abs_expectation": 0.4296442098235513,
+    "auc": 0.9218310767246938,
+    "auc_noiseless": 0.9218310767246938
+   },
+   {
+    "p2": 0.005,
+    "p1": 0.0005,
+    "readout_error": 0.0,
+    "shots": "exact",
+    "mean_abs_logit_change": 0.022428412558330838,
+    "logit_correlation_with_ideal": 0.9999902015970782,
+    "mean_abs_expectation": 0.4254145440513147,
+    "auc": 0.9220116054158607,
+    "auc_noiseless": 0.9218310767246938
+   },
+   {
+    "p2": 0.01,
+    "p1": 0.001,
+    "readout_error": 0.0,
+    "shots": "exact",
+    "mean_abs_logit_change": 0.04457653075127133,
+    "logit_correlation_with_ideal": 0.9999609945990166,
+    "mean_abs_expectation": 0.42018280053326085,
+    "auc": 0.9218568665377176,
+    "auc_noiseless": 0.9218310767246938
+   },
+   {
+    "p2": 0.03,
+    "p1": 0.003,
+    "readout_error": 0.0,
+    "shots": "exact",
+    "mean_abs_logit_change": 0.13045079772910836,
+    "logit_correlation_with_ideal": 0.9996559010203977,
+    "mean_abs_expectation": 0.39984251781012403,
+    "auc": 0.9213410702772404,
+    "auc_noiseless": 0.9218310767246938
+   }
+  ],
+  "hardware": false
+ },
+ "with_readout_and_shots": {
+  "model_id": "v10_vqc_radiomics",
+  "inputs": "200 real patches (random sample). The deployed model was fitted on all units: compare noise levels with the noiseless model, not absolute AUCs.",
+  "execution_mode": "custom NumPy density-matrix simulator",
+  "noise_model": "depolarising (p1 = p2/10) + symmetric readout error; hypothetical, not device-calibrated",
+  "circuit": {
+   "model": "VQC",
+   "qubits": 4,
+   "layers": 1,
+   "entangler": "brick",
+   "readout": "linear_z",
+   "observables": [
+    [
+     0
+    ],
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ]
+   ],
+   "trainable_circuit_parameters": 12,
+   "readout_parameters": 5,
+   "gate_counts": {
+    "qubits": 4,
+    "declared_weights": 12,
+    "one_qubit_gates": 16,
+    "two_qubit_gates": 3,
+    "depth": 6,
+    "two_qubit_depth": 2,
+    "state_vector_bytes": 256,
+    "density_matrix_bytes": 4096
+   },
+   "execution_mode": "custom_numpy_simulator",
+   "epochs": null,
+   "lr": null,
+   "batch": null,
+   "seed": null
+  },
+  "summary": [
+   {
+    "p2": 0.0,
+    "p1": 0.0,
+    "readout_error": 0.02,
+    "shots": 1024,
+    "mean_abs_logit_change": 0.14325386758864653,
+    "logit_correlation_with_ideal": 0.9979380842407757,
+    "mean_abs_expectation": 0.405888671875,
+    "auc": 0.9166924106683143,
+    "auc_noiseless": 0.9185459787869427
+   },
+   {
+    "p2": 0.01,
+    "p1": 0.001,
+    "readout_error": 0.02,
+    "shots": 1024,
+    "mean_abs_logit_change": 0.16502491785607332,
+    "logit_correlation_with_ideal": 0.9977188180512775,
+    "mean_abs_expectation": 0.395625,
+    "auc": 0.914838842549686,
+    "auc_noiseless": 0.9185459787869427
+   }
+  ],
+  "hardware": false
+ }
+}

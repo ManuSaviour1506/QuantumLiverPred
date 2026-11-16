@@ -1,0 +1,122 @@
+{
+ "report": {
+  "passed": true,
+  "rows": 1745,
+  "file_status": {
+   "ok": 1745
+  },
+  "issue_counts": {},
+  "label_distribution": {
+   "tumour": 476,
+   "no_tumour": 1269
+  },
+  "split_distribution": {
+   "test": 436,
+   "val": 713,
+   "train": 596
+  },
+  "group_distribution": {
+   "G01": 249,
+   "G02": 305,
+   "G03": 173,
+   "G04": 37,
+   "G05": 140,
+   "G06": 246,
+   "G07": 101,
+   "G08": 86,
+   "G09": 104,
+   "G10": 304
+  },
+  "label_by_split": {
+   "test": {
+    "tumour": 129,
+    "no_tumour": 307
+   },
+   "val": {
+    "no_tumour": 650,
+    "tumour": 63
+   },
+   "train": {
+    "no_tumour": 312,
+    "tumour": 284
+   }
+  },
+  "identifier_availability": {
+   "patient_id": 0,
+   "scan_id": 1745,
+   "volume_id": 0,
+   "slice_id": 1745
+  },
+  "duplicate_slice_ids_within_unit": 0,
+  "leakage": {
+   "patient_id": {
+    "checked": false,
+    "ids_in_multiple_splits": 0,
+    "examples": {}
+   },
+   "scan_id": {
+    "checked": true,
+    "ids_in_multiple_splits": 0,
+    "examples": {}
+   },
+   "volume_id": {
+    "checked": false,
+    "ids_in_multiple_splits": 0,
+    "examples": {}
+   }
+  },
+  "exact_duplicate_groups": 0,
+  "exact_duplicate_examples": [],
+  "near_duplicate_groups": 300,
+  "near_duplicate_examples": [
+   [
+    "images/test/ct_lits_4237.png",
+    "images/test/ct_lits_4239.png",
+    "images/test/ct_lits_4240.png"
+   ],
+   [
+    "images/test/ct_lits_4238.png",
+    "images/test/ct_lits_4241.png"
+   ],
+   [
+    "images/test/ct_lits_4243.png",
+    "images/test/ct_lits_4245.png",
+    "images/test/ct_lits_4251.png",
+    "images/test/ct_lits_4252.png"
+   ],
+   [
+    "images/test/ct_lits_4244.png",
+    "images/test/ct_lits_4246.png",
+    "images/test/ct_lits_4247.png",
+    "images/test/ct_lits_4248.png",
+    "images/test/ct_lits_4249.png",
+    "images/test/ct_lits_4250.png"
+   ],
+   [
+    "images/test/ct_lits_4253.png",
+    "images/test/ct_lits_4254.png",
+    "images/test/ct_lits_4255.png",
+    "images/test/ct_lits_4257.png"
+   ]
+  ],
+  "image_sizes": {
+   "512x512": 1745
+  },
+  "intensity": {
+   "mean_of_means": 43.03056192480049,
+   "sd_of_means": 13.845908744883806,
+   "mean_of_sds": 80.30465862064439
+  },
+  "unlisted_images": 0,
+  "unlisted_examples": [],
+  "pixel_hash_verification": {
+   "checked": 1745,
+   "matched": 1745
+  },
+  "warnings": [
+   "No patient identifiers: patient-level evaluation and leakage control are not possible; evaluate by scan / group only and do not describe results as patient-level."
+  ],
+  "dataset_version_sha256": "9a0f1e98f3d6cd933bc4c648c452b271bd6ff36bd9a8b36ca55ae2cef0202640"
+ },
+ "problems": []
+}

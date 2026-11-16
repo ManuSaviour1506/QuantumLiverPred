@@ -1,0 +1,13 @@
+{
+  "gate_unitarity_max_error": 2.220446049250313e-16,
+  "normalisation_max_error": 8.881784197001252e-16,
+  "unitary_max_error": 6.661338147750939e-16,
+  "inverse_circuit_max_error": 4.355503409735122e-16,
+  "adjoint_vs_parameter_shift_max_error": 3.3306690738754696e-15,
+  "adjoint_vs_finite_difference_max_error": 1.8314523231310886e-09,
+  "v10_vs_v9_vqc_state_max_error": 0.0,
+  "v10_vs_v9_feature_map_fidelity_min": 0.9999999999999949,
+  "feature_map_diagonal_vs_gate_fidelity_min": 0.9999999999999951,
+  "compute_uncompute_vs_fidelity_max_error": 2.1094237467877974e-15,
+  "bell_state_max_error": 0.0
+}

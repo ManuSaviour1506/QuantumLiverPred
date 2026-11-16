@@ -1,0 +1,60 @@
+{
+  "name": "PCA-8 RBF-SVM (control, fine-tuned features)",
+  "kind": "pca8_control",
+  "task": "Task A: tumour vs tumour-free liver tissue (96x96 px CT patch)",
+  "architecture": "RBF-SVM on 8 PCA features (control); C=10 (validation)",
+  "input": "GAP features (1280-d) of the fine-tuned EfficientNet-B0 (efficientnet_b0_ft, trained on the training split only)",
+  "feature_source": "finetuned",
+  "labels": "LiTS expert masks via seongun/liver-tumor-classification (verified pixel-exact)",
+  "split_file": "data/manifests/split_v8.csv",
+  "validation_status": "held-out test split, research only",
+  "clinical_use": "NOT validated for clinical use",
+  "validation_auc_selection": 0.9515673981191222,
+  "calibration": {
+    "mu": 0.5647305092315958,
+    "sd": 2.1300382029676124,
+    "a": 3.4351165995659496,
+    "b": 0.8069104425567716,
+    "min_slope": 0.001
+  },
+  "calibration_status": "platt_on_validation",
+  "threshold": 0.787239192255994,
+  "threshold_rule": "Youden J on validation (calibrated probability)",
+  "validation_score_check": {
+    "constant_scores": false,
+    "ok": true
+  },
+  "inference_seconds_per_patch": 0.034786160398714426,
+  "family": "classical",
+  "model_id": "pca8_svm_rbf_ft",
+  "npz_sha256": "8c8fcd711222c32c6e63e0bc1ee3b894b2f12d38a49e0ad886a345b127cfc8a3",
+  "status": "trained",
+  "saved_utc": "2026-11-06T05:40:55+00:00",
+  "test_summary": {
+    "auc": 0.9167639681715966,
+    "auc_ci95": [
+      0.8827959476932951,
+      0.9711195987654321
+    ],
+    "sensitivity": 0.5691489361702128,
+    "specificity": 0.9552845528455285,
+    "f1": 0.7121464226289517,
+    "accuracy": 0.7218649517684887,
+    "pr_auc": 0.9441191771211894,
+    "ece": 0.112785116348518,
+    "brier": 0.13838806209680776,
+    "sensitivity_ci95": [
+      0.5185136707388016,
+      0.7333333333333333
+    ],
+    "specificity_ci95": [
+      0.8928571428571429,
+      1.0
+    ]
+  },
+  "validation_summary": {
+    "auc": 0.9515673981191222,
+    "sensitivity": 0.7988505747126436,
+    "specificity": 0.9545454545454546
+  }
+}

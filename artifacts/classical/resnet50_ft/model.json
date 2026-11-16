@@ -1,0 +1,209 @@
+{
+  "name": "ResNet-50 (fine-tuned)",
+  "kind": "cnn_finetune",
+  "task": "Task A: tumour vs tumour-free liver tissue (96x96 px CT patch)",
+  "architecture": "ImageNet-pretrained ResNet-50 (timm weights); fine-tuned: last bottleneck block (layer4.2) + linear head; earlier layers frozen",
+  "input": "96x96 grey patch replicated to 3 channels, ImageNet normalisation",
+  "labels": "LiTS expert masks via seongun/liver-tumor-classification (verified pixel-exact)",
+  "split_file": "data/manifests/split_v8.csv",
+  "validation_status": "held-out test split, research only",
+  "clinical_use": "NOT validated for clinical use",
+  "arch": "resnet50",
+  "training": {
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 0.5688279867944822,
+        "val_loss": 0.6479084611423913,
+        "val_auc": 0.6395506792058516,
+        "seconds": 11.2
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.32507819745614785,
+        "val_loss": 0.6267505855621347,
+        "val_auc": 0.7285788923719959,
+        "seconds": 23.3
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.20138343423122101,
+        "val_loss": 0.694266785959062,
+        "val_auc": 0.7596656217345872,
+        "seconds": 35.4
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.14220370862413287,
+        "val_loss": 0.7610656447298336,
+        "val_auc": 0.7921630094043888,
+        "seconds": 47.7
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.10073469959716093,
+        "val_loss": 0.7897584546479864,
+        "val_auc": 0.7834378265412748,
+        "seconds": 59.8
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.07435486805145415,
+        "val_loss": 0.8555017686748156,
+        "val_auc": 0.7940961337513062,
+        "seconds": 71.8
+      },
+      {
+        "epoch": 7,
+        "train_loss": 0.0626028009454345,
+        "val_loss": 0.8517515317207894,
+        "val_auc": 0.8038662486938349,
+        "seconds": 84.2
+      },
+      {
+        "epoch": 8,
+        "train_loss": 0.05754349045081237,
+        "val_loss": 0.9539484740111058,
+        "val_auc": 0.8000522466039708,
+        "seconds": 96.8
+      },
+      {
+        "epoch": 9,
+        "train_loss": 0.05049256015296154,
+        "val_loss": 1.0009741802025511,
+        "val_auc": 0.8055381400208986,
+        "seconds": 108.8
+      },
+      {
+        "epoch": 10,
+        "train_loss": 0.0420780554975124,
+        "val_loss": 0.9924963434917131,
+        "val_auc": 0.8073145245559038,
+        "seconds": 121.1
+      },
+      {
+        "epoch": 11,
+        "train_loss": 0.035930299905701575,
+        "val_loss": 1.0586171309086092,
+        "val_auc": 0.8055381400208986,
+        "seconds": 133.0
+      },
+      {
+        "epoch": 12,
+        "train_loss": 0.028680704476411998,
+        "val_loss": 1.1717402406336925,
+        "val_auc": 0.8125914315569488,
+        "seconds": 145.4
+      },
+      {
+        "epoch": 13,
+        "train_loss": 0.026943777404391772,
+        "val_loss": 1.1424695646754282,
+        "val_auc": 0.8148380355276907,
+        "seconds": 157.6
+      },
+      {
+        "epoch": 14,
+        "train_loss": 0.03027160975138089,
+        "val_loss": 1.0383879305843584,
+        "val_auc": 0.8146290491118078,
+        "seconds": 169.6
+      },
+      {
+        "epoch": 15,
+        "train_loss": 0.026592317663195916,
+        "val_loss": 1.0743635101513165,
+        "val_auc": 0.8182863113897597,
+        "seconds": 181.9
+      },
+      {
+        "epoch": 16,
+        "train_loss": 0.018380704502682536,
+        "val_loss": 1.1018959748339177,
+        "val_auc": 0.8179728317659353,
+        "seconds": 194.4
+      },
+      {
+        "epoch": 17,
+        "train_loss": 0.022126685946272012,
+        "val_loss": 1.1084440144469105,
+        "val_auc": 0.8178683385579938,
+        "seconds": 206.7
+      },
+      {
+        "epoch": 18,
+        "train_loss": 0.01871171633019435,
+        "val_loss": 1.120174889437455,
+        "val_auc": 0.8177115987460816,
+        "seconds": 219.3
+      },
+      {
+        "epoch": 19,
+        "train_loss": 0.021349880817797148,
+        "val_loss": 1.1370465371417764,
+        "val_auc": 0.818234064785789,
+        "seconds": 231.7
+      }
+    ],
+    "best_epoch": 15,
+    "train_seconds": 231.7,
+    "pos_weight": 0.8567990373044525,
+    "max_epochs": 20,
+    "batch": 32,
+    "patience": 4,
+    "tail_lr": 0.0001,
+    "head_lr": 0.001,
+    "weight_decay": 0.0001,
+    "n_train_views": 3,
+    "early_stopping": "validation ROC-AUC, patience 4"
+  },
+  "calibration": {
+    "mu": 4.246953398697603,
+    "sd": 6.095509849491121,
+    "a": 1.467889895747922,
+    "b": 0.650755668115313,
+    "min_slope": 0.001
+  },
+  "calibration_status": "platt_on_validation",
+  "threshold": 0.6170695613938418,
+  "threshold_rule": "Youden J on validation (calibrated probability)",
+  "validation_score_check": {
+    "constant_scores": false,
+    "ok": true
+  },
+  "inference_seconds_per_patch": 0.03536002160932489,
+  "family": "classical",
+  "imagenet_weights": "artifacts/weights (resnet50)",
+  "trainable_parameters": 4470785,
+  "model_id": "resnet50_ft",
+  "npz_sha256": "1e08ef03e0a5f967ade1b305025864f585408f1abb6e8cc6d56a646f4bbf32c1",
+  "status": "trained",
+  "saved_utc": "2026-11-06T05:34:12+00:00",
+  "test_summary": {
+    "auc": 0.6910569105691057,
+    "auc_ci95": [
+      0.633881338558625,
+      0.987787037037037
+    ],
+    "sensitivity": 0.324468085106383,
+    "specificity": 0.9146341463414634,
+    "f1": 0.4701348747591522,
+    "accuracy": 0.5578778135048231,
+    "pr_auc": 0.7915277727726944,
+    "ece": 0.1911941515934041,
+    "brier": 0.25528111744287046,
+    "sensitivity_ci95": [
+      0.27050270310067737,
+      0.8
+    ],
+    "specificity_ci95": [
+      0.8816274098572235,
+      0.9761904761904762
+    ]
+  },
+  "validation_summary": {
+    "auc": 0.8182863113897597,
+    "sensitivity": 0.764367816091954,
+    "specificity": 0.7363636363636363
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "step": {
+    "from": 202,
+    "to": 203,
+    "group": "G01",
+    "delta_mean_intensity": -15.020000000000003,
+    "liver_iou": 0.33446519524617996,
+    "liver_area_ratio": 0.33446519524617996
+  },
+  "patches_before": 490,
+  "patches_after": 41,
+  "decision": "keep the group as one evaluation unit (merging is leakage-safe; the two parts may be one patient)"
+}

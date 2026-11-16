@@ -1,0 +1,89 @@
+{
+ "report": {
+  "passed": true,
+  "rows": 8,
+  "file_status": {
+   "ok": 8
+  },
+  "issue_counts": {},
+  "label_distribution": {
+   "tumour": 6,
+   "no_tumour": 2
+  },
+  "split_distribution": {
+   "test": 5,
+   "val": 3
+  },
+  "group_distribution": {
+   "G01": 5,
+   "G02": 3
+  },
+  "label_by_split": {
+   "test": {
+    "tumour": 3,
+    "no_tumour": 2
+   },
+   "val": {
+    "tumour": 3
+   }
+  },
+  "identifier_availability": {
+   "patient_id": 0,
+   "scan_id": 8,
+   "volume_id": 0,
+   "slice_id": 8
+  },
+  "duplicate_slice_ids_within_unit": 0,
+  "leakage": {
+   "patient_id": {
+    "checked": false,
+    "ids_in_multiple_splits": 0,
+    "examples": {}
+   },
+   "scan_id": {
+    "checked": true,
+    "ids_in_multiple_splits": 0,
+    "examples": {}
+   },
+   "volume_id": {
+    "checked": false,
+    "ids_in_multiple_splits": 0,
+    "examples": {}
+   }
+  },
+  "exact_duplicate_groups": 0,
+  "exact_duplicate_examples": [],
+  "near_duplicate_groups": 2,
+  "near_duplicate_examples": [
+   [
+    "images/test/ct_lits_4277.png",
+    "images/test/ct_lits_4278.png",
+    "images/test/ct_lits_4279.png"
+   ],
+   [
+    "images/val/ct_lits_4649.png",
+    "images/val/ct_lits_4650.png",
+    "images/val/ct_lits_4651.png"
+   ]
+  ],
+  "image_sizes": {
+   "512x512": 8
+  },
+  "intensity": {
+   "mean_of_means": 45.57007598876953,
+   "sd_of_means": 11.013531233527386,
+   "mean_of_sds": 85.25823226888511
+  },
+  "unlisted_images": 0,
+  "unlisted_examples": [],
+  "pixel_hash_verification": {
+   "checked": 8,
+   "matched": 8
+  },
+  "warnings": [
+   "No patient identifiers: patient-level evaluation and leakage control are not possible; evaluate by scan / group only and do not describe results as patient-level."
+  ],
+  "dataset_version_sha256": "7f72ecfb41507eccbcd2889cba6a2103724b1128dcde06123fa9a0502cfb27a8"
+ },
+ "problems": []
+}

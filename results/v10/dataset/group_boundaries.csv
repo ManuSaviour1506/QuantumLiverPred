@@ -1,0 +1,14 @@
+prev_run_end,next_run_start,gap_slices,gap_missing_indices,group_prev,group_next,split_prev,split_next,same_group,liver_iou_across
+215,532,316,25,G01,G02,test,val,False,0.2328519855595668
+564,852,287,30,G02,G03,val,train,False,0.356353591160221
+865,898,32,0,G03,G04,train,train,False,0.5202863961813843
+910,926,15,0,G04,G05,train,train,False,0.2038664323374341
+979,985,5,0,G05,G05,train,train,True,0.21205821205821207
+987,997,9,0,G05,G05,train,train,True,0.07777777777777778
+1002,1008,5,0,G05,G05,train,train,True,0.20898100172711573
+1023,1094,70,0,G05,G06,train,train,False,0.0
+1260,1267,6,0,G06,G06,train,train,True,0.17894736842105263
+1277,1331,53,0,G06,G07,train,test,False,0.09157509157509157
+1338,1472,133,0,G07,G08,test,test,False,0.02503382949932341
+1476,1507,30,0,G08,G09,test,val,False,0.5289855072463768
+1518,1673,154,0,G09,G10,val,val,False,0.0

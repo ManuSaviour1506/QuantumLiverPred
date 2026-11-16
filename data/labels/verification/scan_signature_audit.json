@@ -1,0 +1,27 @@
+{
+  "what": "Leakage audit of the scan grouping using upstream raw-slice zero-padding counts (images/sample/{i}.png, pixels == 0), collected for all 1,745 verified slices in the browser session.",
+  "finding_signature_quality": "The zero-padding count is a scanner/protocol signature, not a patient id: the value 55,772 occurs in 13 separate index runs and 56,252 in 7; many scans have no padding, so the count varies slice to slice. It therefore cannot replace the tumour-run reconstruction, but runs of identical padding are a useful audit: a run crossing a split boundary could be one scan split across splits.",
+  "runs_of_identical_padding_crossing_split_boundaries": [
+    {
+      "upstream_indices": "1302-1305",
+      "zero_count": 56252,
+      "groups": [
+        "G06 (train)",
+        "G07 (test)"
+      ],
+      "tumour_slices": 0
+    },
+    {
+      "upstream_indices": "1488-1495",
+      "zero_count": 55772,
+      "groups": [
+        "G08 (test)",
+        "G09 (val)"
+      ],
+      "tumour_slices": 0
+    }
+  ],
+  "impact": "Task A (tumour vs tumour-free liver patches; all compared models) uses tumour slices only - unaffected. The liver-tissue gate uses some no-liver slices; at most 12 such slices near two group boundaries could share a scan across splits.",
+  "other_evidence": "Upstream slices 100-233 share one padding value (55,772 / mode 84), consistent with run G01-R1 (100-215) being a single scan (the conservative grouping keeps it whole).",
+  "frozen_split_unchanged": true
+}

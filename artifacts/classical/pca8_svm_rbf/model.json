@@ -1,0 +1,60 @@
+{
+  "name": "PCA-8 RBF-SVM (control, ImageNet features)",
+  "kind": "pca8_control",
+  "task": "Task A: tumour vs tumour-free liver tissue (96x96 px CT patch)",
+  "architecture": "RBF-SVM on 8 PCA features (control); C=10 (validation)",
+  "input": "frozen ImageNet EfficientNet-B0 GAP features (1280-d) of the 96x96 patch (feature extractor never trained on CT labels)",
+  "feature_source": "imagenet",
+  "labels": "LiTS expert masks via seongun/liver-tumor-classification (verified pixel-exact)",
+  "split_file": "data/manifests/split_v8.csv",
+  "validation_status": "held-out test split, research only",
+  "clinical_use": "NOT validated for clinical use",
+  "validation_auc_selection": 0.7479623824451411,
+  "calibration": {
+    "mu": 0.23007376724140857,
+    "sd": 2.0557451857846587,
+    "a": 0.9823813875557045,
+    "b": 0.5350952488776042,
+    "min_slope": 0.001
+  },
+  "calibration_status": "platt_on_validation",
+  "threshold": 0.5383300164200041,
+  "threshold_rule": "Youden J on validation (calibrated probability)",
+  "validation_score_check": {
+    "constant_scores": false,
+    "ok": true
+  },
+  "inference_seconds_per_patch": 0.020017943773312098,
+  "family": "classical",
+  "model_id": "pca8_svm_rbf",
+  "npz_sha256": "06c4efbfbb4a0b4ca0d3ba26c9f7638a64f2f0b59917335d962be4b82b0c53d7",
+  "status": "trained",
+  "saved_utc": "2026-11-06T05:16:11+00:00",
+  "test_summary": {
+    "auc": 0.58356037017817,
+    "auc_ci95": [
+      0.534790969348631,
+      0.8349120370370369
+    ],
+    "sensitivity": 0.6063829787234043,
+    "specificity": 0.5,
+    "f1": 0.6272352132049518,
+    "accuracy": 0.5643086816720257,
+    "pr_auc": 0.7099098768711294,
+    "ece": 0.09696954485760671,
+    "brier": 0.2484037452695958,
+    "sensitivity_ci95": [
+      0.5577744656182687,
+      0.8667592592592588
+    ],
+    "specificity_ci95": [
+      0.44047619047619047,
+      0.6333333333333333
+    ]
+  },
+  "validation_summary": {
+    "auc": 0.7479623824451411,
+    "sensitivity": 0.8045977011494253,
+    "specificity": 0.6
+  }
+}

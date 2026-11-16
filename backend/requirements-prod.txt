@@ -1,0 +1,4 @@
+# Production image: runtime + PostgreSQL driver.
+-r requirements.txt
+psycopg[binary]>=3.1   # PostgreSQL driver (not installable in the offline build environment; tests used PostgreSQL 16
+                       # through the test-only wire client in tests/support/pgwire.py)

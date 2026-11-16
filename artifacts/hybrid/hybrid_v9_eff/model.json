@@ -1,0 +1,72 @@
+{
+  "name": "Hybrid CNN + quantum layer (8 qubits, V9, EFF features)",
+  "kind": "v9_hybrid",
+  "version": "v9",
+  "features": "effnet_ft_v8",
+  "feature_description": "GAP features (1280-d) of V8's fine-tuned EfficientNet-B0 (trained on the training split only)",
+  "configuration": {
+    "qubits": 8,
+    "fusion": true
+  },
+  "selection": "highest validation ROC-AUC in the sweep",
+  "validation_auc": 0.965360501567398,
+  "training_status": "PARTIALLY TRAINED",
+  "labels": "LiTS expert masks (verified)",
+  "clinical_use": "NOT validated for clinical use",
+  "calibration": {
+    "mu": 2.4802503962347444,
+    "sd": 7.870453438422812,
+    "a": 2.689652141817941,
+    "b": 0.7093737101829846,
+    "min_slope": 0.001
+  },
+  "calibration_status": "platt_on_validation",
+  "threshold": 0.7814497552497197,
+  "threshold_rule": "Youden J on validation (calibrated probability)",
+  "validation_score_check": {
+    "constant_scores": false,
+    "ok": true
+  },
+  "inference_seconds_per_patch": 0.0180017,
+  "family": "hybrid",
+  "quantum_backend": {
+    "execution": "simulator",
+    "simulator": "NumPy exact state-vector (src/quantum/simulator.py)",
+    "hardware": "none",
+    "noise": "noise-free unless stated (noise study in quantum_experiments.json)"
+  },
+  "circuit": {
+    "depth": 33,
+    "one_qubit_gates": 72,
+    "two_qubit_gates": 24,
+    "state_vector_bytes": 4096
+  },
+  "model_id": "hybrid_v9_eff",
+  "npz_sha256": "d131ad90474abb2db3daded71a4c1bba2e6d28d6ccb066a40401e2c223f70b70",
+  "status": "trained",
+  "saved_utc": "2026-11-06T11:27:08+00:00",
+  "role": "experiment",
+  "role_order": 5,
+  "test_summary": {
+    "auc": 0.9135422072305829,
+    "auc_ci95": [
+      0.8925548863858405,
+      1.0
+    ],
+    "sensitivity": 0.6196808510638298,
+    "specificity": 0.959349593495935,
+    "f1": 0.7528271405492729,
+    "accuracy": 0.7540192926045016,
+    "pr_auc": 0.9440568938046519,
+    "ece": 0.12472221101081273
+  },
+  "validation_summary": {
+    "auc": 0.965360501567398
+  },
+  "train_seconds": 114.6,
+  "parameters": 10313,
+  "head_inference_ms_per_patch": 0.5757,
+  "feature_ms_per_patch": 17.426,
+  "inference_timing_note": "head + feature extraction on 2 CPU cores; circuits simulated exactly",
+  "support_vectors": null
+}

@@ -1,0 +1,37 @@
+{
+  "name": "liver-tumour-intelligence-frontend",
+  "version": "11.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Liver Tumour Intelligence Platform V11 — research dashboard (React 19 + TypeScript + Tailwind CSS 4, bundled with esbuild)",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "node --import tsx --test tests/*.test.ts tests/*.test.tsx",
+    "test:e2e": "node --test e2e/e2e.test.mjs"
+  },
+  "dependencies": {
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "d3-scale": "4.0.2",
+    "d3-shape": "3.2.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-icons": "5.7.0",
+    "tailwind-merge": "3.6.0",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@types/d3-scale": "^4.0.8",
+    "@types/d3-shape": "^3.1.6",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "esbuild": "0.28.2",
+    "playwright": "1.63.0",
+    "tailwindcss": "4.3.3",
+    "tsx": "4.23.12",
+    "typescript": "6.0.3"
+  },
+  "engines": { "node": ">=20" }
+}

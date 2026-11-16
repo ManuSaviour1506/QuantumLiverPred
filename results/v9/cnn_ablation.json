@@ -1,0 +1,44 @@
+{
+  "runs": [
+    {
+      "variant": "a1_aug",
+      "model_id": "cnn25d_v9_a1_aug",
+      "recipe": "a1_aug",
+      "val_auc": 0.997753396029258,
+      "val_ece": 0.013547185539845866,
+      "best_epoch": 10,
+      "train_seconds": 265.3086765229999,
+      "parameters": 106241
+    },
+    {
+      "variant": "a2_aug_focal",
+      "model_id": "cnn25d_v9_a2_aug_focal",
+      "recipe": "a2_aug_focal",
+      "val_auc": 0.9974921630094044,
+      "val_ece": 0.014566711856374252,
+      "best_epoch": 17,
+      "train_seconds": 386.1574911309999,
+      "parameters": 106241
+    },
+    {
+      "variant": "a3_res_se",
+      "model_id": "cnn25d_v9_a3_res_se",
+      "recipe": "a3_res_se",
+      "val_auc": 0.9992163009404389,
+      "val_ece": 0.012101988447667286,
+      "best_epoch": 18,
+      "train_seconds": 1441.701253161,
+      "parameters": 325501
+    },
+    {
+      "variant": "a4_res_se_focal",
+      "model_id": "cnn25d_v9_a4_res_se_focal",
+      "recipe": "a4_res_se_focal",
+      "val_auc": 0.9995820271682341,
+      "val_ece": 0.011423696754251643,
+      "best_epoch": 22,
+      "train_seconds": 1645.1925198179997,
+      "parameters": 325501
+    }
+  ]
+}

@@ -1,0 +1,3219 @@
+{
+ "generated_at": "2026-11-13T17:10:58+00:00",
+ "note": "Availability is what the model engine determined on the installation that generated this file; the running platform re-checks it at every start (Model Registry page, GET /api/v1/models).",
+ "engine": {
+  "models_total": 63,
+  "models_servable": 33,
+  "weights": {
+   "efficientnet_b0": {
+    "ok": true,
+    "reason": null
+   },
+   "densenet121": {
+    "ok": true,
+    "reason": null
+   },
+   "resnet50": {
+    "ok": true,
+    "reason": null
+   }
+  },
+  "unet_liver_validation": true,
+  "ood_detector": true,
+  "liver_gate": true,
+  "engine_load_seconds": 4.11
+ },
+ "availability_categories": {
+  "available": "runs on a single uploaded slice",
+  "requires_context": "trained and loaded; needs neighbouring slices (2.5-D / 3-D / 5-slice input) \u2014 upload them too",
+  "missing_dependency": "trained, but a required upstream artifact is not in this installation",
+  "missing_weights": "trained, but its weight file is not in this installation",
+  "legacy": "superseded earlier version, kept for reproducibility (not run in comparisons)",
+  "not_trained": "registered architecture with no trained weights (never trained)",
+  "failed_integrity": "artifact present but failed its integrity / self test",
+  "non_deployable": "loaded but cannot produce a confident call (see reason)"
+ },
+ "families": {
+  "classical": [
+   {
+    "id": "v10_decision_tree_radiomics",
+    "name": "Decision Tree \u2014 V10, radiomics",
+    "architecture": "Decision Tree",
+    "version": "v10.1",
+    "source": "v10",
+    "role": "comparison",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-13T16:55:08+00:00",
+    "dataset_version": "lits_verified_v8@2a9a4887bb322cfc",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "available",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.6790128983308042,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": "radiomics",
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/v10/v10_decision_tree_radiomics",
+    "artifact_sha256": "efed31b13dbd10b011f6bdb598966f98603b123bcc8b1c8d5a3177c9fea25d8a",
+    "size_bytes": 17404,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 105.8,
+    "implementation": [
+     "src/v10/classical/models.py",
+     "src/v10/features/extract.py",
+     "src/v10/engine/v10_models.py"
+    ]
+   },
+   {
+    "id": "v10_extra_trees_radiomics",
+    "name": "Extra Trees \u2014 V10, radiomics",
+    "architecture": "Extra Trees",
+    "version": "v10.0",
+    "source": "v10",
+    "role": "comparison",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-12T15:52:45+00:00",
+    "dataset_version": "lits_verified_v8@2a9a4887bb322cfc",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "available",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.4699076194070929,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": "radiomics",
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/v10/v10_extra_trees_radiomics",
+    "artifact_sha256": "d45bd12edced9514daa7a1170f6f5a6addf69aa496fc55a888722cbe4e0242b0",
+    "size_bytes": 1378121,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 92.7,
+    "implementation": [
+     "src/v10/classical/models.py",
+     "src/v10/features/extract.py",
+     "src/v10/engine/v10_models.py"
+    ]
+   },
+   {
+    "id": "v10_hist_gb_radiomics",
+    "name": "Histogram Gradient Boosting \u2014 V10, radiomics",
+    "architecture": "Histogram Gradient Boosting",
+    "version": "v10.0",
+    "source": "v10",
+    "role": "comparison",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-12T15:56:25+00:00",
+    "dataset_version": "lits_verified_v8@2a9a4887bb322cfc",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "available",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.5870408910503581,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": "radiomics",
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/v10/v10_hist_gb_radiomics",
+    "artifact_sha256": "821e7f790aca013bf253c1178bde53ff0aa87a2357afd28d45344904996d5d94",
+    "size_bytes": 135577,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 19.9,
+    "implementation": [
+     "src/v10/classical/models.py",
+     "src/v10/features/extract.py",
+     "src/v10/engine/v10_models.py"
+    ]
+   },
+   {
+    "id": "v10_hybrid_twin_radiomics",
+    "name": "Classical twin (encoder -> matched classical layer -> head) \u2014 V10, radiomics",
+    "architecture": "Classical twin",
+    "version": "v10.0",
+    "source": "v10",
+    "role": "control",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-12T15:58:50+00:00",
+    "dataset_version": "lits_verified_v8@2a9a4887bb322cfc",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "available",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.7112201098175428,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": "radiomics",
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/v10/v10_hybrid_twin_radiomics",
+    "artifact_sha256": "58b88d79bd8b7e2ccab959cb1689f9ef1b87f1a3aaad0f0f10b566b33df37525",
+    "size_bytes": 18192,
+    "parameters": 93,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 1.0,
+    "implementation": [
+     "src/v10/classical/models.py",
+     "src/v10/features/extract.py",
+     "src/v10/engine/v10_models.py"
+    ]
+   },
+   {
+    "id": "v10_knn_radiomics",
+    "name": "K-Nearest Neighbours \u2014 V10, radiomics",
+    "architecture": "K-Nearest Neighbours",
+    "version": "v10.0",
+    "source": "v10",
+    "role": "comparison",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-12T15:52:46+00:00",
+    "dataset_version": "lits_verified_v8@2a9a4887bb322cfc",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "available",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.5146707908502224,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": "radiomics",
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/v10/v10_knn_radiomics",
+    "artifact_sha256": "0d01a86f94420efb7adecbe3fb9d245127c40be7f8bb29f65284211971805a2d",
+    "size_bytes": 682733,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 14.4,
+    "implementation": [
+     "src/v10/classical/models.py",
+     "src/v10/features/extract.py",
+     "src/v10/engine/v10_models.py"
+    ]
+   },
+   {
+    "id": "v10_logreg_pca4_radiomics",
+    "name": "Logistic Regression on PCA(4) [VQC control] \u2014 V10, radiomics",
+    "architecture": "Logistic Regression on PCA(4)",
+    "version": "v10.0",
+    "source": "v10",
+    "role": "control",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-12T15:56:26+00:00",
+    "dataset_version": "lits_verified_v8@2a9a4887bb322cfc",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "available",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.4300706986994666,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": "radiomics",
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/v10/v10_logreg_pca4_radiomics",
+    "artifact_sha256": "df3bd281dfb2cad51c717052541a012a3bcebe0f9e07436e4e1f6d179382942d",
+    "size_bytes": 11652,
+    "parameters": 5,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 1.8,
+    "implementation": [
+     "src/v10/classical/models.py",
+     "src/v10/features/extract.py",
+     "src/v10/engine/v10_models.py"
+    ]
+   },
+   {
+    "id": "v10_logreg_radiomics",
+    "name": "Logistic Regression \u2014 V10, radiomics",
+    "architecture": "Logistic Regression",
+    "version": "v10.0",
+    "source": "v10",
+    "role": "primary",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-12T15:52:23+00:00",
+    "dataset_version": "lits_verified_v8@2a9a4887bb322cfc",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "available",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.5395518367500428,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": "radiomics",
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/v10/v10_logreg_radiomics",
+    "artifact_sha256": "c4705f13d43cc3a91edcab70e6cae92a5232165c6e288a2d2bea7cd6e9143468",
+    "size_bytes": 12233,
+    "parameters": 41,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 1.6,
+    "implementation": [
+     "src/v10/classical/models.py",
+     "src/v10/features/extract.py",
+     "src/v10/engine/v10_models.py"
+    ]
+   },
+   {
+    "id": "v10_mlp_small_radiomics",
+    "name": "MLP (capacity-matched) \u2014 V10, radiomics",
+    "architecture": "MLP",
+    "version": "v10.0",
+    "source": "v10",
+    "role": "comparison",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-12T15:56:26+00:00",
+    "dataset_version": "lits_verified_v8@2a9a4887bb322cfc",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "available",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.5067128692495685,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": "radiomics",
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/v10/v10_mlp_small_radiomics",
+    "artifact_sha256": "2c5fbbce2627e599187dea29178c39ece0cae3e5b880608365eb8b716261b9e7",
+    "size_bytes": 21857,
+    "parameters": 337,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 3.0,
+    "implementation": [
+     "src/v10/classical/models.py",
+     "src/v10/features/extract.py",
+     "src/v10/engine/v10_models.py"
+    ]
+   },
+   {
+    "id": "v10_random_forest_radiomics",
+    "name": "Random Forest \u2014 V10, radiomics",
+    "architecture": "Random Forest",
+    "version": "v10.0",
+    "source": "v10",
+    "role": "comparison",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-12T15:52:39+00:00",
+    "dataset_version": "lits_verified_v8@2a9a4887bb322cfc",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "available",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.47411473657500913,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": "radiomics",
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/v10/v10_random_forest_radiomics",
+    "artifact_sha256": "d74c64bc035f0836f656e994f98819493eeaffac8d543b8180b28345468ca094",
+    "size_bytes": 837955,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 102.3,
+    "implementation": [
+     "src/v10/classical/models.py",
+     "src/v10/features/extract.py",
+     "src/v10/engine/v10_models.py"
+    ]
+   },
+   {
+    "id": "v10_svm_rbf_pca4_radiomics",
+    "name": "RBF-SVM on PCA(4) [quantum-kernel control] \u2014 V10, radiomics",
+    "architecture": "RBF-SVM on PCA(4)",
+    "version": "v10.0",
+    "source": "v10",
+    "role": "control",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-12T15:56:27+00:00",
+    "dataset_version": "lits_verified_v8@2a9a4887bb322cfc",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "available",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.42048202416277985,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": "radiomics",
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/v10/v10_svm_rbf_pca4_radiomics",
+    "artifact_sha256": "eebb011998618a890004d73ac86646aff5355b649ec45111218db159a0b77c93",
+    "size_bytes": 51295,
+    "parameters": 5796,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 2.9,
+    "implementation": [
+     "src/v10/classical/models.py",
+     "src/v10/features/extract.py",
+     "src/v10/engine/v10_models.py"
+    ]
+   },
+   {
+    "id": "v10_svm_rbf_radiomics",
+    "name": "SVM (RBF kernel) \u2014 V10, radiomics",
+    "architecture": "SVM",
+    "version": "v10.0",
+    "source": "v10",
+    "role": "comparison",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-12T15:52:45+00:00",
+    "dataset_version": "lits_verified_v8@2a9a4887bb322cfc",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "available",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.5879632376110845,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": "radiomics",
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/v10/v10_svm_rbf_radiomics",
+    "artifact_sha256": "c170ac418b5fa05cd1b84d1a68f9da0fb4113da106360803f71b6799bd622dac",
+    "size_bytes": 121702,
+    "parameters": 16196,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 2.8,
+    "implementation": [
+     "src/v10/classical/models.py",
+     "src/v10/features/extract.py",
+     "src/v10/engine/v10_models.py"
+    ]
+   },
+   {
+    "id": "logreg_radiomics_v9",
+    "name": "Logistic Regression (radiomics, V9)",
+    "architecture": "Logistic Regression",
+    "version": "v9",
+    "source": "v9",
+    "role": "baseline",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-06T10:03:11+00:00",
+    "dataset_version": "lits_verified_v8 (V9 fixed split)",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "available",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.633996789656117,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/classical/logreg_radiomics_v9",
+    "artifact_sha256": "df12665e391a1b37dc8406dd76c4c7cb081ae97fbab7e283c576a422efa61280",
+    "size_bytes": 4852,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 61.8,
+    "implementation": [
+     "src/classical/baselines.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "lr_control_v9_cnn",
+    "name": "Logistic regression (control for the VQC) (8 qubits, CNN features)",
+    "architecture": "Logistic Regression",
+    "version": "v9",
+    "source": "v9",
+    "role": "control",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-06T11:05:07+00:00",
+    "dataset_version": "lits_verified_v8 (V9 fixed split)",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "requires_context",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.5758597827247234,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 1,
+     "features": null,
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/classical/lr_control_v9_cnn",
+    "artifact_sha256": "524b458aea0d8d7cd3830aa3c3238a16b53268c237a153e978b420c177f3a3b3",
+    "size_bytes": 9736,
+    "parameters": 9,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 39.4,
+    "implementation": [
+     "src/classical/baselines.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "random_forest_radiomics_v9",
+    "name": "Random Forest (radiomics, V9)",
+    "architecture": "Random Forest",
+    "version": "v9",
+    "source": "v9",
+    "role": "baseline",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-06T10:03:06+00:00",
+    "dataset_version": "lits_verified_v8 (V9 fixed split)",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "available",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.49356245979572455,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/classical/random_forest_radiomics_v9",
+    "artifact_sha256": "28f2f0b362603793c26848cb97efbe6347ddc0c1f831796c99b038288d750608",
+    "size_bytes": 1441763,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 37.1,
+    "implementation": [
+     "src/classical/baselines.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "rbf_control_v9_cnn",
+    "name": "RBF-SVM (control for the quantum kernel) (4 qubits, CNN features)",
+    "architecture": "SVM (RBF)",
+    "version": "v9",
+    "source": "v9",
+    "role": "control",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-06T11:05:07+00:00",
+    "dataset_version": "lits_verified_v8 (V9 fixed split)",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "requires_context",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.7374510973295212,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 1,
+     "features": null,
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/classical/rbf_control_v9_cnn",
+    "artifact_sha256": "533e3625cb6140e08e49ed6c0e00aaeab5a27032a55545fdc74b70624df691da",
+    "size_bytes": 8667,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 37.8,
+    "implementation": [
+     "src/classical/baselines.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "svm_rbf_radiomics_v9",
+    "name": "RBF-SVM (radiomics, V9)",
+    "architecture": "SVM (RBF)",
+    "version": "v9",
+    "source": "v9",
+    "role": "baseline",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-06T10:02:29+00:00",
+    "dataset_version": "lits_verified_v8 (V9 fixed split)",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "available",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.7496744776610593,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/classical/svm_rbf_radiomics_v9",
+    "artifact_sha256": "0ebe70cd4a7f9bd2a1fe970d82a4fc0981dc384e757b7d03089fe80cdd7c34c0",
+    "size_bytes": 73267,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 26.5,
+    "implementation": [
+     "src/classical/baselines.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "twin_v9_cnn",
+    "name": "Classical twin (control for the hybrid) (8 qubits, CNN features)",
+    "architecture": "Classical twin (MLP)",
+    "version": "v9",
+    "source": "v9",
+    "role": "control",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-06T11:05:07+00:00",
+    "dataset_version": "lits_verified_v8 (V9 fixed split)",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "requires_context",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.8982449329922795,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 1,
+     "features": null,
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/classical/twin_v9_cnn",
+    "artifact_sha256": "f7ba604cade13cb8b7ac0688fbd1725e415ed0678c0de06fb0eabf2b55111b11",
+    "size_bytes": 9963,
+    "parameters": 609,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 36.4,
+    "implementation": [
+     "src/quantum/v9.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "hybrid_classical_twin_ft",
+    "name": "Classical twin of the hybrid (control, fine-tuned features)",
+    "architecture": "",
+    "version": "v8",
+    "source": "v9",
+    "role": null,
+    "training_status": "TRAINED (weights not in this installation)",
+    "training_date": null,
+    "dataset_version": null,
+    "execution_mode": null,
+    "availability": "missing_dependency",
+    "servable": false,
+    "reason": "ModelIntegrityError: needs the fine-tuned EfficientNet-B0 (efficientnet_b0_ft), which is not loaded",
+    "threshold": 0.9084336471993578,
+    "calibrated": null,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": null,
+     "formats": null
+    },
+    "artifact_path": "artifacts/classical/hybrid_classical_twin_ft",
+    "artifact_sha256": null,
+    "size_bytes": null,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 1.3,
+    "implementation": [
+     "src/hybrid/hybrid_model.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "lr_control_v9_eff",
+    "name": "Logistic regression (control for the VQC) (4 qubits, EFF features)",
+    "architecture": "",
+    "version": "v9",
+    "source": "v9",
+    "role": null,
+    "training_status": "TRAINED (weights not in this installation)",
+    "training_date": null,
+    "dataset_version": null,
+    "execution_mode": null,
+    "availability": "missing_dependency",
+    "servable": false,
+    "reason": "ModelIntegrityError: needs the fine-tuned EfficientNet-B0 (efficientnet_b0_ft), which is not loaded",
+    "threshold": 0.7217438798685749,
+    "calibrated": null,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": null,
+     "formats": null
+    },
+    "artifact_path": "artifacts/classical/lr_control_v9_eff",
+    "artifact_sha256": null,
+    "size_bytes": null,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 1.7,
+    "implementation": [
+     "src/classical/baselines.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "pca8_logreg_ft",
+    "name": "PCA-8 Logistic Regression (control, fine-tuned features)",
+    "architecture": "",
+    "version": "v8",
+    "source": "v9",
+    "role": null,
+    "training_status": "TRAINED (weights not in this installation)",
+    "training_date": null,
+    "dataset_version": null,
+    "execution_mode": null,
+    "availability": "missing_dependency",
+    "servable": false,
+    "reason": "ModelIntegrityError: needs the fine-tuned EfficientNet-B0 (efficientnet_b0_ft), which is not loaded",
+    "threshold": 0.8232113452947433,
+    "calibrated": null,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": null,
+     "formats": null
+    },
+    "artifact_path": "artifacts/classical/pca8_logreg_ft",
+    "artifact_sha256": null,
+    "size_bytes": null,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 1.7,
+    "implementation": [
+     "src/classical/baselines.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "pca8_svm_rbf_ft",
+    "name": "PCA-8 RBF-SVM (control, fine-tuned features)",
+    "architecture": "",
+    "version": "v8",
+    "source": "v9",
+    "role": null,
+    "training_status": "TRAINED (weights not in this installation)",
+    "training_date": null,
+    "dataset_version": null,
+    "execution_mode": null,
+    "availability": "missing_dependency",
+    "servable": false,
+    "reason": "ModelIntegrityError: needs the fine-tuned EfficientNet-B0 (efficientnet_b0_ft), which is not loaded",
+    "threshold": 0.787239192255994,
+    "calibrated": null,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": null,
+     "formats": null
+    },
+    "artifact_path": "artifacts/classical/pca8_svm_rbf_ft",
+    "artifact_sha256": null,
+    "size_bytes": null,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 1.2,
+    "implementation": [
+     "src/classical/baselines.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "rbf_control_v9_eff",
+    "name": "RBF-SVM (control for the quantum kernel) (4 qubits, EFF features)",
+    "architecture": "",
+    "version": "v9",
+    "source": "v9",
+    "role": null,
+    "training_status": "TRAINED (weights not in this installation)",
+    "training_date": null,
+    "dataset_version": null,
+    "execution_mode": null,
+    "availability": "missing_dependency",
+    "servable": false,
+    "reason": "ModelIntegrityError: needs the fine-tuned EfficientNet-B0 (efficientnet_b0_ft), which is not loaded",
+    "threshold": 0.748328152017497,
+    "calibrated": null,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": null,
+     "formats": null
+    },
+    "artifact_path": "artifacts/classical/rbf_control_v9_eff",
+    "artifact_sha256": null,
+    "size_bytes": null,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 1.6,
+    "implementation": [
+     "src/classical/baselines.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "twin_v9_eff",
+    "name": "Classical twin (control for the hybrid) (8 qubits, EFF features)",
+    "architecture": "",
+    "version": "v9",
+    "source": "v9",
+    "role": null,
+    "training_status": "TRAINED (weights not in this installation)",
+    "training_date": null,
+    "dataset_version": null,
+    "execution_mode": null,
+    "availability": "missing_dependency",
+    "servable": false,
+    "reason": "ModelIntegrityError: needs the fine-tuned EfficientNet-B0 (efficientnet_b0_ft), which is not loaded",
+    "threshold": 0.8766410451360728,
+    "calibrated": null,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": null,
+     "formats": null
+    },
+    "artifact_path": "artifacts/classical/twin_v9_eff",
+    "artifact_sha256": null,
+    "size_bytes": null,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 2.0,
+    "implementation": [
+     "src/quantum/v9.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "hybrid_classical_twin",
+    "name": "Classical twin of the hybrid (control, ImageNet features)",
+    "architecture": "Classical twin (MLP)",
+    "version": "v9",
+    "source": "v9",
+    "role": "control",
+    "training_status": "PARTIALLY TRAINED",
+    "training_date": "2026-11-06T05:16:11+00:00",
+    "dataset_version": "lits_verified_v8 (V9 fixed split)",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "legacy",
+    "servable": false,
+    "reason": "V8-era model kept for reproducibility; not offered",
+    "threshold": 0.46238482973177103,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/classical/hybrid_classical_twin",
+    "artifact_sha256": "85b14abb4fd7ee0ebbf9479d5b30eef558ff3ac424944a8f6069aca22ddd62e4",
+    "size_bytes": 108627,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 63.3,
+    "implementation": [
+     "src/hybrid/hybrid_model.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "logreg_radiomics",
+    "name": "Logistic Regression (radiomics)",
+    "architecture": "Logistic Regression",
+    "version": "v9",
+    "source": "v9",
+    "role": "baseline",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-06T05:04:16+00:00",
+    "dataset_version": "lits_verified_v8 (V9 fixed split)",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "legacy",
+    "servable": false,
+    "reason": "V8-era model kept for reproducibility; not offered",
+    "threshold": 0.8201422096646406,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/classical/logreg_radiomics",
+    "artifact_sha256": "4c6e68d28890f4a806d871ae7251ab3ecc36dd8bc74e7ea659694b3235cd39cf",
+    "size_bytes": 4954,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 27.3,
+    "implementation": [
+     "src/classical/baselines.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "pca8_logreg",
+    "name": "PCA-8 Logistic Regression (control, ImageNet features)",
+    "architecture": "Logistic Regression",
+    "version": "v9",
+    "source": "v9",
+    "role": "control",
+    "training_status": "PARTIALLY TRAINED",
+    "training_date": "2026-11-06T05:16:11+00:00",
+    "dataset_version": "lits_verified_v8 (V9 fixed split)",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "legacy",
+    "servable": false,
+    "reason": "V8-era model kept for reproducibility; not offered",
+    "threshold": 0.5252844490314728,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/classical/pca8_logreg",
+    "artifact_sha256": "c31bc924795e06c6c69b79c83cc03acc62ff8e9a6ab40c8d80ebf958463b5548",
+    "size_bytes": 116892,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 86.7,
+    "implementation": [
+     "src/classical/baselines.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "pca8_svm_rbf",
+    "name": "PCA-8 RBF-SVM (control, ImageNet features)",
+    "architecture": "SVM (RBF)",
+    "version": "v9",
+    "source": "v9",
+    "role": "control",
+    "training_status": "PARTIALLY TRAINED",
+    "training_date": "2026-11-06T05:16:11+00:00",
+    "dataset_version": "lits_verified_v8 (V9 fixed split)",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "legacy",
+    "servable": false,
+    "reason": "V8-era model kept for reproducibility; not offered",
+    "threshold": 0.5383300164200041,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/classical/pca8_svm_rbf",
+    "artifact_sha256": "06c4efbfbb4a0b4ca0d3ba26c9f7638a64f2f0b59917335d962be4b82b0c53d7",
+    "size_bytes": 136344,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 66.3,
+    "implementation": [
+     "src/classical/baselines.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "random_forest_radiomics",
+    "name": "Random Forest (radiomics)",
+    "architecture": "Random Forest",
+    "version": "v9",
+    "source": "v9",
+    "role": "baseline",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-06T05:04:15+00:00",
+    "dataset_version": "lits_verified_v8 (V9 fixed split)",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "legacy",
+    "servable": false,
+    "reason": "V8-era model kept for reproducibility; not offered",
+    "threshold": 0.7441113338402167,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/classical/random_forest_radiomics",
+    "artifact_sha256": "e2ea0e88ace6114ec9c0ab9fc7d05a2aa098d1db34ebc4a2d4a46ca4559abbfc",
+    "size_bytes": 904279,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 36.9,
+    "implementation": [
+     "src/classical/baselines.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "svm_rbf_radiomics",
+    "name": "RBF-SVM (radiomics)",
+    "architecture": "SVM (RBF)",
+    "version": "v9",
+    "source": "v9",
+    "role": "baseline",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-06T05:04:09+00:00",
+    "dataset_version": "lits_verified_v8 (V9 fixed split)",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "legacy",
+    "servable": false,
+    "reason": "V8-era model kept for reproducibility; not offered",
+    "threshold": 0.7736622370437045,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/classical/svm_rbf_radiomics",
+    "artifact_sha256": "754e9cc3550b61d600a0a0bafb79dc2a8e852f4dbbe92d6dffeeb3262e255cfa",
+    "size_bytes": 53739,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 29.0,
+    "implementation": [
+     "src/classical/baselines.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   }
+  ],
+  "deep_learning": [
+   {
+    "id": "cnn25d_v9_a1_aug",
+    "name": "2.5-D CNN + CT augmentation (ablation a1)",
+    "architecture": "CNN (NumPy)",
+    "version": "v9",
+    "source": "v9",
+    "role": "ablation",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-06T09:48:32+00:00",
+    "dataset_version": "lits_verified_v8 (V9 fixed split)",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "requires_context",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.47901230968395214,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 1,
+     "features": null,
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/classical/cnn25d_v9_a1_aug",
+    "artifact_sha256": "9a55a0a77e0421911511db14a2ac7af1d8fd9cb27f606e9747e0ac6e0695f0e8",
+    "size_bytes": 443105,
+    "parameters": 106241,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 15.3,
+    "implementation": [
+     "src/classical/numpy_cnn.py",
+     "src/classical/nn.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "cnn25d_v9_a2_aug_focal",
+    "name": "2.5-D CNN + augmentation + focal loss (ablation a2)",
+    "architecture": "CNN (NumPy)",
+    "version": "v9",
+    "source": "v9",
+    "role": "ablation",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-06T09:55:01+00:00",
+    "dataset_version": "lits_verified_v8 (V9 fixed split)",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "requires_context",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.2776166101791103,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 1,
+     "features": null,
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/classical/cnn25d_v9_a2_aug_focal",
+    "artifact_sha256": "636ed65233c497c2c4dcf589374cc84990d2d382e6c500f2f25867afc99c927a",
+    "size_bytes": 445561,
+    "parameters": 106241,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 15.5,
+    "implementation": [
+     "src/classical/numpy_cnn.py",
+     "src/classical/nn.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "cnn25d_v9_a3_res_se",
+    "name": "2.5-D residual-SE CNN + augmentation (ablation a3)",
+    "architecture": "CNN (NumPy)",
+    "version": "v9",
+    "source": "v9",
+    "role": "ablation",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-06T10:19:13+00:00",
+    "dataset_version": "lits_verified_v8 (V9 fixed split)",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "requires_context",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.9692572071155312,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 1,
+     "features": null,
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/classical/cnn25d_v9_a3_res_se",
+    "artifact_sha256": "f6f68b8705c7e00f6057ee5f3f9a2c522ed6ef03965776b8328657ca4ad8a2e0",
+    "size_bytes": 1342897,
+    "parameters": 325501,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 46.0,
+    "implementation": [
+     "src/classical/numpy_cnn.py",
+     "src/classical/nn.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "cnn25d_v9_a4_res_se_focal",
+    "name": "2.5-D residual-SE CNN + augmentation + focal loss (ablation a4)",
+    "architecture": "CNN (NumPy)",
+    "version": "v9",
+    "source": "v9",
+    "role": "primary",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-06T10:46:48+00:00",
+    "dataset_version": "lits_verified_v8 (V9 fixed split)",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "requires_context",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.7000880587749253,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 1,
+     "features": null,
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/classical/cnn25d_v9_a4_res_se_focal",
+    "artifact_sha256": "eebf24030d50d337eec4e8b597a6f2e4c1433c44a8bf9c25edb9370163d15575",
+    "size_bytes": 1344424,
+    "parameters": 325501,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 44.9,
+    "implementation": [
+     "src/classical/numpy_cnn.py",
+     "src/classical/nn.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "cnn2d_v9",
+    "name": "2-D CNN, V9 recipe",
+    "architecture": "CNN (NumPy)",
+    "version": "v9",
+    "source": "v9",
+    "role": "ablation",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-06T10:57:30+00:00",
+    "dataset_version": "lits_verified_v8 (V9 fixed split)",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "available",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.3231583801286378,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/classical/cnn2d_v9",
+    "artifact_sha256": "8eeeec0a0e7a26ad0301e6e42c06b0f9c2815b8bacd4738e5241e2f2a56b8ba7",
+    "size_bytes": 1337139,
+    "parameters": 325181,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 46.0,
+    "implementation": [
+     "src/classical/numpy_cnn.py",
+     "src/classical/nn.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "cnn3d_v9",
+    "name": "3-D CNN (3x3x3 stem over 5 slices), V9 recipe",
+    "architecture": "CNN (NumPy)",
+    "version": "v9",
+    "source": "v9",
+    "role": "architecture",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-06T11:42:26+00:00",
+    "dataset_version": "lits_verified_v8 (V9 fixed split)",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "requires_context",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.7705961022340616,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 2,
+     "features": null,
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/classical/cnn3d_v9",
+    "artifact_sha256": "3987100371c85ad3d77fd18bf337d736b8e9595a996c8767511fc90994b85343",
+    "size_bytes": 1350024,
+    "parameters": 327757,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 62.8,
+    "implementation": [
+     "src/classical/numpy_cnn.py",
+     "src/classical/nn.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "cnn5s_v9",
+    "name": "5-slice 2.5-D CNN, V9 recipe",
+    "architecture": "CNN (NumPy)",
+    "version": "v9",
+    "source": "v9",
+    "role": "architecture",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-06T11:16:27+00:00",
+    "dataset_version": "lits_verified_v8 (V9 fixed split)",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "requires_context",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.45783048147401717,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 2,
+     "features": null,
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/classical/cnn5s_v9",
+    "artifact_sha256": "a67f0f3324cfe8df85ba9f0367c766838a24240edfe78ae323651f41bdb64e3d",
+    "size_bytes": 1342160,
+    "parameters": 325821,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 47.6,
+    "implementation": [
+     "src/classical/numpy_cnn.py",
+     "src/classical/nn.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "densenet121_ft_v9",
+    "name": "DenseNet-121 (fine-tuned, V9 CT recipe)",
+    "architecture": "DenseNet-121",
+    "version": "v9",
+    "source": "v9",
+    "role": "primary",
+    "training_status": "PARTIALLY TRAINED",
+    "training_date": "2026-11-06T10:51:24+00:00",
+    "dataset_version": "lits_verified_v8 (V9 fixed split)",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "available",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.7358271277244635,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/classical/densenet121_ft_v9",
+    "artifact_sha256": "82457d0230493570776492c3df501121bf466bb2034b8ac1dec2dd66ce485627",
+    "size_bytes": 2633838,
+    "parameters": 653057,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "DenseNet-121 ImageNet weights",
+      "ok": true,
+      "detail": "artifacts/weights/densenet121_ra-50efcf5c.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 607.7,
+    "implementation": [
+     "src/classical/backbones.py",
+     "src/classical/cnn_finetune.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "convnext_tiny_ft_v9",
+    "name": "convnext_tiny_ft_v9",
+    "architecture": "",
+    "version": "v9",
+    "source": "v9",
+    "role": null,
+    "training_status": "NOT TRAINED",
+    "training_date": null,
+    "dataset_version": null,
+    "execution_mode": null,
+    "availability": "not_trained",
+    "servable": false,
+    "reason": "ConvNeXt-Tiny: ImageNet weights not available offline (no network access)",
+    "threshold": null,
+    "calibrated": null,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": null,
+     "formats": null
+    },
+    "artifact_path": null,
+    "artifact_sha256": null,
+    "size_bytes": null,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": null,
+    "implementation": [
+     "src/classical/backbones.py",
+     "src/classical/cnn_finetune.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "efficientnet_b2_ft_v9",
+    "name": "efficientnet_b2_ft_v9",
+    "architecture": "",
+    "version": "v9",
+    "source": "v9",
+    "role": null,
+    "training_status": "NOT TRAINED",
+    "training_date": null,
+    "dataset_version": null,
+    "execution_mode": null,
+    "availability": "not_trained",
+    "servable": false,
+    "reason": "EfficientNet-B2: ImageNet weights not available offline (no network access)",
+    "threshold": null,
+    "calibrated": null,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": null,
+     "formats": null
+    },
+    "artifact_path": null,
+    "artifact_sha256": null,
+    "size_bytes": null,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": null,
+    "implementation": [
+     "src/classical/backbones.py",
+     "src/classical/cnn_finetune.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "efficientnet_b0_ft",
+    "name": "EfficientNet-B0 (fine-tuned)",
+    "architecture": "EFFICIENTNET-B0",
+    "version": "v8",
+    "source": "v9",
+    "role": null,
+    "training_status": "TRAINED (weights not in this installation)",
+    "training_date": null,
+    "dataset_version": null,
+    "execution_mode": null,
+    "availability": "missing_weights",
+    "servable": false,
+    "reason": "ModelIntegrityError: efficientnet_b0_ft: model.npz missing",
+    "threshold": 0.6565358777400924,
+    "calibrated": null,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": null,
+     "formats": null
+    },
+    "artifact_path": "artifacts/classical/efficientnet_b0_ft",
+    "artifact_sha256": null,
+    "size_bytes": null,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": null,
+    "implementation": [
+     "src/classical/backbones.py",
+     "src/classical/cnn_finetune.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "efficientnet_b0_ft_v9",
+    "name": "EfficientNet-B0 (fine-tuned, V9 CT recipe)",
+    "architecture": "EFFICIENTNET-B0",
+    "version": "v9",
+    "source": "v9",
+    "role": null,
+    "training_status": "TRAINED (weights not in this installation)",
+    "training_date": null,
+    "dataset_version": null,
+    "execution_mode": null,
+    "availability": "missing_weights",
+    "servable": false,
+    "reason": "ModelIntegrityError: efficientnet_b0_ft_v9: model.npz missing",
+    "threshold": 0.6683360823497756,
+    "calibrated": null,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": null,
+     "formats": null
+    },
+    "artifact_path": "artifacts/classical/efficientnet_b0_ft_v9",
+    "artifact_sha256": null,
+    "size_bytes": null,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": null,
+    "implementation": [
+     "src/classical/backbones.py",
+     "src/classical/cnn_finetune.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "resnet50_ft",
+    "name": "ResNet-50 (fine-tuned)",
+    "architecture": "RESNET50",
+    "version": "v8",
+    "source": "v9",
+    "role": null,
+    "training_status": "TRAINED (weights not in this installation)",
+    "training_date": null,
+    "dataset_version": null,
+    "execution_mode": null,
+    "availability": "missing_weights",
+    "servable": false,
+    "reason": "ModelIntegrityError: resnet50_ft: model.npz missing",
+    "threshold": 0.6170695613938418,
+    "calibrated": null,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": null,
+     "formats": null
+    },
+    "artifact_path": "artifacts/classical/resnet50_ft",
+    "artifact_sha256": null,
+    "size_bytes": null,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "ResNet-50 ImageNet weights",
+      "ok": true,
+      "detail": "artifacts/weights/resnet50_a1_0-14fe96d1.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": null,
+    "implementation": [
+     "src/classical/backbones.py",
+     "src/classical/cnn_finetune.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "resnet50_ft_v9",
+    "name": "ResNet-50 (fine-tuned, V9 CT recipe)",
+    "architecture": "RESNET50",
+    "version": "v9",
+    "source": "v9",
+    "role": null,
+    "training_status": "TRAINED (weights not in this installation)",
+    "training_date": null,
+    "dataset_version": null,
+    "execution_mode": null,
+    "availability": "missing_weights",
+    "servable": false,
+    "reason": "ModelIntegrityError: resnet50_ft_v9: model.npz missing",
+    "threshold": 0.723011884136431,
+    "calibrated": null,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": null,
+     "formats": null
+    },
+    "artifact_path": "artifacts/classical/resnet50_ft_v9",
+    "artifact_sha256": null,
+    "size_bytes": null,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "ResNet-50 ImageNet weights",
+      "ok": true,
+      "detail": "artifacts/weights/resnet50_a1_0-14fe96d1.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": null,
+    "implementation": [
+     "src/classical/backbones.py",
+     "src/classical/cnn_finetune.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "cnn25d_scratch",
+    "name": "2.5-D CNN (from scratch)",
+    "architecture": "CNN (NumPy)",
+    "version": "v9",
+    "source": "v9",
+    "role": "primary",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-06T05:36:06+00:00",
+    "dataset_version": "lits_verified_v8 (V9 fixed split)",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "legacy",
+    "servable": false,
+    "reason": "V8-era model kept for reproducibility; not offered",
+    "threshold": 0.6462901903845563,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 1,
+     "features": null,
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/classical/cnn25d_scratch",
+    "artifact_sha256": "6fecd3d9876d3c241f0b44423c47dda3e4779ef896f1e8517c09e13e736dcf5b",
+    "size_bytes": 442774,
+    "parameters": 106241,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 18.6,
+    "implementation": [
+     "src/classical/numpy_cnn.py",
+     "src/classical/nn.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "cnn2d_scratch",
+    "name": "2-D CNN (from scratch, ablation)",
+    "architecture": "CNN (NumPy)",
+    "version": "v9",
+    "source": "v9",
+    "role": "ablation",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-06T05:30:29+00:00",
+    "dataset_version": "lits_verified_v8 (V9 fixed split)",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "legacy",
+    "servable": false,
+    "reason": "V8-era model kept for reproducibility; not offered",
+    "threshold": 0.4639907087494962,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/classical/cnn2d_scratch",
+    "artifact_sha256": "85f3869bf5f7fa8d96fd6a0955c21ad86d0b4a772df6f0b17fc7bf04b2c67a7e",
+    "size_bytes": 442973,
+    "parameters": 105953,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 16.8,
+    "implementation": [
+     "src/classical/numpy_cnn.py",
+     "src/classical/nn.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "densenet121_ft",
+    "name": "DenseNet-121 (fine-tuned)",
+    "architecture": "DenseNet-121",
+    "version": "v9",
+    "source": "v9",
+    "role": "primary",
+    "training_status": "PARTIALLY TRAINED",
+    "training_date": "2026-11-06T05:36:54+00:00",
+    "dataset_version": "lits_verified_v8 (V9 fixed split)",
+    "execution_mode": "classical_cpu_numpy",
+    "availability": "legacy",
+    "servable": false,
+    "reason": "V8-era model kept for reproducibility; not offered",
+    "threshold": 0.7333670055359268,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/classical/densenet121_ft",
+    "artifact_sha256": "edeab770c75ff55602e674659d85d81bbb881e03cb0b97dfd04f525e3d07d741",
+    "size_bytes": 2633555,
+    "parameters": 653057,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "DenseNet-121 ImageNet weights",
+      "ok": true,
+      "detail": "artifacts/weights/densenet121_ra-50efcf5c.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 633.7,
+    "implementation": [
+     "src/classical/backbones.py",
+     "src/classical/cnn_finetune.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   }
+  ],
+  "quantum": [
+   {
+    "id": "v10_qksvm_radiomics",
+    "name": "Quantum kernel SVM (4 qubits, fidelity kernel) \u2014 V10, radiomics",
+    "architecture": "Quantum kernel SVM",
+    "version": "v10.0",
+    "source": "v10",
+    "role": "primary",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-12T15:57:59+00:00",
+    "dataset_version": "lits_verified_v8@2a9a4887bb322cfc",
+    "execution_mode": "custom_numpy_simulator",
+    "availability": "available",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.4067082416977141,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": "radiomics",
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/v10/v10_qksvm_radiomics",
+    "artifact_sha256": "ec997e6caaa59e7143aa3c5b4217f0070847bd76367f57f22aec35c56387259a",
+    "size_bytes": 60422,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 4.0,
+    "implementation": [
+     "src/v10/quantum/qksvm.py",
+     "src/v10/quantum/simulator.py",
+     "src/v10/features/extract.py",
+     "src/v10/engine/v10_models.py"
+    ]
+   },
+   {
+    "id": "v10_vqc_radiomics",
+    "name": "VQC (4 qubits, brickwork) \u2014 V10, radiomics",
+    "architecture": "VQC",
+    "version": "v10.0",
+    "source": "v10",
+    "role": "primary",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-12T15:57:15+00:00",
+    "dataset_version": "lits_verified_v8@2a9a4887bb322cfc",
+    "execution_mode": "custom_numpy_simulator",
+    "availability": "available",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.3865307362540398,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": "radiomics",
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/v10/v10_vqc_radiomics",
+    "artifact_sha256": "e2420c4ec3a4d89c8ff51fe985bf6e87cf5f07dc38c7b4c8e5bff7f3bf4658af",
+    "size_bytes": 14864,
+    "parameters": 17,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 1.6,
+    "implementation": [
+     "src/v10/quantum/vqc.py",
+     "src/v10/quantum/simulator.py",
+     "src/v10/features/extract.py",
+     "src/v10/engine/v10_models.py"
+    ]
+   },
+   {
+    "id": "qksvm_v9_cnn",
+    "name": "Quantum Kernel SVM (4 qubits, V9, CNN features)",
+    "architecture": "Quantum kernel SVM",
+    "version": "v9",
+    "source": "v9",
+    "role": "primary",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-06T11:05:07+00:00",
+    "dataset_version": "lits_verified_v8 (V9 fixed split)",
+    "execution_mode": "custom_numpy_simulator",
+    "availability": "requires_context",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.8368563492920039,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 1,
+     "features": null,
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/quantum/qksvm_v9_cnn",
+    "artifact_sha256": "304525b99dc281d05f57b42bdfa52417bd8c4643e205e5fa41a5519fb2a672e7",
+    "size_bytes": 9963,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 37.0,
+    "implementation": [
+     "src/quantum/v9.py",
+     "src/quantum/simulator.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "vqc_v9_cnn",
+    "name": "Variational Quantum Classifier (8 qubits, V9, CNN features)",
+    "architecture": "VQC",
+    "version": "v9",
+    "source": "v9",
+    "role": "primary",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-06T11:05:07+00:00",
+    "dataset_version": "lits_verified_v8 (V9 fixed split)",
+    "execution_mode": "custom_numpy_simulator",
+    "availability": "requires_context",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.602714170328922,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 1,
+     "features": null,
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/quantum/vqc_v9_cnn",
+    "artifact_sha256": "1fb4f7739f49aa28236a198c9f551c5a87f6b24842ff9e99cfff0f23b8ab561e",
+    "size_bytes": 11458,
+    "parameters": 57,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 38.3,
+    "implementation": [
+     "src/quantum/v9.py",
+     "src/quantum/simulator.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "qkernel_svm_8q_ft",
+    "name": "Quantum Kernel SVM (8 qubits, fine-tuned features)",
+    "architecture": "",
+    "version": "v8",
+    "source": "v9",
+    "role": null,
+    "training_status": "TRAINED (weights not in this installation)",
+    "training_date": null,
+    "dataset_version": null,
+    "execution_mode": null,
+    "availability": "missing_dependency",
+    "servable": false,
+    "reason": "ModelIntegrityError: needs the fine-tuned EfficientNet-B0 (efficientnet_b0_ft), which is not loaded",
+    "threshold": 0.7303334391491972,
+    "calibrated": null,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": null,
+     "formats": null
+    },
+    "artifact_path": "artifacts/quantum/qkernel_svm_8q_ft",
+    "artifact_sha256": null,
+    "size_bytes": null,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 70.1,
+    "implementation": [
+     "src/quantum/models.py",
+     "src/quantum/simulator.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "qksvm_v9_eff",
+    "name": "Quantum Kernel SVM (4 qubits, V9, EFF features)",
+    "architecture": "",
+    "version": "v9",
+    "source": "v9",
+    "role": null,
+    "training_status": "TRAINED (weights not in this installation)",
+    "training_date": null,
+    "dataset_version": null,
+    "execution_mode": null,
+    "availability": "missing_dependency",
+    "servable": false,
+    "reason": "ModelIntegrityError: needs the fine-tuned EfficientNet-B0 (efficientnet_b0_ft), which is not loaded",
+    "threshold": 0.8470249620913364,
+    "calibrated": null,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": null,
+     "formats": null
+    },
+    "artifact_path": "artifacts/quantum/qksvm_v9_eff",
+    "artifact_sha256": null,
+    "size_bytes": null,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 3.7,
+    "implementation": [
+     "src/quantum/v9.py",
+     "src/quantum/simulator.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "vqc_8q_ft",
+    "name": "Variational Quantum Classifier (8 qubits, fine-tuned features)",
+    "architecture": "",
+    "version": "v8",
+    "source": "v9",
+    "role": null,
+    "training_status": "TRAINED (weights not in this installation)",
+    "training_date": null,
+    "dataset_version": null,
+    "execution_mode": null,
+    "availability": "missing_dependency",
+    "servable": false,
+    "reason": "ModelIntegrityError: needs the fine-tuned EfficientNet-B0 (efficientnet_b0_ft), which is not loaded",
+    "threshold": 0.6169443844850474,
+    "calibrated": null,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": null,
+     "formats": null
+    },
+    "artifact_path": "artifacts/quantum/vqc_8q_ft",
+    "artifact_sha256": null,
+    "size_bytes": null,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 1.7,
+    "implementation": [
+     "src/quantum/models.py",
+     "src/quantum/simulator.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "vqc_v9_eff",
+    "name": "Variational Quantum Classifier (4 qubits, V9, EFF features)",
+    "architecture": "",
+    "version": "v9",
+    "source": "v9",
+    "role": null,
+    "training_status": "TRAINED (weights not in this installation)",
+    "training_date": null,
+    "dataset_version": null,
+    "execution_mode": null,
+    "availability": "missing_dependency",
+    "servable": false,
+    "reason": "ModelIntegrityError: needs the fine-tuned EfficientNet-B0 (efficientnet_b0_ft), which is not loaded",
+    "threshold": 0.7811364666420034,
+    "calibrated": null,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": null,
+     "formats": null
+    },
+    "artifact_path": "artifacts/quantum/vqc_v9_eff",
+    "artifact_sha256": null,
+    "size_bytes": null,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 1.5,
+    "implementation": [
+     "src/quantum/v9.py",
+     "src/quantum/simulator.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "qkernel_svm_8q",
+    "name": "Quantum Kernel SVM (8 qubits, ImageNet features)",
+    "architecture": "Quantum kernel SVM",
+    "version": "v9",
+    "source": "v9",
+    "role": "experiment",
+    "training_status": "PARTIALLY TRAINED",
+    "training_date": "2026-11-06T05:15:14+00:00",
+    "dataset_version": "lits_verified_v8 (V9 fixed split)",
+    "execution_mode": "custom_numpy_simulator",
+    "availability": "legacy",
+    "servable": false,
+    "reason": "V8-era model kept for reproducibility; not offered",
+    "threshold": 0.5680326837121076,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/quantum/qkernel_svm_8q",
+    "artifact_sha256": "2df84489f37aa279444b4c8cd8bfb844a4e84ce93014b7a9a0d56468ef82e9c2",
+    "size_bytes": 146296,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 210.5,
+    "implementation": [
+     "src/quantum/models.py",
+     "src/quantum/simulator.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "vqc_8q",
+    "name": "Variational Quantum Classifier (8 qubits, ImageNet features)",
+    "architecture": "VQC",
+    "version": "v9",
+    "source": "v9",
+    "role": "experiment",
+    "training_status": "PARTIALLY TRAINED",
+    "training_date": "2026-11-06T05:15:03+00:00",
+    "dataset_version": "lits_verified_v8 (V9 fixed split)",
+    "execution_mode": "custom_numpy_simulator",
+    "availability": "legacy",
+    "servable": false,
+    "reason": "V8-era model kept for reproducibility; not offered",
+    "threshold": 0.7462947132477086,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/quantum/vqc_8q",
+    "artifact_sha256": "8fd5e1cb43695ebe97f7bc3ddf125f377d09da78a30215c89edbd19426a2e634",
+    "size_bytes": 120205,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 69.4,
+    "implementation": [
+     "src/quantum/models.py",
+     "src/quantum/simulator.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   }
+  ],
+  "hybrid": [
+   {
+    "id": "v10_hybrid_feature_fusion_radiomics",
+    "name": "Hybrid feature fusion (VQC + classical branch) \u2014 V10, radiomics",
+    "architecture": "Hybrid feature fusion",
+    "version": "v10.0",
+    "source": "v10",
+    "role": "comparison",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-12T15:59:37+00:00",
+    "dataset_version": "lits_verified_v8@2a9a4887bb322cfc",
+    "execution_mode": "custom_numpy_simulator",
+    "availability": "available",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.6587311377448324,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": "radiomics",
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/v10/v10_hybrid_feature_fusion_radiomics",
+    "artifact_sha256": "b53f9cba233fb9d550ff9ea8d12f9a1854a7618b8bb96e766a4e7957b1f13cfc",
+    "size_bytes": 19529,
+    "parameters": 157,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 3.8,
+    "implementation": [
+     "src/v10/hybrid/models.py",
+     "src/v10/quantum/simulator.py",
+     "src/v10/features/extract.py",
+     "src/v10/engine/v10_models.py"
+    ]
+   },
+   {
+    "id": "v10_hybrid_no_fusion_radiomics",
+    "name": "Hybrid (encoder -> VQC -> head) \u2014 V10, radiomics",
+    "architecture": "Hybrid",
+    "version": "v10.0",
+    "source": "v10",
+    "role": "primary",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-12T15:58:49+00:00",
+    "dataset_version": "lits_verified_v8@2a9a4887bb322cfc",
+    "execution_mode": "custom_numpy_simulator",
+    "availability": "available",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.5398520547658867,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": "radiomics",
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/v10/v10_hybrid_no_fusion_radiomics",
+    "artifact_sha256": "465eab59ccb1f183e849f61df497186e57f297a42afbd46d63f5ec5eeab484ab",
+    "size_bytes": 18900,
+    "parameters": 85,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 1.5,
+    "implementation": [
+     "src/v10/hybrid/models.py",
+     "src/v10/quantum/simulator.py",
+     "src/v10/features/extract.py",
+     "src/v10/engine/v10_models.py"
+    ]
+   },
+   {
+    "id": "v10_late_fusion_radiomics",
+    "name": "Late fusion (LR + VQC) \u2014 V10, radiomics",
+    "architecture": "Late fusion",
+    "version": "v10.0",
+    "source": "v10",
+    "role": "comparison",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-12T16:00:57+00:00",
+    "dataset_version": "lits_verified_v8@2a9a4887bb322cfc",
+    "execution_mode": "custom_numpy_simulator",
+    "availability": "available",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.5695067055944555,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": "radiomics",
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/v10/v10_late_fusion_radiomics",
+    "artifact_sha256": "a11cca573f907cb2186a371345168712500efbd0fe25b2e9f309cd1a24e329cc",
+    "size_bytes": 16926,
+    "parameters": 66,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 2.8,
+    "implementation": [
+     "src/v10/hybrid/models.py",
+     "src/v10/quantum/simulator.py",
+     "src/v10/features/extract.py",
+     "src/v10/engine/v10_models.py"
+    ]
+   },
+   {
+    "id": "hybrid_v9_cnn",
+    "name": "Hybrid CNN + quantum layer (8 qubits, V9, CNN features)",
+    "architecture": "Hybrid quantum-classical",
+    "version": "v9",
+    "source": "v9",
+    "role": "primary",
+    "training_status": "TRAINED",
+    "training_date": "2026-11-06T11:05:07+00:00",
+    "dataset_version": "lits_verified_v8 (V9 fixed split)",
+    "execution_mode": "custom_numpy_simulator",
+    "availability": "requires_context",
+    "servable": true,
+    "reason": null,
+    "threshold": 0.9060232546529864,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 1,
+     "features": null,
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/hybrid/hybrid_v9_cnn",
+    "artifact_sha256": "1a089aa8c53024cda896ec5db6259392936b81ab75f0543e87aa84b1cd543e26",
+    "size_bytes": 9906,
+    "parameters": 585,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 38.6,
+    "implementation": [
+     "src/quantum/v9.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "hybrid_cnn_vqc_8q_ft",
+    "name": "Hybrid CNN + Quantum Layer (8 qubits, fine-tuned features)",
+    "architecture": "",
+    "version": "v8",
+    "source": "v9",
+    "role": null,
+    "training_status": "TRAINED (weights not in this installation)",
+    "training_date": null,
+    "dataset_version": null,
+    "execution_mode": null,
+    "availability": "missing_dependency",
+    "servable": false,
+    "reason": "ModelIntegrityError: needs the fine-tuned EfficientNet-B0 (efficientnet_b0_ft), which is not loaded",
+    "threshold": 0.7218580703587912,
+    "calibrated": null,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": null,
+     "formats": null
+    },
+    "artifact_path": "artifacts/hybrid/hybrid_cnn_vqc_8q_ft",
+    "artifact_sha256": null,
+    "size_bytes": null,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 1.8,
+    "implementation": [
+     "src/hybrid/hybrid_model.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "hybrid_v9_eff",
+    "name": "Hybrid CNN + quantum layer (8 qubits, V9, EFF features)",
+    "architecture": "",
+    "version": "v9",
+    "source": "v9",
+    "role": null,
+    "training_status": "TRAINED (weights not in this installation)",
+    "training_date": null,
+    "dataset_version": null,
+    "execution_mode": null,
+    "availability": "missing_dependency",
+    "servable": false,
+    "reason": "ModelIntegrityError: needs the fine-tuned EfficientNet-B0 (efficientnet_b0_ft), which is not loaded",
+    "threshold": 0.7814497552497197,
+    "calibrated": null,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": null,
+     "formats": null
+    },
+    "artifact_path": "artifacts/hybrid/hybrid_v9_eff",
+    "artifact_sha256": null,
+    "size_bytes": null,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 1.5,
+    "implementation": [
+     "src/quantum/v9.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   },
+   {
+    "id": "hybrid_cnn_vqc_8q",
+    "name": "Hybrid CNN + Quantum Layer (8 qubits, ImageNet features)",
+    "architecture": "Hybrid quantum-classical",
+    "version": "v9",
+    "source": "v9",
+    "role": "experiment",
+    "training_status": "PARTIALLY TRAINED",
+    "training_date": "2026-11-06T05:16:11+00:00",
+    "dataset_version": "lits_verified_v8 (V9 fixed split)",
+    "execution_mode": "custom_numpy_simulator",
+    "availability": "legacy",
+    "servable": false,
+    "reason": "V8-era model kept for reproducibility; not offered",
+    "threshold": 0.5657329394373339,
+    "calibrated": true,
+    "inputs": {
+     "context_slices_each_side": 0,
+     "features": null,
+     "patch_px": 96,
+     "formats": [
+      "png",
+      "jpeg",
+      "dicom",
+      "nifti"
+     ]
+    },
+    "artifact_path": "artifacts/hybrid/hybrid_cnn_vqc_8q",
+    "artifact_sha256": "78c794fc7b487cdf8993083cb8ede8b60a27558f3fafc8ce0acd6013e2968503",
+    "size_bytes": 108748,
+    "parameters": null,
+    "dependencies": [
+     {
+      "name": "EfficientNet-B0 ImageNet weights (OOD detector + liver gate front end)",
+      "ok": true,
+      "detail": "artifacts/weights/efficientnet_b0_ra-3dd342df.pth"
+     },
+     {
+      "name": "U-Net liver validation (unet25d_v9)",
+      "ok": true,
+      "detail": "optional: without it only the patch gate checks for liver",
+      "optional": true
+     }
+    ],
+    "load_ms": 72.3,
+    "implementation": [
+     "src/hybrid/hybrid_model.py",
+     "src/inference/registry.py",
+     "src/v10/engine/v9_adapter.py"
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,133 @@
+{
+  "name": "Hybrid CNN + Quantum Layer (8 qubits, ImageNet features)",
+  "kind": "hybrid",
+  "task": "Task A: tumour vs tumour-free liver tissue (96x96 px CT patch)",
+  "architecture": "EfficientNet-B0 (frozen, ImageNet) -> 1280-d -> trainable linear 1280->8 + tanh -> angles pi/2(1+tanh) -> 8-qubit circuit (RY re-uploading, 3 layers RY/RZ + CNOT ring) -> <Z_q> x8 -> linear readout",
+  "input": "frozen ImageNet EfficientNet-B0 GAP features (1280-d) of the 96x96 patch (feature extractor never trained on CT labels)",
+  "feature_source": "imagenet",
+  "labels": "LiTS expert masks via seongun/liver-tumor-classification (verified pixel-exact)",
+  "split_file": "data/manifests/split_v8.csv",
+  "validation_status": "held-out test split, research only",
+  "clinical_use": "NOT validated for clinical use",
+  "training": {
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 0.36553917480933945,
+        "val_loss": 0.6156051421304792,
+        "seconds": 6.2
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.25742383406502783,
+        "val_loss": 0.665429241283571,
+        "seconds": 12.9
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.25003740225886517,
+        "val_loss": 0.7318502007782364,
+        "seconds": 19.3
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.21123781852130166,
+        "val_loss": 0.7618715431219408,
+        "seconds": 25.4
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.2269461519014697,
+        "val_loss": 0.9261568982573672,
+        "seconds": 31.7
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.1902708744377942,
+        "val_loss": 0.6609225549583857,
+        "seconds": 37.8
+      },
+      {
+        "epoch": 7,
+        "train_loss": 0.18148233208152462,
+        "val_loss": 0.7003964204372372,
+        "seconds": 43.9
+      },
+      {
+        "epoch": 8,
+        "train_loss": 0.16527761404204994,
+        "val_loss": 0.8379686933279201,
+        "seconds": 50.0
+      },
+      {
+        "epoch": 9,
+        "train_loss": 0.1636192013392983,
+        "val_loss": 0.8710755341949581,
+        "seconds": 56.1
+      }
+    ],
+    "best_epoch": 1,
+    "train_seconds": 56.1,
+    "epochs_max": 60,
+    "batch": 64,
+    "lr": 0.01,
+    "l2": 0.001,
+    "patience": 8
+  },
+  "calibration": {
+    "mu": 0.3295445722828255,
+    "sd": 1.0845115300991472,
+    "a": 0.8267336094952689,
+    "b": 0.5305822701370742,
+    "min_slope": 0.001
+  },
+  "calibration_status": "platt_on_validation",
+  "threshold": 0.5657329394373339,
+  "threshold_rule": "Youden J on validation (calibrated probability)",
+  "validation_score_check": {
+    "constant_scores": false,
+    "ok": true
+  },
+  "inference_seconds_per_patch": 0.02075306619292588,
+  "family": "hybrid",
+  "quantum_backend": {
+    "execution": "simulator",
+    "simulator": "NumPy exact state-vector (src/quantum/simulator.py)",
+    "hardware": "none - no quantum hardware was used",
+    "shots": "exact expectation values (no shot noise)"
+  },
+  "qubits": 8,
+  "layers": 3,
+  "circuit_parameters": 48,
+  "model_id": "hybrid_cnn_vqc_8q",
+  "npz_sha256": "78c794fc7b487cdf8993083cb8ede8b60a27558f3fafc8ce0acd6013e2968503",
+  "status": "trained",
+  "saved_utc": "2026-11-06T05:16:11+00:00",
+  "test_summary": {
+    "auc": 0.6692938072997752,
+    "auc_ci95": [
+      0.6314028089923241,
+      0.8112292139077852
+    ],
+    "sensitivity": 0.5611702127659575,
+    "specificity": 0.7398373983739838,
+    "f1": 0.6482334869431644,
+    "accuracy": 0.6318327974276527,
+    "pr_auc": 0.7796665451993412,
+    "ece": 0.06765828464639792,
+    "brier": 0.22356687032341105,
+    "sensitivity_ci95": [
+      0.5,
+      0.7222222222222222
+    ],
+    "specificity_ci95": [
+      0.6857806357468774,
+      0.8194444444444444
+    ]
+  },
+  "validation_summary": {
+    "auc": 0.7148380355276908,
+    "sensitivity": 0.764367816091954,
+    "specificity": 0.6272727272727273
+  }
+}

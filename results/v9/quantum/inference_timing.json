@@ -1,0 +1,86 @@
+{
+  "vqc_v9_cnn": {
+    "head_inference_ms_per_patch": 0.4567,
+    "feature_ms_per_patch": 10.114,
+    "train_seconds": 53.4,
+    "parameters": 57,
+    "support_vectors": null
+  },
+  "lr_control_v9_cnn": {
+    "head_inference_ms_per_patch": 0.0002,
+    "feature_ms_per_patch": 10.114,
+    "train_seconds": 0.0,
+    "parameters": 9,
+    "support_vectors": null
+  },
+  "qksvm_v9_cnn": {
+    "head_inference_ms_per_patch": 0.0119,
+    "feature_ms_per_patch": 10.114,
+    "train_seconds": 0.5,
+    "parameters": null,
+    "support_vectors": 38
+  },
+  "rbf_control_v9_cnn": {
+    "head_inference_ms_per_patch": 0.0003,
+    "feature_ms_per_patch": 10.114,
+    "train_seconds": 0.1,
+    "parameters": null,
+    "support_vectors": null
+  },
+  "hybrid_v9_cnn": {
+    "head_inference_ms_per_patch": 0.6849,
+    "feature_ms_per_patch": 10.114,
+    "train_seconds": 51.3,
+    "parameters": 585,
+    "support_vectors": null
+  },
+  "twin_v9_cnn": {
+    "head_inference_ms_per_patch": 0.0002,
+    "feature_ms_per_patch": 10.114,
+    "train_seconds": 0.1,
+    "parameters": 609,
+    "support_vectors": null
+  },
+  "vqc_v9_eff": {
+    "head_inference_ms_per_patch": 0.0271,
+    "feature_ms_per_patch": 17.426,
+    "train_seconds": 4.7,
+    "parameters": 34,
+    "support_vectors": null
+  },
+  "lr_control_v9_eff": {
+    "head_inference_ms_per_patch": 0.0052,
+    "feature_ms_per_patch": 17.426,
+    "train_seconds": 0.0,
+    "parameters": 5,
+    "support_vectors": null
+  },
+  "qksvm_v9_eff": {
+    "head_inference_ms_per_patch": 0.0172,
+    "feature_ms_per_patch": 17.426,
+    "train_seconds": 0.6,
+    "parameters": null,
+    "support_vectors": 131
+  },
+  "rbf_control_v9_eff": {
+    "head_inference_ms_per_patch": 0.0072,
+    "feature_ms_per_patch": 17.426,
+    "train_seconds": 0.1,
+    "parameters": null,
+    "support_vectors": null
+  },
+  "hybrid_v9_eff": {
+    "head_inference_ms_per_patch": 0.5757,
+    "feature_ms_per_patch": 17.426,
+    "train_seconds": 114.6,
+    "parameters": 10313,
+    "support_vectors": null
+  },
+  "twin_v9_eff": {
+    "head_inference_ms_per_patch": 0.004,
+    "feature_ms_per_patch": 17.426,
+    "train_seconds": 0.7,
+    "parameters": 10337,
+    "support_vectors": null
+  }
+}

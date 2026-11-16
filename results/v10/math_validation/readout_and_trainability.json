@@ -1,0 +1,2077 @@
+{
+  "n_init": 200,
+  "qubits": [
+    2,
+    4,
+    6,
+    8
+  ],
+  "layers": [
+    1,
+    2,
+    3,
+    4,
+    6
+  ],
+  "observables": {
+    "v9_z0 (parity of qubits 1..n-1)": {
+      "rows": [
+        {
+          "qubits": 2,
+          "layers": 1,
+          "weights": 4,
+          "mean_var_all": 0.123919775817464,
+          "mean_var_live": 0.495679103269856,
+          "var_first_weight": 2.3042990992894503e-33,
+          "zero_variance_weights": 3,
+          "mean_grad_norm": 0.6331188008059879,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 2,
+          "weights": 8,
+          "mean_var_all": 0.09068332232274529,
+          "mean_var_live": 0.18136664464549057,
+          "var_first_weight": 0.2444944270494856,
+          "zero_variance_weights": 4,
+          "mean_grad_norm": 0.8219925554287235,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 3,
+          "weights": 12,
+          "mean_var_all": 0.07735721230668431,
+          "mean_var_live": 0.11603581846002647,
+          "var_first_weight": 0.09172594509242565,
+          "zero_variance_weights": 4,
+          "mean_grad_norm": 0.9390510884454091,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 4,
+          "weights": 16,
+          "mean_var_all": 0.08710278376190432,
+          "mean_var_live": 0.11613704501587245,
+          "var_first_weight": 0.14416295544976915,
+          "zero_variance_weights": 4,
+          "mean_grad_norm": 1.154877496150565,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 6,
+          "weights": 24,
+          "mean_var_all": 0.09229323203061013,
+          "mean_var_live": 0.11075187843673215,
+          "var_first_weight": 0.13910170002001748,
+          "zero_variance_weights": 4,
+          "mean_grad_norm": 1.4627798652936366,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 1,
+          "weights": 8,
+          "mean_var_all": 0.044945847944934975,
+          "mean_var_live": 0.1198555945198266,
+          "var_first_weight": 2.2618969968940132e-33,
+          "zero_variance_weights": 5,
+          "mean_grad_norm": 0.5605816999662061,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 2,
+          "weights": 16,
+          "mean_var_all": 0.024339618790344072,
+          "mean_var_live": 0.0354030818768641,
+          "var_first_weight": 0.05694499651287718,
+          "zero_variance_weights": 5,
+          "mean_grad_norm": 0.6017245798303567,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 3,
+          "weights": 24,
+          "mean_var_all": 0.025901128119712787,
+          "mean_var_live": 0.032717214467005616,
+          "var_first_weight": 0.03177456083760755,
+          "zero_variance_weights": 5,
+          "mean_grad_norm": 0.7700026045960435,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 4,
+          "weights": 32,
+          "mean_var_all": 0.02490867675204748,
+          "mean_var_live": 0.02952139466909331,
+          "var_first_weight": 0.03199905381458284,
+          "zero_variance_weights": 5,
+          "mean_grad_norm": 0.8851750579202391,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 6,
+          "weights": 48,
+          "mean_var_all": 0.026965138003210317,
+          "mean_var_live": 0.030100619166374305,
+          "var_first_weight": 0.03199250246082344,
+          "zero_variance_weights": 5,
+          "mean_grad_norm": 1.1343900254087176,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 1,
+          "weights": 12,
+          "mean_var_all": 0.013766879804243399,
+          "mean_var_live": 0.033040511530184155,
+          "var_first_weight": 1.2366857819128668e-33,
+          "zero_variance_weights": 7,
+          "mean_grad_norm": 0.3424564000726024,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 2,
+          "weights": 24,
+          "mean_var_all": 0.006999064293502766,
+          "mean_var_live": 0.009881031943768609,
+          "var_first_weight": 0.015631210719269317,
+          "zero_variance_weights": 7,
+          "mean_grad_norm": 0.3773902897993505,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 3,
+          "weights": 36,
+          "mean_var_all": 0.005913268268332765,
+          "mean_var_live": 0.0073406088848268795,
+          "var_first_weight": 0.007654095052193302,
+          "zero_variance_weights": 7,
+          "mean_grad_norm": 0.4473993385565372,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 4,
+          "weights": 48,
+          "mean_var_all": 0.006842266937385777,
+          "mean_var_live": 0.008010458853524811,
+          "var_first_weight": 0.007879199027266024,
+          "zero_variance_weights": 7,
+          "mean_grad_norm": 0.5669666686683997,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 6,
+          "weights": 72,
+          "mean_var_all": 0.007184200248185347,
+          "mean_var_live": 0.007957883351836077,
+          "var_first_weight": 0.006956078006999603,
+          "zero_variance_weights": 7,
+          "mean_grad_norm": 0.7167692844291629,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 1,
+          "weights": 16,
+          "mean_var_all": 0.003654967727682183,
+          "mean_var_live": 0.008354211948987847,
+          "var_first_weight": 1.138700160222712e-33,
+          "zero_variance_weights": 9,
+          "mean_grad_norm": 0.17328954549983294,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 2,
+          "weights": 32,
+          "mean_var_all": 0.0019074997888416535,
+          "mean_var_live": 0.0026539127496927354,
+          "var_first_weight": 0.004093843628793139,
+          "zero_variance_weights": 9,
+          "mean_grad_norm": 0.21419510632539943,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 3,
+          "weights": 48,
+          "mean_var_all": 0.0015958929340442523,
+          "mean_var_live": 0.001964175918823695,
+          "var_first_weight": 0.0017137068319472617,
+          "zero_variance_weights": 9,
+          "mean_grad_norm": 0.26452303274773314,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 4,
+          "weights": 64,
+          "mean_var_all": 0.0017907110937811005,
+          "mean_var_live": 0.002083736545490735,
+          "var_first_weight": 0.0021984606871119704,
+          "zero_variance_weights": 9,
+          "mean_grad_norm": 0.3346968533085351,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 6,
+          "weights": 96,
+          "mean_var_all": 0.0017689926148984358,
+          "mean_var_live": 0.0019519918509224123,
+          "var_first_weight": 0.0018837889200784333,
+          "zero_variance_weights": 9,
+          "mean_grad_norm": 0.411532416121718,
+          "n_init": 200
+        }
+      ],
+      "log_variance_slope_vs_qubits": {
+        "L1": {
+          "slope_log_var_per_qubit": -0.6769020971365147,
+          "factor_per_added_qubit": 0.5081888761113937
+        },
+        "L2": {
+          "slope_log_var_per_qubit": -0.6974819335068329,
+          "factor_per_added_qubit": 0.4978373142671524
+        },
+        "L3": {
+          "slope_log_var_per_qubit": -0.6865479009553112,
+          "factor_per_added_qubit": 0.5033105514148635
+        },
+        "L4": {
+          "slope_log_var_per_qubit": -0.6683095926696624,
+          "factor_per_added_qubit": 0.5125743052272858
+        },
+        "L6": {
+          "slope_log_var_per_qubit": -0.6722854428844536,
+          "factor_per_added_qubit": 0.5105404324317304
+        }
+      }
+    },
+    "v9_allz_mean (parities)": {
+      "rows": [
+        {
+          "qubits": 2,
+          "layers": 1,
+          "weights": 4,
+          "mean_var_all": 0.0591069321173851,
+          "mean_var_live": 0.1182138642347702,
+          "var_first_weight": 0.05985910882497212,
+          "zero_variance_weights": 2,
+          "mean_grad_norm": 0.42299556928624865,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 2,
+          "weights": 8,
+          "mean_var_all": 0.05237641682365618,
+          "mean_var_live": 0.06983522243154157,
+          "var_first_weight": 0.11659432154604786,
+          "zero_variance_weights": 2,
+          "mean_grad_norm": 0.5999691998897417,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 3,
+          "weights": 12,
+          "mean_var_all": 0.044500349676803184,
+          "mean_var_live": 0.05340041961216382,
+          "var_first_weight": 0.04954126094989921,
+          "zero_variance_weights": 2,
+          "mean_grad_norm": 0.6983044880531812,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 4,
+          "weights": 16,
+          "mean_var_all": 0.046599654923990014,
+          "mean_var_live": 0.05325674848456002,
+          "var_first_weight": 0.06767977780496738,
+          "zero_variance_weights": 2,
+          "mean_grad_norm": 0.8250065525216845,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 6,
+          "weights": 24,
+          "mean_var_all": 0.05174279591926198,
+          "mean_var_live": 0.056446686457376695,
+          "var_first_weight": 0.0697255913333052,
+          "zero_variance_weights": 2,
+          "mean_grad_norm": 1.0777243323855845,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 1,
+          "weights": 8,
+          "mean_var_all": 0.012550028572457819,
+          "mean_var_live": 0.025100057144915634,
+          "var_first_weight": 0.03167385147631291,
+          "zero_variance_weights": 4,
+          "mean_grad_norm": 0.2776542600828348,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 2,
+          "weights": 16,
+          "mean_var_all": 0.006826224558342674,
+          "mean_var_live": 0.009101632744456899,
+          "var_first_weight": 0.012213293874257639,
+          "zero_variance_weights": 4,
+          "mean_grad_norm": 0.31538041910565967,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 3,
+          "weights": 24,
+          "mean_var_all": 0.0060154431782192585,
+          "mean_var_live": 0.007218531813863111,
+          "var_first_weight": 0.009538264256010788,
+          "zero_variance_weights": 4,
+          "mean_grad_norm": 0.37250354604028474,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 4,
+          "weights": 32,
+          "mean_var_all": 0.006475627027604269,
+          "mean_var_live": 0.007400716602976308,
+          "var_first_weight": 0.007678625345017386,
+          "zero_variance_weights": 4,
+          "mean_grad_norm": 0.44641101405831973,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 6,
+          "weights": 48,
+          "mean_var_all": 0.006561266847801093,
+          "mean_var_live": 0.007157745652146648,
+          "var_first_weight": 0.0076362416714025605,
+          "zero_variance_weights": 4,
+          "mean_grad_norm": 0.5536237408984869,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 1,
+          "weights": 12,
+          "mean_var_all": 0.0037746743542804036,
+          "mean_var_live": 0.007549348708560807,
+          "var_first_weight": 0.014478074430931647,
+          "zero_variance_weights": 6,
+          "mean_grad_norm": 0.18642470767614036,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 2,
+          "weights": 24,
+          "mean_var_all": 0.0013419838575541305,
+          "mean_var_live": 0.0017893118100721734,
+          "var_first_weight": 0.002997912286108968,
+          "zero_variance_weights": 6,
+          "mean_grad_norm": 0.1673523649560818,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 3,
+          "weights": 36,
+          "mean_var_all": 0.0009898710846954163,
+          "mean_var_live": 0.0011878453016344996,
+          "var_first_weight": 0.0013403215295401006,
+          "zero_variance_weights": 6,
+          "mean_grad_norm": 0.1852440795754059,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 4,
+          "weights": 48,
+          "mean_var_all": 0.0011075955666942595,
+          "mean_var_live": 0.0012658235047934394,
+          "var_first_weight": 0.0011872126964232465,
+          "zero_variance_weights": 6,
+          "mean_grad_norm": 0.22796217919679357,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 6,
+          "weights": 72,
+          "mean_var_all": 0.0011357440170328729,
+          "mean_var_live": 0.0012389934731267703,
+          "var_first_weight": 0.0011436827211254647,
+          "zero_variance_weights": 6,
+          "mean_grad_norm": 0.2841762241580293,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 1,
+          "weights": 16,
+          "mean_var_all": 0.0012931823840103703,
+          "mean_var_live": 0.002586364768020741,
+          "var_first_weight": 0.006913594332235783,
+          "zero_variance_weights": 8,
+          "mean_grad_norm": 0.12741252289237465,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 2,
+          "weights": 32,
+          "mean_var_all": 0.0004179130754897935,
+          "mean_var_live": 0.0005572174339863912,
+          "var_first_weight": 0.001500491095041163,
+          "zero_variance_weights": 8,
+          "mean_grad_norm": 0.10556619201322562,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 3,
+          "weights": 48,
+          "mean_var_all": 0.00020623194610064612,
+          "mean_var_live": 0.00024747833532077536,
+          "var_first_weight": 0.0005240569267601918,
+          "zero_variance_weights": 8,
+          "mean_grad_norm": 0.09486712024229714,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 4,
+          "weights": 64,
+          "mean_var_all": 0.0002167737053365829,
+          "mean_var_live": 0.0002477413775275233,
+          "var_first_weight": 0.00026293379704936447,
+          "zero_variance_weights": 8,
+          "mean_grad_norm": 0.11652258419319392,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 6,
+          "weights": 96,
+          "mean_var_all": 0.0002142486853764738,
+          "mean_var_live": 0.00023372583859251688,
+          "var_first_weight": 0.0002410526855243807,
+          "zero_variance_weights": 8,
+          "mean_grad_norm": 0.14313785755495734,
+          "n_init": 200
+        }
+      ],
+      "log_variance_slope_vs_qubits": {
+        "L1": {
+          "slope_log_var_per_qubit": -0.6334067514749622,
+          "factor_per_added_qubit": 0.5307804802149959
+        },
+        "L2": {
+          "slope_log_var_per_qubit": -0.8059718745095463,
+          "factor_per_added_qubit": 0.44665362427785055
+        },
+        "L3": {
+          "slope_log_var_per_qubit": -0.8963631551736664,
+          "factor_per_added_qubit": 0.40805098254201083
+        },
+        "L4": {
+          "slope_log_var_per_qubit": -0.8938668622966605,
+          "factor_per_added_qubit": 0.40907086974214524
+        },
+        "L6": {
+          "slope_log_var_per_qubit": -0.9107302477714471,
+          "factor_per_added_qubit": 0.40223038891535967
+        }
+      }
+    },
+    "v10_local_z0": {
+      "rows": [
+        {
+          "qubits": 2,
+          "layers": 1,
+          "weights": 6,
+          "mean_var_all": 0.10132501341581553,
+          "mean_var_live": 0.12159001609897864,
+          "var_first_weight": 0.2574521153793706,
+          "zero_variance_weights": 1,
+          "mean_grad_norm": 0.7500513682677785,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 2,
+          "weights": 10,
+          "mean_var_all": 0.10415080457802894,
+          "mean_var_live": 0.11572311619780994,
+          "var_first_weight": 0.19062367512754208,
+          "zero_variance_weights": 1,
+          "mean_grad_norm": 0.9932869114538171,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 3,
+          "weights": 14,
+          "mean_var_all": 0.10064558782709689,
+          "mean_var_live": 0.10838755612148895,
+          "var_first_weight": 0.16977795485271907,
+          "zero_variance_weights": 1,
+          "mean_grad_norm": 1.165936127278267,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 4,
+          "weights": 18,
+          "mean_var_all": 0.10202868862791305,
+          "mean_var_live": 0.10803037619426087,
+          "var_first_weight": 0.1296914870820121,
+          "zero_variance_weights": 1,
+          "mean_grad_norm": 1.3327419978747832,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 6,
+          "weights": 26,
+          "mean_var_all": 0.1048417463629232,
+          "mean_var_live": 0.10903541621744013,
+          "var_first_weight": 0.14978007066532664,
+          "zero_variance_weights": 1,
+          "mean_grad_norm": 1.6270098806521842,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 1,
+          "weights": 12,
+          "mean_var_all": 0.034500167147166194,
+          "mean_var_live": 0.05914314368085633,
+          "var_first_weight": 0.019414389371680798,
+          "zero_variance_weights": 5,
+          "mean_grad_norm": 0.6129213213928975,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 2,
+          "weights": 20,
+          "mean_var_all": 0.019757374528581072,
+          "mean_var_live": 0.0263431660381081,
+          "var_first_weight": 0.036873355884686855,
+          "zero_variance_weights": 5,
+          "mean_grad_norm": 0.5978201609177557,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 3,
+          "weights": 28,
+          "mean_var_all": 0.021814811120349192,
+          "mean_var_live": 0.026557161363903358,
+          "var_first_weight": 0.033204978407673995,
+          "zero_variance_weights": 5,
+          "mean_grad_norm": 0.7707189609058017,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 4,
+          "weights": 36,
+          "mean_var_all": 0.025029500883944823,
+          "mean_var_live": 0.029066517155548824,
+          "var_first_weight": 0.02773849389813756,
+          "zero_variance_weights": 5,
+          "mean_grad_norm": 0.9417531993192841,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 6,
+          "weights": 52,
+          "mean_var_all": 0.0258858848400832,
+          "mean_var_live": 0.028639702376262257,
+          "var_first_weight": 0.03258586097878311,
+          "zero_variance_weights": 5,
+          "mean_grad_norm": 1.1545326442114285,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 1,
+          "weights": 18,
+          "mean_var_all": 0.013757510614911685,
+          "mean_var_live": 0.02751502122982337,
+          "var_first_weight": 0.0239753304048061,
+          "zero_variance_weights": 9,
+          "mean_grad_norm": 0.4594885492543818,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 2,
+          "weights": 30,
+          "mean_var_all": 0.005362901010422055,
+          "mean_var_live": 0.007661287157745793,
+          "var_first_weight": 0.011694626342800718,
+          "zero_variance_weights": 9,
+          "mean_grad_norm": 0.3641285909986495,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 3,
+          "weights": 42,
+          "mean_var_all": 0.004985260022802402,
+          "mean_var_live": 0.006344876392657603,
+          "var_first_weight": 0.008338349831389966,
+          "zero_variance_weights": 9,
+          "mean_grad_norm": 0.4448246134585736,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 4,
+          "weights": 54,
+          "mean_var_all": 0.005770414148297055,
+          "mean_var_live": 0.006924496977956464,
+          "var_first_weight": 0.006829204550447982,
+          "zero_variance_weights": 9,
+          "mean_grad_norm": 0.5528872739488527,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 6,
+          "weights": 78,
+          "mean_var_all": 0.006594280616470989,
+          "mean_var_live": 0.007454404175141116,
+          "var_first_weight": 0.008317367932675923,
+          "zero_variance_weights": 9,
+          "mean_grad_norm": 0.7147543470152362,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 1,
+          "weights": 24,
+          "mean_var_all": 0.007284836944931678,
+          "mean_var_live": 0.015894189698032753,
+          "var_first_weight": 0.025065618393545687,
+          "zero_variance_weights": 13,
+          "mean_grad_norm": 0.3689704504212241,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 2,
+          "weights": 40,
+          "mean_var_all": 0.0021112929604210425,
+          "mean_var_live": 0.0031278414228459884,
+          "var_first_weight": 0.009815101622267862,
+          "zero_variance_weights": 13,
+          "mean_grad_norm": 0.2504225430982594,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 3,
+          "weights": 56,
+          "mean_var_all": 0.0014772281244216927,
+          "mean_var_live": 0.0019238319759910417,
+          "var_first_weight": 0.003080084274133682,
+          "zero_variance_weights": 13,
+          "mean_grad_norm": 0.2721867372486896,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 4,
+          "weights": 72,
+          "mean_var_all": 0.001504750268662734,
+          "mean_var_live": 0.0018363054126053703,
+          "var_first_weight": 0.002764547294159064,
+          "zero_variance_weights": 13,
+          "mean_grad_norm": 0.3239399181476361,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 6,
+          "weights": 104,
+          "mean_var_all": 0.0015925042716463142,
+          "mean_var_live": 0.0018200048818815021,
+          "var_first_weight": 0.0019422210297077513,
+          "zero_variance_weights": 13,
+          "mean_grad_norm": 0.4061210726864999,
+          "n_init": 200
+        }
+      ],
+      "log_variance_slope_vs_qubits": {
+        "L1": {
+          "slope_log_var_per_qubit": -0.3434666164361199,
+          "factor_per_added_qubit": 0.7093071599500639
+        },
+        "L2": {
+          "slope_log_var_per_qubit": -0.6033800365745677,
+          "factor_per_added_qubit": 0.5469597641520096
+        },
+        "L3": {
+          "slope_log_var_per_qubit": -0.6762917314248922,
+          "factor_per_added_qubit": 0.5084991518576057
+        },
+        "L4": {
+          "slope_log_var_per_qubit": -0.6829245979119637,
+          "factor_per_added_qubit": 0.5051375058736419
+        },
+        "L6": {
+          "slope_log_var_per_qubit": -0.6812244812152647,
+          "factor_per_added_qubit": 0.505997029019302
+        }
+      }
+    },
+    "v10_local_mean_z": {
+      "rows": [
+        {
+          "qubits": 2,
+          "layers": 1,
+          "weights": 6,
+          "mean_var_all": 0.056764057661490064,
+          "mean_var_live": 0.056764057661490064,
+          "var_first_weight": 0.09439305040638594,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.5652889493316244,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 2,
+          "weights": 10,
+          "mean_var_all": 0.04850576823918454,
+          "mean_var_live": 0.04850576823918454,
+          "var_first_weight": 0.07470420707365542,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.6753320957312506,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 3,
+          "weights": 14,
+          "mean_var_all": 0.04998678203691366,
+          "mean_var_live": 0.04998678203691366,
+          "var_first_weight": 0.07101363831001525,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.8166826488955147,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 4,
+          "weights": 18,
+          "mean_var_all": 0.047902129434247515,
+          "mean_var_live": 0.047902129434247515,
+          "var_first_weight": 0.06208514378591354,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.8994459964761538,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 6,
+          "weights": 26,
+          "mean_var_all": 0.050373063449650826,
+          "mean_var_live": 0.050373063449650826,
+          "var_first_weight": 0.07078775323670113,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 1.1159810668093113,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 1,
+          "weights": 12,
+          "mean_var_all": 0.008117424691649338,
+          "mean_var_live": 0.008117424691649338,
+          "var_first_weight": 0.015295243283271144,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.3010960351859349,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 2,
+          "weights": 20,
+          "mean_var_all": 0.005428397832617077,
+          "mean_var_live": 0.005428397832617077,
+          "var_first_weight": 0.006871705425241613,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.32035449961315116,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 3,
+          "weights": 28,
+          "mean_var_all": 0.005406819264130637,
+          "mean_var_live": 0.005406819264130637,
+          "var_first_weight": 0.007437321084928002,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.38311839663772673,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 4,
+          "weights": 36,
+          "mean_var_all": 0.00626976152078958,
+          "mean_var_live": 0.00626976152078958,
+          "var_first_weight": 0.00801028718676,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.4687656264819303,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 6,
+          "weights": 52,
+          "mean_var_all": 0.006726460965881103,
+          "mean_var_live": 0.006726460965881103,
+          "var_first_weight": 0.007848913352552504,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.5836157543419243,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 1,
+          "weights": 18,
+          "mean_var_all": 0.0029046721393055654,
+          "mean_var_live": 0.0029046721393055654,
+          "var_first_weight": 0.007507210656891191,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.22181258894794648,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 2,
+          "weights": 30,
+          "mean_var_all": 0.001657503109995511,
+          "mean_var_live": 0.001657503109995511,
+          "var_first_weight": 0.0022551892755933566,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.21756296177737547,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 3,
+          "weights": 42,
+          "mean_var_all": 0.000991157066799327,
+          "mean_var_live": 0.000991157066799327,
+          "var_first_weight": 0.0015003366852918238,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.19989721894702875,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 4,
+          "weights": 54,
+          "mean_var_all": 0.0010009365288373643,
+          "mean_var_live": 0.0010009365288373643,
+          "var_first_weight": 0.0014515779646627385,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.23100353417275504,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 6,
+          "weights": 78,
+          "mean_var_all": 0.001037963710319054,
+          "mean_var_live": 0.001037963710319054,
+          "var_first_weight": 0.001356130092802349,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.2830460988574384,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 1,
+          "weights": 24,
+          "mean_var_all": 0.001328648599079481,
+          "mean_var_live": 0.001328648599079481,
+          "var_first_weight": 0.00373835827742282,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.1732227551549947,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 2,
+          "weights": 40,
+          "mean_var_all": 0.0007252423600692299,
+          "mean_var_live": 0.0007252423600692299,
+          "var_first_weight": 0.000957410916200222,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.1670483368860873,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 3,
+          "weights": 56,
+          "mean_var_all": 0.0003575866576605963,
+          "mean_var_live": 0.0003575866576605963,
+          "var_first_weight": 0.0004293332246627089,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.13884215053953197,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 4,
+          "weights": 72,
+          "mean_var_all": 0.0002507694752580554,
+          "mean_var_live": 0.0002507694752580554,
+          "var_first_weight": 0.0003068645220244077,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.1330946225936432,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 6,
+          "weights": 104,
+          "mean_var_all": 0.0001927604621777285,
+          "mean_var_live": 0.0001927604621777285,
+          "var_first_weight": 0.00025314384491257523,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.14136137663467324,
+          "n_init": 200
+        }
+      ],
+      "log_variance_slope_vs_qubits": {
+        "L1": {
+          "slope_log_var_per_qubit": -0.6145957716834407,
+          "factor_per_added_qubit": 0.5408594818447477
+        },
+        "L2": {
+          "slope_log_var_per_qubit": -0.689756402709827,
+          "factor_per_added_qubit": 0.5016982665201758
+        },
+        "L3": {
+          "slope_log_var_per_qubit": -0.8258475861352322,
+          "factor_per_added_qubit": 0.4378637079314014
+        },
+        "L4": {
+          "slope_log_var_per_qubit": -0.8795972833775673,
+          "factor_per_added_qubit": 0.41494998529421906
+        },
+        "L6": {
+          "slope_log_var_per_qubit": -0.9283039511011419,
+          "factor_per_added_qubit": 0.3952234605616041
+        }
+      }
+    },
+    "v10_nn_correlator_mean": {
+      "rows": [
+        {
+          "qubits": 2,
+          "layers": 1,
+          "weights": 6,
+          "mean_var_all": 0.1389605463293097,
+          "mean_var_live": 0.1389605463293097,
+          "var_first_weight": 0.09928840629444116,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.8835502671883957,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 2,
+          "weights": 10,
+          "mean_var_all": 0.1211346520214637,
+          "mean_var_live": 0.1211346520214637,
+          "var_first_weight": 0.11438542969473031,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 1.0777716968683606,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 3,
+          "weights": 14,
+          "mean_var_all": 0.11798914665518302,
+          "mean_var_live": 0.11798914665518302,
+          "var_first_weight": 0.13457765577340822,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 1.265545763841442,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 4,
+          "weights": 18,
+          "mean_var_all": 0.11353488524162321,
+          "mean_var_live": 0.11353488524162321,
+          "var_first_weight": 0.1213515020890994,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 1.4028698560691515,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 6,
+          "weights": 26,
+          "mean_var_all": 0.11820036149298117,
+          "mean_var_live": 0.11820036149298117,
+          "var_first_weight": 0.16506497955060723,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 1.7322721066371076,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 1,
+          "weights": 12,
+          "mean_var_all": 0.013225451116619685,
+          "mean_var_live": 0.013225451116619685,
+          "var_first_weight": 0.007620959274909784,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.38572332905276346,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 2,
+          "weights": 20,
+          "mean_var_all": 0.0073667640741305095,
+          "mean_var_live": 0.0073667640741305095,
+          "var_first_weight": 0.009512804566148912,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.37314418499480445,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 3,
+          "weights": 28,
+          "mean_var_all": 0.008885146378510114,
+          "mean_var_live": 0.008885146378510114,
+          "var_first_weight": 0.009465951572827206,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.49137436793511197,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 4,
+          "weights": 36,
+          "mean_var_all": 0.009068349338515655,
+          "mean_var_live": 0.009068349338515655,
+          "var_first_weight": 0.009139122688634049,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.564149726398758,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 6,
+          "weights": 52,
+          "mean_var_all": 0.009050690321015268,
+          "mean_var_live": 0.009050690321015268,
+          "var_first_weight": 0.010650237295477457,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.6789036464248577,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 1,
+          "weights": 18,
+          "mean_var_all": 0.004840161834248433,
+          "mean_var_live": 0.004840161834248433,
+          "var_first_weight": 0.0021420772587193338,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.2901206861456671,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 2,
+          "weights": 30,
+          "mean_var_all": 0.0016495639862748465,
+          "mean_var_live": 0.0016495639862748465,
+          "var_first_weight": 0.003123438526921667,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.21619612204335303,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 3,
+          "weights": 42,
+          "mean_var_all": 0.0013974904168534538,
+          "mean_var_live": 0.0013974904168534538,
+          "var_first_weight": 0.0013559428984476303,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.23886850196663012,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 4,
+          "weights": 54,
+          "mean_var_all": 0.0013071322649153086,
+          "mean_var_live": 0.0013071322649153086,
+          "var_first_weight": 0.0013686654069336945,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.26354647134012404,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 6,
+          "weights": 78,
+          "mean_var_all": 0.001327870705522615,
+          "mean_var_live": 0.001327870705522615,
+          "var_first_weight": 0.001584041052534452,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.3203315562218559,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 1,
+          "weights": 24,
+          "mean_var_all": 0.002624927208340981,
+          "mean_var_live": 0.002624927208340981,
+          "var_first_weight": 0.0010109796526380002,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.24850016043359596,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 2,
+          "weights": 40,
+          "mean_var_all": 0.0006090867797345208,
+          "mean_var_live": 0.0006090867797345208,
+          "var_first_weight": 0.0012218820864186913,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.15153775014320317,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 3,
+          "weights": 56,
+          "mean_var_all": 0.00042251907191178376,
+          "mean_var_live": 0.00042251907191178376,
+          "var_first_weight": 0.0004057118698724002,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.15146223810441578,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 4,
+          "weights": 72,
+          "mean_var_all": 0.0002625285810904913,
+          "mean_var_live": 0.0002625285810904913,
+          "var_first_weight": 0.000414678984012583,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.13645461613164672,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 6,
+          "weights": 104,
+          "mean_var_all": 0.00023364443581323332,
+          "mean_var_live": 0.00023364443581323332,
+          "var_first_weight": 0.0003186326271242227,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.15561405780683746,
+          "n_init": 200
+        }
+      ],
+      "log_variance_slope_vs_qubits": {
+        "L1": {
+          "slope_log_var_per_qubit": -0.6456302797501058,
+          "factor_per_added_qubit": 0.5243319621205432
+        },
+        "L2": {
+          "slope_log_var_per_qubit": -0.868727968930454,
+          "factor_per_added_qubit": 0.4194848077236874
+        },
+        "L3": {
+          "slope_log_var_per_qubit": -0.9373021436775382,
+          "factor_per_added_qubit": 0.39168311599157124
+        },
+        "L4": {
+          "slope_log_var_per_qubit": -1.0072735521461968,
+          "factor_per_added_qubit": 0.3652133585719585
+        },
+        "L6": {
+          "slope_log_var_per_qubit": -1.0299136155073838,
+          "factor_per_added_qubit": 0.357037801766378
+        }
+      }
+    },
+    "v10_global_parity": {
+      "rows": [
+        {
+          "qubits": 2,
+          "layers": 1,
+          "weights": 6,
+          "mean_var_all": 0.1389605463293097,
+          "mean_var_live": 0.1389605463293097,
+          "var_first_weight": 0.09928840629444116,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.8835502671883957,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 2,
+          "weights": 10,
+          "mean_var_all": 0.1211346520214637,
+          "mean_var_live": 0.1211346520214637,
+          "var_first_weight": 0.11438542969473031,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 1.0777716968683606,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 3,
+          "weights": 14,
+          "mean_var_all": 0.11798914665518302,
+          "mean_var_live": 0.11798914665518302,
+          "var_first_weight": 0.13457765577340822,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 1.265545763841442,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 4,
+          "weights": 18,
+          "mean_var_all": 0.11353488524162321,
+          "mean_var_live": 0.11353488524162321,
+          "var_first_weight": 0.1213515020890994,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 1.4028698560691515,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 6,
+          "weights": 26,
+          "mean_var_all": 0.11820036149298117,
+          "mean_var_live": 0.11820036149298117,
+          "var_first_weight": 0.16506497955060723,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 1.7322721066371076,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 1,
+          "weights": 12,
+          "mean_var_all": 0.03609999670529333,
+          "mean_var_live": 0.03609999670529333,
+          "var_first_weight": 0.032582784081986296,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.6420172923406207,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 2,
+          "weights": 20,
+          "mean_var_all": 0.03326109461866984,
+          "mean_var_live": 0.03326109461866984,
+          "var_first_weight": 0.027532061473643364,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.8028365277375791,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 3,
+          "weights": 28,
+          "mean_var_all": 0.03255233485397528,
+          "mean_var_live": 0.03255233485397528,
+          "var_first_weight": 0.033523011827049184,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.9450488678131055,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 4,
+          "weights": 36,
+          "mean_var_all": 0.031043625954569682,
+          "mean_var_live": 0.031043625954569682,
+          "var_first_weight": 0.029041501507807776,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 1.0520133201191875,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 6,
+          "weights": 52,
+          "mean_var_all": 0.030097428403620445,
+          "mean_var_live": 0.030097428403620445,
+          "var_first_weight": 0.026767634218226255,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 1.2472610393523653,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 1,
+          "weights": 18,
+          "mean_var_all": 0.010535514255112,
+          "mean_var_live": 0.010535514255112,
+          "var_first_weight": 0.007393947887289426,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.40808594071008214,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 2,
+          "weights": 30,
+          "mean_var_all": 0.009116139568953475,
+          "mean_var_live": 0.009116139568953475,
+          "var_first_weight": 0.0082201023949476,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.507309358431094,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 3,
+          "weights": 42,
+          "mean_var_all": 0.008246536162809544,
+          "mean_var_live": 0.008246536162809544,
+          "var_first_weight": 0.009094874375859457,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.583916121726648,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 4,
+          "weights": 54,
+          "mean_var_all": 0.007967031192732206,
+          "mean_var_live": 0.007967031192732206,
+          "var_first_weight": 0.00776482334265943,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.653953598578656,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 6,
+          "weights": 78,
+          "mean_var_all": 0.007949284841624606,
+          "mean_var_live": 0.007949284841624606,
+          "var_first_weight": 0.008158639140542667,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.786125545865855,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 1,
+          "weights": 24,
+          "mean_var_all": 0.002359825478871149,
+          "mean_var_live": 0.002359825478871149,
+          "var_first_weight": 0.0013131541307307548,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.2077788686354821,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 2,
+          "weights": 40,
+          "mean_var_all": 0.0026056910151808755,
+          "mean_var_live": 0.0026056910151808755,
+          "var_first_weight": 0.0025316082815858548,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.3051427999945588,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 3,
+          "weights": 56,
+          "mean_var_all": 0.0021234374495792455,
+          "mean_var_live": 0.0021234374495792455,
+          "var_first_weight": 0.0022865061693847417,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.34128529733259194,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 4,
+          "weights": 72,
+          "mean_var_all": 0.0020708520561356666,
+          "mean_var_live": 0.0020708520561356666,
+          "var_first_weight": 0.002146038156327709,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.3848212563408029,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 6,
+          "weights": 104,
+          "mean_var_all": 0.001988903731519135,
+          "mean_var_live": 0.001988903731519135,
+          "var_first_weight": 0.001967798752675598,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.45441959645221325,
+          "n_init": 200
+        }
+      ],
+      "log_variance_slope_vs_qubits": {
+        "L1": {
+          "slope_log_var_per_qubit": -0.6729174037238331,
+          "factor_per_added_qubit": 0.5102178927984569
+        },
+        "L2": {
+          "slope_log_var_per_qubit": -0.6405978254067967,
+          "factor_per_added_qubit": 0.5269772894422653
+        },
+        "L3": {
+          "slope_log_var_per_qubit": -0.6712862565156325,
+          "factor_per_added_qubit": 0.5110508124124455
+        },
+        "L4": {
+          "slope_log_var_per_qubit": -0.6686265796324472,
+          "factor_per_added_qubit": 0.5124118516042708
+        },
+        "L6": {
+          "slope_log_var_per_qubit": -0.6792875230247852,
+          "factor_per_added_qubit": 0.5069780739237764
+        }
+      }
+    },
+    "v10_brick_local_mean_z": {
+      "rows": [
+        {
+          "qubits": 2,
+          "layers": 1,
+          "weights": 6,
+          "mean_var_all": 0.056764057661490064,
+          "mean_var_live": 0.056764057661490064,
+          "var_first_weight": 0.09439305040638594,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.5652889493316244,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 2,
+          "weights": 10,
+          "mean_var_all": 0.04850576823918454,
+          "mean_var_live": 0.04850576823918454,
+          "var_first_weight": 0.07470420707365542,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.6753320957312506,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 3,
+          "weights": 14,
+          "mean_var_all": 0.04998678203691366,
+          "mean_var_live": 0.04998678203691366,
+          "var_first_weight": 0.07101363831001525,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.8166826488955147,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 4,
+          "weights": 18,
+          "mean_var_all": 0.047902129434247515,
+          "mean_var_live": 0.047902129434247515,
+          "var_first_weight": 0.06208514378591354,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.8994459964761538,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 6,
+          "weights": 26,
+          "mean_var_all": 0.050373063449650826,
+          "mean_var_live": 0.050373063449650826,
+          "var_first_weight": 0.07078775323670113,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 1.1159810668093113,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 1,
+          "weights": 12,
+          "mean_var_all": 0.011832094353806203,
+          "mean_var_live": 0.011832094353806203,
+          "var_first_weight": 0.031451647585670116,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.36978230564027453,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 2,
+          "weights": 20,
+          "mean_var_all": 0.008397574207927517,
+          "mean_var_live": 0.008397574207927517,
+          "var_first_weight": 0.016463937939097742,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.40427902903290014,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 3,
+          "weights": 28,
+          "mean_var_all": 0.00632018295805403,
+          "mean_var_live": 0.00632018295805403,
+          "var_first_weight": 0.01085503421419975,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.41443039356828265,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 4,
+          "weights": 36,
+          "mean_var_all": 0.005950090302519281,
+          "mean_var_live": 0.005950090302519281,
+          "var_first_weight": 0.010583215725335706,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.45712393140590524,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 6,
+          "weights": 52,
+          "mean_var_all": 0.0058702325876587675,
+          "mean_var_live": 0.0058702325876587675,
+          "var_first_weight": 0.008067001360690539,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.5454114435302734,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 1,
+          "weights": 18,
+          "mean_var_all": 0.004625106282131997,
+          "mean_var_live": 0.004625106282131997,
+          "var_first_weight": 0.011471384602659798,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.2839443561512639,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 2,
+          "weights": 30,
+          "mean_var_all": 0.0030134582800734892,
+          "mean_var_live": 0.0030134582800734892,
+          "var_first_weight": 0.006372757255111172,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.29659018332697784,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 3,
+          "weights": 42,
+          "mean_var_all": 0.001707076572259617,
+          "mean_var_live": 0.001707076572259617,
+          "var_first_weight": 0.00420627184727909,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.26369523621381347,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 4,
+          "weights": 54,
+          "mean_var_all": 0.001257004474129551,
+          "mean_var_live": 0.001257004474129551,
+          "var_first_weight": 0.0025913999411205572,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.25760160176234365,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 6,
+          "weights": 78,
+          "mean_var_all": 0.0009556408722945758,
+          "mean_var_live": 0.0009556408722945758,
+          "var_first_weight": 0.0015012931724993292,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.27125760360317935,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 1,
+          "weights": 24,
+          "mean_var_all": 0.0025381429910343862,
+          "mean_var_live": 0.0025381429910343862,
+          "var_first_weight": 0.006725829316302187,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.24348259714186923,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 2,
+          "weights": 40,
+          "mean_var_all": 0.0014392758127573285,
+          "mean_var_live": 0.0014392758127573285,
+          "var_first_weight": 0.003732668430365788,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.2372044875132277,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 3,
+          "weights": 56,
+          "mean_var_all": 0.0008099181855966115,
+          "mean_var_live": 0.0008099181855966115,
+          "var_first_weight": 0.0022531993793623154,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.21002459022762843,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 4,
+          "weights": 72,
+          "mean_var_all": 0.0005206786806797942,
+          "mean_var_live": 0.0005206786806797942,
+          "var_first_weight": 0.0010458931836264031,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.19100036230957915,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 6,
+          "weights": 104,
+          "mean_var_all": 0.0002444080699864249,
+          "mean_var_live": 0.0002444080699864249,
+          "var_first_weight": 0.0005459624773025417,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.1580411677071937,
+          "n_init": 200
+        }
+      ],
+      "log_variance_slope_vs_qubits": {
+        "L1": {
+          "slope_log_var_per_qubit": -0.5130864119656446,
+          "factor_per_added_qubit": 0.5986450592743198
+        },
+        "L2": {
+          "slope_log_var_per_qubit": -0.5788741231472294,
+          "factor_per_added_qubit": 0.5605290981726543
+        },
+        "L3": {
+          "slope_log_var_per_qubit": -0.6838353907703828,
+          "factor_per_added_qubit": 0.5046776396939786
+        },
+        "L4": {
+          "slope_log_var_per_qubit": -0.7560010637411294,
+          "factor_per_added_qubit": 0.4695403395731625
+        },
+        "L6": {
+          "slope_log_var_per_qubit": -0.8900192588864042,
+          "factor_per_added_qubit": 0.41064784405600857
+        }
+      }
+    },
+    "v10_brick_nn_correlator_mean": {
+      "rows": [
+        {
+          "qubits": 2,
+          "layers": 1,
+          "weights": 6,
+          "mean_var_all": 0.1389605463293097,
+          "mean_var_live": 0.1389605463293097,
+          "var_first_weight": 0.09928840629444116,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.8835502671883957,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 2,
+          "weights": 10,
+          "mean_var_all": 0.1211346520214637,
+          "mean_var_live": 0.1211346520214637,
+          "var_first_weight": 0.11438542969473031,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 1.0777716968683606,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 3,
+          "weights": 14,
+          "mean_var_all": 0.11798914665518302,
+          "mean_var_live": 0.11798914665518302,
+          "var_first_weight": 0.13457765577340822,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 1.265545763841442,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 4,
+          "weights": 18,
+          "mean_var_all": 0.11353488524162321,
+          "mean_var_live": 0.11353488524162321,
+          "var_first_weight": 0.1213515020890994,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 1.4028698560691515,
+          "n_init": 200
+        },
+        {
+          "qubits": 2,
+          "layers": 6,
+          "weights": 26,
+          "mean_var_all": 0.11820036149298117,
+          "mean_var_live": 0.11820036149298117,
+          "var_first_weight": 0.16506497955060723,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 1.7322721066371076,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 1,
+          "weights": 12,
+          "mean_var_all": 0.016629476132790078,
+          "mean_var_live": 0.016629476132790078,
+          "var_first_weight": 0.007831150241959017,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.43618346929536345,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 2,
+          "weights": 20,
+          "mean_var_all": 0.008548620224925016,
+          "mean_var_live": 0.008548620224925016,
+          "var_first_weight": 0.012027472075941674,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.39781442038910214,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 3,
+          "weights": 28,
+          "mean_var_all": 0.00880120791188407,
+          "mean_var_live": 0.00880120791188407,
+          "var_first_weight": 0.010702147878816501,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.48744389788960274,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 4,
+          "weights": 36,
+          "mean_var_all": 0.008695106777488422,
+          "mean_var_live": 0.008695106777488422,
+          "var_first_weight": 0.010560825394690228,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.5503547236558253,
+          "n_init": 200
+        },
+        {
+          "qubits": 4,
+          "layers": 6,
+          "weights": 52,
+          "mean_var_all": 0.008888701742068988,
+          "mean_var_live": 0.008888701742068988,
+          "var_first_weight": 0.010459300768843945,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.6710409690680085,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 1,
+          "weights": 18,
+          "mean_var_all": 0.0056410289039726174,
+          "mean_var_live": 0.0056410289039726174,
+          "var_first_weight": 0.002257104430371713,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.31403445749658987,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 2,
+          "weights": 30,
+          "mean_var_all": 0.00220594105300409,
+          "mean_var_live": 0.00220594105300409,
+          "var_first_weight": 0.0034275232344904366,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.25119996062579925,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 3,
+          "weights": 42,
+          "mean_var_all": 0.0015622901304389628,
+          "mean_var_live": 0.0015622901304389628,
+          "var_first_weight": 0.0021948111255981595,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.2506712995133186,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 4,
+          "weights": 54,
+          "mean_var_all": 0.001193877033754635,
+          "mean_var_live": 0.001193877033754635,
+          "var_first_weight": 0.0015707165106354976,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.25072243272716627,
+          "n_init": 200
+        },
+        {
+          "qubits": 6,
+          "layers": 6,
+          "weights": 78,
+          "mean_var_all": 0.0012301054762338054,
+          "mean_var_live": 0.0012301054762338054,
+          "var_first_weight": 0.0015520276432370358,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.307947971643203,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 1,
+          "weights": 24,
+          "mean_var_all": 0.0030958278476389835,
+          "mean_var_live": 0.0030958278476389835,
+          "var_first_weight": 0.0008750974278699995,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.2700639070569492,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 2,
+          "weights": 40,
+          "mean_var_all": 0.0010234221379583947,
+          "mean_var_live": 0.0010234221379583947,
+          "var_first_weight": 0.0014548948991998142,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.1981572470042923,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 3,
+          "weights": 56,
+          "mean_var_all": 0.0006207189470561592,
+          "mean_var_live": 0.0006207189470561592,
+          "var_first_weight": 0.0009047131575384491,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.18315918311898818,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 4,
+          "weights": 72,
+          "mean_var_all": 0.0003635906078335687,
+          "mean_var_live": 0.0003635906078335687,
+          "var_first_weight": 0.0005466164917975912,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.15905450070063754,
+          "n_init": 200
+        },
+        {
+          "qubits": 8,
+          "layers": 6,
+          "weights": 104,
+          "mean_var_all": 0.00022752772210836043,
+          "mean_var_live": 0.00022752772210836043,
+          "var_first_weight": 0.000372439474787468,
+          "zero_variance_weights": 0,
+          "mean_grad_norm": 0.15269925512712934,
+          "n_init": 200
+        }
+      ],
+      "log_variance_slope_vs_qubits": {
+        "L1": {
+          "slope_log_var_per_qubit": -0.6246757212463762,
+          "factor_per_added_qubit": 0.535435030574101
+        },
+        "L2": {
+          "slope_log_var_per_qubit": -0.7837933903568606,
+          "factor_per_added_qubit": 0.4566703923837198
+        },
+        "L3": {
+          "slope_log_var_per_qubit": -0.8735572384037503,
+          "factor_per_added_qubit": 0.4174638862620302
+        },
+        "L4": {
+          "slope_log_var_per_qubit": -0.9608532547660595,
+          "factor_per_added_qubit": 0.3825663201370052
+        },
+        "L6": {
+          "slope_log_var_per_qubit": -1.036813707599338,
+          "factor_per_added_qubit": 0.3545826880501661
+        }
+      }
+    }
+  },
+  "effective_readouts": {
+    "n4": {
+      "v9_measured_Zq_equivalent_before_ring": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "v10_measured_Zq": "local: the final trainable RY layer follows the entangler, so Z_q is not a parity of the inputs to it"
+    },
+    "n8": {
+      "v9_measured_Zq_equivalent_before_ring": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "v10_measured_Zq": "local: the final trainable RY layer follows the entangler, so Z_q is not a parity of the inputs to it"
+    }
+  },
+  "caution": "gradient variance at 2-8 qubits cannot establish or exclude a barren plateau; the fitted per-qubit factors describe this range only"
+}

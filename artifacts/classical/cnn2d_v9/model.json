@@ -1,0 +1,223 @@
+{
+  "name": "2-D CNN, V9 recipe",
+  "kind": "numpy_cnn",
+  "version": "v9",
+  "variant": "cnn2d_v9",
+  "recipe": "a4_res_se_focal",
+  "task": "Task A: tumour vs tumour-free liver tissue (96x96 px CT patch)",
+  "architecture": "input 1x64x64; residual block 1->16: 2x(conv3x3+BN) + squeeze-excitation, shortcut conv1x1+BN, ReLU (64x64); maxpool 2x2 -> 16x32x32; residual block 16->32: 2x(conv3x3+BN) + squeeze-excitation, shortcut conv1x1+BN, ReLU (32x32); maxpool 2x2 -> 32x16x16; residual block 32->64: 2x(conv3x3+BN) + squeeze-excitation, shortcut conv1x1+BN, ReLU (16x16); maxpool 2x2 -> 64x8x8; residual block 64->128: 2x(conv3x3+BN) + squeeze-excitation, shortcut conv1x1+BN, ReLU (8x8); maxpool 2x2 -> 128x4x4; global average pool -> 128; dropout 0.3; dense 128->64 + ReLU (embedding); dropout 0.3; dense 64->1 + sigmoid",
+  "input": "current slice only (64x64); per-channel standardisation from training data",
+  "input_slices": 1,
+  "labels": "LiTS expert masks via seongun/liver-tumor-classification (verified pixel-exact)",
+  "split_file": "data/manifests/split_v8.csv",
+  "validation_status": "held-out test split, research only",
+  "clinical_use": "NOT validated for clinical use",
+  "config": {
+    "in_channels": 1,
+    "image_size": 64,
+    "filters": [
+      16,
+      32,
+      64,
+      128
+    ],
+    "convs_per_block": 1,
+    "hidden": 64,
+    "dropout": 0.3,
+    "learning_rate": 0.002,
+    "weight_decay": 0.0001,
+    "batch_size": 32,
+    "max_epochs": 30,
+    "warmup_epochs": 2,
+    "min_lr_ratio": 0.05,
+    "patience": 6,
+    "class_weight": "balanced",
+    "augment_shift": 4,
+    "augment_rotate": 10.0,
+    "augment_intensity": 0.15,
+    "augment_flip": false,
+    "ema_decay": 0.0,
+    "seed": 42,
+    "residual": true,
+    "grad_clip": 0.0,
+    "schedule_epochs": null,
+    "se": true,
+    "stem3d": 0,
+    "focal_gamma": 2.0,
+    "augment_gamma": 0.3,
+    "augment_noise": 0.03,
+    "augment_blur": 0.3,
+    "early_stop": "auc"
+  },
+  "training": {
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 0.24564196714396075,
+        "lr": 0.001001,
+        "grad_norm": null,
+        "seconds": 39.63700612100001,
+        "train_acc": 0.8898250162022034,
+        "val_loss": 0.43699493654247173,
+        "val_acc": 0.7746478873239436,
+        "val_roc_auc": 0.9159352142110764
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.07271623557993082,
+        "lr": 0.002,
+        "grad_norm": null,
+        "seconds": 94.01103124899964,
+        "train_acc": 0.9708360337005832,
+        "val_loss": 0.39315081318938294,
+        "val_acc": 0.8380281690140845,
+        "val_roc_auc": 0.9758098223615466
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.0748351464624229,
+        "lr": 0.0019940265993985806,
+        "grad_norm": null,
+        "seconds": 149.05681838700002,
+        "train_acc": 0.9721322099805574,
+        "val_loss": 0.2957424425153382,
+        "val_acc": 0.8873239436619719,
+        "val_roc_auc": 0.974294670846395
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.0394727572048453,
+        "lr": 0.0019761815165727325,
+        "grad_norm": null,
+        "seconds": 203.05324253399976,
+        "train_acc": 0.9870382372002592,
+        "val_loss": 0.2828562131212292,
+        "val_acc": 0.852112676056338,
+        "val_roc_auc": 0.9942006269592477
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.02619311377448735,
+        "lr": 0.0019466891637929492,
+        "grad_norm": null,
+        "seconds": 256.99957783300033,
+        "train_acc": 0.9850939727802981,
+        "val_loss": 0.17575018193987893,
+        "val_acc": 0.9753521126760564,
+        "val_roc_auc": 0.9983281086729362
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.02545753606987178,
+        "lr": 0.001905920424507298,
+        "grad_norm": null,
+        "seconds": 315.48819071399976,
+        "train_acc": 0.9850939727802981,
+        "val_loss": 0.22207343492961246,
+        "val_acc": 0.9190140845070423,
+        "val_roc_auc": 0.9866248693834901
+      },
+      {
+        "epoch": 7,
+        "train_loss": 0.019456555698558156,
+        "lr": 0.0018543879892668701,
+        "grad_norm": null,
+        "seconds": 378.68488854600037,
+        "train_acc": 0.9825016202203499,
+        "val_loss": 0.1365200100258544,
+        "val_acc": 0.971830985915493,
+        "val_roc_auc": 0.9958725182863113
+      },
+      {
+        "epoch": 8,
+        "train_loss": 0.02589330857128535,
+        "lr": 0.0017927399083446285,
+        "grad_norm": null,
+        "seconds": 434.44449327799975,
+        "train_acc": 0.9922229423201555,
+        "val_loss": 0.258854903541621,
+        "val_acc": 0.8943661971830986,
+        "val_roc_auc": 0.990073145245559
+      },
+      {
+        "epoch": 9,
+        "train_loss": 0.023515868313181875,
+        "lr": 0.0017217514421272201,
+        "grad_norm": null,
+        "seconds": 489.3043788690002,
+        "train_acc": 0.9909267660401815,
+        "val_loss": 0.23466270559345073,
+        "val_acc": 0.9154929577464789,
+        "val_roc_auc": 0.982601880877743
+      },
+      {
+        "epoch": 10,
+        "train_loss": 0.020364801631256462,
+        "lr": 0.0016423153117657969,
+        "grad_norm": null,
+        "seconds": 543.3447728370002,
+        "train_acc": 0.9915748541801686,
+        "val_loss": 0.15868836279577123,
+        "val_acc": 0.9612676056338029,
+        "val_roc_auc": 0.9971264367816091
+      },
+      {
+        "epoch": 11,
+        "train_loss": 0.014825895279872945,
+        "lr": 0.0015554304726895698,
+        "grad_norm": null,
+        "seconds": 597.648427653,
+        "train_acc": 0.9935191186001296,
+        "val_loss": 0.13933898951331242,
+        "val_acc": 0.9577464788732394,
+        "val_roc_auc": 0.9972831765935214
+      }
+    ],
+    "best_epoch": 5,
+    "train_seconds": 614.4019842950001
+  },
+  "calibration": {
+    "mu": 1.1037527109614351,
+    "sd": 2.6370171955373367,
+    "a": 16.385591888583868,
+    "b": 6.275156878158034,
+    "min_slope": 0.001
+  },
+  "calibration_status": "platt_on_validation",
+  "threshold": 0.3231583801286378,
+  "threshold_rule": "Youden J on validation (calibrated probability)",
+  "validation_score_check": {
+    "constant_scores": false,
+    "ok": true
+  },
+  "inference_seconds_per_patch": 0.008849465620577812,
+  "family": "classical",
+  "threshold_high_sensitivity": 0.3231583801286378,
+  "threshold_high_sensitivity_rule": "highest validation specificity with validation sensitivity >= 0.98",
+  "trainable_parameters": 325181,
+  "validation_auc": 0.9983281086729362,
+  "validation_ece": 0.022108388661147164,
+  "training_status": "TRAINED",
+  "model_id": "cnn2d_v9",
+  "npz_sha256": "8eeeec0a0e7a26ad0301e6e42c06b0f9c2815b8bacd4738e5241e2f2a56b8ba7",
+  "status": "trained",
+  "saved_utc": "2026-11-06T10:57:30+00:00",
+  "role": "ablation",
+  "role_order": 2,
+  "test_summary": {
+    "auc": 0.99812964884968,
+    "auc_ci95": [
+      0.9956500840242039,
+      1.0
+    ],
+    "sensitivity": 0.9946808510638298,
+    "specificity": 0.8455284552845529,
+    "f1": 0.9492385786802031,
+    "accuracy": 0.9356913183279743,
+    "pr_auc": 0.9989341331602725,
+    "ece": 0.049651942186792725
+  },
+  "validation_summary": {
+    "auc": 0.9983281086729362
+  }
+}

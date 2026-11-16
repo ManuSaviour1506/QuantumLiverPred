@@ -1,0 +1,62 @@
+{
+ "family": "confirmatory",
+ "comparisons": {
+  "vqc vs logreg_pca4": {
+   "mean_difference": -0.015555930071124944,
+   "p_two_sided": 0.390625,
+   "units": 7,
+   "smallest_attainable_p": 0.015625,
+   "units_favouring_first": 2,
+   "units_favouring_second": 5,
+   "per_unit": {
+    "G01": -0.011930618862614262,
+    "G02": 0.03395061728395066,
+    "G04": -0.0014792899408284654,
+    "G05": 0.04140350877192989,
+    "G06+G07": -0.07577185078598303,
+    "G08+G09": -0.008278867102396448,
+    "G10": -0.08678500986193294
+   },
+   "p_holm": 0.78125,
+   "interpretation": "not significant: this is NOT evidence of equivalence"
+  },
+  "qksvm vs svm_rbf_pca4": {
+   "mean_difference": 0.04100838885456987,
+   "p_two_sided": 0.1875,
+   "units": 7,
+   "smallest_attainable_p": 0.015625,
+   "units_favouring_first": 4,
+   "units_favouring_second": 2,
+   "per_unit": {
+    "G01": 0.18159013735507357,
+    "G02": -0.004068462401795703,
+    "G04": 0.005424063116370781,
+    "G05": -0.02219298245614043,
+    "G06+G07": 0.06007502954930877,
+    "G08+G09": 0.06623093681917214,
+    "G10": 0.0
+   },
+   "p_holm": 0.5625,
+   "interpretation": "not significant: this is NOT evidence of equivalence"
+  },
+  "hybrid_no_fusion vs hybrid_twin": {
+   "mean_difference": -0.0012708239555854364,
+   "p_two_sided": 0.8125,
+   "units": 7,
+   "smallest_attainable_p": 0.015625,
+   "units_favouring_first": 2,
+   "units_favouring_second": 5,
+   "per_unit": {
+    "G01": -0.006057083422558063,
+    "G02": -0.0026655443322110006,
+    "G04": 0.009368836291913207,
+    "G05": 0.0748245614035088,
+    "G06+G07": -0.010746241385020339,
+    "G08+G09": -0.002614379084967311,
+    "G10": -0.07100591715976334
+   },
+   "p_holm": 0.8125,
+   "interpretation": "not significant: this is NOT evidence of equivalence"
+  }
+ }
+}

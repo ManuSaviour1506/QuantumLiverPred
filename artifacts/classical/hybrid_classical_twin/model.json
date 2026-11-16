@@ -1,0 +1,124 @@
+{
+  "name": "Classical twin of the hybrid (control, ImageNet features)",
+  "kind": "classical_twin",
+  "task": "Task A: tumour vs tumour-free liver tissue (96x96 px CT patch)",
+  "architecture": "EfficientNet-B0 (frozen, ImageNet) -> 1280-d -> trainable linear 1280->8 + tanh -> angles pi/2(1+tanh) -> dense 8->8 + tanh (replaces the quantum layer) -> linear readout",
+  "input": "frozen ImageNet EfficientNet-B0 GAP features (1280-d) of the 96x96 patch (feature extractor never trained on CT labels)",
+  "feature_source": "imagenet",
+  "labels": "LiTS expert masks via seongun/liver-tumor-classification (verified pixel-exact)",
+  "split_file": "data/manifests/split_v8.csv",
+  "validation_status": "held-out test split, research only",
+  "clinical_use": "NOT validated for clinical use",
+  "training": {
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 0.08473770848525736,
+        "val_loss": 0.6041233997326008,
+        "seconds": 0.0
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.024261309734444837,
+        "val_loss": 0.705533981850146,
+        "seconds": 0.1
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.02534555308447553,
+        "val_loss": 0.9174326922499236,
+        "seconds": 0.1
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.03270668961981967,
+        "val_loss": 1.0005568618501965,
+        "seconds": 0.1
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.01877141544280903,
+        "val_loss": 0.7945841771912285,
+        "seconds": 0.2
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.020755999331490756,
+        "val_loss": 1.1136742984517576,
+        "seconds": 0.2
+      },
+      {
+        "epoch": 7,
+        "train_loss": 0.012528355433227447,
+        "val_loss": 1.0483413677322255,
+        "seconds": 0.2
+      },
+      {
+        "epoch": 8,
+        "train_loss": 0.012229862801453585,
+        "val_loss": 0.9592759877994379,
+        "seconds": 0.3
+      },
+      {
+        "epoch": 9,
+        "train_loss": 0.011573530416468593,
+        "val_loss": 0.8594372467961747,
+        "seconds": 0.3
+      }
+    ],
+    "best_epoch": 1,
+    "train_seconds": 0.3,
+    "epochs_max": 60,
+    "batch": 64,
+    "lr": 0.01,
+    "l2": 0.001,
+    "patience": 8
+  },
+  "calibration": {
+    "mu": 0.45540933518683363,
+    "sd": 2.3242924854057887,
+    "a": 1.2404778489435542,
+    "b": 0.6005174211163233,
+    "min_slope": 0.001
+  },
+  "calibration_status": "platt_on_validation",
+  "threshold": 0.46238482973177103,
+  "threshold_rule": "Youden J on validation (calibrated probability)",
+  "validation_score_check": {
+    "constant_scores": false,
+    "ok": true
+  },
+  "inference_seconds_per_patch": 0.02001593607877849,
+  "family": "classical",
+  "model_id": "hybrid_classical_twin",
+  "npz_sha256": "85b14abb4fd7ee0ebbf9479d5b30eef558ff3ac424944a8f6069aca22ddd62e4",
+  "status": "trained",
+  "saved_utc": "2026-11-06T05:16:11+00:00",
+  "test_summary": {
+    "auc": 0.7334803667185608,
+    "auc_ci95": [
+      0.6875147310512211,
+      0.9398148148148148
+    ],
+    "sensitivity": 0.6143617021276596,
+    "specificity": 0.7520325203252033,
+    "f1": 0.6916167664670659,
+    "accuracy": 0.6688102893890675,
+    "pr_auc": 0.8229345721075166,
+    "ece": 0.09447997474492706,
+    "brier": 0.21797117900076318,
+    "sensitivity_ci95": [
+      0.5685418323173426,
+      0.8148148148148148
+    ],
+    "specificity_ci95": [
+      0.7019188596491227,
+      0.8854166666666666
+    ]
+  },
+  "validation_summary": {
+    "auc": 0.8353187042842215,
+    "sensitivity": 0.8448275862068966,
+    "specificity": 0.6727272727272727
+  }
+}

@@ -1,0 +1,898 @@
+{
+  "groups": {
+    "train": [
+      "G03",
+      "G04",
+      "G05",
+      "G06"
+    ],
+    "validation": [
+      "G02",
+      "G09",
+      "G10"
+    ],
+    "test": [
+      "G01",
+      "G07",
+      "G08"
+    ]
+  },
+  "intensity_median_per_group": {
+    "G03": {
+      "liver_median": 234.0,
+      "tumour_median": 155.0,
+      "contrast": 77.5,
+      "liver_iqr": 46.0,
+      "tumour_iqr": 49.5
+    },
+    "G04": {
+      "liver_median": 255.0,
+      "tumour_median": 195.0,
+      "contrast": 60.0,
+      "liver_iqr": 7.0,
+      "tumour_iqr": 51.0
+    },
+    "G05": {
+      "liver_median": 255.0,
+      "tumour_median": 190.0,
+      "contrast": 59.0,
+      "liver_iqr": 21.0,
+      "tumour_iqr": 100.0
+    },
+    "G06": {
+      "liver_median": 255.0,
+      "tumour_median": 178.0,
+      "contrast": 77.0,
+      "liver_iqr": 34.0,
+      "tumour_iqr": 95.0
+    },
+    "G02": {
+      "liver_median": 253.0,
+      "tumour_median": 200.0,
+      "contrast": 53.0,
+      "liver_iqr": 36.0,
+      "tumour_iqr": 68.0
+    },
+    "G09": {
+      "liver_median": 233.0,
+      "tumour_median": 135.5,
+      "contrast": 95.0,
+      "liver_iqr": 35.125,
+      "tumour_iqr": 54.0
+    },
+    "G10": {
+      "liver_median": 210.0,
+      "tumour_median": 170.0,
+      "contrast": 41.5,
+      "liver_iqr": 88.5,
+      "tumour_iqr": 91.25
+    },
+    "G01": {
+      "liver_median": 205.0,
+      "tumour_median": 130.0,
+      "contrast": 77.0,
+      "liver_iqr": 82.0,
+      "tumour_iqr": 75.0
+    },
+    "G07": {
+      "liver_median": 255.0,
+      "tumour_median": 136.0,
+      "contrast": 119.0,
+      "liver_iqr": 0.0,
+      "tumour_iqr": 53.0
+    },
+    "G08": {
+      "liver_median": 244.0,
+      "tumour_median": 195.0,
+      "contrast": 51.0,
+      "liver_iqr": 36.0,
+      "tumour_iqr": 60.0
+    }
+  },
+  "tumour_morphology_median_per_group": {
+    "G03": {
+      "lesions_per_slice": 2.0,
+      "tumour_cells": 52.0,
+      "tumour_share_of_liver": 0.2487
+    },
+    "G04": {
+      "lesions_per_slice": 1.0,
+      "tumour_cells": 119.0,
+      "tumour_share_of_liver": 0.2446
+    },
+    "G05": {
+      "lesions_per_slice": 2.0,
+      "tumour_cells": 103.0,
+      "tumour_share_of_liver": 0.3072
+    },
+    "G06": {
+      "lesions_per_slice": 2.0,
+      "tumour_cells": 131.0,
+      "tumour_share_of_liver": 0.2681
+    },
+    "G02": {
+      "lesions_per_slice": 3.0,
+      "tumour_cells": 121.0,
+      "tumour_share_of_liver": 0.2371
+    },
+    "G09": {
+      "lesions_per_slice": 1.0,
+      "tumour_cells": 134.0,
+      "tumour_share_of_liver": 0.3668
+    },
+    "G10": {
+      "lesions_per_slice": 1.0,
+      "tumour_cells": 41.0,
+      "tumour_share_of_liver": 0.264
+    },
+    "G01": {
+      "lesions_per_slice": 3.0,
+      "tumour_cells": 162.5,
+      "tumour_share_of_liver": 0.3972
+    },
+    "G07": {
+      "lesions_per_slice": 1.0,
+      "tumour_cells": 137.0,
+      "tumour_share_of_liver": 0.2091
+    },
+    "G08": {
+      "lesions_per_slice": 2.0,
+      "tumour_cells": 218.0,
+      "tumour_share_of_liver": 0.2319
+    },
+    "_lesions": {
+      "G03": {
+        "lesion_cells": 25.0,
+        "compactness": 1.4034
+      },
+      "G04": {
+        "lesion_cells": 119.0,
+        "compactness": 1.1474
+      },
+      "G05": {
+        "lesion_cells": 22.0,
+        "compactness": 1.481
+      },
+      "G06": {
+        "lesion_cells": 80.0,
+        "compactness": 1.331
+      },
+      "G02": {
+        "lesion_cells": 15.0,
+        "compactness": 1.8326
+      },
+      "G09": {
+        "lesion_cells": 130.0,
+        "compactness": 1.2175
+      },
+      "G10": {
+        "lesion_cells": 39.0,
+        "compactness": 1.3914
+      },
+      "G01": {
+        "lesion_cells": 28.5,
+        "compactness": 1.4673
+      },
+      "G07": {
+        "lesion_cells": 137.0,
+        "compactness": 1.2576
+      },
+      "G08": {
+        "lesion_cells": 20.0,
+        "compactness": 1.7453
+      }
+    }
+  },
+  "image_quality_median_per_group": {
+    "G03": {
+      "noise_sigma": 13.9238,
+      "sharpness": 9554.1313,
+      "body_fraction": 0.213,
+      "mean": 38.3583,
+      "saturated_fraction": 0.0602
+    },
+    "G04": {
+      "noise_sigma": 8.288,
+      "sharpness": 5260.4116,
+      "body_fraction": 0.4001,
+      "mean": 75.5868,
+      "saturated_fraction": 0.1318
+    },
+    "G05": {
+      "noise_sigma": 19.8912,
+      "sharpness": 20212.168,
+      "body_fraction": 0.3009,
+      "mean": 50.1683,
+      "saturated_fraction": 0.0836
+    },
+    "G06": {
+      "noise_sigma": 19.7254,
+      "sharpness": 13010.9395,
+      "body_fraction": 0.3551,
+      "mean": 64.1773,
+      "saturated_fraction": 0.1093
+    },
+    "G02": {
+      "noise_sigma": 15.5814,
+      "sharpness": 9521.0469,
+      "body_fraction": 0.2761,
+      "mean": 54.8923,
+      "saturated_fraction": 0.1036
+    },
+    "G09": {
+      "noise_sigma": 10.1113,
+      "sharpness": 4378.7266,
+      "body_fraction": 0.2691,
+      "mean": 44.8389,
+      "saturated_fraction": 0.0401
+    },
+    "G10": {
+      "noise_sigma": 26.0243,
+      "sharpness": 17622.7988,
+      "body_fraction": 0.3278,
+      "mean": 50.546,
+      "saturated_fraction": 0.0646
+    },
+    "G01": {
+      "noise_sigma": 28.8422,
+      "sharpness": 20721.2393,
+      "body_fraction": 0.2726,
+      "mean": 43.1019,
+      "saturated_fraction": 0.0532
+    },
+    "G07": {
+      "noise_sigma": 7.9565,
+      "sharpness": 5959.9487,
+      "body_fraction": 0.3408,
+      "mean": 66.9648,
+      "saturated_fraction": 0.1495
+    },
+    "G08": {
+      "noise_sigma": 11.6032,
+      "sharpness": 4344.1357,
+      "body_fraction": 0.5091,
+      "mean": 95.4819,
+      "saturated_fraction": 0.147
+    }
+  },
+  "tumour_slices_per_group": {
+    "G01": 116,
+    "G02": 33,
+    "G03": 14,
+    "G04": 13,
+    "G05": 79,
+    "G06": 178,
+    "G07": 8,
+    "G08": 5,
+    "G09": 12,
+    "G10": 18
+  },
+  "feature_shift_vs_training": {
+    "radiomics": {
+      "G03": {
+        "mahalanobis_median": 4.656,
+        "mean_abs_standardised_shift": 0.589,
+        "largest_shifts": [
+          {
+            "feature": "lbp_4",
+            "smd": 1.81
+          },
+          {
+            "feature": "lbp_7",
+            "smd": -1.35
+          },
+          {
+            "feature": "lbp_2",
+            "smd": 0.99
+          },
+          {
+            "feature": "p75",
+            "smd": -0.98
+          },
+          {
+            "feature": "lbp_9",
+            "smd": -0.97
+          }
+        ]
+      },
+      "G04": {
+        "mahalanobis_median": 5.296,
+        "mean_abs_standardised_shift": 0.682,
+        "largest_shifts": [
+          {
+            "feature": "glcm_contrast_d1",
+            "smd": -1.33
+          },
+          {
+            "feature": "grad_sd",
+            "smd": -1.29
+          },
+          {
+            "feature": "grad_p90",
+            "smd": -1.29
+          },
+          {
+            "feature": "glcm_dissimilarity_d1",
+            "smd": -1.26
+          },
+          {
+            "feature": "kurtosis",
+            "smd": 1.2
+          }
+        ]
+      },
+      "G05": {
+        "mahalanobis_median": 4.054,
+        "mean_abs_standardised_shift": 0.391,
+        "largest_shifts": [
+          {
+            "feature": "lbp_3",
+            "smd": -1.34
+          },
+          {
+            "feature": "lbp_6",
+            "smd": -1.25
+          },
+          {
+            "feature": "lbp_0",
+            "smd": 0.7
+          },
+          {
+            "feature": "grad_mean",
+            "smd": -0.65
+          },
+          {
+            "feature": "lbp_8",
+            "smd": 0.6
+          }
+        ]
+      },
+      "G06": {
+        "mahalanobis_median": 3.034,
+        "mean_abs_standardised_shift": 0.117,
+        "largest_shifts": [
+          {
+            "feature": "lbp_6",
+            "smd": 0.34
+          },
+          {
+            "feature": "lbp_3",
+            "smd": 0.34
+          },
+          {
+            "feature": "grad_mean",
+            "smd": 0.27
+          },
+          {
+            "feature": "grad_p90",
+            "smd": 0.26
+          },
+          {
+            "feature": "grad_sd",
+            "smd": 0.23
+          }
+        ]
+      },
+      "G02": {
+        "mahalanobis_median": 4.089,
+        "mean_abs_standardised_shift": 0.351,
+        "largest_shifts": [
+          {
+            "feature": "lbp_1",
+            "smd": 1.04
+          },
+          {
+            "feature": "lbp_9",
+            "smd": 0.99
+          },
+          {
+            "feature": "lbp_5",
+            "smd": -0.77
+          },
+          {
+            "feature": "grad_sd",
+            "smd": -0.74
+          },
+          {
+            "feature": "band_1",
+            "smd": -0.7
+          }
+        ]
+      },
+      "G09": {
+        "mahalanobis_median": 9.633,
+        "mean_abs_standardised_shift": 0.964,
+        "largest_shifts": [
+          {
+            "feature": "p90",
+            "smd": -2.86
+          },
+          {
+            "feature": "grad_sd",
+            "smd": -2.58
+          },
+          {
+            "feature": "grad_p90",
+            "smd": -2.21
+          },
+          {
+            "feature": "band_2",
+            "smd": 1.78
+          },
+          {
+            "feature": "glcm_contrast_d3",
+            "smd": -1.69
+          }
+        ]
+      },
+      "G10": {
+        "mahalanobis_median": 4.202,
+        "mean_abs_standardised_shift": 1.023,
+        "largest_shifts": [
+          {
+            "feature": "band_1",
+            "smd": 2.01
+          },
+          {
+            "feature": "glcm_dissimilarity_d3",
+            "smd": 1.65
+          },
+          {
+            "feature": "glcm_contrast_d3",
+            "smd": 1.63
+          },
+          {
+            "feature": "grad_mean",
+            "smd": 1.58
+          },
+          {
+            "feature": "p75",
+            "smd": -1.5
+          }
+        ]
+      },
+      "G01": {
+        "mahalanobis_median": 5.903,
+        "mean_abs_standardised_shift": 1.044,
+        "largest_shifts": [
+          {
+            "feature": "p90",
+            "smd": -3.04
+          },
+          {
+            "feature": "lbp_1",
+            "smd": 2.32
+          },
+          {
+            "feature": "p75",
+            "smd": -2.13
+          },
+          {
+            "feature": "lbp_5",
+            "smd": -1.99
+          },
+          {
+            "feature": "lbp_0",
+            "smd": 1.96
+          }
+        ]
+      },
+      "G07": {
+        "mahalanobis_median": 7.709,
+        "mean_abs_standardised_shift": 0.857,
+        "largest_shifts": [
+          {
+            "feature": "p90",
+            "smd": -2.02
+          },
+          {
+            "feature": "lbp_9",
+            "smd": -1.83
+          },
+          {
+            "feature": "glcm_ASM_d3",
+            "smd": 1.82
+          },
+          {
+            "feature": "glcm_ASM_d1",
+            "smd": 1.69
+          },
+          {
+            "feature": "kurtosis",
+            "smd": 1.68
+          }
+        ]
+      },
+      "G08": {
+        "mahalanobis_median": 5.677,
+        "mean_abs_standardised_shift": 0.578,
+        "largest_shifts": [
+          {
+            "feature": "grad_sd",
+            "smd": -1.78
+          },
+          {
+            "feature": "lbp_6",
+            "smd": 1.32
+          },
+          {
+            "feature": "lbp_4",
+            "smd": 1.21
+          },
+          {
+            "feature": "glcm_contrast_d3",
+            "smd": -1.13
+          },
+          {
+            "feature": "glcm_contrast_d1",
+            "smd": -1.12
+          }
+        ]
+      }
+    },
+    "imagenet_efficientnet": {
+      "G03": {
+        "mahalanobis_median": 4.462,
+        "mean_abs_standardised_shift": 0.402,
+        "largest_shifts": null
+      },
+      "G04": {
+        "mahalanobis_median": 3.949,
+        "mean_abs_standardised_shift": 0.239,
+        "largest_shifts": null
+      },
+      "G05": {
+        "mahalanobis_median": 4.014,
+        "mean_abs_standardised_shift": 0.177,
+        "largest_shifts": null
+      },
+      "G06": {
+        "mahalanobis_median": 3.631,
+        "mean_abs_standardised_shift": 0.061,
+        "largest_shifts": null
+      },
+      "G02": {
+        "mahalanobis_median": 3.302,
+        "mean_abs_standardised_shift": 0.193,
+        "largest_shifts": null
+      },
+      "G09": {
+        "mahalanobis_median": 4.048,
+        "mean_abs_standardised_shift": 0.409,
+        "largest_shifts": null
+      },
+      "G10": {
+        "mahalanobis_median": 3.391,
+        "mean_abs_standardised_shift": 0.243,
+        "largest_shifts": null
+      },
+      "G01": {
+        "mahalanobis_median": 3.23,
+        "mean_abs_standardised_shift": 0.153,
+        "largest_shifts": null
+      },
+      "G07": {
+        "mahalanobis_median": 3.197,
+        "mean_abs_standardised_shift": 0.202,
+        "largest_shifts": null
+      },
+      "G08": {
+        "mahalanobis_median": 3.354,
+        "mean_abs_standardised_shift": 0.227,
+        "largest_shifts": null
+      }
+    }
+  },
+  "v8_errors_per_test_scan": {
+    "cnn25d_scratch": {
+      "G01": {
+        "fn_rate": 0.0,
+        "fp_rate": 0.036,
+        "fn_rate_small_tumour_frac_lt_0.3": 0.0,
+        "n_pos": 337,
+        "n_neg": 194,
+        "mean_prob_tumour": 0.999,
+        "mean_prob_tumour_free": 0.073
+      },
+      "G07": {
+        "fn_rate": 0.0,
+        "fp_rate": 0.0,
+        "fn_rate_small_tumour_frac_lt_0.3": null,
+        "n_pos": 24,
+        "n_neg": 32,
+        "mean_prob_tumour": 1.0,
+        "mean_prob_tumour_free": 0.018
+      },
+      "G08": {
+        "fn_rate": 0.133,
+        "fp_rate": 0.0,
+        "fn_rate_small_tumour_frac_lt_0.3": 1.0,
+        "n_pos": 15,
+        "n_neg": 20,
+        "mean_prob_tumour": 0.86,
+        "mean_prob_tumour_free": 0.018
+      }
+    },
+    "efficientnet_b0_ft": {
+      "G01": {
+        "fn_rate": 0.353,
+        "fp_rate": 0.036,
+        "fn_rate_small_tumour_frac_lt_0.3": 0.348,
+        "n_pos": 337,
+        "n_neg": 194,
+        "mean_prob_tumour": 0.713,
+        "mean_prob_tumour_free": 0.121
+      },
+      "G07": {
+        "fn_rate": 0.333,
+        "fp_rate": 0.062,
+        "fn_rate_small_tumour_frac_lt_0.3": null,
+        "n_pos": 24,
+        "n_neg": 32,
+        "mean_prob_tumour": 0.708,
+        "mean_prob_tumour_free": 0.095
+      },
+      "G08": {
+        "fn_rate": 0.2,
+        "fp_rate": 0.0,
+        "fn_rate_small_tumour_frac_lt_0.3": 0.0,
+        "n_pos": 15,
+        "n_neg": 20,
+        "mean_prob_tumour": 0.779,
+        "mean_prob_tumour_free": 0.059
+      }
+    },
+    "densenet121_ft": {
+      "G01": {
+        "fn_rate": 0.466,
+        "fp_rate": 0.046,
+        "fn_rate_small_tumour_frac_lt_0.3": 0.449,
+        "n_pos": 337,
+        "n_neg": 194,
+        "mean_prob_tumour": 0.656,
+        "mean_prob_tumour_free": 0.188
+      },
+      "G07": {
+        "fn_rate": 0.375,
+        "fp_rate": 0.0,
+        "fn_rate_small_tumour_frac_lt_0.3": null,
+        "n_pos": 24,
+        "n_neg": 32,
+        "mean_prob_tumour": 0.742,
+        "mean_prob_tumour_free": 0.071
+      },
+      "G08": {
+        "fn_rate": 0.2,
+        "fp_rate": 0.0,
+        "fn_rate_small_tumour_frac_lt_0.3": 0.0,
+        "n_pos": 15,
+        "n_neg": 20,
+        "mean_prob_tumour": 0.84,
+        "mean_prob_tumour_free": 0.101
+      }
+    },
+    "resnet50_ft": {
+      "G01": {
+        "fn_rate": 0.718,
+        "fp_rate": 0.093,
+        "fn_rate_small_tumour_frac_lt_0.3": 0.768,
+        "n_pos": 337,
+        "n_neg": 194,
+        "mean_prob_tumour": 0.455,
+        "mean_prob_tumour_free": 0.329
+      },
+      "G07": {
+        "fn_rate": 0.375,
+        "fp_rate": 0.062,
+        "fn_rate_small_tumour_frac_lt_0.3": null,
+        "n_pos": 24,
+        "n_neg": 32,
+        "mean_prob_tumour": 0.648,
+        "mean_prob_tumour_free": 0.291
+      },
+      "G08": {
+        "fn_rate": 0.2,
+        "fp_rate": 0.05,
+        "fn_rate_small_tumour_frac_lt_0.3": 0.0,
+        "n_pos": 15,
+        "n_neg": 20,
+        "mean_prob_tumour": 0.785,
+        "mean_prob_tumour_free": 0.191
+      }
+    },
+    "svm_rbf_radiomics": {
+      "G01": {
+        "fn_rate": 0.552,
+        "fp_rate": 0.737,
+        "fn_rate_small_tumour_frac_lt_0.3": 0.261,
+        "n_pos": 337,
+        "n_neg": 194,
+        "mean_prob_tumour": 0.709,
+        "mean_prob_tumour_free": 0.815
+      },
+      "G07": {
+        "fn_rate": 0.167,
+        "fp_rate": 0.0,
+        "fn_rate_small_tumour_frac_lt_0.3": null,
+        "n_pos": 24,
+        "n_neg": 32,
+        "mean_prob_tumour": 0.858,
+        "mean_prob_tumour_free": 0.188
+      },
+      "G08": {
+        "fn_rate": 0.133,
+        "fp_rate": 0.0,
+        "fn_rate_small_tumour_frac_lt_0.3": 1.0,
+        "n_pos": 15,
+        "n_neg": 20,
+        "mean_prob_tumour": 0.805,
+        "mean_prob_tumour_free": 0.084
+      }
+    },
+    "random_forest_radiomics": {
+      "G01": {
+        "fn_rate": 0.169,
+        "fp_rate": 0.531,
+        "fn_rate_small_tumour_frac_lt_0.3": 0.145,
+        "n_pos": 337,
+        "n_neg": 194,
+        "mean_prob_tumour": 0.77,
+        "mean_prob_tumour_free": 0.728
+      },
+      "G07": {
+        "fn_rate": 0.125,
+        "fp_rate": 0.0,
+        "fn_rate_small_tumour_frac_lt_0.3": null,
+        "n_pos": 24,
+        "n_neg": 32,
+        "mean_prob_tumour": 0.8,
+        "mean_prob_tumour_free": 0.298
+      },
+      "G08": {
+        "fn_rate": 0.133,
+        "fp_rate": 0.0,
+        "fn_rate_small_tumour_frac_lt_0.3": 1.0,
+        "n_pos": 15,
+        "n_neg": 20,
+        "mean_prob_tumour": 0.743,
+        "mean_prob_tumour_free": 0.224
+      }
+    },
+    "logreg_radiomics": {
+      "G01": {
+        "fn_rate": 0.05,
+        "fp_rate": 0.732,
+        "fn_rate_small_tumour_frac_lt_0.3": 0.014,
+        "n_pos": 337,
+        "n_neg": 194,
+        "mean_prob_tumour": 0.962,
+        "mean_prob_tumour_free": 0.883
+      },
+      "G07": {
+        "fn_rate": 0.0,
+        "fp_rate": 0.0,
+        "fn_rate_small_tumour_frac_lt_0.3": null,
+        "n_pos": 24,
+        "n_neg": 32,
+        "mean_prob_tumour": 0.993,
+        "mean_prob_tumour_free": 0.181
+      },
+      "G08": {
+        "fn_rate": 0.333,
+        "fp_rate": 0.0,
+        "fn_rate_small_tumour_frac_lt_0.3": 1.0,
+        "n_pos": 15,
+        "n_neg": 20,
+        "mean_prob_tumour": 0.812,
+        "mean_prob_tumour_free": 0.069
+      }
+    },
+    "hybrid_cnn_vqc_8q_ft": {
+      "G01": {
+        "fn_rate": 0.398,
+        "fp_rate": 0.021,
+        "fn_rate_small_tumour_frac_lt_0.3": 0.391,
+        "n_pos": 337,
+        "n_neg": 194,
+        "mean_prob_tumour": 0.691,
+        "mean_prob_tumour_free": 0.161
+      },
+      "G07": {
+        "fn_rate": 0.375,
+        "fp_rate": 0.094,
+        "fn_rate_small_tumour_frac_lt_0.3": null,
+        "n_pos": 24,
+        "n_neg": 32,
+        "mean_prob_tumour": 0.787,
+        "mean_prob_tumour_free": 0.171
+      },
+      "G08": {
+        "fn_rate": 0.2,
+        "fp_rate": 0.05,
+        "fn_rate_small_tumour_frac_lt_0.3": 0.0,
+        "n_pos": 15,
+        "n_neg": 20,
+        "mean_prob_tumour": 0.863,
+        "mean_prob_tumour_free": 0.132
+      }
+    },
+    "vqc_8q_ft": {
+      "G01": {
+        "fn_rate": 0.359,
+        "fp_rate": 0.149,
+        "fn_rate_small_tumour_frac_lt_0.3": 0.391,
+        "n_pos": 337,
+        "n_neg": 194,
+        "mean_prob_tumour": 0.68,
+        "mean_prob_tumour_free": 0.363
+      },
+      "G07": {
+        "fn_rate": 0.417,
+        "fp_rate": 0.062,
+        "fn_rate_small_tumour_frac_lt_0.3": null,
+        "n_pos": 24,
+        "n_neg": 32,
+        "mean_prob_tumour": 0.685,
+        "mean_prob_tumour_free": 0.391
+      },
+      "G08": {
+        "fn_rate": 0.333,
+        "fp_rate": 0.05,
+        "fn_rate_small_tumour_frac_lt_0.3": 0.0,
+        "n_pos": 15,
+        "n_neg": 20,
+        "mean_prob_tumour": 0.765,
+        "mean_prob_tumour_free": 0.335
+      }
+    },
+    "qkernel_svm_8q_ft": {
+      "G01": {
+        "fn_rate": 0.472,
+        "fp_rate": 0.072,
+        "fn_rate_small_tumour_frac_lt_0.3": 0.522,
+        "n_pos": 337,
+        "n_neg": 194,
+        "mean_prob_tumour": 0.647,
+        "mean_prob_tumour_free": 0.214
+      },
+      "G07": {
+        "fn_rate": 0.458,
+        "fp_rate": 0.094,
+        "fn_rate_small_tumour_frac_lt_0.3": null,
+        "n_pos": 24,
+        "n_neg": 32,
+        "mean_prob_tumour": 0.699,
+        "mean_prob_tumour_free": 0.156
+      },
+      "G08": {
+        "fn_rate": 0.333,
+        "fp_rate": 0.0,
+        "fn_rate_small_tumour_frac_lt_0.3": 0.0,
+        "n_pos": 15,
+        "n_neg": 20,
+        "mean_prob_tumour": 0.765,
+        "mean_prob_tumour_free": 0.147
+      }
+    }
+  },
+  "test_patch_tumour_fraction_median": {
+    "G01": 0.431,
+    "G07": 0.51,
+    "G08": 0.59
+  },
+  "test_patch_counts": {
+    "G01": {
+      "tumour_free": 194,
+      "tumour": 337
+    },
+    "G07": {
+      "tumour_free": 32,
+      "tumour": 24
+    },
+    "G08": {
+      "tumour_free": 20,
+      "tumour": 15
+    }
+  },
+  "acquisition_metadata": "not available: the slices are windowed PNG images without DICOM headers (no scanner, kernel, contrast phase or voxel spacing)"
+}

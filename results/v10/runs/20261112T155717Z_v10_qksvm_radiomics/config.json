@@ -1,0 +1,57 @@
+{
+ "model_id": "v10_qksvm_radiomics",
+ "spec": "qksvm",
+ "config": {
+  "C": 0.3,
+  "bandwidth": 0.25,
+  "pair": "product"
+ },
+ "selection": "most frequent inner-loop selection (5 of 8 outer folds)",
+ "preprocessing": {
+  "scaler": "standard",
+  "pca": 4,
+  "angle_max": 3.141592653589793
+ },
+ "seed": 0,
+ "features": "radiomics",
+ "architecture": {
+  "model": "Quantum kernel SVM",
+  "qubits": 4,
+  "feature_map": {
+   "qubits": 4,
+   "reps": 2,
+   "pair": "product",
+   "coefficients_c0_c1_c2": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "entanglement": "linear",
+   "pairs": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "bandwidth": 0.25,
+   "single_scale": 1.0
+  },
+  "kernel": "fidelity",
+  "C": 0.3,
+  "n_support_vectors": 1185,
+  "execution_mode": "custom_numpy_simulator",
+  "circuit": {
+   "reps": 2,
+   "two_qubit_gates_per_state": 12,
+   "compute_uncompute_depth_note": "fidelity estimated exactly from state vectors"
+  }
+ }
+}

@@ -1,0 +1,717 @@
+{
+ "v9": [
+  {
+   "model_id": "cnn25d_v9_a1_aug",
+   "family": "deep_learning",
+   "platt_slope_on_standardised_score": 9.524545201730273,
+   "val_auc": 0.997753396029258,
+   "val_ece": 0.013547185539845866,
+   "test_ece": 0.07449975913173913,
+   "test_auc": 0.9951781698668051,
+   "test_sensitivity": 0.9973404255319149,
+   "test_specificity": 0.7926829268292683
+  },
+  {
+   "model_id": "cnn25d_v9_a2_aug_focal",
+   "family": "deep_learning",
+   "platt_slope_on_standardised_score": 15.257054412756416,
+   "val_auc": 0.9974921630094044,
+   "val_ece": 0.014566711856374252,
+   "test_ece": 0.08234424746686624,
+   "test_auc": 0.9968755405639163,
+   "test_sensitivity": 0.9973404255319149,
+   "test_specificity": 0.7398373983739838
+  },
+  {
+   "model_id": "cnn25d_v9_a3_res_se",
+   "family": "deep_learning",
+   "platt_slope_on_standardised_score": 15.273185835374832,
+   "val_auc": 0.9992163009404389,
+   "val_ece": 0.012101988447667286,
+   "test_ece": 0.01960927821728961,
+   "test_auc": 0.9980647811797266,
+   "test_sensitivity": 0.976063829787234,
+   "test_specificity": 0.9959349593495935
+  },
+  {
+   "model_id": "cnn25d_v9_a4_res_se_focal",
+   "family": "deep_learning",
+   "platt_slope_on_standardised_score": 18.277558846705052,
+   "val_auc": 0.9995820271682341,
+   "val_ece": 0.011423696754251643,
+   "test_ece": 0.04773025308832953,
+   "test_auc": 0.9986918353226085,
+   "test_sensitivity": 0.9946808510638298,
+   "test_specificity": 0.9186991869918699
+  },
+  {
+   "model_id": "cnn2d_v9",
+   "family": "deep_learning",
+   "platt_slope_on_standardised_score": 16.385591888583868,
+   "val_auc": 0.9983281086729362,
+   "val_ece": 0.022108388661147164,
+   "test_ece": 0.049651942186792725,
+   "test_auc": 0.99812964884968,
+   "test_sensitivity": 0.9946808510638298,
+   "test_specificity": 0.8455284552845529
+  },
+  {
+   "model_id": "cnn3d_v9",
+   "family": "deep_learning",
+   "platt_slope_on_standardised_score": 10.054096474398634,
+   "val_auc": 0.9979623824451411,
+   "val_ece": 0.006710451094696246,
+   "test_ece": 0.01317041581265729,
+   "test_auc": 0.9965187683791731,
+   "test_sensitivity": 0.9680851063829787,
+   "test_specificity": 0.9878048780487805
+  },
+  {
+   "model_id": "cnn5s_v9",
+   "family": "deep_learning",
+   "platt_slope_on_standardised_score": 30.78968256618659,
+   "val_auc": 0.9998432601880878,
+   "val_ece": 0.00721909704811451,
+   "test_ece": 0.08355840649261075,
+   "test_auc": 0.998562099982702,
+   "test_sensitivity": 1.0,
+   "test_specificity": 0.8008130081300813
+  },
+  {
+   "model_id": "densenet121_ft_v9",
+   "family": "deep_learning",
+   "platt_slope_on_standardised_score": 3.079294786129141,
+   "val_auc": 0.9352142110762801,
+   "val_ece": 0.07518449964907238,
+   "test_ece": 0.09374337897296466,
+   "test_auc": 0.8643184570143575,
+   "test_sensitivity": 0.6276595744680851,
+   "test_specificity": 0.8902439024390244
+  },
+  {
+   "model_id": "hybrid_v9_cnn",
+   "family": "hybrid",
+   "platt_slope_on_standardised_score": 11.574948270245278,
+   "val_auc": 0.9991118077324974,
+   "val_ece": null,
+   "test_ece": 0.045113568425863115,
+   "test_auc": 0.9985729112610274,
+   "test_sensitivity": 0.9920212765957447,
+   "test_specificity": 0.9471544715447154
+  },
+  {
+   "model_id": "logreg_radiomics_v9",
+   "family": "classical",
+   "platt_slope_on_standardised_score": 4.548858802354439,
+   "val_auc": 0.9499477533960293,
+   "val_ece": 0.06573362592278564,
+   "test_ece": 0.12714594433473428,
+   "test_auc": 0.9431218647292856,
+   "test_sensitivity": 0.9202127659574468,
+   "test_specificity": 0.6869918699186992
+  },
+  {
+   "model_id": "lr_control_v9_cnn",
+   "family": "classical",
+   "platt_slope_on_standardised_score": 11.972101909546817,
+   "val_auc": 0.9989550679205851,
+   "val_ece": null,
+   "test_ece": 0.044831529748286365,
+   "test_auc": 0.9983350631378654,
+   "test_sensitivity": 0.9946808510638298,
+   "test_specificity": 0.9186991869918699
+  },
+  {
+   "model_id": "qksvm_v9_cnn",
+   "family": "quantum",
+   "platt_slope_on_standardised_score": 15.681747594779521,
+   "val_auc": 0.9995297805642633,
+   "val_ece": null,
+   "test_ece": 0.04240499459071502,
+   "test_auc": 0.9977404428299601,
+   "test_sensitivity": 0.9920212765957447,
+   "test_specificity": 0.943089430894309
+  },
+  {
+   "model_id": "random_forest_radiomics_v9",
+   "family": "classical",
+   "platt_slope_on_standardised_score": 2.0348448246998654,
+   "val_auc": 0.9052507836990595,
+   "val_ece": 0.03982946913229483,
+   "test_ece": 0.1274679679839285,
+   "test_auc": 0.943019157585193,
+   "test_sensitivity": 0.9973404255319149,
+   "test_specificity": 0.5894308943089431
+  },
+  {
+   "model_id": "rbf_control_v9_cnn",
+   "family": "classical",
+   "platt_slope_on_standardised_score": 12.57025204217038,
+   "val_auc": 0.9994252873563219,
+   "val_ece": null,
+   "test_ece": 0.04742451173362752,
+   "test_auc": 0.9819775990313095,
+   "test_sensitivity": 0.8776595744680851,
+   "test_specificity": 0.943089430894309
+  },
+  {
+   "model_id": "svm_rbf_radiomics_v9",
+   "family": "classical",
+   "platt_slope_on_standardised_score": 3.7347420763339327,
+   "val_auc": 0.937042842215256,
+   "val_ece": 0.06854202373924376,
+   "test_ece": 0.21298523896912336,
+   "test_auc": 0.8903195813873033,
+   "test_sensitivity": 0.6117021276595744,
+   "test_specificity": 0.8821138211382114
+  },
+  {
+   "model_id": "twin_v9_cnn",
+   "family": "classical",
+   "platt_slope_on_standardised_score": 23.94674269236589,
+   "val_auc": 0.999164054336468,
+   "val_ece": null,
+   "test_ece": 0.04800590910162472,
+   "test_auc": 0.9985729112610274,
+   "test_sensitivity": 0.9920212765957447,
+   "test_specificity": 0.9471544715447154
+  },
+  {
+   "model_id": "vqc_v9_cnn",
+   "family": "quantum",
+   "platt_slope_on_standardised_score": 10.729959654429111,
+   "val_auc": 0.999373040752351,
+   "val_ece": null,
+   "test_ece": 0.060532654235192995,
+   "test_auc": 0.9731447846393357,
+   "test_sensitivity": 0.8670212765957447,
+   "test_specificity": 0.9146341463414634
+  }
+ ],
+ "v10_oof": [
+  {
+   "model_id": "v10_logreg_imagenet_gap",
+   "feature_set": "imagenet_gap",
+   "n": 2449,
+   "oof_ece": 0.1038,
+   "share_p_ge_0_999": 0.0029,
+   "share_p_le_0_001": 0.0053
+  },
+  {
+   "model_id": "v10_svm_rbf_imagenet_gap",
+   "feature_set": "imagenet_gap",
+   "n": 2449,
+   "oof_ece": 0.1155,
+   "share_p_ge_0_999": 0.0008,
+   "share_p_le_0_001": 0.0053
+  },
+  {
+   "model_id": "v10_logreg_pca4_imagenet_gap",
+   "feature_set": "imagenet_gap",
+   "n": 2449,
+   "oof_ece": 0.1251,
+   "share_p_ge_0_999": 0.0,
+   "share_p_le_0_001": 0.0
+  },
+  {
+   "model_id": "v10_svm_rbf_pca4_imagenet_gap",
+   "feature_set": "imagenet_gap",
+   "n": 2449,
+   "oof_ece": 0.0997,
+   "share_p_ge_0_999": 0.0,
+   "share_p_le_0_001": 0.0
+  },
+  {
+   "model_id": "v10_vqc_imagenet_gap",
+   "feature_set": "imagenet_gap",
+   "n": 2449,
+   "oof_ece": 0.1111,
+   "share_p_ge_0_999": 0.0,
+   "share_p_le_0_001": 0.0
+  },
+  {
+   "model_id": "v10_qksvm_imagenet_gap",
+   "feature_set": "imagenet_gap",
+   "n": 2449,
+   "oof_ece": 0.1066,
+   "share_p_ge_0_999": 0.0,
+   "share_p_le_0_001": 0.0
+  },
+  {
+   "model_id": "v10_logreg_radiomics",
+   "feature_set": "radiomics",
+   "n": 2449,
+   "oof_ece": 0.1301,
+   "share_p_ge_0_999": 0.0441,
+   "share_p_le_0_001": 0.002
+  },
+  {
+   "model_id": "v10_decision_tree_radiomics",
+   "feature_set": "radiomics",
+   "n": 2449,
+   "oof_ece": 0.1359,
+   "share_p_ge_0_999": 0.0,
+   "share_p_le_0_001": 0.0
+  },
+  {
+   "model_id": "v10_random_forest_radiomics",
+   "feature_set": "radiomics",
+   "n": 2449,
+   "oof_ece": 0.1193,
+   "share_p_ge_0_999": 0.0024,
+   "share_p_le_0_001": 0.0
+  },
+  {
+   "model_id": "v10_extra_trees_radiomics",
+   "feature_set": "radiomics",
+   "n": 2449,
+   "oof_ece": 0.1539,
+   "share_p_ge_0_999": 0.0,
+   "share_p_le_0_001": 0.0
+  },
+  {
+   "model_id": "v10_svm_rbf_radiomics",
+   "feature_set": "radiomics",
+   "n": 2449,
+   "oof_ece": 0.1015,
+   "share_p_ge_0_999": 0.0,
+   "share_p_le_0_001": 0.0
+  },
+  {
+   "model_id": "v10_knn_radiomics",
+   "feature_set": "radiomics",
+   "n": 2449,
+   "oof_ece": 0.119,
+   "share_p_ge_0_999": 0.0,
+   "share_p_le_0_001": 0.0
+  },
+  {
+   "model_id": "v10_hist_gb_radiomics",
+   "feature_set": "radiomics",
+   "n": 2449,
+   "oof_ece": 0.1013,
+   "share_p_ge_0_999": 0.0,
+   "share_p_le_0_001": 0.0
+  },
+  {
+   "model_id": "v10_mlp_small_radiomics",
+   "feature_set": "radiomics",
+   "n": 2449,
+   "oof_ece": 0.2284,
+   "share_p_ge_0_999": 0.0,
+   "share_p_le_0_001": 0.0
+  },
+  {
+   "model_id": "v10_logreg_pca4_radiomics",
+   "feature_set": "radiomics",
+   "n": 2449,
+   "oof_ece": 0.1813,
+   "share_p_ge_0_999": 0.096,
+   "share_p_le_0_001": 0.0
+  },
+  {
+   "model_id": "v10_svm_rbf_pca4_radiomics",
+   "feature_set": "radiomics",
+   "n": 2449,
+   "oof_ece": 0.1402,
+   "share_p_ge_0_999": 0.0069,
+   "share_p_le_0_001": 0.0
+  },
+  {
+   "model_id": "v10_vqc_radiomics",
+   "feature_set": "radiomics",
+   "n": 2449,
+   "oof_ece": 0.1705,
+   "share_p_ge_0_999": 0.0139,
+   "share_p_le_0_001": 0.0
+  },
+  {
+   "model_id": "v10_qksvm_radiomics",
+   "feature_set": "radiomics",
+   "n": 2449,
+   "oof_ece": 0.1512,
+   "share_p_ge_0_999": 0.0131,
+   "share_p_le_0_001": 0.0
+  },
+  {
+   "model_id": "v10_hybrid_no_fusion_radiomics",
+   "feature_set": "radiomics",
+   "n": 2449,
+   "oof_ece": 0.174,
+   "share_p_ge_0_999": 0.0,
+   "share_p_le_0_001": 0.0
+  },
+  {
+   "model_id": "v10_hybrid_twin_radiomics",
+   "feature_set": "radiomics",
+   "n": 2449,
+   "oof_ece": 0.1671,
+   "share_p_ge_0_999": 0.0,
+   "share_p_le_0_001": 0.0
+  },
+  {
+   "model_id": "v10_hybrid_feature_fusion_radiomics",
+   "feature_set": "radiomics",
+   "n": 2449,
+   "oof_ece": 0.1499,
+   "share_p_ge_0_999": 0.0,
+   "share_p_le_0_001": 0.0
+  },
+  {
+   "model_id": "v10_hybrid_random_quantum_radiomics",
+   "feature_set": "radiomics",
+   "n": 2449,
+   "oof_ece": 0.1707,
+   "share_p_ge_0_999": 0.0,
+   "share_p_le_0_001": 0.0
+  },
+  {
+   "model_id": "v10_hybrid_quantum_only_radiomics",
+   "feature_set": "radiomics",
+   "n": 2449,
+   "oof_ece": 0.1244,
+   "share_p_ge_0_999": 0.0,
+   "share_p_le_0_001": 0.0
+  },
+  {
+   "model_id": "v10_late_fusion_radiomics",
+   "feature_set": "radiomics",
+   "n": 2449,
+   "oof_ece": 0.1833,
+   "share_p_ge_0_999": 0.0078,
+   "share_p_le_0_001": 0.0
+  }
+ ],
+ "saturation_samples": [
+  {
+   "model_id": "cnn25d_v9_a3_res_se",
+   "family": "deep_learning",
+   "slices": 2,
+   "tumour_slices": 2,
+   "n_patches": 19,
+   "share_patch_p_ge_0_999": 0.474,
+   "share_patch_p_le_0_001": 0.263,
+   "tumour_slice_pmax_mean": 1.0,
+   "tumour_slices_saturated": 2
+  },
+  {
+   "model_id": "cnn25d_v9_a2_aug_focal",
+   "family": "deep_learning",
+   "slices": 2,
+   "tumour_slices": 2,
+   "n_patches": 19,
+   "share_patch_p_ge_0_999": 0.421,
+   "share_patch_p_le_0_001": 0.263,
+   "tumour_slice_pmax_mean": 1.0,
+   "tumour_slices_saturated": 2
+  },
+  {
+   "model_id": "cnn25d_v9_a4_res_se_focal",
+   "family": "deep_learning",
+   "slices": 2,
+   "tumour_slices": 2,
+   "n_patches": 19,
+   "share_patch_p_ge_0_999": 0.421,
+   "share_patch_p_le_0_001": 0.263,
+   "tumour_slice_pmax_mean": 1.0,
+   "tumour_slices_saturated": 2
+  },
+  {
+   "model_id": "cnn2d_v9",
+   "family": "deep_learning",
+   "slices": 6,
+   "tumour_slices": 6,
+   "n_patches": 62,
+   "share_patch_p_ge_0_999": 0.403,
+   "share_patch_p_le_0_001": 0.194,
+   "tumour_slice_pmax_mean": 1.0,
+   "tumour_slices_saturated": 6
+  },
+  {
+   "model_id": "lr_control_v9_cnn",
+   "family": "classical",
+   "slices": 2,
+   "tumour_slices": 2,
+   "n_patches": 19,
+   "share_patch_p_ge_0_999": 0.368,
+   "share_patch_p_le_0_001": 0.263,
+   "tumour_slice_pmax_mean": 0.9999,
+   "tumour_slices_saturated": 2
+  },
+  {
+   "model_id": "qksvm_v9_cnn",
+   "family": "quantum",
+   "slices": 2,
+   "tumour_slices": 2,
+   "n_patches": 19,
+   "share_patch_p_ge_0_999": 0.368,
+   "share_patch_p_le_0_001": 0.263,
+   "tumour_slice_pmax_mean": 1.0,
+   "tumour_slices_saturated": 2
+  },
+  {
+   "model_id": "cnn25d_v9_a1_aug",
+   "family": "deep_learning",
+   "slices": 2,
+   "tumour_slices": 2,
+   "n_patches": 19,
+   "share_patch_p_ge_0_999": 0.316,
+   "share_patch_p_le_0_001": 0.211,
+   "tumour_slice_pmax_mean": 1.0,
+   "tumour_slices_saturated": 2
+  },
+  {
+   "model_id": "vqc_v9_cnn",
+   "family": "quantum",
+   "slices": 2,
+   "tumour_slices": 2,
+   "n_patches": 19,
+   "share_patch_p_ge_0_999": 0.211,
+   "share_patch_p_le_0_001": 0.263,
+   "tumour_slice_pmax_mean": 1.0,
+   "tumour_slices_saturated": 2
+  },
+  {
+   "model_id": "logreg_radiomics_v9",
+   "family": "classical",
+   "slices": 6,
+   "tumour_slices": 6,
+   "n_patches": 62,
+   "share_patch_p_ge_0_999": 0.145,
+   "share_patch_p_le_0_001": 0.0,
+   "tumour_slice_pmax_mean": 0.9943,
+   "tumour_slices_saturated": 3
+  },
+  {
+   "model_id": "v10_random_forest_radiomics",
+   "family": "classical",
+   "slices": 6,
+   "tumour_slices": 6,
+   "n_patches": 62,
+   "share_patch_p_ge_0_999": 0.081,
+   "share_patch_p_le_0_001": 0.0,
+   "tumour_slice_pmax_mean": 0.8481,
+   "tumour_slices_saturated": 3
+  },
+  {
+   "model_id": "rbf_control_v9_cnn",
+   "family": "classical",
+   "slices": 2,
+   "tumour_slices": 2,
+   "n_patches": 19,
+   "share_patch_p_ge_0_999": 0.053,
+   "share_patch_p_le_0_001": 0.263,
+   "tumour_slice_pmax_mean": 0.9988,
+   "tumour_slices_saturated": 1
+  },
+  {
+   "model_id": "svm_rbf_radiomics_v9",
+   "family": "classical",
+   "slices": 6,
+   "tumour_slices": 6,
+   "n_patches": 62,
+   "share_patch_p_ge_0_999": 0.048,
+   "share_patch_p_le_0_001": 0.0,
+   "tumour_slice_pmax_mean": 0.998,
+   "tumour_slices_saturated": 3
+  },
+  {
+   "model_id": "v10_hybrid_feature_fusion_radiomics",
+   "family": "hybrid",
+   "slices": 6,
+   "tumour_slices": 6,
+   "n_patches": 62,
+   "share_patch_p_ge_0_999": 0.048,
+   "share_patch_p_le_0_001": 0.0,
+   "tumour_slice_pmax_mean": 0.9458,
+   "tumour_slices_saturated": 2
+  },
+  {
+   "model_id": "densenet121_ft_v9",
+   "family": "deep_learning",
+   "slices": 6,
+   "tumour_slices": 6,
+   "n_patches": 62,
+   "share_patch_p_ge_0_999": 0.0,
+   "share_patch_p_le_0_001": 0.0,
+   "tumour_slice_pmax_mean": 0.9732,
+   "tumour_slices_saturated": 0
+  },
+  {
+   "model_id": "hybrid_v9_cnn",
+   "family": "hybrid",
+   "slices": 2,
+   "tumour_slices": 2,
+   "n_patches": 19,
+   "share_patch_p_ge_0_999": 0.0,
+   "share_patch_p_le_0_001": 0.316,
+   "tumour_slice_pmax_mean": 0.9939,
+   "tumour_slices_saturated": 0
+  },
+  {
+   "model_id": "random_forest_radiomics_v9",
+   "family": "classical",
+   "slices": 6,
+   "tumour_slices": 6,
+   "n_patches": 62,
+   "share_patch_p_ge_0_999": 0.0,
+   "share_patch_p_le_0_001": 0.0,
+   "tumour_slice_pmax_mean": 0.9531,
+   "tumour_slices_saturated": 0
+  },
+  {
+   "model_id": "twin_v9_cnn",
+   "family": "classical",
+   "slices": 2,
+   "tumour_slices": 2,
+   "n_patches": 19,
+   "share_patch_p_ge_0_999": 0.0,
+   "share_patch_p_le_0_001": 0.316,
+   "tumour_slice_pmax_mean": 0.9869,
+   "tumour_slices_saturated": 0
+  },
+  {
+   "model_id": "v10_extra_trees_radiomics",
+   "family": "classical",
+   "slices": 6,
+   "tumour_slices": 6,
+   "n_patches": 62,
+   "share_patch_p_ge_0_999": 0.0,
+   "share_patch_p_le_0_001": 0.0,
+   "tumour_slice_pmax_mean": 0.7759,
+   "tumour_slices_saturated": 0
+  },
+  {
+   "model_id": "v10_hist_gb_radiomics",
+   "family": "classical",
+   "slices": 6,
+   "tumour_slices": 6,
+   "n_patches": 62,
+   "share_patch_p_ge_0_999": 0.0,
+   "share_patch_p_le_0_001": 0.0,
+   "tumour_slice_pmax_mean": 0.8283,
+   "tumour_slices_saturated": 0
+  },
+  {
+   "model_id": "v10_hybrid_no_fusion_radiomics",
+   "family": "hybrid",
+   "slices": 6,
+   "tumour_slices": 6,
+   "n_patches": 62,
+   "share_patch_p_ge_0_999": 0.0,
+   "share_patch_p_le_0_001": 0.0,
+   "tumour_slice_pmax_mean": 0.9713,
+   "tumour_slices_saturated": 0
+  },
+  {
+   "model_id": "v10_hybrid_twin_radiomics",
+   "family": "classical",
+   "slices": 6,
+   "tumour_slices": 6,
+   "n_patches": 62,
+   "share_patch_p_ge_0_999": 0.0,
+   "share_patch_p_le_0_001": 0.0,
+   "tumour_slice_pmax_mean": 0.8611,
+   "tumour_slices_saturated": 0
+  },
+  {
+   "model_id": "v10_knn_radiomics",
+   "family": "classical",
+   "slices": 6,
+   "tumour_slices": 6,
+   "n_patches": 62,
+   "share_patch_p_ge_0_999": 0.0,
+   "share_patch_p_le_0_001": 0.0,
+   "tumour_slice_pmax_mean": 0.6773,
+   "tumour_slices_saturated": 0
+  },
+  {
+   "model_id": "v10_late_fusion_radiomics",
+   "family": "hybrid",
+   "slices": 6,
+   "tumour_slices": 6,
+   "n_patches": 62,
+   "share_patch_p_ge_0_999": 0.0,
+   "share_patch_p_le_0_001": 0.0,
+   "tumour_slice_pmax_mean": 0.7401,
+   "tumour_slices_saturated": 0
+  },
+  {
+   "model_id": "v10_logreg_pca4_radiomics",
+   "family": "classical",
+   "slices": 6,
+   "tumour_slices": 6,
+   "n_patches": 62,
+   "share_patch_p_ge_0_999": 0.0,
+   "share_patch_p_le_0_001": 0.0,
+   "tumour_slice_pmax_mean": 0.7606,
+   "tumour_slices_saturated": 0
+  },
+  {
+   "model_id": "v10_logreg_radiomics",
+   "family": "classical",
+   "slices": 6,
+   "tumour_slices": 6,
+   "n_patches": 62,
+   "share_patch_p_ge_0_999": 0.0,
+   "share_patch_p_le_0_001": 0.0,
+   "tumour_slice_pmax_mean": 0.819,
+   "tumour_slices_saturated": 0
+  },
+  {
+   "model_id": "v10_mlp_small_radiomics",
+   "family": "classical",
+   "slices": 6,
+   "tumour_slices": 6,
+   "n_patches": 62,
+   "share_patch_p_ge_0_999": 0.0,
+   "share_patch_p_le_0_001": 0.0,
+   "tumour_slice_pmax_mean": 0.7379,
+   "tumour_slices_saturated": 0
+  },
+  {
+   "model_id": "v10_qksvm_radiomics",
+   "family": "quantum",
+   "slices": 6,
+   "tumour_slices": 6,
+   "n_patches": 62,
+   "share_patch_p_ge_0_999": 0.0,
+   "share_patch_p_le_0_001": 0.0,
+   "tumour_slice_pmax_mean": 0.8361,
+   "tumour_slices_saturated": 0
+  },
+  {
+   "model_id": "v10_svm_rbf_pca4_radiomics",
+   "family": "classical",
+   "slices": 6,
+   "tumour_slices": 6,
+   "n_patches": 62,
+   "share_patch_p_ge_0_999": 0.0,
+   "share_patch_p_le_0_001": 0.0,
+   "tumour_slice_pmax_mean": 0.8202,
+   "tumour_slices_saturated": 0
+  },
+  {
+   "model_id": "v10_svm_rbf_radiomics",
+   "family": "classical",
+   "slices": 6,
+   "tumour_slices": 6,
+   "n_patches": 62,
+   "share_patch_p_ge_0_999": 0.0,
+   "share_patch_p_le_0_001": 0.0,
+   "tumour_slice_pmax_mean": 0.8915,
+   "tumour_slices_saturated": 0
+  },
+  {
+   "model_id": "v10_vqc_radiomics",
+   "family": "quantum",
+   "slices": 6,
+   "tumour_slices": 6,
+   "n_patches": 62,
+   "share_patch_p_ge_0_999": 0.0,
+   "share_patch_p_le_0_001": 0.0,
+   "tumour_slice_pmax_mean": 0.8027,
+   "tumour_slices_saturated": 0
+  }
+ ]
+}

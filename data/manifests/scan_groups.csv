@@ -1,0 +1,11 @@
+group_id,n_slices,n_tumour_slices,first_index,last_index,split
+G01,249,116,100,373,test
+G02,305,33,374,708,val
+G03,173,14,709,881,train
+G04,37,13,882,918,train
+G05,140,79,919,1058,train
+G06,246,178,1059,1304,train
+G07,101,8,1305,1405,test
+G08,86,5,1406,1491,test
+G09,104,12,1492,1595,val
+G10,304,18,1596,1899,val

@@ -1,0 +1,60 @@
+{
+  "name": "Classical twin (control for the hybrid) (8 qubits, CNN features)",
+  "kind": "v9_twin",
+  "version": "v9",
+  "features": "cnn25d_v9",
+  "feature_description": "64-d embedding (penultimate layer) of the selected V9 2.5-D CNN (cnn25d_v9_a4_res_se_focal, trained on the training split only)",
+  "configuration": {
+    "qubits": 8,
+    "fusion": true
+  },
+  "selection": "highest validation ROC-AUC in the sweep",
+  "validation_auc": 0.999164054336468,
+  "training_status": "TRAINED",
+  "labels": "LiTS expert masks (verified)",
+  "clinical_use": "NOT validated for clinical use",
+  "calibration": {
+    "mu": 2.6300715769627176,
+    "sd": 4.509625442411061,
+    "a": 23.94674269236589,
+    "b": -12.558310694208991,
+    "min_slope": 0.001
+  },
+  "calibration_status": "platt_on_validation",
+  "threshold": 0.8982449329922795,
+  "threshold_rule": "Youden J on validation (calibrated probability)",
+  "validation_score_check": {
+    "constant_scores": false,
+    "ok": true
+  },
+  "inference_seconds_per_patch": 0.0101142,
+  "family": "classical",
+  "model_id": "twin_v9_cnn",
+  "npz_sha256": "f7ba604cade13cb8b7ac0688fbd1725e415ed0678c0de06fb0eabf2b55111b11",
+  "status": "trained",
+  "saved_utc": "2026-11-06T11:05:07+00:00",
+  "role": "control",
+  "role_order": 4,
+  "test_summary": {
+    "auc": 0.9985729112610274,
+    "auc_ci95": [
+      0.9971226107027398,
+      1.0
+    ],
+    "sensitivity": 0.9920212765957447,
+    "specificity": 0.9471544715447154,
+    "f1": 0.979002624671916,
+    "accuracy": 0.9742765273311897,
+    "pr_auc": 0.9991057634775397,
+    "ece": 0.04800590910162472
+  },
+  "validation_summary": {
+    "auc": 0.999164054336468
+  },
+  "train_seconds": 0.1,
+  "parameters": 609,
+  "head_inference_ms_per_patch": 0.0002,
+  "feature_ms_per_patch": 10.114,
+  "inference_timing_note": "head + feature extraction on 2 CPU cores; circuits simulated exactly",
+  "support_vectors": null
+}

@@ -1,0 +1,8 @@
+{
+ "status": "succeeded",
+ "started_utc": "2026-11-12T15:52:45+00:00",
+ "finished_utc": "2026-11-12T15:52:46+00:00",
+ "seconds": 0.9,
+ "artifact": "artifacts/v10/v10_knn_radiomics",
+ "dataset_version": "lits_verified_v8@2a9a4887bb322cfc"
+}
